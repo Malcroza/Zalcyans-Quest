@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "friss_cap",
+		"metalness_emissive_roughness": "friss_cap_mer",
+		"heightmap": "friss_cap_heightmap"
+	}
+}

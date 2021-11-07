@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "argen_stone",
+		"metalness_emissive_roughness": "argen_stone_mer",
+		"heightmap": "argen_stone_heightmap"
+	}
+}

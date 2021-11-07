@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "friss_vine_fruited",
+        "metalness_emissive_roughness": "friss_vine_fruited_mer",
+        "heightmap": "friss_vine_fruited_heightmap"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "friss_trapdoor",
+        "metalness_emissive_roughness": "friss_trapdoor_mer",
+        "heightmap": "friss_trapdoor_heightmap"
+    }
+}

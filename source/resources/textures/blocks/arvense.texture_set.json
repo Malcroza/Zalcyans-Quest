@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "arvense",
+        "metalness_emissive_roughness": [86,0,175],
+        "heightmap": "arvense_heightmap"
+    }
+}

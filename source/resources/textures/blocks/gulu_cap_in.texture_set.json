@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "gulu_cap_in",
+		"metalness_emissive_roughness": "gulu_cap_in_mer",
+		"heightmap": "gulu_cap_in_heightmap"
+	}
+}

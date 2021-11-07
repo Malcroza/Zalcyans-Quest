@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "friss_door",
+        "metalness_emissive_roughness": "friss_door_mer",
+        "heightmap": "friss_door_heightmap"
+    }
+}
