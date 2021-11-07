@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100", 
+    "minecraft:texture_set": {
+        "color": "raken_ground_side1",
+        "metalness_emissive_roughness": "raken_ground_side1_mer",
+        "heightmap": "raken_ground_side1_heightmap"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "raken_door",
+        "metalness_emissive_roughness": "raken_door_mer",
+        "heightmap": "raken_door_heightmap"
+    }
+}

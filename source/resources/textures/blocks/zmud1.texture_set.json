@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "zmud1",
+        "metalness_emissive_roughness": "zmud1_mer",
+        "heightmap": "zmud1_heightmap"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "raken_trapdoor",
+        "metalness_emissive_roughness": "raken_trapdoor_mer",
+        "heightmap": "raken_trapdoor_heightmap"
+    }
+}
