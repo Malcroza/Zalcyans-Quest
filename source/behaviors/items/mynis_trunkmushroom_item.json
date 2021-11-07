@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:mynis_trunkmushroom_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:block_placer": {
+				"block": "zalcyan:mynis_trunkmushroom",
+				"use_on": [
+					"zalcyan:mynis_log_stripped",
+					"zalcyan:mynis_log"
+				]
+			},
+			"minecraft:icon": {
+				"texture": "mynis_trunkmushroom_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.flower"
+			},
+			"minecraft:max_stack_size": 64,
+			"minecraft:stacked_by_data": true
+		},
+		"events": {}
+	}
+}

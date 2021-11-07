@@ -1,0 +1,56 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:moonlen_stone",
+			"is_experimental": false,
+			"register_to_creative_menu": true
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:friction": 0.6,
+			"minecraft:map_color": "#171A22",
+			"minecraft:block_light_absorption": 16,
+			"minecraft:block_light_emission": 0,
+			"minecraft:explosion_resistance": 200.5,
+			"minecraft:on_interact": {
+				"event": "mould",
+				"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+			}
+		},
+		"events": {
+			"mould": {
+				"sequence": [
+					{
+						"set_block_at_pos": {
+							"block_type": "zalcyan:moonlen_mould",
+							"block_offset": [
+								0,
+								0,
+								0
+							]
+						}
+					},
+					{
+						"decrement_stack": {}
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:endrod ~ ~ ~"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"playsound item.bone_meal.use @a ~ ~ ~"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

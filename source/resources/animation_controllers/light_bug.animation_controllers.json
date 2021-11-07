@@ -1,0 +1,94 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.light_bug.drip": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"dripping": "query.is_powered"
+						}
+					]
+				},
+				"dripping": {
+					"particle_effects": [
+						{
+							"effect": "nectar_dripping"
+						}
+					],
+					"transitions": [
+						{
+							"default": "!query.is_powered"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.light_bug.move": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"grounded": "query.is_on_ground && query.modified_move_speed"
+						},
+						{
+							"lit": "query.time_of_day <= 0.25 && !query.is_on_ground || query.time_of_day >= 0.75 && !query.is_on_ground"
+						},
+						{
+							"general": "query.is_on_ground && !query.modified_move_speed"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"grounded": {
+					"animations": [
+						"walking"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_on_ground || !query.modified_move_speed"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"lit": {
+					"animations": [
+						"flying",
+						"light",
+						"bee_fly_bobbing"
+					],
+					"transitions": [
+						{
+							"default": "query.is_on_ground"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"general": {
+					"animations": [
+						"general"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_on_ground || query.modified_move_speed"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.light_bug.sting": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"bee_sting"
+					]
+				}
+			}
+		}
+	}
+}

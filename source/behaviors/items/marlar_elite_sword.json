@@ -1,0 +1,56 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:marlar_elite_sword"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 3600,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_damage": 131,
+				"max_durability": 131,
+				"damage_chance": {
+					"min": 1,
+					"max": 2
+				}
+			},
+			"minecraft:damage": 4,
+			"minecraft:enchantable": {
+				"value": 22,
+				"slot": "sword"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:icon": {
+				"texture": "marlar_elite_sword"
+			},
+			"minecraft:allow_off_hand": true,
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "damage",
+					"target": "self"
+				}
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"zalcyan:marlar_elite_sword"
+						],
+						"repair_amount": "query.remaining_durability"
+					}
+				]
+			}
+		},
+		"events": {
+			"damage": {
+				"damage": {
+					"type": "durability",
+					"amount": 1
+				}
+			}
+		}
+	}
+}

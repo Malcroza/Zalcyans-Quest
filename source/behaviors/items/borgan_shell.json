@@ -1,0 +1,16 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:borgan_shell",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "borgan_shell"
+			}
+		},
+		"events": {}
+	}
+}

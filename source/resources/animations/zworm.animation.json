@@ -1,0 +1,111 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.zworm.move": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 90" , "Math.sin(query.head_y_rotation(0)) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne1": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne2": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne3": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne4": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne5": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne6": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne7": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne8": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne9": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4"],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne10": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				},
+				"ne11": {
+					"rotation": [ "-Math.sin(query.head_x_rotation(0)) * 0", "(Math.sin(query.head_y_rotation(0))) * 4", "(Math.sin(query.head_y_rotation(0))) * 4" ],
+					"position": [ 0, "-Math.sin(query.modified_move_speed) * 40", 0 ]
+				}
+			}
+		},
+		"animation.zworm.rotate": {
+			"loop": true,
+			"bones": {
+				"headb": {
+					"rotation": [ 0 , 0, "((query.anim_time/2-0.1) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne1b": {
+					"rotation": [ 0, 0, "-((query.anim_time/2-0.2) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne2b": {
+					"rotation": [ 0, 0, "((query.anim_time/2-0.3) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne3b": {
+					"rotation": [ 0, 0, "-((query.anim_time/2-0.4) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne4b": {
+					"rotation": [ 0, 0, "((query.anim_time/2-0.5) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne5b": {
+					"rotation": [ 0, 0, "((query.anim_time/2-0.6) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne6b": {
+					"rotation": [ 0, 0, "-((query.anim_time/2-0.7) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne7b": {
+					"rotation": [ 0, 0, "((query.anim_time/2-0.6) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne8b": {
+					"rotation": [ 0, 0, "((query.anim_time/2-0.6) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne9b": {
+					"rotation": [ 0, 0, "((query.anim_time/2-0.6) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne10b": {
+					"rotation": [ 0, 0, "((query.anim_time/2-0.6) *360)"],
+					"position": [ 0, 0, 0 ]
+				},
+				"ne11b": {
+					"rotation": [ 0, 0, "((query.anim_time/2-0.6) *360)"],
+					"position": [ 0, 0, 0 ]
+				}
+			}
+		}
+	}
+}

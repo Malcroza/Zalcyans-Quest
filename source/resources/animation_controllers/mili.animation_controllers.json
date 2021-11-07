@@ -1,0 +1,58 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.mili.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"basepose",
+						"look_at_target"
+					],
+					"transitions": [
+						{
+							"walk": "query.ground_speed >= 2"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"walk": {
+					"animations": [
+						"walking"
+					],
+					"transitions": [
+						{
+							"default": "query.ground_speed <= 2"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.mili.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attacking": "query.is_delayed_attacking == 1"
+						}
+					],
+					"blend_transition": 0
+				},
+				"attacking": {
+					"animations": [
+						"attacking"
+					],
+					"transitions": [
+						{
+							"default": "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.1
+				}
+			}
+		}
+	}
+}

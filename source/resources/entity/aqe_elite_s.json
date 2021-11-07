@@ -1,0 +1,54 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:aqe_elite_s",
+			"materials": {
+				"default": "phantom",
+				"elec": "charged_creeper"
+			},
+			"textures": {
+				"default": "textures/entity/aqe_elite",
+				"elec": "textures/entity/elec"
+			},
+			"geometry": {
+				"default": "geometry.aqe_elite",
+				"elec": "geometry.elec"
+			},
+			"animations": {
+				"moving": "animation.aqe_elite_s.move",
+				"aqe_elite_s_general": "animation.aqe_elite_s.general",
+				"attack0": "animation.aqe_elite_s.attack",
+				"attack1": "animation.aqe_elite_s.attack",
+				"move": "controller.animation.aqe_elite_s.move",
+				"general": "controller.animation.aqe_elite_s.general",
+				"attack": "controller.animation.aqe_elite_s.attack",
+				"roaring": "animation.aqe_elite_s.roaring",
+				"head": "controller.animation.aqe_elite_s.head_movement",
+				"look_at_target": "animation.aqe_elite_s.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"general",
+					"attack",
+					"head"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"render_controllers": [
+				"controller.render.aqe_elite", "controller.render.aqe_elite_s.elec"
+			],
+			"spawn_egg": {
+				"base_color": "#DFBC00",
+				"overlay_color": "#FAF3D4"
+			},
+			"sound_effects": {
+				"roar": "mob.aqe.roar"
+			},"enable_attachables": true
+		}
+	}
+}

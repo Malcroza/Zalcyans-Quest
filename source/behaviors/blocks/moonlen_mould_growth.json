@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:moonlen_mould_growth",
+			"is_experimental": false,
+			"register_to_creative_menu": true
+		},
+		"components": {
+			"minecraft:loot": "loot_tables/blocks/moonlen_mould_growth.json",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "moonlen_mould_growth",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:destroy_time": 0.3,
+			"minecraft:friction": 0.7,
+			"minecraft:map_color": "#00C2E2",
+			"minecraft:block_light_absorption": 15,
+			"minecraft:block_light_emission": 1,
+			"minecraft:explosion_resistance": 1
+		},
+		"events": {}
+	}
+}

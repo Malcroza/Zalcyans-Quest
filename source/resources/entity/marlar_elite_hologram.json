@@ -1,0 +1,41 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:marlar_elite_hologram",
+			"materials": {
+				"default": "charged_creeper"
+			},
+			"textures": {
+				"default": "textures/entity/marlar_elite_hologram"
+			},
+			"geometry": {
+				"default": "geometry.marlar_elite_hologram"
+			},
+			"animations": {
+				"marlar_elite_hologram.general": "animation.marlar_elite_hologram.general",
+				"general": "controller.animation.marlar_elite_hologram.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			},
+			"particle_effects": {
+				"beaming": "zalcyan:beaming_particle"
+			}
+			,
+			"sound_effects": {
+				"beaming_jingle": "mob.beaming"
+			},
+			"spawn_egg": {
+				"base_color": "#8a8185",
+				"overlay_color": "#fc0362"
+			},
+			"render_controllers": [
+				"controller.render.marlar_elite_hologram"
+			]
+		}
+	}
+}

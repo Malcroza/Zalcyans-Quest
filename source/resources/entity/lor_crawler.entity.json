@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:lor_crawler",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/lor_crawler"
+      },
+      "geometry": {
+        "default": "geometry.lor_crawler"
+      },
+      "animations": {
+        "default_leg_pose": "animation.lor_crawler.default_leg_pose",
+        "look_at_target": "animation.lor_crawler.look_at_target",
+        "walk": "animation.lor_crawler.walk"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.lor_crawler.move" }
+      ],
+      "render_controllers": [ "controller.render.lor_crawler" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 11
+      }
+    }
+  }
+}

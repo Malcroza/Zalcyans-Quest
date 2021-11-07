@@ -1,0 +1,47 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:gulu_aso1"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.2,
+			"minecraft:friction": 0.6,
+			"minecraft:block_light_emission": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": {
+				"origin": [
+					-7,
+					0,
+					-8
+				],
+				"size": [
+					0,
+					0,
+					0
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-8
+				],
+				"size": [
+					15,
+					16,
+					16
+				]
+			},
+			"minecraft:geometry": "geometry.gulu_aso1",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "gulu_aso1",
+					"render_method": "blend"
+				}
+			}
+		},
+		"events": {}
+	}
+}

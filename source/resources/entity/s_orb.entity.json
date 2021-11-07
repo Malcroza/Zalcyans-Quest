@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:s_orb",
+      "materials": {
+        "default": "orb"
+      },
+	  "particle_effects": {
+    "lazar_trail": "zalcyan:s_orb_trail"
+	},
+      "textures": {
+        "default": "textures/entity/s_orb"
+      },
+      "geometry": {
+        "default": "geometry.s_orb"
+      },
+      "animations": {
+		"moving": "controller.animation.s_orb.particles"
+      },
+      "scripts": {
+        "animate": [
+          "moving"
+        ]
+      },
+      "render_controllers": [ "controller.render.orb" ]
+    }
+  }
+}

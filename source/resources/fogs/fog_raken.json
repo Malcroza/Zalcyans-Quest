@@ -1,0 +1,23 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "zalcyan:fog_raken"
+		},
+		"distance": {
+			"water": {
+				"fog_start": 0,
+				"fog_end": 48,
+				"fog_color": "#ABEAFF",
+				"render_distance_type": "fixed"
+			},
+			"weather": {
+				"fog_start": 0,
+				"fog_end": 1,
+				"fog_color": "#FFD142",
+				"render_distance_type": "render"
+			}
+		}
+	}
+}

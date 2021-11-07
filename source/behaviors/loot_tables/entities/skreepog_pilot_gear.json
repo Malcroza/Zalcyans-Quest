@@ -1,0 +1,75 @@
+{
+	"pools": [{
+			"rolls": 1,
+			"entries": [{
+				"type": "item",
+				"weight": 1,
+				"name": "zalcyan:skreepog_blaster"
+			}]
+		},
+		{
+			"rolls": 1,
+			"conditions": [{
+				"condition": "random_chance",
+				"chance": 0.5
+			}],
+			"entries": [{
+				"type": "item",
+				"name": "zalcyan:skreepog_helmet",
+				"weight": 1,
+				"functions": [{
+					"function": "enchant_random_gear",
+					"chance": 0.25
+				}]
+			}]
+		},
+		{
+			"rolls": 1,
+			"conditions": [{
+				"condition": "random_chance",
+				"chance": 0.5
+			}],
+			"entries": [{
+				"type": "item",
+				"name": "zalcyan:skreepog_chestplate",
+				"weight": 1,
+				"functions": [{
+					"function": "enchant_random_gear",
+					"chance": 0.25
+				}]
+			}]
+		},
+		{
+			"rolls": 1,
+			"conditions": [{
+				"condition": "random_chance",
+				"chance": 0.5
+			}],
+			"entries": [{
+				"type": "item",
+				"name": "zalcyan:skreepog_leggings",
+				"weight": 1,
+				"functions": [{
+					"function": "enchant_random_gear",
+					"chance": 0.25
+				}]
+			}]
+		},
+		{
+			"rolls": 1,
+			"conditions": [{
+				"condition": "random_chance",
+				"chance": 0.5
+			}],
+			"entries": [{
+				"type": "item",
+				"name": "zalcyan:skreepog_boots",
+				"weight": 1,
+				"functions": [{
+					"function": "enchant_random_gear",
+					"chance": 0.25
+				}]
+			}]
+		}
+	]
+}

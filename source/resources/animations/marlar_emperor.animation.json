@@ -1,0 +1,58 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.marlar_emperor.casting": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "-135.0 - this"],
+					"scale": 1
+				},
+				"rightArm": {
+					"rotation": ["math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "135.0 - this"],
+					"scale": 1
+				}
+			}
+		},
+		"animation.marlar_emperor.general": {
+			"loop": true
+		},
+		"animation.marlar_emperor.celebrating": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["(math.cos(query.life_time * 800.0) * 2.865)", 180, -135]
+				},
+				"rightArm": {
+					"rotation": ["(math.cos(query.life_time * 800.0) * 2.865)", 180, 153]
+				}
+			}
+		},
+		"animation.common.look_at_target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				}
+			}
+		},
+		"animation.marlar_emperor.move": {
+			"loop": true,
+			"anim_time_update": "query.modified_distance_moved",
+			"bones": {
+				"leg0": {
+					"rotation": ["(math.cos(query.anim_time * 38.17) * 40.0) - this", "-this", 0]
+				},
+				"leg1": {
+					"rotation": ["(math.cos(query.anim_time * 38.17 + 180) * 40.0) - this", "-this", 0]
+				},
+				"rightArm": {
+					"rotation": ["(math.cos(query.anim_time * 38.17 + 180) * 40.0) - this", "-this", 0]
+				},
+				"leftArm": {
+					"rotation": ["(math.cos(query.anim_time * 38.17) * 20.0) - this", "-this", 0]
+				}
+			}
+		}
+	}
+}

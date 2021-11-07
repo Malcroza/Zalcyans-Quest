@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:zworm",
+			"materials": {
+				"default": "phantom",
+				"invisible": "phantom_invisible"
+			},
+			"textures": {
+				"default": "textures/entity/zworm"
+			},
+			"geometry": {
+				"default": "geometry.zworm"
+			},
+			"scripts": {
+				"initialize": [
+				
+            "variable.seg = query.ground_speed == 0 ? Math.cos(query.anim_time * 150) *  5.0 : Math.sin(-query.yaw_speed) * 100;",
+            "variable.seg1 = query.ground_speed == 0 ? Math.cos(query.anim_time * 100) *  5.0 : Math.sin(-query.yaw_speed) * 100;",
+            "variable.seg2 = query.ground_speed == 0 ? Math.cos(query.anim_time * 80) *  5.0 : Math.sin(-query.yaw_speed) * 100;",
+            "variable.seg3 = query.ground_speed == 0 ? Math.cos(query.anim_time * 60) *  5.0 : Math.sin(-query.yaw_speed) * 100;",
+            "variable.seg4 = query.ground_speed == 0 ? Math.cos(query.anim_time * 50) *  5.0 : Math.sin(-query.yaw_speed) * 100;",
+            "variable.seg5 = query.ground_speed == 0 ? Math.cos(query.anim_time * 20) *  5.0 : Math.sin(-query.yaw_speed) * 100;",
+            "variable.seg6 = query.ground_speed == 0 ? Math.cos(query.anim_time * 10) *  5.0 : Math.sin(-query.yaw_speed) * 100;"
+
+
+				],
+				"animate": [
+					"moving",
+					"rotating"
+				]
+			},
+			"animations": {
+				"moving": "animation.zworm.move",
+				"rotating":"animation.zworm.rotate"
+			},
+			"render_controllers": [ "controller.render.phantom" ],
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 51
+			}
+		}
+	}
+}

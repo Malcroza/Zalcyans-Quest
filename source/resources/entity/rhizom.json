@@ -1,0 +1,46 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:rhizom",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"default": "textures/entity/rhizom"
+			},
+			"geometry": {
+				"default": "geometry.rhizom"
+			},
+			"animations": {
+				"moving": "animation.rhizom.move",
+				"rhizom_general": "animation.rhizom.general",
+				"attack0": "animation.rhizom.attack",
+				"attack1": "animation.rhizom.attack",
+				"move": "controller.animation.rhizom.move",
+				"general": "controller.animation.rhizom.general",
+				"attack": "controller.animation.rhizom.attack",
+				"roaring": "animation.rhizom.roaring",
+				"head": "controller.animation.rhizom.head_movement",
+				"look_at_target": "animation.rhizom.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"general",
+					"attack",
+					"head"
+				]
+			},
+			"render_controllers": [
+				"controller.render.rhizom"
+			],
+			"spawn_egg": {
+				"base_color": "#486116",
+				"overlay_color": "#689c00"
+			},
+			"enable_attachables": true
+		}
+	}
+}

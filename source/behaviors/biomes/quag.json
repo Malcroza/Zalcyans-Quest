@@ -1,0 +1,55 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.13.0",
+	"minecraft:biome": {
+		"description": {
+			"identifier": "quag"
+		},
+		"components": {
+			"minecraft:climate": {
+				"downfall": 0,
+				"snow_accumulation": [
+					0,
+					0.125
+				],
+				"temperature": 2
+			},
+			"minecraft:mesa_surface": {
+				"bryce_pillars": true,
+				"clay_material": "zalcyan:quag_stone",
+				"sea_floor_depth": 7,
+				"sea_floor_material": "minecraft:gravel",
+				"foundation_material": "minecraft:stone",
+				"hard_clay_material": "zalcyan:quag_stone_cobbled",
+				"has_forest": false,
+				"mid_material": "zalcyan:quag_stone",
+				"top_material": "zalcyan:quag",
+				"sea_material": "minecraft:water"
+			},
+			"minecraft:overworld_height": {
+				"noise_type": "default"
+			},
+			"minecraft:overworld_generation_rules": {
+				"generate_for_climates": [
+					[
+						"medium",
+						300
+					],
+					[
+						"warm",
+						100
+					],
+					[
+						"cold",
+						100
+					]
+				]
+			},
+			"animal": {},
+			"monster": {},
+			"mutated": {},
+			"overworld": {},
+			"quag": {}
+		}
+	}
+}

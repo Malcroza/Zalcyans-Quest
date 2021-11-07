@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "zalcyan:mynis_x_feature_west"
+		},
+
+		"structure_name": "zalcyan:mynis_x",
+
+		"facing_direction": "west",
+		"adjustment_radius": 0,
+
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

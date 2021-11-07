@@ -1,0 +1,464 @@
+//bridge-file-version: #111
+{
+	"individual_event_sounds": {
+		"events": {
+			"sound.chime.ring": {
+				"pitch": [
+					0.6,
+					1.3
+				],
+				"sound": "sound.chime.ring",
+				"volume": 0.7
+			},
+			"mob.magwag.summon": {
+				"sound": "mob.magwag.summon",
+				"volume": 0.9,
+				"pitch": [
+					0.7,
+					1.3
+				]
+			},
+			"summon": {
+				"sound": "mob.magwag.summon",
+				"volume": 0.7,
+				"pitch": [
+					0.7,
+					1.3
+				]
+			}
+		}
+	},
+	"entity_sounds": {
+		"entities": {
+			"zalcyan:orb": {
+				"volume": 1,
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"events": {
+					"hurt": {
+						"sound": "mob.orb.zap",
+						"volume": 1,
+						"pitch": [
+							0.9,
+							1.1
+						]
+					},
+					"death": {
+						"sound": "mob.orb.zap",
+						"volume": 1,
+						"pitch": [
+							0.9,
+							1.1
+						]
+					}
+				}
+			},
+			"zalcyan:aqe": {
+				"volume": 1,
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"events": {
+					"ambient": {
+						"sound": "mob.aqe.say"
+					},
+					"hurt": {
+						"sound": "mob.aqe.hurt"
+					},
+					"death": {
+						"sound": "mob.aqe.death"
+					},
+					"step": {
+						"sound": "mob.aqe.step"
+					}
+				}
+			},
+			"zalcyan:aqe_elite": {
+				"volume": 3,
+				"events": {
+					"ambient": {
+						"sound": "mob.aqe.say",
+						"pitch": [
+							0.6,
+							0.8
+						]
+					},
+					"hurt": {
+						"sound": "mob.aqe.hurt",
+						"pitch": [
+							0.6,
+							0.8
+						]
+					},
+					"step": {
+						"sound": "mob.aqe.step",
+						"pitch": [
+							0.6,
+							1
+						],
+						"volume": [
+							1,
+							1
+						]
+					}
+				}
+			},
+			"zalcyan:lor": {
+				"volume": 0.2,
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"events": {
+					"ambient": {
+						"sound": "mob.aqe.say"
+					},
+					"hurt": {
+						"sound": "mob.aqe.hurt"
+					},
+					"step": {
+						"sound": "mob.aqe.step"
+					}
+				}
+			},
+			"zalcyan:lor_crawler": {
+				"volume": 0.9,
+				"pitch": [
+					0.7,
+					1.2
+				],
+				"events": {
+					"hurt": {
+						"sound": "mob.lor_crawler.hurt"
+					},
+					"ambient": {
+						"sound": "mob.lor_crawler.say"
+					},
+					"death": {
+						"sound": "mob.lor_crawler.death"
+					}
+				}
+			},
+			"zalcyan:aqe_elite_s": {
+				"volume": 3,
+				"events": {
+					"ambient": {
+						"sound": "mob.aqe.say",
+						"pitch": [
+							0.6,
+							0.8
+						]
+					},
+					"hurt": {
+						"sound": "mob.aqe.hurt",
+						"pitch": [
+							0.6,
+							0.8
+						]
+					},
+					"step": {
+						"sound": "mob.aqe.step",
+						"pitch": [
+							0.6,
+							1
+						],
+						"volume": [
+							1,
+							1
+						]
+					}
+				}
+			},
+			"zalcyan:mili": {
+				"volume": 0.8,
+				"pitch": [
+					1.1,
+					1.4
+				],
+				"events": {
+					"ambient": {
+						"sound": "mob.mili.say"
+					},
+					"hurt": {
+						"sound": "mob.mili.hurt"
+					}
+				}
+			},
+			"zalcyan:mili_a": {
+				"volume": 0.8,
+				"pitch": [
+					1.1,
+					1.4
+				],
+				"events": {
+					"ambient": {
+						"sound": "mob.mili.say"
+					},
+					"hurt": {
+						"sound": "mob.mili.hurt"
+					}
+				}
+			},
+			"zalcyan:mili_burnt": {
+				"volume": 0.8,
+				"pitch": [
+					0.2,
+					0.3
+				],
+				"events": {
+					"ambient": {
+						"sound": "mob.mili.say"
+					},
+					"hurt": {
+						"sound": "mob.mili.hurt"
+					}
+				}
+			},
+			"zalcyan:arglonar": {
+				"events": {
+					"ambient": {
+						"sound": "mob.arglonar.say"
+					},
+					"hurt": {
+						"sound": "mob.arglonar.hurt"
+					},
+					"step": {
+						"sound": "mob.irongolem.walk",
+						"pitch": 0.4,
+						"volume": 3
+					}
+				},
+				"volume": 2,
+				"pitch": [
+					0.7,
+					1
+				]
+			},
+			"zalcyan:r_orb": {
+				"volume": 1,
+				"pitch": [
+					0.7,
+					1.2
+				],
+				"events": {
+					"ambient": {
+						"sound": "sound.lazar.shoot",
+						"volume": 0.6,
+						"pitch": [
+							0.7,
+							1.2
+						]
+					},
+					"attack": {
+						"sound": "sound.lazar.hit",
+						"volume": 0.7
+					},
+					"death": {
+						"sound": "sound.lazar.hit",
+						"volume": 0.8
+					}
+				}
+			},
+			"zalcyan:marlar": {
+				"volume": 3,
+				"pitch": [
+					0.8,
+					1.1
+				],
+				"events": {
+					"shoot": {
+						"sound": "sound.lazar.shoot"
+					}
+				}
+			},
+			"zalcyan:magwag": {
+				"volume": 1,
+				"pitch": [
+					0.6,
+					0.8
+				],
+				"events": {
+					"step": {
+						"sound": "mob.cow.step",
+						"volume": 5,
+						"pitch": 0.5
+					},
+					"mob.magwag.summon": {
+						"sound": "mob.magwag.summon",
+						"volume": 2,
+						"pitch": [
+							0.8,
+							1.2
+						]
+					},
+					"hurt": {
+						"sound": "hit.basalt",
+						"pitch": [
+							0.6,
+							0.8
+						],
+						"volume": 1.9
+					}
+				}
+			},
+			"zalcyan:magwag_spike": {
+				"volume": 1,
+				"pitch": [
+					0.7,
+					1.3
+				]
+			},
+			"zalcyan:reteleport": {
+				"events": {
+					"death": {
+						"sound": "mob.beaming",
+						"volume": 0.8
+					}
+				},
+				"volume": 1,
+				"pitch": [
+					0.95,
+					1
+				]
+			},
+			"zalcyan:light_bug": {
+				"volume": 1,
+				"pitch": [
+					0.7,
+					1.2
+				]
+			},
+			"zalcyan:light_bug_flying": {
+				"volume": 1,
+				"pitch": [
+					0.9,
+					1.3
+				],
+				"events": {
+					"ambient": {
+						"sound": "mob.light_bug.clicking",
+						"volume": [
+							0.7,
+							0.8
+						],
+						"pitch": [
+							0.9,
+							1.3
+						]
+					}
+				}
+			},
+			"zalcyan:zalmessage": {
+				"volume": 0,
+				"events": {
+					"death": {
+						"volume": 0
+					}
+				}
+			},
+			"zalcyan:borgan": {
+				"events": {
+					"ambient": {
+						"sound": "mob.borgan.say",
+						"volume": 3,
+						"pitch": [
+							0.7,
+							1.1
+						]
+					},
+					"hurt": {
+						"sound": "mob.borgan.hit",
+						"volume": 3,
+						"pitch": [
+							0.7,
+							1.1
+						]
+					},
+					"step": {
+						"sound": "mob.spider.step",
+						"volume": 3,
+						"pitch": [
+							0.5,
+							0.7
+						]
+					},
+					"death": {
+						"sound": "mob.borgan.death",
+						"volume": 1,
+						"pitch": [
+							0.9,
+							1.1
+						]
+					},
+					"shoot": {
+						"sound": "mob.borgan.spit",
+						"volume": 3,
+						"pitch": [
+							0.7,
+							1.1
+						]
+					}
+				}
+			},
+			"zalcyan:borgan_bullet": {
+				"events": {
+					"attack": {
+						"sound": "mob.borganweb",
+						"volume": 1,
+						"pitch": [
+							0.6,
+							1.1
+						]
+					},
+					"shoot": {
+						"sound": "mob.borganweb",
+						"volume": 1,
+						"pitch": 0.7
+					}
+				}
+			},
+			"zalcyan:skreepog_pilot": {
+				"volume": 1,
+				"pitch": [
+					0.7,
+					1.3
+				],
+				"events": {
+					"shoot": {
+						"sound": "sound.skreepog.lazer"
+					},
+					"ambient": {
+						"sound": "mob.skreepog.say"
+					},
+					"hurt": {
+						"sound": "mob.skreepog.hit"
+					},
+					"death": {
+						"sound": "mob.skreepog.say"
+					}
+				}
+			},
+			"zalcyan:skreepog": {
+				"volume": 1,
+				"pitch": [
+					0.7,
+					1.3
+				],
+				"events": {
+					"ambient": {
+						"sound": "mob.skreepog.say"
+					},
+					"hurt": {
+						"sound": "mob.skreepog.hit"
+					},
+					"death": {
+						"sound": "mob.skreepog.say"
+					}
+				}
+			}
+		}
+	}
+}

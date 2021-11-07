@@ -1,0 +1,34 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.220",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:raken_leaves",
+			"is_experimental": false,
+			"register_to_creative_menu": true
+		},
+		"components": {
+			"minecraft:loot": "loot_tables/blocks/raken_leaves.json",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "raken_leaves",
+					"render_method": "blend",
+					"face_dimming": true,
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:destroy_time": 0.3,
+			"minecraft:friction": 0.7,
+			"minecraft:map_color": "#044E07",
+			"minecraft:block_light_absorption": 5,
+			"minecraft:block_light_emission": 0,
+			"minecraft:explosion_resistance": 1,
+			"minecraft:unit_cube": {},
+			"minecraft:flammable": {
+				"burn_odds": 30,
+				"flame_odds": 80
+			}
+		},
+		"events": {}
+	}
+}

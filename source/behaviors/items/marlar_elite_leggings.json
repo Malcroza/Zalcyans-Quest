@@ -1,0 +1,46 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:marlar_elite_leggings",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.leggings"
+			},
+			"minecraft:icon": {
+				"texture": "marlar_elite_leggings",
+				"frame": 0
+			},
+			"minecraft:display_name": {
+				"value": "§4Astral Leggings"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 18,
+				"slot": "armor_legs"
+			},
+			"minecraft:durability": {
+				"max_durability": 340,
+				"damage_chance": {
+					"min": 60,
+					"max": 100
+				},
+				"repair_items": [
+					"minecraft:diamond",
+					"zalcyan:marlar_elite_leggings"
+				]
+			},
+			"minecraft:damage": 2,
+			"minecraft:armor": {
+				"protection": 4
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			}
+		},
+		"events": {}
+	}
+}

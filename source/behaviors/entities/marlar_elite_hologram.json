@@ -1,0 +1,72 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:marlar_elite_hologram",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"transform_count": {
+				"minecraft:timer": {
+					"looping": false,
+					"randomInterval": false,
+					"time": 2.55,
+					"time_down_event": {
+						"event": "transform"
+					}
+				}
+			},
+			"transform": {
+				"minecraft:transformation": {
+					"into": "zalcyan:marlar_elite",
+					"delay": {
+						"value": 0
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:health": {
+				"value": {
+					"range_min": 10,
+					"range_max": 10
+				}
+			},
+			"minecraft:damage_sensor": [
+				{
+					"deals_damage": false
+				}
+			],
+			"minecraft:physics": {
+				"has_collusion": false,
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"transform_count"
+					]
+				}
+			},
+			"transform": {
+				"add": {
+					"component_groups": [
+						"transform"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.varth.drip": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "dripping": "query.is_powered"
+            }
+          ]
+        },
+        "dripping": {
+          "particle_effects": [
+            {
+              "effect": "nectar_dripping"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_powered"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.varth.sting": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [ "bee_sting" ]
+        }
+      }
+    },
+    "controller.animation.varth.root": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "flying",
+			"blink",
+			"look"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:borgan",
+			"materials": {
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/borgan"
+			},
+			"geometry": {
+				"default": "geometry.borgan"
+			},
+			"animations": {
+				"default_leg_pose": "animation.borgan.default_leg_pose",
+				"look_at_target": "animation.borgan.look_at_target",
+				"walk": "animation.borgan.walk"
+			},
+			"animation_controllers": [
+				{
+					"move": "controller.animation.borgan.move"
+				}
+			],
+			"render_controllers": [
+				"controller.render.borgan"
+			],
+			"spawn_egg": {
+				"base_color": "#EB79F0",
+				"overlay_color": "#EFC5F3"
+			}
+		}
+	}
+}

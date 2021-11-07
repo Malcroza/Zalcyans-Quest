@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.skreepog": {
+	  "arrays": {
+	    "textures": {
+		  "Array.skins": [
+		    "Texture.skreepog0",
+		    "Texture.skreepog1",
+		    "Texture.skreepog2",
+		    "Texture.skreepog3"
+		  ]
+		}
+	  },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.skins[query.variant]" ]
+    }
+  }
+}

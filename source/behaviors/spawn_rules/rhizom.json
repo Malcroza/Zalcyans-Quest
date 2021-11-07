@@ -1,0 +1,33 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "zalcyan:rhizom",
+			"population_control": "monster"
+		},
+		"conditions": [
+			{
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 15,
+					"adjust_for_weather": true
+				},
+				"minecraft:weight": {
+					"default": 40
+				},
+				"minecraft:herd": {
+					"min_size": 3,
+					"max_size": 5
+				},
+				"minecraft:biome_filter": {
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "raken"
+				},
+				"minecraft:spawns_underwater": {},
+				"minecraft:spawns_underground": {}
+			}
+		]
+	}
+}

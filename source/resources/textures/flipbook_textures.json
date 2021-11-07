@@ -1,0 +1,7 @@
+[
+  { 
+    "flipbook_texture": "textures/blocks/beam_block",
+    "atlas_tile": "beam_block",
+    "ticks_per_frame": 8
+  }
+]

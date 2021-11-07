@@ -1,0 +1,49 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:mynis_trunkmushroom_feature_scatter_rule_west",
+			"places_feature": "zalcyan:mynis_trunkmushroom_feature_scatter_west"
+		},
+		"conditions": {
+			"placement_pass": "final_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "mynis"
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 800,
+			"coordinate_eval_order": "zyx",
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					18
+				]
+			},
+			"y":  {
+				"distribution": "uniform",
+				"extent": [
+					50,
+					220
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					18
+				]
+			}
+		}
+	}
+}

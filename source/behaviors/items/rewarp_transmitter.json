@@ -1,0 +1,83 @@
+//bridge-file-version: #51
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:rewarp_transmitter",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.navigation"
+			},
+			"minecraft:icon": {
+				"texture": "rewarp_transmitter"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "warp",
+					"target": "self"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "warp",
+				"duration": 10
+			}
+		},
+		"events": {
+			"warp": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"teleport @e [family=!reteleport, c=1] @r [type=zalcyan:reteleport, rm=1]"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"effect @a blindness 3",
+								"particle zalcyan:beaming_particle ~ ~ ~",
+								"effect @a slowness 3",
+								"effect @a nausea 2"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"effect @a invisibility 2"
+							]
+						}
+					},
+					{
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"kill @e [type=zalcyan:reteleport,r=1]"
+									]
+								}
+							}
+						]
+					},
+					{
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"give @s zalcyan:warp_transmitter"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

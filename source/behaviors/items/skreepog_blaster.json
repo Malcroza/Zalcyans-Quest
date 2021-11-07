@@ -1,0 +1,74 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:skreepog_blaster"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 3600,
+			"minecraft:frame_count": 3,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "skreepog_blaster"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "shoot",
+					"target": "self"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 25
+			},
+			"minecraft:use_animation": "bow",
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"zalcyan:lor_gem"
+						],
+						"repair_amount": 10
+					},
+					{
+						"items": [
+							"zalcyan:skreepog_blaster"
+						],
+						"repair_amount": "query.remaining_durability"
+					},
+					{
+						"items": [
+							"zalcyan:lor_gem_broken"
+						],
+						"repair_amount": 2
+					}
+				]
+			}
+		},
+		"events": {
+			"shoot": {
+				"sequence": [
+					{
+						"shoot": {
+							"projectile": "zalcyan:s_orb",
+							"launch_power": 1.7
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"playsound sound.skreepog.lazer @s ~ ~ ~ 0.6"
+							]
+						}
+					},
+					{
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						}
+					}
+				]
+			}
+		}
+	}
+}

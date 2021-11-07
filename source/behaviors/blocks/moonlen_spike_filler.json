@@ -1,0 +1,46 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:moonlen_spike_filler",
+			"is_experimental": false,
+			"register_to_creative_menu": true
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:friction": 0.6,
+			"minecraft:map_color": "#253121",
+			"minecraft:block_light_absorption": 15,
+			"minecraft:block_light_emission": 0,
+			"minecraft:explosion_resistance": 0.5,
+			"minecraft:on_placed": {
+				"event": "rewrite",
+				"target": "self"
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"zalcyan:moonlen_spike_body",
+							"zalcyan:moonlen_spike1",
+							"zalcyan:moonlen_spike_filler"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"rewrite": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ zalcyan:moonlen_spike_body"
+					]
+				}
+			}
+		}
+	}
+}

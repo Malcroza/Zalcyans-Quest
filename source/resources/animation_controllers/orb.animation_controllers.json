@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.orb.particles": {
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "1_explosion",
+							"locator": "part_emitter"
+						},
+						{
+							"effect": "1_explosion",
+							"locator": "part_emitter"
+						}
+					]
+				}
+			}
+		}
+	}
+}

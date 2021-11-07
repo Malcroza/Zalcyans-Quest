@@ -1,0 +1,15 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "zalcyan:marlar_ship_feature_west"
+		},
+		"structure_name": "zalcyan:marlar_ship",
+		"facing_direction": "west",
+		"adjustment_radius": 0,
+		"constraints": {
+			"unburied": {}
+		}
+	}
+}

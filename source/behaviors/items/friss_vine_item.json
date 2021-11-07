@@ -1,0 +1,32 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:friss_vine_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:block_placer": {
+				"block": "zalcyan:friss_vine",
+				"use_on": [
+					"zalcyan:friss_stem",
+					"zalcyan:friss_stem_stripped",
+					"zalcyan:friss_cap",
+					"zalcyan:friss_vine",
+					"zalcyan:friss_vine_fruited",
+					"zalcyan:friss_roots"
+				]
+			},
+			"minecraft:icon": {
+				"texture": "friss_vine_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.nature"
+			},
+			"minecraft:max_stack_size": 64,
+			"minecraft:stacked_by_data": true
+		},
+		"events": {}
+	}
+}

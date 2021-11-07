@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:glistening_mite",
+      "materials": { "default": "slime_outer" },
+      "textures": {
+        "default": "textures/entity/glistening_mite"
+      },
+      "geometry": {
+        "default": "geometry.glistening_mite"
+      },
+      "animations": {
+        "move": "animation.glistening_mite.move"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.glistening_mite.move" }
+      ],
+      "render_controllers": [ "controller.render.glistening_mite" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 25
+      }
+    }
+  }
+}

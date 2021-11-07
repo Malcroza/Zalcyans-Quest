@@ -1,0 +1,125 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:mynis_trunkmushroom",
+			"properties": {
+				"zalcyan:rotate": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:friction": 0.6,
+			"minecraft:block_light_emission": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": {
+				"origin": [
+					-5.65,
+					0,
+					-5.65
+				],
+				"size": [
+					11.3,
+					16,
+					11.3
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "mynis_trunkmushroom",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:geometry": "geometry.mynis_trunkmushroom",
+			"minecraft:map_color": "#EE61F3",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"zalcyan:mynis_log",
+							"zalcyan:mynis_log_stripped"
+						],
+						"allowed_faces": [
+							"north",
+							"south",
+							"east",
+							"west"
+						]
+					}
+				]
+			},
+			"minecraft:on_placed": {
+				"event": "zalcyan:ground",
+				"target": "self"
+			},
+			"minecraft:on_player_placing": {
+				"event": "zalcyan:ground",
+				"target": "self"
+			},
+			"minecraft:loot": "loot_tables/items/mynis_trunkmushroom_item.json"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('zalcyan:rotate') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('zalcyan:rotate') ==3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('zalcyan:rotate') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('zalcyan:rotate') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			}
+		],
+		"events": {
+			"zalcyan:ground": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"zalcyan:rotate": "query.block_face"
+						}
+					}
+				]
+			}
+		}
+	}
+}

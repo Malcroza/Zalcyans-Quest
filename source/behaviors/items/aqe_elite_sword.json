@@ -1,0 +1,57 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:aqe_elite_sword"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 3600,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_damage": 32
+			},
+			"minecraft:mining_speed": 1.5,
+			"minecraft:damage": 4,
+			"minecraft:enchantable": {
+				"value": 22,
+				"slot": "sword"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 15
+					},
+					{
+						"block": "minecraft:bamboo",
+						"speed": 10
+					}
+				]
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "wam",
+					"target": "self"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "aqe_elite_sword"
+			},
+			"minecraft:foil": true
+		},
+		"events": {
+			"wam": {
+				"add_mob_effect": {
+					"target": "holder",
+					"effect": "regeneration",
+					"duration": 1,
+					"amplifier": 1
+				}
+			}
+		}
+	}
+}

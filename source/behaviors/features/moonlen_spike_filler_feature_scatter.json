@@ -1,0 +1,26 @@
+{
+    "format_version": "1.13.0",
+    
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "zalcyan:moonlen_spike_filler_feature_scatter"
+        },
+        
+        "places_feature": "zalcyan:moonlen_spike_filler_feature",
+        
+        "iterations": 3468,
+        
+        "x": {
+            "distribution": "fixed_grid",
+            "extent": [0, 16]
+        },
+        "z": {
+            "distribution": "fixed_grid",
+            "extent": [0, 16]
+        },
+        "y": {
+            "distribution": "fixed_grid",
+            "extent": [26, 37]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "zalcyan:moonlen_temple_feature_south"
+		},
+
+		"structure_name": "zalcyan:moonlen_temple",
+
+		"facing_direction": "south",
+		"adjustment_radius": 0,
+
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

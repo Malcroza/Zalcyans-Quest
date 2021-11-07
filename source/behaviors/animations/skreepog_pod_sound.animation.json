@@ -1,0 +1,14 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.skreepog_pod.sound": {
+			"loop": true,
+			"animation_length": 1.0,
+			"timeline": {
+				"0.5": [
+					"/playsound sound.skreepog.engine @p ~ ~ ~ 0.7 0.8"
+				]
+			}
+		}
+	}
+}

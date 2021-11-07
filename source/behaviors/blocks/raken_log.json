@@ -1,0 +1,123 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:raken_log",
+			"properties": {
+				"custom:texture": [
+					0,
+					1
+				],
+				"custom:facing_direction": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('custom:facing_direction') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('custom:facing_direction') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('custom:facing_direction') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						90
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('custom:texture') == 1",
+				"components": {
+					"minecraft:loot": "loot_tables/blocks/raken_log_stripped.json",
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "raken_log_stripped_top",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "raken_log_stripped_top",
+							"render_method": "opaque"
+						},
+						"side": {
+							"texture": "raken_log_stripped_side",
+							"render_method": "opaque"
+						},
+						"north": "side",
+						"south": "side",
+						"west": "side",
+						"east": "side"
+					}
+				}
+			}
+		],
+		"components": {
+			"minecraft:flammable": {
+				"burn_odds": 30,
+				"flame_odds": 35
+			},
+			"minecraft:map_color": "#813F09",
+			"minecraft:unit_cube": {},
+			"minecraft:destroy_time": 1,
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "raken_log_top",
+					"render_method": "opaque"
+				},
+				"down": {
+					"texture": "raken_log_top",
+					"render_method": "opaque"
+				},
+				"side": {
+					"texture": "raken_log",
+					"render_method": "opaque"
+				},
+				"north": "side",
+				"south": "side",
+				"west": "side",
+				"east": "side"
+			},
+			"minecraft:loot": "loot_tables/blocks/raken_log.json",
+			"minecraft:on_interact": {
+				"condition": "q.get_equipped_item_name=='wooden_axe' || q.get_equipped_item_name=='stone_axe' || q.get_equipped_item_name=='golden_axe' || q.get_equipped_item_name=='iron_axe' || q.get_equipped_item_name=='diamond_axe' || q.get_equipped_item_name=='netherite_axe'",
+				"event": "texture_stripped"
+			},
+			"minecraft:on_player_placing": {
+				"event": "orientation"
+			}
+		},
+		"events": {
+			"orientation": {
+				"set_block_property": {
+					"custom:facing_direction": "math.floor(query.cardinal_block_face_placed_on / 2.0)"
+				}
+			},
+			"texture_stripped": {
+				"set_block_property": {
+					"custom:texture": 1
+				}
+			}
+		}
+	}
+}

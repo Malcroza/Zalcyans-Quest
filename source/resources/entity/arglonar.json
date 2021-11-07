@@ -1,0 +1,54 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:arglonar",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"default": "textures/entity/arglonar"
+			},
+			"geometry": {
+				"default": "geometry.arglonar"
+			},
+			"animations": {
+				"moving": "animation.arglonar.move",
+				"arglonar_general": "animation.arglonar.general",
+				"attack0": "animation.arglonar.attack",
+				"attack1": "animation.arglonar.attack1",
+				"move": "controller.animation.arglonar.move",
+				"general": "controller.animation.arglonar.general",
+				"attack": "controller.animation.arglonar.attack",
+				"roaring": "animation.arglonar.roaring",
+				"head": "controller.animation.arglonar.head_movement",
+				"look_at_target": "animation.arglonar.look_at_target",
+				"charge": "animation.arglonar.charge",
+				"charging": "controller.animation.arglonar.charging"
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"general",
+					"attack",
+					"head",
+					"charging"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"render_controllers": [
+				"controller.render.arglonar"
+			],
+			"spawn_egg": {
+				"base_color": "#324852",
+				"overlay_color": "#75d2e0"
+			},
+			"sound_effects": {
+				"yell": "mob.arglonar.yell"
+			}
+		}
+	}
+}

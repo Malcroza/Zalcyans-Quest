@@ -1,0 +1,871 @@
+//bridge-file-version: #79
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"mushroom1": {
+			"textures": "textures/blocks/mushroom1"
+		},
+		"mushroom2": {
+			"textures": "textures/blocks/mushroom2"
+		},
+		"mushroom3": {
+			"textures": "textures/blocks/mushroom3"
+		},
+		"mushroom3_2": {
+			"textures": "textures/blocks/mushroom3_2"
+		},
+		"mushroom3_3": {
+			"textures": "textures/blocks/mushroom3_3"
+		},
+		"lorzol": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/lorzol",
+						"weight": 20
+					},
+					{
+						"path": "textures/blocks/lorzol1",
+						"weight": 70
+					},
+					{
+						"path": "textures/blocks/lorzol2",
+						"weight": 10
+					}
+				]
+			}
+		},
+		"lorzol_side": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/lorzol_side",
+						"weight": 20
+					},
+					{
+						"path": "textures/blocks/lorzol_side1",
+						"weight": 70
+					},
+					{
+						"path": "textures/blocks/lorzol_side2",
+						"weight": 10
+					}
+				]
+			}
+		},
+		"argen_stone": {
+			"textures": "textures/blocks/argen_stone"
+		},
+		"lorzol_dirt": {
+			"textures": "textures/blocks/lorzol_dirt"
+		},
+		"lor_mineral": {
+			"textures": "textures/blocks/lor_mineral"
+		},
+		"lor_leaves": {
+			"textures": "textures/blocks/lor_leaves"
+		},
+		"lor_mineral_ore": {
+			"textures": "textures/blocks/lor_mineral_ore"
+		},
+		"lor_mineral_block": {
+			"textures": "textures/blocks/lor_mineral_block"
+		},
+		"lor_rock": {
+			"textures": "textures/blocks/lor_rock"
+		},
+		"lor_geode": {
+			"textures": "textures/blocks/lor_geode"
+		},
+		"lor_smoker": {
+			"textures": "textures/blocks/lor_smoker"
+		},
+		"lor_log_carved": {
+			"textures": "textures/blocks/lor_log_carved"
+		},
+		"lor_log_chipped": {
+			"textures": "textures/blocks/lor_log_chipped"
+		},
+		"lor_log_semi_carved": {
+			"textures": "textures/blocks/lor_log_semi_carved"
+		},
+		"lor_log_side": {
+			"textures": "textures/blocks/lor_log_side"
+		},
+		"lor_log_top": {
+			"textures": "textures/blocks/lor_log_top"
+		},
+		"lor_log_planks": {
+			"textures": "textures/blocks/lor_log_planks"
+		},
+		"lor_log_stripped_side": {
+			"textures": "textures/blocks/lor_log_stripped_side"
+		},
+		"lor_log_stripped_top": {
+			"textures": "textures/blocks/lor_log_stripped_top"
+		},
+		"aqe_elite_stone": {
+			"textures": "textures/blocks/aqe_elite_stone"
+		},
+		"gulu_shelf": {
+			"textures": "textures/blocks/gulu_shelf"
+		},
+		"gulu_grass": {
+			"textures": "textures/blocks/gulu_grass"
+		},
+		"gulu_aso1": {
+			"textures": "textures/blocks/gulu_aso"
+		},
+		"gulu_aso2": {
+			"textures": "textures/blocks/gulu_aso"
+		},
+		"gulu_cap": {
+			"textures": "textures/blocks/gulu_cap"
+		},
+		"gulu_cap_in": {
+			"textures": "textures/blocks/gulu_cap_in"
+		},
+		"gulu_stem_bottem": {
+			"textures": "textures/blocks/gulu_stem_bottem"
+		},
+		"gulu_stem": {
+			"textures": "textures/blocks/gulu_stem"
+		},
+		"gulu_ground_top1": {
+			"textures": "textures/blocks/gulu_ground_top"
+		},
+		"gulu_ground_side": {
+			"textures": "textures/blocks/gulu_ground_side"
+		},
+		"gulu_stone": {
+			"textures": "textures/blocks/gulu_stone"
+		},
+		"gulu_stone_smooth": {
+			"textures": "textures/blocks/gulu_stone_smooth"
+		},
+		"gulu_stone_rippled": {
+			"textures": "textures/blocks/gulu_stone_rippled"
+		},
+		"gulu_stone_glyphs_side": {
+			"textures": "textures/blocks/gulu_stone_glyphs_side"
+		},
+		"gulu_stone_symbol": {
+			"textures": "textures/blocks/gulu_stone_symbol"
+		},
+		"gulu_dirt": {
+			"textures": "textures/blocks/gulu_dirt"
+		},
+		"gulu_ground_top": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/gulu_ground_top0",
+						"weight": 73
+					},
+					{
+						"path": "textures/blocks/gulu_ground_top1",
+						"weight": 7
+					},
+					{
+						"path": "textures/blocks/gulu_ground_top2",
+						"weight": 10
+					},
+					{
+						"path": "textures/blocks/gulu_ground_top3",
+						"weight": 5
+					},
+					{
+						"path": "textures/blocks/gulu_ground_top4",
+						"weight": 5
+					}
+				]
+			}
+		},
+		"moonlen_mould_top": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/moonlen_mould_top1",
+						"weight": 70
+					},
+					{
+						"path": "textures/blocks/moonlen_mould_top2",
+						"weight": 20
+					},
+					{
+						"path": "textures/blocks/moonlen_mould_top3",
+						"weight": 10
+					}
+				]
+			}
+		},
+		"moonlen_mould_side": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/moonlen_mould_side1",
+						"weight": 50
+					},
+					{
+						"path": "textures/blocks/moonlen_mould_side2",
+						"weight": 30
+					},
+					{
+						"path": "textures/blocks/moonlen_mould_side3",
+						"weight": 20
+					}
+				]
+			}
+		},
+		"moonlen_stone": {
+			"textures": "textures/blocks/moonlen_stone"
+		},
+		"moonlen_stone_top": {
+			"textures": "textures/blocks/moonlen_stone_top"
+		},
+		"moonlen_crys_top": {
+			"textures": [
+				"textures/blocks/moonlen_crys_top"
+			]
+		},
+		"moonlen_crys_side": {
+			"textures": [
+				"textures/blocks/moonlen_crys_side"
+			]
+		},
+		"moonlen_mould_growth": {
+			"textures": [
+				"textures/blocks/moonlen_mould_growth"
+			]
+		},
+		"moonlen_crys_base_top": {
+			"textures": [
+				"textures/blocks/moonlen_crys_base_top"
+			]
+		},
+		"moonlen_crys_base_side": {
+			"textures": [
+				"textures/blocks/moonlen_crys_base_side"
+			]
+		},
+		"moonlen_vine": {
+			"textures": [
+				"textures/blocks/moonlen_vine"
+			]
+		},
+		"krackle_wood_side": {
+			"textures": [
+				"textures/blocks/krackle_wood"
+			]
+		},
+		"moonlen_pillar_mouldy": {
+			"textures": [
+				"textures/blocks/moonlen_pillar_mouldy"
+			]
+		},
+		"moonlen_brick": {
+			"textures": [
+				"textures/blocks/moonlen_brick"
+			]
+		},
+		"moonlen_brick_carved": {
+			"textures": [
+				"textures/blocks/moonlen_brick_carved"
+			]
+		},
+		"moonlen_brick_mouldy": {
+			"textures": [
+				"textures/blocks/moonlen_brick_mouldy"
+			]
+		},
+		"moonlen_motif_side": {
+			"textures": [
+				"textures/blocks/Moonlen_motif_side"
+			]
+		},
+		"moonlen_motif_top": {
+			"textures": [
+				"textures/blocks/moonlen_motif_top"
+			]
+		},
+		"moonlen_pillar": {
+			"textures": [
+				"textures/blocks/moonlen_pillar"
+			]
+		},
+		"moonlen_pillar_top": {
+			"textures": [
+				"textures/blocks/moonlen_pillar_top"
+			]
+		},
+		"friss": {
+			"textures": [
+				"textures/blocks/friss"
+			]
+		},
+		"friss_cap": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/friss_cap",
+						"weight": 85
+					},
+					{
+						"path": "textures/blocks/friss_cap1",
+						"weight": 15
+					}
+				]
+			}
+		},
+		"friss_stem": {
+			"textures": [
+				"textures/blocks/friss_stem"
+			]
+		},
+		"friss_stem_top": {
+			"textures": [
+				"textures/blocks/friss_stem_top"
+			]
+		},
+		"friss_vine": {
+			"textures": [
+				"textures/blocks/friss_vine"
+			]
+		},
+		"friss_roots": {
+			"textures": [
+				"textures/blocks/friss_roots"
+			]
+		},
+		"friss_cap_cover": {
+			"textures": [
+				"textures/blocks/friss_cap_cover"
+			]
+		},
+		"pod_stone": {
+			"textures": [
+				"textures/blocks/pod_stone"
+			]
+		},
+		"friss_stem_stripped_top": {
+			"textures": [
+				"textures/blocks/friss_stem_top_stripped"
+			]
+		},
+		"friss_stem_stripped_side": {
+			"textures": [
+				"textures/blocks/friss_stem_side_stripped"
+			]
+		},
+		"friss_planks": {
+			"textures": [
+				"textures/blocks/friss_planks"
+			]
+		},
+		"fruited_friss_vine": {
+			"textures": [
+				"textures/blocks/friss_vine_fruited"
+			]
+		},
+		"raken_stone": {
+			"textures": [
+				"textures/blocks/raken_stone"
+			]
+		},
+		"raken_jell": {
+			"textures": [
+				"textures/blocks/raken_jell"
+			]
+		},
+		"raken_cap_cover": {
+			"textures": [
+				"textures/blocks/raken_cap_cover"
+			]
+		},
+		"raken_dirt": {
+			"textures": [
+				"textures/blocks/raken_dirt"
+			]
+		},
+		"raken_ground_side": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/raken_ground_side1",
+						"weight": 50
+					},
+					{
+						"path": "textures/blocks/raken_ground_side2",
+						"weight": 50
+					}
+				]
+			}
+		},
+		"raken_ground_top": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/raken_ground_top",
+						"weight": 25
+					},
+					{
+						"path": "textures/blocks/raken_ground_top1",
+						"weight": 25
+					},
+					{
+						"path": "textures/blocks/raken_ground_top2",
+						"weight": 25
+					},
+					{
+						"path": "textures/blocks/raken_ground_top3",
+						"weight": 25
+					}
+				]
+			}
+		},
+		"raken_grass": {
+			"textures": [
+				"textures/blocks/raken_grass"
+			]
+		},
+		"zmud": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/zmud",
+						"weight": 90
+					},
+					{
+						"path": "textures/blocks/zmud1",
+						"weight": 10
+					}
+				]
+			}
+		},
+		"raken_log": {
+			"textures": [
+				"textures/blocks/raken_log"
+			]
+		},
+		"raken_log_top": {
+			"textures": [
+				"textures/blocks/raken_log_top"
+			]
+		},
+		"raken_log_stripped_side": {
+			"textures": [
+				"textures/blocks/raken_log_side_stripped"
+			]
+		},
+		"raken_log_stripped_top": {
+			"textures": [
+				"textures/blocks/raken_log_top_stripped"
+			]
+		},
+		"raken_planks": {
+			"textures": [
+				"textures/blocks/raken_planks"
+			]
+		},
+		"raken_leaves": {
+			"textures": [
+				"textures/blocks/raken_leaves"
+			]
+		},
+		"miren_grass": {
+			"textures": [
+				"textures/blocks/miren_grass"
+			]
+		},
+		"miren_grass_tall": {
+			"textures": [
+				"textures/blocks/miren_grass_tall"
+			]
+		},
+		"miren_grass_orange": {
+			"textures": [
+				"textures/blocks/miren_grass_orange"
+			]
+		},
+		"moonlen_spike_tall1": {
+			"textures": [
+				"textures/blocks/moonlen_spike_tall1"
+			]
+		},
+		"cryan_stone": {
+			"textures": [
+				"textures/blocks/cryan_stone"
+			]
+		},
+		"cryan_stone_top": {
+			"textures": [
+				"textures/blocks/cryan_stone_top"
+			]
+		},
+		"cryan_grass_top": {
+			"textures": [
+				"textures/blocks/cryan_grass_top"
+			]
+		},
+		"cryan_grass_side": {
+			"textures": [
+				"textures/blocks/cryan_grass_side"
+			]
+		},
+		"cryan_dirt": {
+			"textures": [
+				"textures/blocks/cryan_dirt"
+			]
+		},
+		"miren_rock": {
+			"textures": [
+				"textures/blocks/lorzol_dirt_rocks"
+			]
+		},
+		"moonlen_fungus": {
+			"textures": [
+				"textures/blocks/moonlen_fungus"
+			]
+		},
+		"friss_fungus": {
+			"textures": [
+				"textures/blocks/friss_fungus"
+			]
+		},
+		"friss_door": {
+			"textures": [
+				"textures/blocks/friss_door"
+			]
+		},
+		"friss_trapdoor": {
+			"textures": [
+				"textures/blocks/friss_trapdoor"
+			]
+		},
+		"lor_door": {
+			"textures": [
+				"textures/blocks/lor_door"
+			]
+		},
+		"lor_trapdoor": {
+			"textures": [
+				"textures/blocks/lor_trapdoor"
+			]
+		},
+		"moonlen_spike_body": {
+			"textures": [
+				"textures/blocks/moonlen_spike_body"
+			]
+		},
+		"moonlen_spike_filler": {
+			"textures": [
+				"textures/blocks/moonlen_spike_filler"
+			]
+		},
+		"cave_mould": {
+			"textures": [
+				"textures/blocks/cave_mould"
+			]
+		},
+		"cave_mould_frills": {
+			"textures": [
+				"textures/blocks/cave_mould_frills"
+			]
+		},
+		"zlily_pad": {
+			"textures": [
+				"textures/blocks/zlily_pad"
+			]
+		},
+		"mya_vine_body": {
+			"textures": [
+				"textures/blocks/mya_vine_body"
+			]
+		},
+		"mya_vine_tip": {
+			"textures": [
+				"textures/blocks/mya_vine_tip"
+			]
+		},
+		"zlily_pad1": {
+			"textures": [
+				"textures/blocks/zlily_pad1"
+			]
+		},
+		"raken_trapdoor": {
+			"textures": [
+				"textures/blocks/raken_trapdoor"
+			]
+		},
+		"raken_door": {
+			"textures": [
+				"textures/blocks/raken_door"
+			]
+		},
+		"raken_vine_body": {
+			"textures": [
+				"textures/blocks/raken_vine_body"
+			]
+		},
+		"raken_vine_tip": {
+			"textures": [
+				"textures/blocks/raken_vine_tip"
+			]
+		},
+		"arvense": {
+			"textures": [
+				"textures/blocks/arvense"
+			]
+		},
+		"raken_grass_tall": {
+			"textures": [
+				"textures/blocks/raken_grass_tall"
+			]
+		},
+		"beam_block": {
+			"textures": [
+				"textures/blocks/beam_block"
+			]
+		},
+		"void_fill": {
+			"textures": [
+				"textures/blocks/void_fill"
+			]
+		},
+		"bioluminescent_rod": {
+			"textures": [
+				"textures/blocks/bioluminescent_rod"
+			]
+		},
+		"mynis_dirt": {
+			"textures": [
+				"textures/blocks/mynis_dirt"
+			]
+		},
+		"mynis_door": {
+			"textures": [
+				"textures/blocks/mynis_door"
+			]
+		},
+		"mynis_fan": {
+			"textures": [
+				"textures/blocks/mynis_fan"
+			]
+		},
+		"mynis_grass": {
+			"textures": [
+				"textures/blocks/mynis_grass"
+			]
+		},
+		"mynis_grass_tall": {
+			"textures": [
+				"textures/blocks/mynis_grass_tall"
+			]
+		},
+		"mynis_cap_in": {
+			"textures": [
+				"textures/blocks/mynis_cap_in"
+			]
+		},
+		"mynis_planks": {
+			"textures": [
+				"textures/blocks/mynis_log_planks"
+			]
+		},
+		"mynis_log_side": {
+			"textures": [
+				"textures/blocks/mynis_log_side"
+			]
+		},
+		"mynis_log_stripped_side": {
+			"textures": [
+				"textures/blocks/mynis_log_stripped_side"
+			]
+		},
+		"mynis_log_stripped_top": {
+			"textures": [
+				"textures/blocks/mynis_log_stripped_top"
+			]
+		},
+		"mynis_log_top": {
+			"textures": [
+				"textures/blocks/mynis_log_top"
+			]
+		},
+		"mynis_mushroom": {
+			"textures": [
+				"textures/blocks/mynis_mushroom"
+			]
+		},
+		"mynis_plant": {
+			"textures": [
+				"textures/blocks/mynis_plant"
+			]
+		},
+		"mynis_root": {
+			"textures": [
+				"textures/blocks/mynis_root"
+			]
+		},
+		"mynis_side": {
+			"textures": [
+				"textures/blocks/mynis_side"
+			]
+		},
+		"mynis_top": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/mynis_top",
+						"weight": 70
+					},
+					{
+						"path": "textures/blocks/mynis_top1",
+						"weight": 20
+					},
+					{
+						"path": "textures/blocks/mynis_top2",
+						"weight": 5
+					},
+					{
+						"path": "textures/blocks/mynis_top3",
+						"weight": 5
+					}
+				]
+			}
+		},
+		"mynis_trapdoor": {
+			"textures": [
+				"textures/blocks/mynis_trapdoor"
+			]
+		},
+		"mynis_trunkmushroom": {
+			"textures": [
+				"textures/blocks/mynis_trunkmushroom"
+			]
+		},
+		"mynis_cap_cover": {
+			"textures": [
+				"textures/blocks/mynis_cap_cover"
+			]
+		},
+		"cryan_grass_top_lit": {
+			"textures": [
+				"textures/blocks/cryan_grass_top_lit"
+			]
+		},
+		"cryan_grass_side_lit": {
+			"textures": [
+				"textures/blocks/cryan_grass_side_lit"
+			]
+		},
+		"mynis_small_cap": {
+			"textures": [
+				"textures/blocks/mynis_small_cap"
+			]
+		},
+		"mynis_small_cap_stem": {
+			"textures": [
+				"textures/blocks/mynis_small_cap_stem"
+			]
+		},
+		"quag_dirt": {
+			"textures": [
+				"textures/blocks/quag_dirt"
+			]
+		},
+		"quag_dirt_top": {
+			"textures": [
+				"textures/blocks/quag_dirt_top"
+			]
+		},
+		"quag_grass": {
+			"textures": [
+				"textures/blocks/quag_grass"
+			]
+		},
+		"quag_grass_top": {
+			"textures": [
+				"textures/blocks/quag_grass_top"
+			]
+		},
+		"quag_roots": {
+			"textures": [
+				"textures/blocks/quag_roots"
+			]
+		},
+		"quag_stem": {
+			"textures": [
+				"textures/blocks/quag_stem"
+			]
+		},
+		"quag_stem_stripped": {
+			"textures": [
+				"textures/blocks/quag_stem_stripped"
+			]
+		},
+		"quag_stem_stripped_top": {
+			"textures": [
+				"textures/blocks/quag_stem_stripped_top"
+			]
+		},
+		"quag_stem_top": {
+			"textures": [
+				"textures/blocks/quag_stem_top"
+			]
+		},
+		"quag_planks": {
+			"textures": [
+				"textures/blocks/quag_wood"
+			]
+		},
+		"skreeshroom": {
+			"textures": [
+				"textures/blocks/skreeshroom"
+			]
+		},
+		"vini_leaf": {
+			"textures": [
+				"textures/blocks/vini_leaf"
+			]
+		},
+		"vini_flower": {
+			"textures": [
+				"textures/blocks/vini_flower"
+			]
+		},
+		"quag_door": {
+			"textures": [
+				"textures/blocks/quag_door"
+			]
+		},
+		"quag_trapdoor": {
+			"textures": [
+				"textures/blocks/quag_trapdoor"
+			]
+		},
+		"quag_dirt_cobbled": {
+			"textures": [
+				"textures/blocks/cobbled_quag_dirt"
+			]
+		},
+		"quag_leaves": {
+			"textures": [
+				"textures/blocks/quag_leaves"
+			]
+		},
+		"quag_plant": {
+			"textures": [
+				"textures/blocks/quag_plant"
+			]
+		},
+		"quag_plant_tall": {
+			"textures": [
+				"textures/blocks/quag_plant_tall"
+			]
+		}
+	}
+}

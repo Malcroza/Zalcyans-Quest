@@ -1,0 +1,49 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:mili_burnt",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"default": "textures/entity/mili_burnt"
+			},
+			"geometry": {
+				"default": "geometry.mili"
+			},
+			"animations": {
+				"moving": "animation.mili_burnt.move",
+				"mili_a_general": "animation.mili_burnt.general",
+				"attack0": "animation.mili_burnt.attack",
+				"attack1": "animation.mili_burnt.attack",
+				"move": "controller.animation.mili_burnt.move",
+				"general": "controller.animation.mili_burnt.general",
+				"attack": "controller.animation.mili_burnt.attack",
+				"roaring": "animation.mili_burnt.roaring",
+				"head": "controller.animation.mili_burnt.head_movement",
+				"look_at_target": "animation.mili_burnt.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"general",
+					"attack",
+					"head"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"render_controllers": [
+				"controller.render.mili"
+			],
+			"spawn_egg": {
+				"base_color": "#301D1D",
+				"overlay_color": "#C50000"
+			},
+			"enable_attachables": true
+		}
+	}
+}

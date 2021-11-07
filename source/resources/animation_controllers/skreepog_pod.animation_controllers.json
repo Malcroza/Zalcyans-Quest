@@ -1,0 +1,69 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pod.base_pose": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "trail",
+							"locator": "blip"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.skreepog_pod.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"basepose"
+					],
+					"transitions": [
+						{
+							"zoom": "query.modified_move_speed <= 0.1"
+						}
+					],
+					"blend_transition": 1.0
+				},
+				"zoom": {
+					"animations": [
+						"fold"
+					],
+					"transitions": [
+						{
+							"default": "query.modified_move_speed >= 0.1"
+						}
+					],
+					"blend_transition": 0.6
+				}
+			}
+		},
+		"controller.animation.skreepog_pod.zoom": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"ridden": "query.has_rider"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"ridden": {
+					"animations": [
+						"exaust"
+					],
+					"transitions": [
+						{
+							"default": "!query.has_rider"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		}
+	}
+}

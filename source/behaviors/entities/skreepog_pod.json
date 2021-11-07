@@ -1,0 +1,290 @@
+//bridge-file-version: #27
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:skreepog_pod",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"skreepog_pod_fly",
+					"skreepog_pod_fly_stop",
+					"skreepog_pod_sound_c"
+				]
+			},
+			"animations": {
+				"skreepog_pod_fly": "controller.animation.skreepog_pod_fly",
+				"skreepog_pod_fly_stop": "controller.animation.skreepog_pod_fly_stop",
+				"skreepog_pod_sound_c": "controller.animation.skreepog_pod.sound",
+				"skreepog_pod_sound": "animation.skreepog_pod.sound"
+			}
+		},
+		"component_groups": {
+			"minecraft:air": {
+				"minecraft:movement": {
+					"value": 5,
+					"max": 5
+				}
+			},
+			"minecraft:ground": {
+				"minecraft:movement": {
+					"value": 0,
+					"max": 0
+				}
+			},
+			"skreepog_pilot_riding": {
+				"minecraft:behavior.circle_around_anchor": {
+					"priority": 3,
+					"radius_change": 1,
+					"radius_adjustment_chance": 0.004,
+					"height_adjustment_chance": 0.002857,
+					"goal_radius": 1,
+					"angle_change": 25,
+					"radius_range": [
+						16,
+						32
+					],
+					"height_offset_range": [
+						5,
+						8
+					],
+					"height_above_target_range": [
+						-2,
+						1
+					],
+					"speed_multiplier": 1
+				},
+				"minecraft:environment_sensor": {
+					"triggers": {
+						"0": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"operator": "=",
+										"value": 0
+									}
+								]
+							}
+						},
+						"event": "no_skreepog_pilot_rider",
+						"target": "self"
+					}
+				},
+				"minecraft:physics": {
+					"has_gravity": false
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 0,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									}
+								]
+							},
+							"max_dist": 64,
+							"must_see": false
+						}
+					]
+				},
+				"minecraft:behavior.random_fly": {
+					"priority": 1,
+					"speed_multiplier": 0.5,
+					"y_offset": 10,
+					"can_land_on_trees": false,
+					"y_dist": 2,
+					"xz_dist": 5
+				},
+				"minecraft:behavior.avoid_mob_type": {
+					"priority": 0,
+					"max_dist": 5,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "skreepog_pod"
+									}
+								]
+							}
+						}
+					],
+					"remove_target": false,
+					"ignore_visibility": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"on_environment": {
+							"filters": {
+								"any_of": [
+									{
+										"test": "on_ground",
+										"subject": "self",
+										"operator": "=",
+										"value": true
+									}
+								]
+							},
+							"event": "minecraft:ground"
+						}
+					},
+					{
+						"on_environment": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "on_ground",
+										"subject": "self",
+										"operator": "=",
+										"value": false
+									}
+								]
+							},
+							"event": "minecraft:air"
+						}
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 1.8,
+				"height": 2
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:can_power_jump": {},
+			"minecraft:jump.static": {},
+			"minecraft:horse.jump_strength": {
+				"value": {
+					"range_min": 0.5,
+					"range_max": 1
+				}
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"can_float": true
+			},
+			"minecraft:rideable": {
+				"crouching_skip_interact": true,
+				"seat_count": 1,
+				"family_types": [
+					"player",
+					"skreepog"
+				],
+				"interact_text": "Ride",
+				"seats": [
+					{
+						"position": [
+							0,
+							0.82,
+							0.1
+						]
+					}
+				],
+				"rider_can_interact": false
+			},
+			"minecraft:input_ground_controlled": {},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:type_family": {
+				"family": [
+					"skreepog_pod",
+					"skreepog_pilot"
+				]
+			},
+			"minecraft:health": {
+				"value": 60,
+				"max": 60
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_water": true
+			},
+			"minecraft:flying_speed": {
+				"value": 9
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "fall",
+					"deals_damage": false
+				}
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			}
+		},
+		"events": {
+			"minecraft:air": {
+				"add": {
+					"component_groups": [
+						"minecraft:air"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"minecraft:ground"
+					]
+				}
+			},
+			"minecraft:ground": {
+				"add": {
+					"component_groups": [
+						"minecraft:ground"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"minecraft:air"
+					]
+				}
+			},
+			"skreepog_pilot_rider": {
+				"add": {
+					"component_groups": [
+						"skreepog_pilot_riding"
+					]
+				}
+			},
+			"no_skreepog_pilot_rider": {
+				"remove": {
+					"component_groups": [
+						"skreepog_pilot_riding"
+					]
+				}
+			}
+		}
+	}
+}

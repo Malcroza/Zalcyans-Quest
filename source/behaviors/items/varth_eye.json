@@ -1,0 +1,66 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:varth_eye"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 3600,
+			"minecraft:frame_count": 3,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "varth_eye"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "shoot",
+					"target": "self"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.bows"
+			},
+			"minecraft:durability": {
+				"max_durability": 3
+			},
+			"minecraft:use_animation": "bow",
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"zalcyan:varth_eye"
+						],
+						"repair_amount": "query.remaining_durability"
+					}
+				]
+			}
+		},
+		"events": {
+			"shoot": {
+				"sequence": [
+					{
+						"shoot": {
+							"projectile": "zalcyan:varth_bullet",
+							"launch_power": 1.7
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"playsound mob.shulker.shoot @s ~ ~ ~ 0.6"
+							]
+						}
+					},
+					{
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						}
+					}
+				]
+			}
+		}
+	}
+}

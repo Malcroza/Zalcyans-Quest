@@ -1,0 +1,92 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.lia_giant.base_pose" : {
+			"loop" : true,
+			"bones" : {
+				"body" : {
+					"position" : [ 0.0, -20.0, 0.0 ],
+					"rotation" : [ "-query.target_x_rotation", 0.0, 0.0 ]
+				}
+			}
+		},
+		"animation.lia_giant.move": {
+			"loop": true,
+			"animation_length": 2.16,
+			"start_delay": "math.random(0, 2.16)",
+			"bones": {
+				"body": {
+					"rotation": [0, 0, 0]
+				},
+				"wing0": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.64": [0, 0, -30],
+						"1.64": [0, 0, 32.5],
+						"2.16": [0, 0, 0]
+					}
+				},
+				"wingtip0": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.64": [0, 0, -15.91],
+						"0.88": [0, 0, -15],
+						"1.64": [0, 0, 12.6],
+						"1.92": [0, 0, 12.5],
+						"2.16": [0, 0, 0]
+					}
+				},
+				"wing1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.64": [0, 0, 32.5],
+						"1.64": [0, 0, -27.5],
+						"2.16": [0, 0, 0]
+					}
+				},
+				"wingtip1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.64": [0, 0, 12.27],
+						"0.88": [0, 0, 10],
+						"1.64": [0, 0, -19.42],
+						"1.92": [0, 0, -20],
+						"2.16": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.64": [-2.5, 0, 0],
+						"2.16": [0, 0, 0]
+					}
+				},
+				"tailtip": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.64": [7.5, 0, 0],
+						"1.64": [-20, 0, 0],
+						"2.16": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.72":{
+						"effect": "flap"
+						}
+			},
+			"particle_effects": {
+				"0.72": [
+				{
+					"effect": "no",
+					"locator": "left_wing"
+				},
+				{
+					"effect": "no",
+					"locator": "right_wing"
+				}
+				]// too laggy
+			}
+		}
+	}
+}

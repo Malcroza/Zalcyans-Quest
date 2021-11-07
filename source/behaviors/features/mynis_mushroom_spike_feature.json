@@ -1,0 +1,21 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "zalcyan:mynis_mushroom_spike_feature"
+    },
+    "height_distribution":  [
+      [{"range_min": 2, "range_max": 13}, 2],
+      [{"range_min": 3, "range_max": 5}, 3],
+      [{"range_min": 4, "range_max": 7}, 10]
+    ],
+    "growth_direction": "UP",
+    "body_blocks" : [
+      ["zalcyan:mynis_small_cap_stem", 1]
+    ],
+    "head_blocks" : [
+      ["zalcyan:mynis_small_cap", 1]
+    ],
+  "allow_water": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+    "format_version": "1.13.0",
+    
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "zalcyan:zlily_pad_feature_scatter"
+        },
+        
+        "places_feature": "zalcyan:zlily_pad_feature",
+        
+        "iterations": 15,
+        
+        "x": {
+            "distribution": "gaussian",
+            "extent": [0, 16]
+        },
+        "z": {
+            "distribution": "gaussian",
+            "extent": [0, 16]
+        },
+        "y": {
+            "distribution": "fixed_grid",
+            "extent": [0, 1]
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pod_fly": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"fly": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function pod_fly",
+						"/tag @s add rider"
+					]
+				},
+				"fly": {
+					"transitions": [
+						{
+							"default": "query.has_rider"
+						}
+					],
+					"on_entry": [
+						"/function pod_fly",
+						"/tag @s add rider"
+					]
+				}
+			}
+		}
+	}
+}

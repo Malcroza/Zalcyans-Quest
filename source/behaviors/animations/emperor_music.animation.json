@@ -1,0 +1,12 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.emperor.music": {
+            "timeline": {
+				"0": [ "/playsound emperor.music @a[tag=empsound]" ]
+            },
+            "animation_length": 96.0,
+			"loop":true
+        }
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.skreepog_pod.exaust": {
+			"loop": true,
+			"bones": {
+				"exauseright1": {
+					"position": [0, 0, "Math.abs(Math.sin(query.anim_time* 400)*20)"],
+					"scale": "Math.cos(query.anim_time* 400)"
+				},
+				"exauseright2": {
+					"position": [0, 0, "Math.abs(Math.sin((query.anim_time+0.0833)* 400)*20)"],
+					"scale": "Math.cos((query.anim_time+0.0833)* 400)"
+				},
+				"exauseright3": {
+					"position": [0, 0, "Math.abs(Math.sin((query.anim_time+0.1667)* 400)*20)"],
+					"scale": "Math.cos((query.anim_time+0.1667)* 400)"
+				},
+				"exauseleft1": {
+					"position": [0, 0, "Math.abs(Math.sin(query.anim_time* 400)*20)"],
+					"scale": "Math.cos(query.anim_time* 400)"
+				},
+				"exauseleft2": {
+					"position": [0, 0, "Math.abs(Math.sin((query.anim_time+0.0833)* 400)*20)"],
+					"scale": "Math.cos((query.anim_time+0.0833)* 400)"
+				},
+				"exauseleft3": {
+					"position": [0, 0, "Math.abs(Math.sin((query.anim_time+0.1667)* 400)*20)"],
+					"scale": "Math.cos((query.anim_time+0.1667)* 400)"
+				}
+			}
+		},
+		"animation.skreepog_pod.fold": {
+			"loop": true,
+			"bones": {
+				"wingright": {
+					"rotation": [-90, 0, 0],
+					"position": [7, 1, 0]
+				},
+				"wingleft": {
+					"rotation": [-90, 0, 0],
+					"position": [-7, 0, 0]
+				}
+			}
+		},
+		"animation.skreepog_pod.basepose": {
+			"loop": true,
+			"bones": {
+				"wingright": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"wingleft": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		}
+	}
+}

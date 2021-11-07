@@ -1,0 +1,34 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:skreepog_pod",
+      "materials": { "default": "phantom"},
+      "textures": {
+        "default": "textures/entity/skreepog_pod"
+      },
+      "animations": {
+        "general": "controller.animation.skreepog_pod.general",
+		"fold": "animation.skreepog_pod.fold",
+		"zoom": "controller.animation.skreepog_pod.zoom",
+		"exaust": "animation.skreepog_pod.exaust",
+		"basepose": "animation.skreepog_pod.basepose"
+
+      },
+      "scripts": {
+        "animate": [
+          "general",
+		  "zoom"
+        ]
+      },
+        "spawn_egg": {
+          "base_color": "#202e37",
+          "overlay_color": "#a8ca58"
+        },
+      "geometry": {
+        "default": "geometry.skreepog_pod"
+      },
+      "render_controllers": [ "controller.render.skreepog_pod" ]
+    }
+  }
+}
