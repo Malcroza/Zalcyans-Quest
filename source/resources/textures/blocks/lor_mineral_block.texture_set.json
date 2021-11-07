@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "lor_mineral_block",
+		"metalness_emissive_roughness": "lor_mineral_block_mer",
+		"heightmap": "lor_mineral_block_heightmap"
+	}
+}

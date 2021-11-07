@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "gulu_shelf",
+		"metalness_emissive_roughness": "gulu_shelf_mer",
+		"heightmap": "gulu_shelf_heightmap"
+	}
+}
