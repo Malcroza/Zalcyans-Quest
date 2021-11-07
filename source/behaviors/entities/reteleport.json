@@ -1,0 +1,46 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.8.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:reteleport",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:health": {
+				"value": {
+					"range_min": 10,
+					"range_max": 10
+				}
+			},
+			"minecraft:damage_sensor": [
+				{
+					"deals_damage": false
+				}
+			],
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collusion": false
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:type_family": {
+				"family": [
+					"reteleport"
+				]
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:lor_stairs"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wooden_stairs",
+		"pattern": [
+			"#  ",
+			"## ",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "zalcyan:lor_log_planks"
+			}
+		},
+		"result": {
+			"item": "zalcyan:lor_stairs",
+			"count": 4
+		}
+	}
+}

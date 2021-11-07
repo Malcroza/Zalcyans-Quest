@@ -1,0 +1,22 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "zalcyan:raken_vine_feature"
+    },
+    "height_distribution":  [
+      [{"range_min": 1, "range_max": 13}, 2],
+      [{"range_min": 1, "range_max": 2}, 3],
+      [{"range_min": 1, "range_max": 7}, 10]
+    ],
+    "growth_direction": "DOWN",
+    "age" : {"range_min": 17, "range_max": 26},
+    "body_blocks" : [
+      ["zalcyan:mya_vine_body", 1]
+    ],
+    "head_blocks" : [
+      ["zalcyan:mya_vine_tip", 1]
+    ],
+  "allow_water": false
+  }
+}

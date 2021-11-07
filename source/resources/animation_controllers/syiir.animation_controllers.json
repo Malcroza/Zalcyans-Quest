@@ -1,0 +1,153 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.syiir.melee": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+				"blend_transition": 4.2,
+          "blend_via_shortest_path": true,
+					"transitions": [{
+							"attack": "query.is_delayed_attacking && query.is_riding == false"
+						}
+					],
+					"blend_transition": 4.4
+				},
+				"attack": {
+					"animations": ["melee"],
+					"transitions": [{
+						"default": "query.is_delayed_attacking == false || query.is_riding == true"
+					}],"blend_transition": 4.2
+				}
+			}
+		},"controller.animation.syiir.tail": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [{
+							"tail": "temp.current = v.last + (query.yaw_speed - v.last) * (1 - math.pow((1 - 0.6), query.delta_time / 0.3));v.last = temp.current;return temp.current;"
+						}
+					]
+				},
+				"tail": {
+					"animations": ["tailrot"]
+				}
+			}
+		},
+		"controller.animation.syiir.fly": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": ["stop"],
+				"blend_transition": 4.2,
+          "blend_via_shortest_path": true,
+					"transitions": [{
+							"fly": "query.is_on_ground == false && query.is_riding == false && query.is_sitting == false"
+						},
+						{
+							"walk": "query.modified_move_speed > 0.3 && query.is_on_ground == true && query.is_riding == false && query.is_sitting == false"
+						},
+						{
+							"sit": "query.is_sitting == true"
+						},
+						{
+							"ridden": "query.is_riding"
+						}
+					],
+					"blend_transition": 2.4,
+          "blend_via_shortest_path": true
+				},
+				"fly": {
+					"animations": ["fly"],
+					"transitions": [
+						{
+							"walk": "query.modified_move_speed > 0.3 && query.is_on_ground == true && query.is_riding == false && query.is_sitting == false"
+						},
+						{
+							"sit": "query.is_sitting == true"
+						},
+						{
+							"ridden": "query.is_riding"
+						},
+						{
+							"stop": "query.modified_move_speed <= 0.3 && query.is_on_ground == true && query.is_sitting == false"
+						}
+					],"blend_transition": 4.2,
+          "blend_via_shortest_path": true
+				},
+				"walk": {
+					"animations": ["walk"],
+					"transitions": [
+					{
+							"fly": "query.is_on_ground == false && query.is_riding == false && query.is_sitting == false"
+						},
+						{
+							"sit": "query.is_sitting == true"
+						},
+						{
+							"ridden": "query.is_riding"
+						},
+						{
+							"stop": "query.modified_move_speed <= 0.1 && query.is_on_ground == true && query.is_sitting == false"
+						}
+					],"blend_transition": 4.2,
+          "blend_via_shortest_path": true
+				},
+				"ridden": {
+					"animations": ["ridden"],
+					"transitions": [
+					{
+							"fly": "query.is_on_ground == false && query.is_riding == false && query.is_sitting == false"
+						},
+						{
+							"walk": "query.modified_move_speed > 0.1 && query.is_on_ground == true && query.is_riding == false && query.is_sitting == false"
+						},
+						{
+							"sit": "query.is_sitting == true"
+						},
+						{
+							"stop": "query.modified_move_speed <= 0.1 && query.is_on_ground == true && query.is_sitting == false"
+						}
+					],"blend_transition": 4.2,
+          "blend_via_shortest_path": true
+				},
+				"sit": {
+					"animations": ["sit"],
+					"transitions": [
+					{
+							"fly": "query.is_on_ground == false && query.is_riding == false && query.is_sitting == false"
+						},
+						{
+							"walk": "query.modified_move_speed > 0.1 && query.is_on_ground == true && query.is_riding == false && query.is_sitting == false"
+						},
+						{
+							"ridden": "query.is_riding"
+						},
+						{
+							"stop": "query.modified_move_speed <= 0.1 && query.is_on_ground == true && query.is_sitting == false"
+						}
+					],"blend_transition": 4.2,
+          "blend_via_shortest_path": true
+				},
+				"stop": {
+					"animations": ["stop"],
+					"transitions": [
+					{
+							"fly": "query.is_on_ground == false && query.is_sitting == false"
+						},
+						{
+							"walk": "query.modified_move_speed > 0.1 && query.is_on_ground == true"
+						},
+						{
+							"ridden": "query.is_riding"
+						},
+						{
+							"sit": "query.is_sitting == true"
+						}
+					],"blend_transition": 4.2,
+          "blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

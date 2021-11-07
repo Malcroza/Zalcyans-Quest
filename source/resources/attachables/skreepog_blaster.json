@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan:skreepog_blaster",
+      "materials": {
+        "default": "phantom",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/models/equipment/skreepog_blaster",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.skreepog_blaster"
+      },
+      "animations": {
+		"skreepog_blaster_first_person": "animation.skreepog_blaster.first_person.hold",
+		"skreepog_blaster_shoot": "animation.skreepog_blaster.shoot"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "skreepog_blaster_first_person": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'skreepog_blaster'"
+          },
+		  
+            "skreepog_blaster_shoot"
+          ,
+		  {
+			"skreepog_blaster": "variable.skreepog_blaster"
+		  }
+        ]
+      },
+      "render_controllers": [ "controller.render.item_default" ]
+    }
+  }
+}

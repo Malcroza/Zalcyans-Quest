@@ -1,0 +1,87 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.lor.general": {
+			"states": {
+				"default": {
+					"animations": [
+						"lor_general"
+					]
+				}
+			}
+		},
+		"controller.animation.lor.move": {
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"moving": "query.modified_move_speed"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.lor.head_movement" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "lor.general" ],
+					"transitions" : [
+						{
+							"roaring" : "query.is_roaring == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"roaring" : {
+					"animations" : [ "roaring" ],
+					"transitions" : [
+						{
+							"default" : "query.is_roaring == 0"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.lor.attack": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack0": "variable.attack > 0"
+						},
+						{
+							"attack1": "variable.attack > 0"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"attack0": {
+					"animations": [
+						"attack0"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"attack1": {
+					"animations": [
+						"attack1"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		}
+	}
+}

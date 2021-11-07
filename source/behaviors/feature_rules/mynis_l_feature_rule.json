@@ -1,0 +1,25 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:mynis_l_feature_rule",
+			"places_feature": "zalcyan:mynis_l_feature"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "mynis"
+			},
+			"placement_pass": "first_pass"
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 6,
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz) - 5",
+			"z": 0
+		}
+	}
+}

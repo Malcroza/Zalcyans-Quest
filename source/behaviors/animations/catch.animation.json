@@ -1,0 +1,14 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.borgan.catch": {
+			"loop": true,
+			"animation_length": 0.2,
+			"timeline": {
+				"0.1": [
+					"/ride @p[r=2] start_riding @s teleport_rider"
+				]
+			}
+		}
+	}
+}

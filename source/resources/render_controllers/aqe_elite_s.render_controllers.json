@@ -1,0 +1,31 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers": {
+    "controller.render.aqe_elite_s": {
+      "geometry": "Geometry.default",
+      "materials": [{"*":"Material.default"}],
+      "textures": ["Texture.default"]
+    },
+    "controller.render.aqe_elite_s.elec": {
+      "geometry": "Geometry.elec",
+      "part_visibility": [
+        { "*": "query.has_target" }
+      ],
+      "materials": [ { "*": "Material.elec" } ],
+      "textures": [ "Texture.elec" ],
+      "overlay_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "uv_anim": {
+        "offset": [ "(query.has_target) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.01 : 0.0", 
+        "(query.has_target) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.01 : 0.0" ],
+        "scale": [ 1.0, 1.0 ]
+      },
+      "light_color_multiplier": 0.5,
+      "ignore_lighting" : true
+    }
+  }
+}

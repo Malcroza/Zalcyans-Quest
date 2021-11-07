@@ -1,0 +1,37 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:gulu_stem_bottem"
+		},
+		"components": {
+			"minecraft:destroy_time": 4,
+			"minecraft:friction": 0.6,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "gulu_stem_bottem",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:on_step_on": {
+				"event": "naus",
+				"target": "self"
+			},
+			"minecraft:map_color": "#06422C",
+			"minecraft:unit_cube": {}
+		},
+		"events": {
+			"naus": {
+				"add_mob_effect": {
+					"effect": "nausea",
+					"duration": 8,
+					"target": "other",
+					"amplifier": 6
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:cryan_dirt",
+			"is_experimental": false,
+			"register_to_creative_menu": true
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:friction": 0.6,
+			"minecraft:map_color": "#253121",
+			"minecraft:block_light_absorption": 15,
+			"minecraft:block_light_emission": 0,
+			"minecraft:explosion_resistance": 0.5
+		},
+		"events": {}
+	}
+}

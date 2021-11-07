@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:caican",
+			"materials": {
+				"default": "phantom",
+				"invisible": "phantom_invisible"
+			},
+			"textures": {
+				"default": "textures/entity/caican"
+			},
+			"geometry": {
+				"default": "geometry.caican"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.runtimeid = 0;",
+					"variable.tailrotx = 0.0;",
+					"variable.wingrotz = 0.0;"
+				],
+				"animate": [
+					"caican_base_pose_controller",
+					"move"
+				]
+			},
+			"animations": {
+				"caican_base_pose": "animation.caican.base_pose",
+				"caican_base_pose_controller": "controller.animation.caican.base_pose",
+				"move": "animation.caican.move"
+			},
+
+			"render_controllers": [ "controller.render.caican" ],
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 51
+			}
+		}
+	}
+}

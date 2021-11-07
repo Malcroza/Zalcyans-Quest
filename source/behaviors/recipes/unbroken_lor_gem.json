@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:lor_gem_unbroken"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "zalcyan:lor_gem_broken"
+			}
+		},
+		"result": {
+			"item": "zalcyan:lor_gem"
+		}
+	}
+}

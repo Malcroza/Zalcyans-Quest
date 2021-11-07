@@ -1,0 +1,29 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "zalcyan:mushroom3_2"
+    },
+    "components": {
+      "minecraft:destroy_time": 4.0,
+      "minecraft:friction": 0.6,
+	  "minecraft:block_light_emission": 0.0,
+      "minecraft:block_light_absorption": 0.0,
+	  "minecraft:entity_collision": {
+		"origin": [-8, 0, -8],
+		"size": [16, 16, 16]
+	  },
+	  "minecraft:pick_collision": {
+		"origin": [-8, 0, -8],
+		"size": [16, 16, 16]
+	  },
+	  "minecraft:geometry": "geometry.mushroom3_2",
+      "minecraft:material_instances" : {
+        "*" : {
+          "texture": "mushroom3_2",
+          "render_method": "blend"
+        }
+      }
+    }
+  }
+}

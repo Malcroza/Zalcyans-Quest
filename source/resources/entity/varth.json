@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:varth",
+      "materials": { "default": "phantom" },
+      "textures": {
+        "default": "textures/entity/varth"
+      },
+      "geometry": {
+        "default": "geometry.varth"
+      },
+      "animations": {
+        "flying": "animation.varth.flying",
+        "controller_bee_sting": "controller.animation.varth.sting",
+        "bee_sting": "animation.varth.sting",
+        "bee_no_stinger": "animation.bee.no_stinger",
+        "bee_fly_bobbing": "animation.varth.fly.bobbing",
+        "bee_root_controller": "controller.animation.varth.root",
+		"blink":"animation.varth.blink",
+		"look":"animation.varth.look_at_target"
+      },      
+      "scripts": {
+        "animate": [
+          "bee_root_controller"
+        ]
+      },
+      "render_controllers": [ "controller.render.varth" ],
+      "spawn_egg": {
+          "base_color": "#002b2b",
+          "overlay_color": "#1cfbff"
+        }
+    }
+  }
+}

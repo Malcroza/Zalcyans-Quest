@@ -1,0 +1,343 @@
+//bridge-file-version: #60
+{
+	"format_version": "1.10.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:mili_burnt",
+			"is_summonable": true,
+			"is_experimental": false,
+			"is_spawnable": false
+		},
+		"component_groups": {
+			"lor_angry": {
+				"minecraft:angry": {
+					"duration": 25,
+					"calm_event": {
+						"event": "minecraft:on_calm",
+						"target": "self"
+					}
+				}
+			},
+			"lor_calm": {
+				"minecraft:on_target_acquired": {
+					"event": "minecraft:become_angry",
+					"target": "self"
+				}
+			},
+			"melee": {
+				"minecraft:behavior.delayed_attack": {
+					"priority": 1,
+					"attack_duration": 0.96,
+					"speed_multiplier": 1,
+					"hit_delay_pct": 0.5,
+					"track_target": true,
+					"reach_multiplier": 2
+				}
+			},
+			"praise": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"knockback_strength": 0,
+					"duration": 3,
+					"on_roar_end": {
+						"event": "praise_end"
+					},
+					"attack_time": 0,
+					"cooldown_time": 3,
+					"knockback_damage": 0,
+					"knockback_range": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:nameable": {},
+			"minecraft:movement": {
+				"value": 0.38
+			},
+			"minecraft:type_family": {
+				"family": [
+					"mili_a",
+					"villager"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"is_amphibious": false,
+				"can_pass_doors": true,
+				"can_break_doors": true,
+				"can_walk": true,
+				"avoid_water": true,
+				"can_path_over_water": false
+			},
+			"minecraft:jump.static": {},
+			"minecraft:scale": {
+				"value": 0.7
+			},
+			"minecraft:can_climb": {},
+			"minecraft:attack": {
+				"damage": 5
+			},
+			"minecraft:health": {
+				"value": 45,
+				"max": 45
+			},
+			"minecraft:behavior.delayed_attack": {
+				"priority": 1,
+				"attack_duration": 0.96,
+				"speed_multiplier": 1,
+				"hit_delay_pct": 0.05,
+				"track_target": true,
+				"reach_multiplier": 2
+			},
+			"minecraft:breathable": {
+				"totalSupply": 15,
+				"suffocateTime": 0,
+				"breathesAir": true,
+				"breathesWater": true
+			},
+			"minecraft:behavior.move_towards_restriction": {
+				"priority": 5,
+				"speed_multiplier": 1
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 1
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 7,
+				"look_distance": 6,
+				"probability": 0.02
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 7
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"within_radius": 30,
+				"reselect_targets": true,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "aqe"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "aqe_elite"
+								}
+							]
+						},
+						"max_dist": 30,
+						"must_see": false
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "illager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "monster"
+								}
+							]
+						},
+						"max_dist": 16
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "player",
+									"domain": "hand",
+									"value": "zalcyan:lor_gem",
+									"operator": "=="
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								}
+							]
+						}
+					}
+				],
+				"must_see": true
+			},
+			"minecraft:physics": {},
+			"minecraft:equipment": {
+				"table": "loot_tables/entities/mili_gear.json"
+			},
+			"minecraft:attack_cooldown": {
+				"attack_cooldown_time": [
+					0.1,
+					0.2
+				]
+			},
+			"minecraft:behavior.melee_attack": {
+				"on_attack": {
+					"event": "minecraft:entity_transformed"
+				},
+				"track_target": true
+			},
+			"minecraft:walk_animation_speed": {
+				"value": 1.1
+			},
+			"minecraft:behavior.tempt": {
+				"items": [
+					"minecraft:diamond"
+				],
+				"priority": 2,
+				"speed_multiplier": 1.1,
+				"within_radius": 100,
+				"can_tempt_vertically": true
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1,
+				"alert_same_type": true
+			},
+			"minecraft:behavior.find_mount": {
+				"start_delay": 1,
+				"within_radius": 30,
+				"max_failed_attempts": 30,
+				"priority": 1,
+				"avoid_water": true,
+				"target_needed": false,
+				"mount_distance": 20
+			},
+			"minecraft:behavior.equip_item": {
+				"priority": 5
+			},
+			"minecraft:shareables": {
+				"items": [
+					{
+						"item": "minecraft:diamond",
+						"admire": true,
+						"want_amount": 4,
+						"pickup_limit": 8
+					}
+				]
+			},
+			"minecraft:behavior.admire_item": {
+				"priority": 7,
+				"sound_interval": {
+					"range_min": 2,
+					"range_max": 5
+				},
+				"on_admire_item_start": {
+					"target": "self",
+					"event": "praise"
+				},
+				"on_admire_item_stop": {
+					"target": "self",
+					"event": "praise_end"
+				}
+			},
+			"minecraft:behavior.pickup_items": {
+				"priority": 5,
+				"max_dist": 10,
+				"goal_radius": 2,
+				"speed_multiplier": 0.8,
+				"pickup_based_on_chance": false,
+				"cooldown_after_being_attacked": 20,
+				"can_pickup_to_hand_or_equipment": true,
+				"can_pickup_any_item": true
+			},
+			"minecraft:behavior.share_items": {
+				"priority": 4,
+				"goal_radius": 20,
+				"max_dist": 3,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"value": "player",
+							"subject": "other"
+						}
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"value": "mili_a",
+							"subject": "other"
+						}
+					}
+				]
+			},
+			"minecraft:inventory": {
+				"inventory_size": 10
+			},
+			"minecraft:fire_immune": true
+		},
+		"events": {
+			"minecraft:on_calm": {
+				"remove": {
+					"component_groups": [
+						"lor_angry"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"lor_calm"
+					]
+				}
+			},
+			"minecraft:become_angry": {
+				"remove": {
+					"component_groups": [
+						"lor_calm"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"lor_angry"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"lor_calm"
+					]
+				}
+			},
+			"minecraft:entity_transformed": {
+				"add": {
+					"component_groups": [
+						"melee"
+					]
+				}
+			},
+			"praise": {
+				"add": {
+					"component_groups": [
+						"praise"
+					]
+				}
+			},
+			"praise_end": {
+				"remove": {
+					"component_groups": [
+						"praise"
+					]
+				}
+			}
+		}
+	}
+}

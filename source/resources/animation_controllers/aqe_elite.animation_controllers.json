@@ -1,0 +1,88 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.aqe_elite.general": {
+			"states": {
+				"default": {
+					"animations": [
+						"aqe_elite_general",
+						"look_at_target"
+					]
+				}
+			}
+		},
+		"controller.animation.aqe_elite.move": {
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"moving": "query.modified_move_speed"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.aqe_elite.head_movement" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "aqe_elite.general" ],
+					"transitions" : [
+						{
+							"roaring" : "query.is_roaring == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"roaring" : {
+					"animations" : [ "roaring" ],
+					"transitions" : [
+						{
+							"default" : "query.is_roaring == 0"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.aqe_elite.attack": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack0": "variable.attack > 0"
+						},
+						{
+							"attack1": "variable.attack > 0"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"attack0": {
+					"animations": [
+						"attack0"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"attack1": {
+					"animations": [
+						"attack1"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		}
+	}
+}

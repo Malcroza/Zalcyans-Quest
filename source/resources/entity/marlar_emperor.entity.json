@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:marlar_emperor",
+      "materials": {
+        "default": "skeleton"
+      },
+      "textures": {
+        "default": "textures/entity/marlar_emperor"
+      },
+      "geometry": {
+        "default": "geometry.marlar_emperor"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "animate": [
+          "controller_general",
+          "controller_move"
+        ]
+      },
+      "animations": {
+        "general": "animation.marlar_emperor.general",
+        "casting": "animation.marlar_emperor.casting",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.marlar_emperor.move",
+        "celebrating": "animation.marlar_emperor.celebrating",
+        "controller_general": "controller.animation.marlar_emperor.general",
+        "controller_move": "controller.animation.marlar_emperor.move"
+      },
+      "particle_effects": {
+        "spell": "minecraft:evoker_spell"
+      },
+      "render_controllers": [ "controller.render.marlar_elite" ],
+	  "enable_attachables": true,
+      "spawn_egg": {
+				"base_color": "#752212",
+				"overlay_color": "#de7a00"
+			}
+    }
+  }
+}

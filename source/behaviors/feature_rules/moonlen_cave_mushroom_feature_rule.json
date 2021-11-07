@@ -1,0 +1,24 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:moonlen_cave_mushroom_feature_rule",
+			"places_feature": "zalcyan:moonlen_cave_mushroom_sequence_feature"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "moonlen"
+			},
+			"placement_pass": "final_pass"
+		},
+		"distribution": {
+			"iterations": 8,
+			"x": "math.random_integer(0, 3)",
+			"y": "query.above_top_solid(v.worldx, v.worldz)",
+			"z": "math.random_integer(0, 3)"
+		}
+	}
+}

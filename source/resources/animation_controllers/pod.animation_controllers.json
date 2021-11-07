@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pod.base_pose": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "trail",
+							"locator": "blip"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.pod.move": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [ "base_pose" ]
+				}
+			}
+		}
+	}
+}

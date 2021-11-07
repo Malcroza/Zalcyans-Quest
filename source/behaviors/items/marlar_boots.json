@@ -1,0 +1,44 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "zalcyan:marlar_boots",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.boots"
+      },
+      "minecraft:icon": {
+        "texture": "marlar_boots",
+        "frame": 0
+      },
+      "minecraft:display_name": {
+        "value": "Marlar Boots"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:enchantable": {
+        "value": 18,
+        "slot": "armor_feet"
+      },
+      "minecraft:durability": {
+        "max_durability": 260,
+        "damage_chance": {
+          "min": 60,
+          "max": 100
+        },
+        "repair_items": [
+          "minecraft:diamond",
+          "zalcyan:marlar_boots"
+        ]
+      },
+	  "minecraft:damage": 2,
+      "minecraft:armor": {
+        "protection": 1
+      },
+      "minecraft:wearable": {
+        "slot": "slot.armor.feet"
+      }
+    }
+  }
+}

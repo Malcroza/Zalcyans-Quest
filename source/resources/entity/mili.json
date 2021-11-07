@@ -1,0 +1,43 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:mili",
+			"materials": {
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mili"
+			},
+			"geometry": {
+				"default": "geometry.mili"
+			},
+			"spawn_egg": {
+				"base_color": "#ECE2DD",
+				"overlay_color": "#9E1212"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				],
+				"animate": [
+					"general",
+					"attack"
+				]
+			},
+			"animations": {
+				"general": "controller.animation.mili.general",
+				"attack": "controller.animation.mili.attack",
+				"attack1": "animation.mili.attack1",
+				"basepose": "animation.mili.idle",
+				"walking": "animation.mili.walk",
+				"look_at_target": "animation.mili.look_at_target"
+			},
+			"render_controllers": [
+				"controller.render.mili"
+			],
+			"enable_attachables": true
+		}
+	}
+}

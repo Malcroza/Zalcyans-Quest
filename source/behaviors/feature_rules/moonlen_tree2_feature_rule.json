@@ -1,0 +1,25 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:moonlen_tree2_feature_rule",
+			"places_feature": "minecraft:moonlen_tree2_mcstructure"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "moonlen"
+			},
+			"placement_pass": "first_pass"
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 40,
+			"x": "math.random_integer(0, 3)",
+			"y": "query.above_top_solid(v.worldx, v.worldz) - 3",
+			"z": "math.random_integer(0, 3)"
+		}
+	}
+}

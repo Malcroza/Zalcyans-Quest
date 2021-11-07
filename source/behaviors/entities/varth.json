@@ -1,0 +1,181 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:varth",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"escape_fire": {
+				"minecraft:behavior.panic": {
+					"priority": 1,
+					"speed_multiplier": 1.25,
+					"force": true
+				},
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						20,
+						50
+					],
+					"randomInterval": true,
+					"time_down_event": {
+						"event": "stop_panicking_after_fire",
+						"target": "self"
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:behavior.move_towards_home_restriction": {
+				"priority": 9
+			},
+			"minecraft:behavior.random_hover": {
+				"priority": 12,
+				"xz_dist": 8,
+				"y_dist": 8,
+				"y_offset": -1,
+				"interval": 1,
+				"hover_height": [
+					1,
+					2
+				]
+			},
+			"minecraft:leashable": {
+				"soft_distance": 4,
+				"hard_distance": 6,
+				"max_distance": 10
+			},
+			"minecraft:behavior.float": {
+				"priority": 19
+			},
+			"minecraft:type_family": {
+				"family": [
+					"varth",
+					"mob",
+					"arthropod"
+				]
+			},
+			"minecraft:breathable": {
+				"totalSupply": 15,
+				"suffocateTime": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0.7,
+				"height": 0.7
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:follow_range": {
+				"value": 1024
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "fall",
+					"deals_damage": false
+				}
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:movement": {
+				"value": 0.3
+			},
+			"minecraft:flying_speed": {
+				"value": 0.15
+			},
+			"minecraft:navigation.hover": {
+				"can_path_over_water": true,
+				"can_sink": false,
+				"can_pass_doors": false,
+				"can_path_from_air": true,
+				"avoid_water": true,
+				"avoid_damage_blocks": true,
+				"avoid_sun": false
+			},
+			"minecraft:movement.hover": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_fly": {},
+			"minecraft:health": {
+				"value": 10,
+				"max": 10
+			},
+			"minecraft:nameable": {},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 2,
+				"look_distance": 30,
+				"probability": 1
+			},
+			"minecraft:behavior.look_at_target": {
+				"priority": 0
+			},
+			"minecraft:shooter": {
+				"def": "zalcyan:varth_bullet"
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"reselect_targets": true,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "player"
+						},
+						"max_dist": 16
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "marlar_elite"
+						},
+						"must_see": true,
+						"max_dist": 16
+					}
+				],
+				"must_see": true
+			},
+			"minecraft:behavior.ranged_attack": {
+				"priority": 2,
+				"attack_radius": 20,
+				"speed_multiplier": 0.8,
+				"attack_interval_min": 3,
+				"attack_interval_max": 8
+			},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/varth.json"
+			}
+		},
+		"events": {
+			"stop_panicking_after_fire": {
+				"remove": {
+					"component_groups": [
+						"escape_fire"
+					]
+				}
+			}
+		}
+	}
+}

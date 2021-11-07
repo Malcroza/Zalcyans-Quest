@@ -1,0 +1,22 @@
+{
+	"format_version": 1,
+	"header": {
+		"uuid": "611cb8bb-6667-492e-8ec4-e33a33a9c28e",
+		"name": "§6ZALCYAN'S §5QUEST §2(Resource)§3(primary)",
+		"description": "[1.0.7] *Enable Experimental Gamelplay*",
+		"version": [7, 0, 0]
+	},
+	"modules": [
+		{
+			"description": "Enable Experimental Gamelplay",
+			"type": "resources",
+			"version": [7, 0, 0],
+			"uuid": "743f6949-53be-44b6-b326-398005028819"
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"blockbench_entity_wizard": ["1.0.2"]
+		}
+	}
+}

@@ -1,0 +1,289 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:light_bug_baby",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:light_bug_baby": {
+				"minecraft:is_baby": {},
+				"minecraft:scale": {
+					"value": 0.5
+				},
+				"minecraft:ageable": {
+					"duration": 1200,
+					"feed_items": [
+						{
+							"item": "zalcyan:arvense_item"
+						}
+					],
+					"grow_up": {
+						"event": "minecraft:ageable_grow_up",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.follow_parent": {
+					"priority": 5,
+					"speed_multiplier": 1.1
+				}
+			},
+			"transform_adult_night": {
+				"minecraft:transformation": {
+					"into": "zalcyan:light_bug_flying<minecraft:as_adult>",
+					"keep_owner": true,
+					"delay": {
+						"value": 0
+					}
+				}
+			},
+			"transform_adult_day": {
+				"minecraft:transformation": {
+					"into": "zalcyan:light_bug<minecraft:as_adult>",
+					"keep_owner": true,
+					"delay": {
+						"value": 0
+					}
+				}
+			},
+			"minecraft:bug_wild": {
+				"minecraft:type_family": {
+					"family": [
+						"light_bug",
+						"mob",
+						"arthropod"
+					]
+				},
+				"minecraft:tameable": {
+					"probability": 0.33,
+					"tame_items": [
+						"minecraft:honeycomb",
+						"minecraft:honey_block"
+					],
+					"tame_event": {
+						"event": "minecraft:on_tame",
+						"target": "self"
+					}
+				}
+			},
+			"minecraft:bug_tame": {
+				"minecraft:type_family": {
+					"family": [
+						"parrot_tame",
+						"mob",
+						"arthropod",
+						"light_bug"
+					]
+				},
+				"minecraft:is_tamed": {},
+				"minecraft:behavior.follow_owner": {
+					"priority": 2,
+					"speed_multiplier": 1,
+					"start_distance": 5,
+					"stop_distance": 1
+				},
+				"minecraft:behavior.find_mount": {
+					"priority": 3,
+					"within_radius": 16,
+					"avoid_water": true,
+					"start_delay": 100,
+					"target_needed": false,
+					"mount_distance": 2
+				},
+				"minecraft:behavior.stay_while_sitting": {
+					"priority": 1
+				},
+				"minecraft:sittable": {}
+			}
+		},
+		"components": {
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 0.8
+			},
+			"minecraft:nameable": {},
+			"minecraft:health": {
+				"value": 4,
+				"max": 4
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:movement": {
+				"value": 0.25
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "fall",
+					"deals_damage": false
+				}
+			},
+			"minecraft:leashable": {
+				"soft_distance": 4,
+				"hard_distance": 6,
+				"max_distance": 10
+			},
+			"minecraft:balloonable": {
+				"mass": 0.5
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:despawn": {
+				"despawn_from_distance": {}
+			},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:behavior.panic": {
+				"priority": 1,
+				"speed_multiplier": 1.5
+			},
+			"minecraft:behavior.mount_pathing": {
+				"priority": 2,
+				"speed_multiplier": 1.5,
+				"target_dist": 0,
+				"track_target": true
+			},
+			"minecraft:behavior.tempt": {
+				"priority": 4,
+				"speed_multiplier": 1,
+				"items": [
+					"zalcyan:arvense_item",
+					"minecraft:glow_berries"
+				]
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 1
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 7,
+				"look_distance": 6,
+				"probability": 0.02
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 8
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "is_daytime",
+							"value": false
+						},
+						"event": "transform_night",
+						"target": "self"
+					}
+				]
+			},
+			"sen": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"trigger": "minecraft:spawn_baby"
+					},
+					{
+						"add": {
+							"component_groups": [
+								"minecraft:bug_wild"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:entity_born": {
+				"add": {
+					"component_groups": [
+						"minecraft:light_bug_baby",
+						"minecraft:bug_wild"
+					]
+				}
+			},
+			"minecraft:ageable_grow_up": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "is_daytime",
+							"value": true
+						},
+						"add": {
+							"component_groups": [
+								"transform_adult_day"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "is_daytime",
+							"value": false
+						},
+						"add": {
+							"component_groups": [
+								"transform_adult_night"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:spawn_baby": {
+				"add": {
+					"component_groups": [
+						"minecraft:light_bug_baby",
+						"minecraft:bug_wild"
+					]
+				}
+			},
+			"minecraft:on_tame": {
+				"remove": {
+					"component_groups": [
+						"minecraft:bug_wild"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"minecraft:bug_tame"
+					]
+				}
+			},
+			"minecraft:as_baby": {
+				"add": {
+					"component_groups": [
+						"minecraft:light_bug_baby"
+					]
+				}
+			}
+		}
+	}
+}

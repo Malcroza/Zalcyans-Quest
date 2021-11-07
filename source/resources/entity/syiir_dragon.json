@@ -1,0 +1,60 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:syiir_dragon",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/syiir"
+			},
+			"geometry": {
+				"default": "geometry.syiir_dragon"
+			},
+			"sound_effects": {
+				"mob.enderdragon.flap": "mob.enderdragon.flap"
+			},
+			"spawn_egg": {
+				"base_color": "#427212",
+				"overlay_color": "#8F1B1B"
+			},
+			"animations": {
+				"stop": "animation.syiir.stop",
+				"walk": "animation.syiir.walk",
+				"walking": "controller.animation.syiir.walk",
+				"melee": "animation.syiir.melee",
+				"meleeing": "controller.animation.syiir.melee",
+				"fly": "animation.syiir.fly",
+				"flying": "controller.animation.syiir.fly",
+				"fall": "animation.syiir.fall",
+				"falling": "controller.animation.syiir.fall",
+				"look_at_target": "animation.common.look_at_target",
+				"sit": "animation.syiir.sit",
+				"tailrot": "animation.syiir.tailrot",
+				"tailrotcont": "controller.animation.syiir.tail",
+				"ridden": "animation.syiir.ridden",
+				"death": "animation.syiir.death",
+				"sleep": "animation.syiir.sleep",
+				"flap": "animation.syiir.flap"
+			},
+			"scripts": {
+				"animate": [
+					"stoping",
+					"walking",
+					"meleeing",
+					"flying",
+					"look_at_target",
+					"tailrotcont"
+				],
+				"pre_animation": [
+          "variable.moving = query.ground_speed > 0 || query.vertical_speed > 0;",
+          "variable.pitch = query.body_x_rotation;"
+          ]
+			},
+			"render_controllers": [
+				{ "controller.render.ender_dragon_default": "query.death_ticks <= 0.0" }
+			]
+		}
+	}
+}

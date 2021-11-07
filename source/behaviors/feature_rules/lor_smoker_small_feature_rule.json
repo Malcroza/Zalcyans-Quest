@@ -1,0 +1,25 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:lor_smoker_small_feature_rule",
+			"places_feature": "minecraft:lor_smoker_small_mcstructure"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "lorla"
+			},
+			"placement_pass": "surface_pass"
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 40,
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz) - 1",
+			"z": 0
+		}
+	}
+}

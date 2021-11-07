@@ -1,0 +1,54 @@
+//bridge-file-version: #25
+{
+	"biomes": {
+		"the_end": {
+			"fog_color": "#0B080C",
+			"fog_identifier": "minecraft:fog_the_end",
+			"water_fog_color": "#62529e",
+			"water_surface_color": "#62529e"
+		},
+		"warped_forest": {
+			"fog_color": "#1A051A",
+			"fog_identifier": "minecraft:fog_warped_forest",
+			"water_fog_color": "#905957",
+			"water_surface_color": "#905957"
+		},
+		"gulumar": {
+			"water_surface_color": "#8BFFD5",
+			"water_surface_transparency": 0.7,
+			"fog_identifier": "minecraft:fog_gulumar",
+			"fog_color": "#00C56D"
+		},
+		"lorla": {
+			"water_surface_color": "#3D1010",
+			"water_surface_transparency": 0.8,
+			"fog_color": "#221E1D",
+			"fog_identifier": "minecraft:fog_crimson_forest"
+		},
+		"moonlena": {
+			"water_surface_color": "#8DFFF5",
+			"fog_identifier": "zalcyan:fog_moonlen",
+			"water_surface_transparency": 0.5
+		},
+		"frissania": {
+			"water_surface_color": "#6708D5",
+			"fog_identifier": "zalcyan:fog_frissania",
+			"water_surface_transparency": 0.5
+		},
+		"raken": {
+			"water_surface_color": "#01D6C4",
+			"fog_identifier": "zalcyan:fog_raken",
+			"water_surface_transparency": 0.4
+		},
+		"mynis": {
+			"water_surface_color": "#E753E9",
+			"water_surface_transparency": 0.5,
+			"fog_identifier": "zalcyan:fog_mynis"
+		},
+		"quag": {
+			"water_surface_color": "db712b",
+			"water_surface_transparency": 0.5,
+			"fog_identifier": "zalcyan:fog_quag"
+		}
+	}
+}

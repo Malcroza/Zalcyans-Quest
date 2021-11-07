@@ -1,0 +1,213 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.8.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:magwag_spike",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:dead_": {
+				"minecraft:collision_box": {
+					"width": 0.6,
+					"height": 0.8
+				},
+				"minecraft:timer": {
+					"looping": false,
+					"randomInterval": false,
+					"time": 2.33,
+					"time_down_event": {
+						"event": "minecraft:event_dead"
+					}
+				}
+			},
+			"minecraft:despawndead": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "self",
+							"value": "despawn_"
+						}
+					]
+				}
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:health": {
+				"value": {
+					"range_min": 10,
+					"range_max": 10
+				}
+			},
+			"minecraft:damage_sensor": [
+				{
+					"deals_damage": false
+				}
+			],
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collusion": false
+			},
+			"minecraft:attack_damage": {
+				"value": 4
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "mob"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "aqe_elite"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "mili_a"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "arglonar"
+								}
+							]
+						}
+					},
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "snowgolem"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "irongolem"
+								}
+							]
+						},
+						"max_dist": 100
+					},
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "wandering_trader"
+								}
+							]
+						},
+						"max_dist": 100,
+						"must_see": false
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "illager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "monster"
+								}
+							]
+						},
+						"max_dist": 100
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "lor"
+						}
+					}
+				],
+				"within_radius": 100,
+				"reselect_targets": true,
+				"must_see": true
+			},
+			"minecraft:behavior.melee_attack": {
+				"priority": 1
+			},
+			"minecraft:attack": {
+				"damage": 5
+			},
+			"minecraft:area_attack": {
+				"damage_range": 2,
+				"damage_per_tick": 12,
+				"cause": "entity_attack",
+				"entity_filter": {
+					"none_of": [
+						{
+							"test": "is_family",
+							"subject": "other",
+							"value": "magwag"
+						}
+					]
+				}
+			},
+			"minecraft:sound_volume": {
+				"value": 0.1
+			}
+		},
+		"events": {
+			"minecraft:entity_transformed": {
+				"add": {
+					"component_groups": [
+						"minecraft:dead_"
+					]
+				}
+			},
+			"minecraft:event_dead": {
+				"add": {
+					"component_groups": [
+						"minecraft:despawndead"
+					]
+				}
+			}
+		}
+	}
+}

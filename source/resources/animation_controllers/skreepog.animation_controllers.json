@@ -1,0 +1,96 @@
+
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.skreepog.general": {
+			"states": {
+				"default": {
+					"animations": [
+						"skreepog_general",
+						"look_at_target"
+					]
+				}
+			}
+		},
+		"controller.animation.skreepog.move": {
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"moving": "query.modified_move_speed"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.skreepog.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"skreepog.general"
+					],
+					"transitions": [
+						{
+							"attackzero": "query.is_delayed_attacking && math.random_integer(1,4)==1"
+						},
+						{
+							"attackone": "query.is_delayed_attacking && math.random_integer(1,4)==2"
+						},
+						{
+							"attacktwo": "query.is_delayed_attacking && math.random_integer(1,4)==3"
+						},
+						{
+							"attackthree": "query.is_delayed_attacking && math.random_integer(1,4)==4"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"attackzero": {
+					"animations": [
+						"attackzero"
+					],
+					"transitions": [
+						{
+							"default": "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.7
+				},
+				"attackone": {
+					"animations": [
+						"attackone"
+					],
+					"transitions": [
+						{
+							"default": "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.7
+				},
+				"attacktwo": {
+					"animations": [
+						"attacktwo"
+					],
+					"transitions": [
+						{
+							"default": "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.7
+				},
+				"attackthree": {
+					"animations": [
+						"attackthree"
+					],
+					"transitions": [
+						{
+							"default": "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		}
+	}
+}

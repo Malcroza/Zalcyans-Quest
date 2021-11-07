@@ -1,0 +1,30 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:aqe_elite_dead",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/aqe_elite"
+			},
+			"geometry": {
+				"default": "geometry.aqe_elite"
+			},
+			"animations": {
+				"aqe_elite_d.general": "animation.aqe_elite_d.general",
+				"general": "controller.animation.aqe_elite_d.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			},
+			"render_controllers": [
+				"controller.render.aqe_elite_d"
+			]
+		}
+	}
+}

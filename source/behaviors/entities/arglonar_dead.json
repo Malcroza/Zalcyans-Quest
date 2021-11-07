@@ -1,0 +1,86 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.8.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:arglonar_dead",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:dead_": {
+				"minecraft:collision_box": {
+					"width": 0.6,
+					"height": 0.8
+				},
+				"minecraft:timer": {
+					"looping": false,
+					"randomInterval": false,
+					"time": 3.15,
+					"time_down_event": {
+						"event": "minecraft:event_dead"
+					}
+				}
+			},
+			"minecraft:despawndead": {
+				"minecraft:type_family": {
+					"family": [
+						"despawn_"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "self",
+							"value": "despawn_"
+						}
+					]
+				}
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:health": {
+				"value": {
+					"range_min": 10,
+					"range_max": 10
+				}
+			},
+			"minecraft:damage_sensor": [
+				{
+					"deals_damage": false
+				}
+			],
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collusion": false
+			}
+		},
+		"events": {
+			"minecraft:entity_transformed": {
+				"add": {
+					"component_groups": [
+						"minecraft:dead_"
+					]
+				}
+			},
+			"minecraft:event_dead": {
+				"add": {
+					"component_groups": [
+						"minecraft:despawndead"
+					]
+				}
+			}
+		}
+	}
+}

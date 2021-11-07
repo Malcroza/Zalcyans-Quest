@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:sequence_feature": {
+    "description": {
+      "identifier": "zalcyan:moonlen_spike_sequence_feature"
+    },
+    "features": [
+      "zalcyan:moonlen_spike_snap_feature",
+      "zalcyan:moonlen_spike_filler_feature_scatter"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:light_bug",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"default": "textures/entity/light_bug"
+			},
+			"geometry": {
+				"default": "geometry.light_bug"
+			},
+			"animations": {
+				"flying": "animation.light_bug.flying",
+				"bee_fly_bobbing": "animation.light_bug.fly.bobbing",
+				"grounded": "controller.animation.light_bug.move",
+				"walking": "animation.light_bug.walk",
+				"light": "animation.light_bug.light",
+				"general": "animation.light_bug.general"
+			},
+			"scripts": {
+				"animate": [
+					"general",
+					{
+						"walking": "query.modified_move_speed >=0.1"
+					}
+				]
+			},
+			"particle_effects": {
+				"light_emit": "zalcyan:lights"
+			},
+			"render_controllers": [
+				"controller.render.light_bug"
+			],
+			"spawn_egg": {
+				"base_color": "#251400",
+				"overlay_color": "#00E96D"
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "aqe:entity_alphatest": {
+      "+states": [ "Blending" ]
+    },
+	"orb:entity": {
+      "+defines": [ "ALPHA_TEST" ],
+      "+states": [ "Blending", "DisableCulling" ],
+      "blendSrc": "One",
+      "blendDst": "One"
+    }
+  }
+}

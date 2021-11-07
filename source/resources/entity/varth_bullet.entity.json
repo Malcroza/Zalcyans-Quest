@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:varth_bullet",
+      "materials": {
+        "default": "phantom"
+      },
+      "textures": {
+        "default": "textures/entity/varth_bullet"
+      },
+      "geometry": {
+        "default": "geometry.varth_bullet"
+      },
+      "animations": {
+        "move": "animation.varth_bullet.move",
+		"part":"animation.varth_bullet.particle"
+      },
+      "scripts": {
+        "animate": [
+          "move",
+		  "part"
+        ]
+      },
+	  "particle_effects": {
+				"varth_trail": "zalcyan:varth_particle"
+	},
+      "render_controllers": [ "controller.render.shulker_bullet" ]
+    }
+  }
+}

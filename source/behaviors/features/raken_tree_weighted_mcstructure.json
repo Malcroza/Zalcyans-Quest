@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:raken_tree_weighted_mcstructure"
+    },
+    "features": [
+      [ "minecraft:raken_tree_medium_mcstructure", 1 ],
+      [ "minecraft:raken_tree_small_mcstructure", 2 ]
+    ]
+  }
+}

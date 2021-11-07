@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:sequence_feature": {
+    "description": {
+      "identifier": "zalcyan:moonlen_cave_mushroom_sequence_feature"
+    },
+    "features": [
+      "zalcyan:moonlen_cave_mushroom3_feature_scatter",
+      "zalcyan:moonlen_cave_mushroom3_2_feature_scatter",
+	  "zalcyan:moonlen_cave_mushroom3_3_feature_scatter"
+    ]
+  }
+}

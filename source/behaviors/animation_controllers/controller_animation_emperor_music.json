@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.emperor_music_controller": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "music": "q.is_alive"
+                        }
+                    ],
+					"on_entry": [
+                        "/execute @s[tag=zal] ~~~ say music"
+					],
+                    "on_exit": [
+					"/execute @s[tag=zal] ~~~ say exiting"
+                    ]
+                },
+                "music": {
+                    "on_entry": [
+						"/execute @s[tag=zal] ~~~ say playing"
+						
+                    ],
+                    "on_exit": [
+					"/stopsound @a emperor.music",
+					"/say  §6§l MY CROWN.. I... am no more...",
+					"/playsound ambient.weather.thunder @a",
+					"/scoreboard objectives remove zsongemp"
+					
+					
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_alive"
+                        }
+                    ]
+                }
+            }
+        }
+	}
+}

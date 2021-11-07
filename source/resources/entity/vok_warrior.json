@@ -1,0 +1,44 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:vok_warrior",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"default": "textures/entity/vok_warrior"
+			},
+			"geometry": {
+				"default": "geometry.vok_warrior"
+			},
+			"animations": {
+				"move": "animation.vok_warrior.walk",
+				"vok_warrior_general": "animation.vok_warrior.idle",
+				"attack": "animation.vok_warrior.melee",
+				"general": "controller.animation.vok_warrior.general",
+				"roaring": "animation.vok_warrior.blast",
+				"look_at_target": "animation.vok_warrior.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"render_controllers": [
+				"controller.render.vok_warrior"
+			],
+			"spawn_egg": {
+				"base_color": "#DFBC00",
+				"overlay_color": "#FAF3D4"
+			},
+			"sound_effects": {
+				"roar": "mob.aqe.roar"
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "minecraft:trunk_mushroom_tick_mcstructure"
+		},
+		"structure_name": "mystructure:trunk_mushroom_tick",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"block_intersection": {
+				"block_whitelist": [
+					"zalcyan:mynis_trunkmushroom"
+				]
+			}
+		}
+	}
+}

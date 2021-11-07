@@ -1,0 +1,100 @@
+//bridge-file-version: #54
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:warp_transmitter",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.navigation"
+			},
+			"minecraft:icon": {
+				"texture": "warp_transmitter"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "warp",
+					"target": "self"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "warp",
+				"duration": 10
+			}
+		},
+		"events": {
+			"warp": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon zalcyan:reteleport ~ ~ ~"
+							]
+						}
+					},
+					{
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"teleport @s 687 29 680"
+									]
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"execute @p [tag=!zstruc] ~ ~ ~ structure load beam_tower 680 28 675"
+									]
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"effect @a blindness 3",
+										"particle zalcyan:beaming_particle ~ ~ ~",
+										"effect @a slowness 3",
+										"effect @a nausea 2"
+									]
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"effect @a invisibility 2",
+										"tag @a add zstruc",
+										"scoreboard objectives add zpreventstruct dummy"
+									]
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"playsound mob.beaming @s 664 70 688"
+									],
+									"target": "holder"
+								}
+							}
+						]
+					},
+					{
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"give @s zalcyan:rewarp_transmitter"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

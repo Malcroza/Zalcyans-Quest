@@ -1,0 +1,55 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:magwag",
+			"materials": {
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/magwag"
+			},
+			"geometry": {
+				"default": "geometry.magwag"
+			},
+			"animations": {
+				"moving": "animation.magwag.move",
+				"magwag_general": "animation.magwag.general",
+				"move": "controller.animation.magwag.move",
+				"general": "controller.animation.magwag.general",
+				"look_at_target": "animation.magwag.look_at_target",
+				"summon": "animation.magwag.summon",
+				"summon_con": "controller.animation.magwag.summon",
+				"hit": "animation.magwag.hit",
+				"attack": "controller.animation.magwag.attack"
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"general",
+					"head",
+					"summon_con",
+					"attack"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"render_controllers": [
+				"controller.render.magwag"
+			],
+			"particle_effects": {
+				"gravity_sparks": "zalcyan:gravity_sparks"
+			},
+			"spawn_egg": {
+				"base_color": "#3b3834",
+				"overlay_color": "#ffc042"
+			},
+			"sound_effects": {
+				"summon": "mob.magwag.summon",
+				"spark": "mob.magwag.crackle"
+			}
+		}
+	}
+}

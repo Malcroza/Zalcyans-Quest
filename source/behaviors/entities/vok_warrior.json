@@ -1,0 +1,308 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:vok_warrior",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:is_dead": {
+				"minecraft:transformation": {
+					"into": "zalcyan:aqe_elite_s"
+				}
+			},
+			"aqe_elite_angry": {
+				"minecraft:angry": {
+					"duration": 25,
+					"broadcast_anger": true,
+					"broadcast_range": 20,
+					"calm_event": {
+						"event": "minecraft:on_calm",
+						"target": "self"
+					}
+				}
+			},
+			"aqe_elite_calm": {
+				"minecraft:on_target_acquired": {
+					"event": "minecraft:become_angry",
+					"target": "self"
+				}
+			}
+		},
+		"components": {
+			"minecraft:nameable": {},
+			"minecraft:movement": {
+				"value": 0.28
+			},
+			"minecraft:type_family": {
+				"family": [
+					"aqe_elite"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"is_amphibious": false,
+				"can_pass_doors": true,
+				"can_break_doors": true,
+				"can_walk": true,
+				"avoid_water": true,
+				"can_path_over_water": false
+			},
+			"minecraft:annotation.break_door": {},
+			"minecraft:jump.static": {},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:can_climb": {},
+			"minecraft:attack": {
+				"damage": 21,
+				"effect_name": "slowness",
+				"effect_duration": 5
+			},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:health": {
+				"value": 265,
+				"max": 265
+			},
+			"minecraft:breathable": {
+				"totalSupply": 15,
+				"suffocateTime": 0,
+				"breathesAir": true,
+				"breathesWater": true
+			},
+			"minecraft:damage_sensor": [
+				{
+					"on_damage": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_damage",
+									"value": "fatal"
+								}
+							]
+						},
+						"event": "minecraft:event_spawn_dead"
+					}
+				}
+			],
+			"minecraft:behavior.move_towards_restriction": {
+				"priority": 5,
+				"speed_multiplier": 1
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 1
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 7,
+				"look_distance": 6,
+				"probability": 0.02
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 7
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"within_radius": 100,
+				"reselect_targets": true,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "snowgolem"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "irongolem"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "marlar_emperor"
+								}
+							]
+						},
+						"max_dist": 100
+					},
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "wandering_trader"
+								}
+							]
+						},
+						"max_dist": 100,
+						"must_see": false
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "illager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "monster"
+								}
+							]
+						},
+						"max_dist": 100
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "lor"
+						}
+					}
+				],
+				"must_see": true
+			},
+			"minecraft:physics": {},
+			"minecraft:fire_immune": true,
+			"minecraft:equipment": {
+				"table": "loot_tables/entities/aqe_elite_gear.json",
+				"slot_drop_chance": [
+					{
+						"slot": "slot.weapon.mainhand",
+						"drop_chance": 0
+					}
+				]
+			},
+			"minecraft:attack_cooldown": {
+				"attack_cooldown_time": [
+					0.1,
+					0.2
+				]
+			},
+			"minecraft:behavior.melee_attack": {
+				"track_target": true
+			},
+			"minecraft:walk_animation_speed": {
+				"value": 1.1
+			},
+			"minecraft:behavior.knockback_roar": {
+				"priority": 0,
+				"attack_time": 0.9,
+				"cooldown_time": 10,
+				"duration": 3,
+				"knockback_damage": 10,
+				"knockback_strength": 3,
+				"knockback_range": 10,
+				"knockback_filters": {
+					"none_of": [
+						{
+							"test": "is_family",
+							"subject": "other",
+							"value": "aqe"
+						},
+						{
+							"test": "is_family",
+							"subject": "other",
+							"value": "lia"
+						}
+					]
+				},
+				"damage_filters": {
+					"none_of": [
+						{
+							"test": "is_family",
+							"subject": "other",
+							"value": "aqe"
+						},
+						{
+							"test": "is_family",
+							"subject": "other",
+							"value": "lia"
+						}
+					]
+				}
+			},
+			"minecraft:knockback_resistance": {
+				"value": 0.7
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:ambient_sound_interval": {
+				"range": 10,
+				"value": 0
+			}
+		},
+		"events": {
+			"minecraft:event_spawn_dead": {
+				"add": {
+					"component_groups": [
+						"minecraft:is_dead"
+					]
+				}
+			},
+			"minecraft:on_calm": {
+				"remove": {
+					"component_groups": [
+						"aqe_elite_angry"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"aqe_elite_calm"
+					]
+				}
+			},
+			"minecraft:become_angry": {
+				"remove": {
+					"component_groups": [
+						"aqe_elite_calm"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"aqe_elite_angry"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"aqe_elite_calm"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.skreepog_pilot.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "skeleton_attack" ]
+				}
+			}
+		}
+	}
+}

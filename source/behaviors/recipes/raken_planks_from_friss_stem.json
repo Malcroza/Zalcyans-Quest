@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:raken_log_planks_from_raken_log_stem"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "planks",
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "zalcyan:raken_log",
+				"data": 0
+			}
+		},
+		"result": {
+			"item": "zalcyan:raken_log_planks",
+			"data": 4,
+			"count": 4
+		}
+	}
+}

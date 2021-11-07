@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:pod",
+      "materials": { "default": "skeleton", "pod_glass":"charged_creeper" },
+      "textures": {
+        "default": "textures/entity/pod", "pod_glass": "textures/entity/pod_glass"
+      },
+      "animations": {
+        "base_pose": "controller.animation.pod.base_pose"
+      },
+      "scripts": {
+        "animate": [
+          "base_pose"
+        ]
+      },
+        "spawn_egg": {
+          "base_color": "#e38010",
+          "overlay_color": "#63615d"
+        },
+      "geometry": {
+        "default": "geometry.pod", "pod_glass": "geometry.pod_glass"
+      },
+      "render_controllers": [ "controller.render.pod", "controller.render.pod.pod_glass" ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.aqe": {
+	  "arrays": {
+	    "textures": {
+		  "Array.skins": [
+		    "Texture.aqe0",
+		    "Texture.aqe1",
+		    "Texture.aqe2",
+		    "Texture.aqe3",
+			"Texture.aqe4",
+			"Texture.aqe5",
+			"Texture.aqe6",
+			"Texture.aqe7"
+		  ]
+		}
+	  },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.skins[query.variant]" ]
+    }
+  }
+}

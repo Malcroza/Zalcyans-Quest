@@ -1,0 +1,57 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:pod_stone"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.3,
+			"minecraft:friction": 0.6,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "pod_stone",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:map_color": "#E0B61B",
+			"minecraft:unit_cube": {},
+			"minecraft:on_player_destroyed": {
+				"event": "doom",
+				"target": "self"
+			},
+			"minecraft:on_interact": {
+				"event": "doom",
+				"target": "self"
+			},
+			"minecraft:loot": "loot_tables/nothing.json"
+		},
+		"events": {
+			"doom": {
+				"run_command": {
+					"command": [
+						"summon zalcyan:pod"
+					],
+					"target": "self"
+				},
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon zalcyan:pod"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"run_command": {
+							"command": "setblock ~ ~ ~ air"
+						}
+					}
+				]
+			}
+		}
+	}
+}

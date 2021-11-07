@@ -1,0 +1,251 @@
+//bridge-file-version: #46
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"mob.aqe.say": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/aqe/say1"
+				},
+				{
+					"name": "sounds/mob/aqe/say2"
+				},
+				{
+					"name": "sounds/mob/aqe/say3"
+				}
+			]
+		},
+		"mob.aqe.death": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/aqe/death1"
+				}
+			]
+		},
+		"mob.aqe.step": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/aqe/step1"
+				}
+			]
+		},
+		"mob.aqe.hurt": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/aqe/hurt1"
+				}
+			]
+		},
+		"mob.orb.zap": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/mob/orb/zap"
+				}
+			]
+		},
+		"mob.orb.lazer": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/mob/orb/lazar"
+				}
+			]
+		},
+		"mob.aqe.roar": {
+			"sounds": [
+				"sounds/mob/aqe/aqe_elite_roar"
+			],
+			"category": "neutral"
+		},
+		"mob.lor_crawler.say": {
+			"sounds": [
+				"sounds/mob/lor_crawler/say"
+			],
+			"category": "hostile"
+		},
+		"mob.lor_crawler.hurt": {
+			"sounds": [
+				"sounds/mob/lor_crawler/hurt"
+			],
+			"category": "hostile"
+		},
+		"mob.lor_crawler.death": {
+			"sounds": [
+				"sounds/mob/lor_crawler/death"
+			],
+			"category": "hostile"
+		},
+		"mob.mili.say": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/mili/say1"
+				},
+				{
+					"name": "sounds/mob/mili/say2"
+				},
+				{
+					"name": "sounds/mob/mili/say3"
+				},
+				"sounds/mob/mili/say4"
+			]
+		},
+		"mob.mili.hurt": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/mili/hurt"
+				}
+			]
+		},
+		"mob.arglonar.say": {
+			"sounds": [
+				{
+					"name": "sounds/mob/arglonar/say0"
+				},
+				{
+					"name": "sounds/mob/arglonar/say1"
+				}
+			]
+		},
+		"mob.arglonar.death": {
+			"sounds": [
+				{
+					"name": "sounds/mob/arglonar/yell0"
+				}
+			]
+		},
+		"mob.arglonar.hurt": {
+			"sounds": [
+				{
+					"name": "sounds/mob/arglonar/hit"
+				},
+				{
+					"name": "sounds/mob/arglonar/hit1"
+				},
+				{
+					"name": "sounds/mob/arglonar/hit2"
+				}
+			]
+		},
+		"mob.arglonar.yell": {
+			"sounds": [
+				{
+					"name": "sounds/mob/arglonar/yell0"
+				}
+			]
+		},
+		"sound.lazar.shoot": {
+			"category": "player",
+			"sounds": [
+				"sounds/z_sounds/lazar"
+			]
+		},
+		"sound.lazar.hit": {
+			"sounds": [
+				"sounds/z_sounds/lazar_hit"
+			],
+			"category": "neutral"
+		},
+		"sound.engine.move": {
+			"sounds": [
+				"sounds/z_sounds/engine"
+			]
+		},
+		"sound.chime.ring": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/z_sounds/chime"
+			]
+		},
+		"mob.magwag.summon": {
+			"sounds": [
+				"sounds/mob/magwag/magwag_summon"
+			]
+		},
+		"mob.magwag.crackle": {
+			"sounds": [
+				"sounds/mob/magwag/crackle"
+			]
+		},
+		"mob.beaming": {
+			"sounds": [
+				"sounds/z_sounds/beaming"
+			]
+		},
+		"emperor.music": {
+			"sounds": [
+				{
+					"name": "sounds/music/game/emperor_music",
+					"volume": 0.8
+				}
+			],
+			"category": "music"
+		},
+		"mob.light_bug.clicking": {
+			"sounds": [
+				{
+					"name": "sounds/mob/light_bug/light_bug_click"
+				}
+			]
+		},
+		"mob.borgan.death": {
+			"sounds": [
+				"sounds/mob/borgan/borgan_death"
+			],
+			"category": "hostile"
+		},
+		"mob.borgan.say": {
+			"sounds": [
+				"sounds/mob/borgan/borgan_say"
+			],
+			"category": "hostile"
+		},
+		"mob.borgan.hit": {
+			"sounds": [
+				"sounds/mob/borgan/borgan_hit"
+			],
+			"category": "hostile"
+		},
+		"mob.borganweb": {
+			"sounds": [
+				"sounds/mob/borgan/borgan_web"
+			]
+		},
+		"mob.borgan.spit": {
+			"sounds": [
+				"sounds/mob/borgan/borgan_spit"
+			]
+		},
+		"sound.skreepog.lazer": {
+			"sounds": [
+				"sounds/z_sounds/skreepog_blaster"
+			]
+		},
+		"sound.skreepog.engine": {
+			"sounds": [
+				"sounds/z_sounds/skreepog_engine"
+			]
+		},
+		"mob.skreepog.say": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/skreepog/skreepog_say1",
+				"sounds/mob/skreepog/skreepog_say2",
+				"sounds/mob/skreepog/skreepog_say3",
+				"sounds/mob/skreepog/skreepog_say4"
+			]
+		},
+		"mob.skreepog.hit": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/skreepog/skreepog_hit"
+			]
+		}
+	}
+}

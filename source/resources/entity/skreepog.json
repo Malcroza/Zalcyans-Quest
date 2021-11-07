@@ -1,0 +1,58 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:skreepog",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"skreepog0": "textures/entity/skreepog/skreepog0",
+				"skreepog1": "textures/entity/skreepog/skreepog1",
+				"skreepog2": "textures/entity/skreepog/skreepog2",
+				"skreepog3": "textures/entity/skreepog/skreepog3"
+			},
+			"geometry": {
+				"default": "geometry.skreepog"
+			},
+			"animations": {
+
+				"attackzero": "animation.skreepog.attackzero",
+				"attackone": "animation.skreepog.attackone",
+				"attacktwo": "animation.skreepog.attacktwo",
+				"attackthree": "animation.skreepog.attackthree",
+				"moving": "animation.skreepog.move",
+				"skreepog_general": "animation.skreepog.general",
+				"move": "controller.animation.skreepog.move",
+				"general": "controller.animation.skreepog.general",
+				"roaring": "animation.skreepog.roaring",
+				"head": "controller.animation.skreepog.head_movement",
+				"look_at_target_default": "animation.humanoid.look_at_target.default",
+				"look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+				"look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+				"controller_look_at_target": "controller.animation.humanoid.look_at_target",
+				"attacking": "controller.animation.skreepog.attack",
+				"look_at_target": "animation.skreepog.look_at_target"
+
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"general",
+					"attacking",
+					"head"
+				]
+			},
+			"render_controllers": [
+				"controller.render.skreepog"
+			],
+			"spawn_egg": {
+				"base_color": "#71e368",
+				"overlay_color": "#2ca881"
+			},
+			"sound_effects": {
+				"roar": "mob.roar"
+			}
+		}
+	}
+}

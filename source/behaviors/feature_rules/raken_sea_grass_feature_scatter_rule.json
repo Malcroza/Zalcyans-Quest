@@ -1,0 +1,43 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:raken_sea_grass_feature_scatter_rule",
+			"places_feature": "zalcyan:raken_sea_grass_feature_scatter"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "raken"
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 20,
+			"coordinate_eval_order": "zyx",
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					18
+				]
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz) - 0",
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					18
+				]
+			}
+		}
+	}
+}

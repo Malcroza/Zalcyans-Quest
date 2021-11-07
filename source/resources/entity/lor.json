@@ -1,0 +1,47 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:lor",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"default": "textures/entity/lor"
+			},
+			"geometry": {
+				"default": "geometry.lor"
+			},
+			"animations": {
+				"moving": "animation.lor.move",
+				"lor_general": "animation.lor.general",
+				"attack0": "animation.lor.attack",
+				"attack1": "animation.lor.attack",
+				"move": "controller.animation.lor.move",
+				"general": "controller.animation.lor.general",
+				"attack": "controller.animation.lor.attack",
+				"roaring": "animation.lor.roaring",
+				"head": "controller.animation.lor.head_movement"
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"general",
+					"attack",
+					"head"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"render_controllers": [
+				"controller.render.lor"
+			],
+			"spawn_egg": {
+				"base_color": "#7C2929",
+				"overlay_color": "#C50000"
+			}
+		}
+	}
+}

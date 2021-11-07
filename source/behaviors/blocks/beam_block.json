@@ -1,0 +1,56 @@
+//bridge-file-version: #24
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:beam_block"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.3,
+			"minecraft:friction": 0.6,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#E0B61B",
+			"minecraft:unit_cube": {},
+			"minecraft:on_player_destroyed": {
+				"event": "doom",
+				"target": "self"
+			},
+			"minecraft:on_interact": {
+				"event": "doom",
+				"target": "self"
+			},
+			"minecraft:loot": "loot_tables/nothing.json",
+			"minecraft:explosion_resistance": 2000
+		},
+		"events": {
+			"doom": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"structure load mystructure:emperor_ship_back 650 157 668",
+								"structure load mystructure:emperor_ship_front 714 157 668",
+								"structure load mystructure:marlar_ship 738 167 626",
+								"structure load mystructure:marlar_ship 725 150 715",
+								"structure load mystructure:marlar_ship 624 140 690",
+								"structure load mystructure:marlar_ship 679 150 645",
+								"structure load mystructure:marlar_ship 654 197 721",
+								"summon zalcyan:marlar_emperor 695 169 682",
+								"summon zalcyan:marlar 684 141 717",
+								"summon zalcyan:marlar 713 129 669"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"setblock ~ ~ ~ air"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "cave_pillar_feature_rule",
+			"places_feature": "zalcyan:cave_pillar_feature"
+		},
+		"conditions": {
+			"placement_pass": "before_underground_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "gulumar"
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 0,
+			"coordinate_eval_order": "zyx",
+			"y": "math.random_integer(14, 15)",
+			"z": 0,
+			"x": 0
+		}
+	}
+}

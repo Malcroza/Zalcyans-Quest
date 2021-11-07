@@ -1,0 +1,86 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.caican.base_pose": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["-query.target_x_rotation", 0, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.caican.move": {
+			"loop": true,
+			"animation_length": 2.426,
+			"start_delay": "math.random(0, 2.426)",
+			"bones": {
+				"tail": {
+					"rotation": ["16.0 * Math.cos(148.9690267 * (query.anim_time - 0.6066))", 0, 0]
+				},
+				"tailtip": {
+					"rotation": ["16.0 * Math.cos(148.9690267 * (query.anim_time - 0.6066))", 0, 0]
+				},
+				"wing0": {
+					"rotation": [0, 0, "16.0 * Math.cos(148.9690267 * query.anim_time)"]
+				},
+				"wing1": {
+					"rotation": [0, 0, "-16.0 * Math.cos(148.9690267 * query.anim_time)"]
+				},
+				"body": {
+					"rotation": ["8.0 * Math.cos(148.9690267 * (query.anim_time + 0.0))", "1.0 * Math.cos(148.9690267 * (query.anim_time +0.6066))", 0]
+				},
+				"wing3": {
+					"rotation": [0, 0, "-16.0 * Math.cos(148.9690267 * (query.anim_time - 0.2))"]
+				},
+				"wing5": {
+					"rotation": [0, 0, "-16.0 * Math.cos(148.9690267 * (query.anim_time - 0.4))"]
+				},
+				"wing2": {
+					"rotation": [0, 0, "16.0 * Math.cos(148.9690267 * (query.anim_time - 0.2))"]
+				},
+				"wing4": {
+					"rotation": [0, 0, "16.0 * Math.cos(148.9690267 * (query.anim_time - 0.4))"]
+				},
+				"wing6": {
+					"rotation": [0, 0, "16.0 * Math.cos(148.9690267 * (query.anim_time - 0.6))"]
+				},
+				"wing7": {
+					"rotation": [0, 0, "-16.0 * Math.cos(148.9690267 * (query.anim_time - 0.6))"]
+				},
+				"wing11": {
+					"rotation": [0, 0, "-16.0 * Math.cos(148.9690267 * (query.anim_time - 1.0))"]
+				},
+				"wing9": {
+					"rotation": [0, 0, "-16.0 * Math.cos(148.9690267 * (query.anim_time - 0.8))"]
+				},
+				"wing10": {
+					"rotation": [0, 0, "16.0 * Math.cos(148.9690267 * (query.anim_time - 1.0))"]
+				},
+				"wing8": {
+					"rotation": [0, 0, "16.0 * Math.cos(148.9690267 * (query.anim_time - 0.8))"]
+				},
+				"wing13": {
+					"rotation": [0, 0, "-16.0 * Math.cos(148.9690267 * (query.anim_time - 1.2))"]
+				},
+				"wing15": {
+					"rotation": [0, 0, "-16.0 * Math.cos(148.9690267 * (query.anim_time - 1.4))"]
+				},
+				"wing12": {
+					"rotation": [0, 0, "16.0 * Math.cos(148.9690267 * (query.anim_time - 1.2))"]
+				},
+				"wing14": {
+					"rotation": [0, 0, "16.0 * Math.cos(148.9690267 * (query.anim_time - 1.4))"]
+				},
+				"head": {
+					"rotation": ["2.0 * Math.cos(148.9690267 * (query.anim_time - 1.8))", 0, 0]
+				}
+			},
+			"sound_effects": {
+				"1.4": {
+					"effect": "flap"
+				}
+			}
+		}
+	}
+}

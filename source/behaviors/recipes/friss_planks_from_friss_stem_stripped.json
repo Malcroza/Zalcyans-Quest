@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:friss_planks_from_friss_stem_stripped"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "planks",
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "zalcyan:friss_stem_stripped",
+				"data": 0
+			}
+		},
+		"result": {
+			"item": "zalcyan:friss_planks",
+			"data": 4,
+			"count": 4
+		}
+	}
+}

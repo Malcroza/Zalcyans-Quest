@@ -1,0 +1,23 @@
+{
+    "format_version": "1.13.0",
+    
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "zalcyan:gra_cluster"
+        },
+        
+        "places_feature": "zalcyan:gra_structure",
+        
+        "iterations": "math.random_integer(2, 6)",
+        
+        "x": {
+            "distribution": "gaussian",
+            "extent": [-2, 2]
+        },
+        "z": {
+            "distribution": "gaussian",
+            "extent": [-2, 2]
+        },
+        "y": "query.heightmap(v.worldx, v.worldz)"
+    }
+}

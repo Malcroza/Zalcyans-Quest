@@ -1,0 +1,303 @@
+##bridge-file-version: #33
+##//items n stuff
+item.zalcyan:aqe_elite_sword=Graven Sword
+item.zalcyan:mili_staff=Mili Staff
+item.zalcyan:guliku=Aqe Orb Thrower
+item.zalcyan:lor_gem=Lor Gem
+item.zalcyan:lor_gem_broken=Broken Lor Gem
+item.zalcyan:lor_sword=Lor Sword
+item.zalcyan:marlar_helmet=Marlar Helmet
+item.zalcyan:marlar_chestplate=Marlar Chestplate
+item.zalcyan:marlar_leggings=Marlar Leggings
+item.zalcyan:marlar_boots=Marlar boots
+item.zalcyan:marlar_blaster=Marlar Blaster
+item.zalcyan:arglonar_meat=Arglonar Meat
+item.zalcyan:mafis_berries=Mafis Berries
+item.zalcyan:friss_fungus_item=Friss Fungus
+item.zalcyan:friss_vine_item=Friss Vine
+item.zalcyan:moonlen_fungus_item=Moonlen Fungus
+item.zalcyan:moonlen_spike_item=Moonlen Spike
+item.zalcyan:moonlen_vine_item=Moonlen Vine
+item.zalcyan:mya_vine_item=May Vine
+item.zalcyan:zlily_pad_item=Water Lily
+item.zalcyan:raken_vine_item=Raken Vine
+item.zalcyan:arvense_item=Arvense
+item.zalcyan:warp_transmitter=§eWarp Transmiter §f(Keep one inventory slot open)
+item.zalcyan:rewarp_transmitter=§cRewarp Transmiter §f(Keep one inventory slot open)
+item.zalcyan:zorkan_crown=§l§cZorkan Crown
+item.zalcyan:marlar_elite_helmet=§4Astral Helmet
+item.zalcyan:marlar_elite_chestplate=§4Astral Chestplate
+item.zalcyan:marlar_elite_leggings=§4Astral Leggings
+item.zalcyan:marlar_elite_boots=§4Astral boots
+item.zalcyan:marlar_elite_sword=§4Astral Sword
+item.zalcyan:transmitter_shard=Warp Shard (Combine 4 for Warp Transmitter)
+item.zalcyan:varth_eye=Varth Eye
+item.zalcyan:photoprotein=Photoprotein Jell
+item.zalcyan:borgan_shell=Borgan Shell
+item.zalcyan:mynis_trunkmushroom_item= Mynis Trunkmushroom
+item.zalcyan:borgan_helmet=§dBorgan Helmet
+item.zalcyan:borgan_chestplate=§dBorgan Chestplate
+item.zalcyan:borgan_leggings=§dBorgan Leggings
+item.zalcyan:borgan_boots=§dBorgan boots
+item.zalcyan:borgan_sword=§aBorgan Sword
+item.zalcyan:skreepog_helmet=§aSkreepog Helmet
+item.zalcyan:skreepog_chestplate=§aSkreepog Chestplate
+item.zalcyan:skreepog_leggings=§dSkreepog Leggings
+item.zalcyan:skreepog_boots=§aSkreepog boots
+item.zalcyan:skreepog_sword=§aSkreepog Sword
+
+
+
+//action hints
+action.hint.exit.zalcyan:pod=Tap sneak to dismount
+action.hint.tame.zalcyan:lightning_bug=Tame (only lasts one day)
+
+//entities n stuff
+entity.zalcyan:aqe.name=Aqe
+entity.zalcyan:aqe_elite.name=Aqe Elite
+entity.zalcyan:lia.name=Lia
+entity.zalcyan:lia_giant.name=Lia Giant
+entity.zalcyan:mili.name=Mili
+entity.zalcyan:mili_a.name=Mili Warrior
+entity.zalcyan:mili_burnt.name=Burnt Mili Warrior
+entity.zalcyan:lor_crawler.name=Lor Crawler
+entity.zalcyan:marlar.name=Marauder
+entity.zalcyan:pod.name=Pod
+entity.zalcyan:friss_bug.name=Friss Beetle
+entity.zalcyan:caican.name=Caican
+entity.zalcyan:arglonar.name=Arglonar
+entity.zalcyan:argen_block.name=Arglonar Essence
+entity.zalcyan:magwag.name=Magwag
+entity.zalcyan:magwag_spike.name=Magwag Spike
+entity.zalcyan:rhizom.name=Rhizom
+entity.zalcyan:marlar_elite.name=Astral Knight
+entity.zalcyan:marlar_emperor.name=§l§cEmperor Zorkan
+entity.zalcyan:orb.name=Aqe Orb
+entity.zalcyan:r_orb.name=Marlar laser
+entity.zalcyan:reteleport.name=Stored location for Reteleportation device
+entity.zalcyan:light_bug.name=Lightning Bug
+entity.zalcyan:light_bug_flying.name=Lightning Bug
+entity.zalcyan:varth.name=Varth
+entity.zalcyan:varth_bullet.name=Varth Tear
+entity.zalcyan:borgan.name=Borgan Spider
+entity.zalcyan:borgan_bullet.name=Borgan Web
+entity.zalcyan:vok_warrior.name=Vok Warrior
+entity.zalcyan:skreepog.name=Skreepog
+
+//spawn eggs n stuff
+item.spawn_egg.entity.zalcyan:aqe.name=Spawn Aqe
+item.spawn_egg.entity.zalcyan:aqe_elite.name=Spawn Aqe Elite
+item.spawn_egg.entity.zalcyan:mili.name=Spawn Mili
+item.spawn_egg.entity.zalcyan:mili_a.name=Spawn Mili Warrior
+item.spawn_egg.entity.zalcyan:lia.name=Spawn Lia
+item.spawn_egg.entity.zalcyan:lia_giant.name=Spawn Lia Giant
+item.spawn_egg.entity.zalcyan:glistening_mite.name=Spawn Glistening Mite
+item.spawn_egg.entity.zalcyan:lor.name=Spawn Lorlander
+item.spawn_egg.entity.zalcyan:lor_crawler.name=Spawn Lor crawler
+item.spawn_egg.entity.zalcyan:marlar.name=Spawn Marauder
+item.spawn_egg.entity.zalcyan:pod.name=Spawn Pod
+item.spawn_egg.entity.zalcyan:friss_bug.name=Spawn Friss Beetle
+item.spawn_egg.entity.zalcyan:caican.name=Spawn Caican
+item.spawn_egg.entity.zalcyan:arglonar.name=Spawn Arglonar
+item.spawn_egg.entity.zalcyan:magwag.name=Spawn Magwag
+item.spawn_egg.entity.zalcyan:rhizom.name=Spawn Rhizom
+item.spawn_egg.entity.zalcyan:magwag_spike.name=Spawn Magwag Spike
+item.spawn_egg.entity.zalcyan:marlar_elite_hologram.name=Spawn Astral Knight
+item.spawn_egg.entity.zalcyan:marlar_emperor.name=Spawn §l§cEmperor Zorkan
+item.spawn_egg.entity.zalcyan:light_bug.name=Spawn Lightning Bug
+item.spawn_egg.entity.zalcyan:light_bug_flying.name=Spawn Flying Lightning Bug
+item.spawn_egg.entity.zalcyan:light_bug_baby.name=Spawn Lightning Bug Larva
+item.spawn_egg.entity.zalcyan:varth.name=Spawn Varth
+item.spawn_egg.entity.zalcyan:borgan.name=Spawn Borgan
+item.spawn_egg.entity.zalcyan:vok_warrior.name=Spawn Vok Warrior
+item.spawn_egg.entity.zalcyan:skreepog.name=Spawn Skreepog
+
+
+//blocks n stuff
+tile.zalcyan:aqe_elite_stone.name=§6§lAqe Elite Stone
+tile.zalcyan:pod_stone.name=Pod Stone
+tile.zalcyan:argen_stone.name=Argen Stone
+tile.zalcyan:zmud.name=Mud
+tile.zalcyan:krackle_wood.name=Krackle Wood
+tile.zalcyan:bioluminescent_rod.name=Bioluminescent Rod
+
+//Frissania
+tile.zalcyan:friss.name=Friss Sand
+tile.zalcyan:friss_roots.name=Friss Roots
+tile.zalcyan:friss_stem.name=Friss Stem
+tile.zalcyan:friss_vine.name=Mafis Vine
+tile.zalcyan:friss_cap.name=Friss Gel
+tile.zalcyan:friss_cap_cover.name=Friss Cap
+tile.zalcyan:mushroom2.name=Friss Mushroom
+tile.zalcyan:friss_door.name=Friss Door
+tile.zalcyan:friss_double_slab.name=friss Double Slab
+tile.zalcyan:friss_planks.name=Friss Planks
+tile.zalcyan:friss_slab.name=Friss Slab
+tile.zalcyan:friss_stairs.name=Friss Stairs
+tile.zalcyan:friss_stem_stripped.name=Stripped Friss Stem
+tile.zalcyan:friss_trapdoor.name=Friss Trapdoor
+tile.zalcyan:friss_vine_fruited.name=Fruited Mafis Vine
+tile.zalcyan:friss_fungus.name=Friss Fungus
+
+//Lorzol
+tile.Lor Leaves.name=Lorzol Leaves
+tile.zalcyan:lor_rock.name=Lor Stone
+tile.zalcyan:lor_smoker.name=Lor Smoker
+tile.zalcyan:lor_geode.name=Lor Geode
+tile.zalcyan:lor_mineral_ore.name=Lor Mineral Ore
+tile.zalcyan:lor_mineral.name=Lor Mineral
+tile.zalcyan:lor_mineral_block.name=Lor Mineral Block
+tile.zalcyan:lor_log.name=Lorzol Log
+tile.zalcyan:lor_log_chipped.name=Chipped Lorzol Log
+tile.zalcyan:lor_log_carved.name=Carved Lorzol Log
+tile.zalcyan:lor_log_semi_carved.name=Chiseled Lorzol Log
+tile.zalcyan:lor_log_stripped.name=Stripped Lorzol Log
+tile.zalcyan:lor_log_planks.name=Lorzol Planks
+tile.zalcyan:lorzol_dirt.name=Lorzol Dirt
+tile.zalcyan:lorzol0.name=Lorzol Grass
+tile.zalcyan:lorzol1.name=Lorzol Grass
+tile.zalcyan:lorzol2.name=Lorzol Grass
+tile.zalcyan:lor_log_planks.name=Lorzol Log Planks
+tile.zalcyan:lor_slab.name=Lorzol Slab
+tile.zalcyan:lor_stairs.name=Lorzol Stairs
+tile.zalcyan:lor_trapdoor.name=Lorzol Trapdoor
+tile.zalcyan:lor_door.name=Lorzol Door
+tile.zalcyan:lor_double_slab.name=Lorzol Double Slab
+tile.zalcyan:miren_grass.name=Lorzol Grass
+tile.zalcyan:miren_grass_tall.name=Tall Lorzol Grass
+tile.zalcyan:miren_grass_orange.name=Orange Lorzol Grass
+tile.zalcyan:miren_rock.name=Lor stones
+
+
+//Gulumar
+tile.zalcyan:gulu_grass.name=Gulu Tallgrass
+tile.zalcyan:gulu_ground.name=Gulu Grass
+tile.zalcyan:gulu_ground1.name=Gulu Grass
+tile.zalcyan:gulu_ground2.name=Gulu Grass
+tile.zalcyan:gulu_ground3.name=Gulu Grass
+tile.zalcyan:gulu_ground4.name=Gulu Grass
+tile.zalcyan:gulu_stem_bottem.name=Gulu Stem Root
+tile.zalcyan:gulu_stem.name=Gulu Stem
+tile.zalcyan:mushroom1.name=Gulu Mushroom
+tile.zalcyan:gulu_cap.name=Gulu Cap
+tile.zalcyan:gulu_cap_in.name=Gulu Gel
+tile.zalcyan:gulu_aso1.name=Tall Gulu Aso
+tile.zalcyan:gulu_aso2.name=Gulu Aso
+tile.zalcyan:gulu_shelf.name=Gulu Shelf Mushroom
+tile.zalcyan:gulu_dirt.name=Gulu Dirt
+tile.zalcyan:gulu_stone.name=Gulu Stone
+tile.zalcyan:gulu_stone_smooth.name=Smooth Gulu Stone
+tile.zalcyan:gulu_stone_rippled.name=Rippled Gulu Stone
+tile.zalcyan:gulu_stone_glyphs.name=Gulu Glyph Stone
+tile.zalcyan:gulu_stone_symbol.name=Gulu Symbol Stone
+
+//Moonlena
+tile.zalcyan:moonlen_stone.name=Moonlen Stone
+tile.zalcyan:moonlen_mould1.name=Moonlen Mould
+tile.zalcyan:moonlen_mould2.name=Moonlen Mould
+tile.zalcyan:moonlen_mould3.name=Moonlen Mould
+tile.zalcyan:moonlen_mould_growth.name=Moonlen Mould Growth
+tile.zalcyan:mushroom3.name=Moonlen Mushroom
+tile.zalcyan:mushroom3_2.name=Large Moonlen Mushroom
+tile.zalcyan:mushroom3_3.name=Small Moonlen Mushroom
+tile.zalcyan:moonlen_vine.name=Moonlen Vine
+tile.zalcyan:moonlen_crys.name=Moonlen Crys
+tile.zalcyan:moonlen_crys_base.name=Moonlen Crys Root
+tile.zalcyan:moonlen_brick.name=Moonlen Bricks
+tile.zalcyan:moonlen_brick_carved.name=Carved Moonlen Bricks
+tile.zalcyan:moonlen_brick_mouldy.name=Mouldy Moonlen Bricks
+tile.zalcyan:moonlen_pillar.name=Moonlen Pillar
+tile.zalcyan:moonlen_pillar_mouldy.name=Mouldy Moonlen Pillar
+tile.zalcyan:moonlen_motif.name=Chiseled Moonlen Bricks
+tile.zalcyan:moonlen_spike1.name=Moonlen Stalactite
+tile.zalcyan:moonlen_spike_body.name=Moonlen Stalactite Stem
+tile.zalcyan:moonlen_spike_filler.name=Moonlen Stalactite Base
+tile.zalcyan:moonlen_fungus.name=Moonlen Fungus
+
+//Cryan
+tile.zalcyan:cryan_dirt.name=cryan_dirt
+tile.zalcyan:cryan_grass.name=cryan_grass
+tile.zalcyan:cryan_stone.name=cryan_stone
+
+//Raken
+tile.zalcyan:raken_cap_cover.name=Raken Growths
+tile.zalcyan:raken_dirt.name=Raken Dirt
+tile.zalcyan:raken_grass.name=Short Raken Grass
+tile.zalcyan:raken_ground.name=Raken Grass
+tile.zalcyan:raken_jell.name=Raken Cave Gel
+tile.zalcyan:raken_leaves.name=Raken Leaves
+tile.zalcyan:raken_log_planks.name=Raken Planks
+tile.zalcyan:raken_log.name=Raken log
+tile.zalcyan:raken_log_stripped.name=Stripped Raken Log
+tile.zalcyan:raken_stone.name=Raken Stone
+tile.zalcyan:raken_slab.name=Raken Slab
+tile.zalcyan:raken_stairs.name=Raken Stairs
+tile.zalcyan:raken_trapdoor.name=Raken Trapdoor
+tile.zalcyan:raken_door.name=Raken Door
+tile.zalcyan:raken_double_slab.name=Raken Double Slab
+tile.zalcyan:arvense.name=Arvense
+tile.zalcyan:raken_grass_tall.name=Tall Raken Grass
+
+//Mynis
+tile.zalcyan:mynis.name=Mynis
+tile.zalcyan:mynis_cap_cover.name=Mynis Cap
+tile.zalcyan:mynis_cap_in.name=Mynis Gel
+tile.zalcyan:mynis_dirt.name=Mynis Crackle
+tile.zalcyan:mynis_door.name=Mynis Door
+tile.zalcyan:mynis_double_slab.name=Mynis Double Slab
+tile.zalcyan:mynis_grass_tall.name=Tall Myn
+tile.zalcyan:mynis_grass.name=Myn
+tile.zalcyan:mynis_log.name=Mynis Trunk
+tile.zalcyan:mynis_log_planks.name=Mynis Planks
+tile.zalcyan:mynis_log_stripped.name=Stripped Mynis Trunk
+tile.zalcyan:mynis_mushroom.name=Moi Mushroom
+tile.zalcyan:mynis_plant.name=Mynis Bush
+tile.zalcyan:mynis_roots.name=Mynis Roots
+tile.zalcyan:mynis_slab.name=Mynis Slab
+tile.zalcyan:mynis_stairs.name=Mynis Stairs
+tile.zalcyan:mynis_trapdoor.name=Mynis Trapdoor
+tile.zalcyan:mynis_trunkmushroom.name=Mynis Trunkmushroom
+tile.zalcyan:mynis_trunkmushroom_east.name=Mynis Trunkmushroom (East)
+tile.zalcyan:mynis_trunkmushroom_north.name=Mynis Trunkmushroom (North)
+tile.zalcyan:mynis_trunkmushroom_south.name=Mynis Trunkmushroom (South)
+tile.zalcyan:mynis_trunkmushroom_west.name=Mynis Trunkmushroom (West)
+tile.zalcyan:mynis_small_cap.name=Mog Cap
+tile.zalcyan:mynis_small_cap_stem.name=Mog Cap Stem
+
+
+
+//speaking
+emperor.msg1=§l§c[Emperor Zorkan] §6You cannot defeat me %1!
+emperor.msg2=§l§c[Emperor Zorkan] §6I am the true Emperor!
+emperor.msg3=§l§c[Emperor Zorkan] §6This world is mine!
+emperor.msg4=§l§c[Emperor Zorkan] §6Fear my power!
+emperor.msg5=§l§c[Emperor Zorkan] §6I will rule the Universe and you can't stop me!
+emperor.msg6=§l§c[Emperor Zorkan] §6I know you are near.
+emperor.msg7=§l§c[Emperor Zorkan] §6This is my ship!
+emperor.msg8=§l§c[Emperor Zorkan] §6Attack the Minecraftian my Astral Knights!
+emperor.msg9=§l§c[Emperor Zorkan] §6You are outnumbered.
+emperor.msg10=§l§c[Emperor Zorkan] §6The Crown is MINE!
+emperor.msg11=§l§c[Emperor Zorkan] §6Only I can rule!
+emperor.msg12=§l§c[Emperor Zorkan] §6Prepare for the invasion of this planet.
+emperor.msg13=§l§c[Emperor Zorkan] §6No one can defeat my army!
+emperor.msg14=§l§c[Emperor Zorkan] §6You cannot defeat me %1!
+emperor.msg15=§l§c[Emperor Zorkan] §6I am inevitable!
+emperor.msg16=§l§c[Emperor Zorkan] §6Only with might will there be peace in the galaxy.
+emperor.msg17=§l§c[Emperor Zorkan] §6You wan't my power for yourself, don't you?
+emperor.msg18=§l§c[Emperor Zorkan] §6Embrace the Dark Side!
+emperor.msg19=§l§c[Emperor Zorkan] §6You can run %1 but you can never hide.
+emperor.msg20=§l§c[Emperor Zorkan] §6The true power of the Marlar Empire will be known by all! Fear it's might %1!
+emperor.msg21=§l§c[Emperor Zorkan] §6You can't hurt me with Projectiles %1!
+emperor.msg22=§l§c[Emperor Zorkan] §6Ow!
+emperor.msg23=§l§c[Emperor Zorkan] §6Ouch.
+emperor.msg24=§l§c[Emperor Zorkan] §6'Tis but a sctatch %1.
+emperor.msg25=§l§c[Emperor Zorkan] §6You are strong %1, but not strong enough!
+
+
+zalhello.msg1=§l§6 Hi §c§l%1,§l§6 it's §b§lZalcyan§l§6,§9§lCrovono§l§6, and §d§lMadlad§l§6. We are the creators of Zalcyan's Quest.
+zalhello.msg2=§l§6 If you Like this addon §c§l%1, §l§6consider supporting the addon on Patreon at §l§a patreon.com/zalcyan
+zalhello.msg3=§l§6 Thanks and have fun!
+
+
+
+

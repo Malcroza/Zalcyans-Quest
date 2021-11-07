@@ -1,0 +1,49 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:guliku"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 3600,
+			"minecraft:frame_count": 3,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "guzi"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "shoot",
+					"target": "self"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 120,
+				"damage_chance": {
+					"min": 1,
+					"max": 2
+				}
+			}
+		},
+		"events": {
+			"shoot": {
+				"sequence": [
+					{
+						"shoot": {
+							"projectile": "zalcyan:orb",
+							"launch_power": 1.2
+						}
+					},
+					{
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						}
+					}
+				]
+			}
+		}
+	}
+}

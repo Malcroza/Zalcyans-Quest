@@ -1,0 +1,47 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:lor_smoker"
+		},
+		"components": {
+			"minecraft:destroy_time": 4,
+			"minecraft:friction": 0.6,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": {
+				"origin": [
+					-3.75,
+					0,
+					-3.75
+				],
+				"size": [
+					7.5,
+					16,
+					7.5
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-3.75,
+					0,
+					-3.75
+				],
+				"size": [
+					7.5,
+					16,
+					7.5
+				]
+			},
+			"minecraft:geometry": "geometry.lor_smoker",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "lor_smoker",
+					"render_method": "opaque"
+				}
+			}
+		},
+		"events": {}
+	}
+}

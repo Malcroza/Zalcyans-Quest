@@ -1,0 +1,235 @@
+//bridge-file-version: #25
+{
+	"resource_pack_name": "vanilla",
+	"texture_data": {
+		"lor_sword": {
+			"textures": "textures/items/lor_sword"
+		},
+		"guzi": {
+			"textures": [
+				"textures/items/guzi"
+			]
+		},
+		"aqe_elite_sword": {
+			"textures": [
+				"textures/items/aqe_elite_sword"
+			]
+		},
+		"lor_gem": {
+			"textures": [
+				"textures/items/lor_gem"
+			]
+		},
+		"mili_staff": {
+			"textures": [
+				"textures/items/mili_staff"
+			]
+		},
+		"lor_gem_broken": {
+			"textures": [
+				"textures/items/lor_gem_broken"
+			]
+		},
+		"marlar_blaster": {
+			"textures": [
+				"textures/items/marlar_blaster"
+			]
+		},
+		"marlar_boots": {
+			"textures": [
+				"textures/items/marlar_boots"
+			]
+		},
+		"marlar_chestplate": {
+			"textures": [
+				"textures/items/marlar_chestplate"
+			]
+		},
+		"marlar_helmet": {
+			"textures": [
+				"textures/items/marlar_helmet"
+			]
+		},
+		"marlar_leggings": {
+			"textures": [
+				"textures/items/marlar_leggings"
+			]
+		},
+		"arglonar_meat": {
+			"textures": [
+				"textures/items/arglonar_meat"
+			]
+		},
+		"mystery": {
+			"textures": [
+				"textures/items/record_mystery"
+			]
+		},
+		"mafis_berries": {
+			"textures": [
+				"textures/items/mafis_berries"
+			]
+		},
+		"friss_vine_item": {
+			"textures": [
+				"textures/items/friss_vine_item"
+			]
+		},
+		"friss_fungus_item": {
+			"textures": [
+				"textures/items/friss_fungus_item"
+			]
+		},
+		"moonlen_spike_item": {
+			"textures": [
+				"textures/items/moonlen_spike_item"
+			]
+		},
+		"moonlen_fungus_item": {
+			"textures": [
+				"textures/items/moonlen_fungus_item"
+			]
+		},
+		"moonlen_vine_item": {
+			"textures": [
+				"textures/items/moonlen_vine_item"
+			]
+		},
+		"mya_vine_item": {
+			"textures": [
+				"textures/items/mya_vine_item"
+			]
+		},
+		"zlily_pad_item": {
+			"textures": [
+				"textures/items/zlily_pad_item"
+			]
+		},
+		"raken_vine_item": {
+			"textures": [
+				"textures/items/raken_vine_item"
+			]
+		},
+		"arvense_item": {
+			"textures": [
+				"textures/items/arvense_item"
+			]
+		},
+		"marlar_elite_chestplate": {
+			"textures": [
+				"textures/items/marlar_elite_chestplate"
+			]
+		},
+		"marlar_elite_helmet": {
+			"textures": [
+				"textures/items/marlar_elite_helmet"
+			]
+		},
+		"marlar_elite_leggings": {
+			"textures": [
+				"textures/items/marlar_elite_leggings"
+			]
+		},
+		"marlar_elite_boots": {
+			"textures": [
+				"textures/items/marlar_elite_boots"
+			]
+		},
+		"marlar_elite_sword": {
+			"textures": [
+				"textures/items/marlar_elite_sword"
+			]
+		},
+		"zorkan_crown": {
+			"textures": [
+				"textures/items/zorkan_crown"
+			]
+		},
+		"warp_transmitter": {
+			"textures": [
+				"textures/items/warp_transmitter"
+			]
+		},
+		"rewarp_transmitter": {
+			"textures": [
+				"textures/items/rewarp_transmitter "
+			]
+		},
+		"transmitter_shard": {
+			"textures": [
+				"textures/items/transmitter_shard"
+			]
+		},
+		"photoprotein": {
+			"textures": [
+				"textures/items/photoprotein"
+			]
+		},
+		"varth_eye": {
+			"textures": [
+				"textures/items/varth_eye"
+			]
+		},
+		"mynis_trunkmushroom_item": {
+			"textures": [
+				"textures/items/mynis_trunkmushroom_item"
+			]
+		},
+		"borgan_boots": {
+			"textures": [
+				"textures/items/borgan_boots"
+			]
+		},
+		"borgan_chestplate": {
+			"textures": [
+				"textures/items/borgan_chestplate"
+			]
+		},
+		"borgan_helmet": {
+			"textures": [
+				"textures/items/borgan_helmet"
+			]
+		},
+		"borgan_leggings": {
+			"textures": [
+				"textures/items/borgan_leggings"
+			]
+		},
+		"borgan_shell": {
+			"textures": [
+				"textures/items/borgan_shell"
+			]
+		},
+		"skreepog_sword": {
+			"textures": [
+				"textures/items/skreepog_sword"
+			]
+		},
+		"skreepog_helmet": {
+			"textures": [
+				"textures/items/skreepog_helmet"
+			]
+		},
+		"skreepog_chestplate": {
+			"textures": [
+				"textures/items/skreepog_chestplate"
+			]
+		},
+		"skreepog_leggings": {
+			"textures": [
+				"textures/items/skreepog_leggings"
+			]
+		},
+		"skreepog_boots": {
+			"textures": [
+				"textures/items/skreepog_boots"
+			]
+		},
+		"skreepog_blaster": {
+			"textures": [
+				"textures/items/skreepog_blaster"
+			]
+		}
+	},
+	"texture_name": "atlas.items"
+}

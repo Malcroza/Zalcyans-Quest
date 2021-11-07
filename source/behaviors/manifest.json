@@ -1,0 +1,45 @@
+{
+	"format_version": 1,
+	"header": {
+		"uuid": "9b1f8247-8bdb-4796-8372-86a77b4ab417",
+		"name": "§6ZALCYAN'S §5QUEST §3(Primary)",
+		"description": "[1.0.7] *Enable Experimental Gamelplay*",
+		"version": [
+			7,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"description": "Enable Experimental Gamelplay",
+			"type": "data",
+			"version": [
+				7,
+				0,
+				0
+			],
+			"uuid": "fa6e90c8-c925-460f-8155-c8a60b753caa"
+		}
+	],
+	"dependencies": [
+		{
+			"version": [
+				7,
+				0,
+				0
+			],
+			"uuid": "611cb8bb-6667-492e-8ec4-e33a33a9c28e"
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"blockbench_entity_wizard": [
+				"1.0.2"
+			],
+			"bridge": [
+				"1.8.3"
+			]
+		}
+	}
+}
