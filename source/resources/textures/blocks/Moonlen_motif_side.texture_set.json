@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "Moonlen_motif_side",
+		"metalness_emissive_roughness": "Moonlen_motif_side_mer",
+		"heightmap": "Moonlen_motif_side_heightmap"
+	}
+}
