@@ -6,7 +6,6 @@
 			"identifier": "zalcyan:mynis_mushroom_spike_feature_scatter"
 		},
 		"iterations": 3,
-		"coordinate_eval_order": "zyx",
 		"x": {
 			"extent": [
 				-2,

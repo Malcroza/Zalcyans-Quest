@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:kexp_summon",
+			"materials": {
+				"default": "charged_creeper"
+			},
+			"textures": {
+				"default": "textures/entity/kexp_summon"
+			},
+			"geometry": {
+				"default": "geometry.kexp_summon"
+			},
+			"animations": {
+				"kexp_summon.general": "animation.kexp_summon",
+				"general": "controller.animation.kexp_summon.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			},
+			"particle_effects": {
+				"kexp_summon": "zalcyan:kexp_summon_part",
+				"kexp_blast": "zalcyan:kexp_blast_part"
+			},
+			"spawn_egg": {
+				"base_color": "#71e368",
+				"overlay_color": "#2ca881"
+			},
+			"render_controllers": [
+				"controller.render.marlar_elite_hologram"
+			]
+		}
+	}
+}

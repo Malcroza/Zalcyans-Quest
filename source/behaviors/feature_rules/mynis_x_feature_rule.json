@@ -3,20 +3,31 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"identifier": "minecraft:mynis_x_feature_rule",
+			"identifier": "zalcyan:mynis_x_feature_rule",
 			"places_feature": "zalcyan:mynis_x_feature"
 		},
 		"conditions": {
-			"minecraft:biome_filter": {
-				"test": "has_biome_tag",
-				"operator": "==",
-				"value": "mynis"
-			},
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "mesa"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "desert"
+						}
+					]
+				}
+			],
 			"placement_pass": "first_pass"
 		},
 		"distribution": {
-			"iterations": 1,
-			"scatter_chance": 6,
+			"iterations": "(q.noise(v.originx / 740, v.originz / 740) < -0.43 && q.noise(v.originx / 740, v.originz / 740) > -0.89)",
+			"scatter_chance": 16,
 			"x": 0,
 			"y": "query.heightmap(variable.worldx, variable.worldz) - 9",
 			"z": 0

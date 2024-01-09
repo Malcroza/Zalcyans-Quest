@@ -1,7 +1,7 @@
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
-		"controller.animation.skreepog_pod.sound": {
+		"controller.animation.pod.sound": {
 			"initial_state": "default",
 			"states": {
 				"default": {

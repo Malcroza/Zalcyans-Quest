@@ -205,7 +205,8 @@
 					"mob",
 					"marlar",
 					"marlar_elite",
-					"marlar_emperor"
+					"marlar_emperor",
+					"boss"
 				]
 			},
 			"minecraft:breathable": {
@@ -428,7 +429,7 @@
 				],
 				"must_see": false,
 				"must_reach": false,
-				"scan_interval": 0.1,
+				"scan_interval": 10,
 				"within_radius": 100,
 				"attack_interval": 3,
 				"set_persistent": true,

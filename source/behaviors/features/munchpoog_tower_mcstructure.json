@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:munchpoog_tower_mcstructure"
+    },
+    "features": [
+      [ "minecraft:munchpoog_tower_1_mcstructure", 1 ],
+      [ "minecraft:munchpoog_tower_1_mcstructure", 2 ],
+      [ "minecraft:munchpoog_tower_1_mcstructure", 4 ]
+    ]
+  }
+}

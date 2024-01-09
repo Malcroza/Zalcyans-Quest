@@ -4,9 +4,35 @@
 		"animation.r_orb.move": {
 			"loop": true,
 			"animation_length": 0.01,
+			"bones": {
+				"waist": {
+					"rotation": ["-query.target_x_rotation", "-query.body_y_rotation + query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.r_orb.part": {
+			"animation_length": 0.04,
 			"particle_effects": {
-				"0.0": {
+				"0.04": {
 					"effect": "lazar_trail",
+					"locator": "part_emitter"
+				}
+			}
+		},
+		"animation.r_orb.close": {
+			"loop": true,
+			"bones": {
+				"cubes": {
+					"scale": "(query.property('zalcyan:invis') == false)  ? Math.min(query.ground_speed/11,2) : 0 "
+				}
+			}
+		},
+		"animation.r_orb.fog": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.16,
+			"particle_effects": {
+				"0.16": {
+					"effect": "fog",
 					"locator": "part_emitter"
 				}
 			}

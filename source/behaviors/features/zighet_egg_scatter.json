@@ -1,0 +1,30 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:zighet_egg_scatter"
+		},
+		"iterations": 2500,
+		"x": {
+			"extent": [
+				-2,
+				18
+			],
+			"distribution": "gaussian"
+		},
+		"z": {
+			"extent": [
+				-2,
+				18
+			],
+			"distribution": "gaussian"
+		},
+		"y": {
+			"extent": [0, 180],
+			"distribution": "uniform"
+		},
+		"project_input_to_floor": false,
+		"places_feature": "zalcyan:zighet_egg_feature"
+	}
+}

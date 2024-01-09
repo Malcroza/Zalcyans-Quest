@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "zalcyan:gulu_temple_feature_east"
+		},
+
+		"structure_name": "zalcyan:gulu_temple",
+
+		"facing_direction": "east",
+		"adjustment_radius": 0,
+
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

@@ -1,0 +1,130 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.8.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:marlar_dead",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"bridge_execute_commands"
+				]
+			},
+			"animations": {
+				"bridge_execute_commands": "controller.animation.bridge_marlar_dead.execute_commands"
+			}
+		},
+		"component_groups": {
+			"minecraft:dead_": {
+				"minecraft:collision_box": {
+					"width": 0.6,
+					"height": 0.8
+				},
+				"minecraft:timer": {
+					"looping": false,
+					"randomInterval": false,
+					"time": 10.15,
+					"time_down_event": {
+						"event": "minecraft:event_dead"
+					}
+				}
+			},
+			"minecraft:despawndead": {
+				"minecraft:type_family": {
+					"family": [
+						"despawn_"
+					]
+				}
+			},
+			"bridge:execute_command_id_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "self",
+							"value": "despawn_"
+						}
+					]
+				}
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:health": {
+				"value": {
+					"range_min": 10,
+					"range_max": 10
+				}
+			},
+			"minecraft:damage_sensor": [
+				{
+					"deals_damage": false
+				}
+			],
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collusion": false
+			},
+			"minecraft:equipment": {
+				"table": "loot_tables/entities/marlar_gear_dead.json"
+			}
+		},
+		"events": {
+			"minecraft:entity_transformed": {
+				"add": {
+					"component_groups": [
+						"minecraft:dead_"
+					]
+				}
+			},
+			"minecraft:event_dead": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"bridge:execute_command_id_1"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"minecraft:despawndead"
+							]
+						}
+					}
+				]
+			},
+			"bridge:remove_command_id_1": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			}
+		}
+	}
+}

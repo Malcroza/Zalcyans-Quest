@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:mynis_var_weighted"
+    },
+    "features": [
+      [ "zalcyan:mynis_feature", 4 ],
+      [ "zalcyan:mynis1_feature", 2 ],
+      [ "zalcyan:mynis2_feature", 1 ],
+      [ "zalcyan:mynis3_feature", 1 ]
+    ]
+  }
+}

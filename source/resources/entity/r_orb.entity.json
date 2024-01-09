@@ -7,7 +7,9 @@
         "default": "orb"
       },
 	  "particle_effects": {
-    "lazar_trail": "zalcyan:lazar_trail"
+    "lazar_trail": "zalcyan:lazar_trail",
+	"lazar_sparks": "zalcyan:r_orb_sparks",
+	"fog": "zalcyan:r_orb_fog"
 	},
       "textures": {
         "default": "textures/entity/r_orb"
@@ -16,12 +18,18 @@
         "default": "geometry.r_orb"
       },
       "animations": {
-        "move": "animation.r_orb.move", 
-		"moving": "controller.animation.r_orb.particles"
+        "move": "animation.r_orb.move",		
+		"part": "controller.animation.r_orb.particles",
+		"moving": "controller.animation.r_orb.movement",
+		"close": "animation.r_orb.close",
+		"fog_part": "animation.r_orb.fog"
       },
       "scripts": {
         "animate": [
-          "moving"
+          "move",
+		  "close",
+		  "part",
+		  "fog_part"
         ]
       },
       "render_controllers": [ "controller.render.orb" ]

@@ -1,8 +1,0 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "lor_door",
-        "metalness_emissive_roughness": "lor_door_mer",
-        "heightmap": "lor_door_heightmap"
-    }
-}

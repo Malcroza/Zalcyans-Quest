@@ -1,0 +1,79 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:rysii_block_summon",
+            "is_experimental": false,
+            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:map_color": "#695651",
+            "minecraft:unit_cube": {},
+            "minecraft:on_player_destroyed": {
+                "event": "doom",
+                "target": "self"
+            },
+            "minecraft:on_interact": {
+                "event": "doom",
+                "target": "self"
+            },
+            "minecraft:loot": "loot_tables/nothing.json",
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2000
+            }
+        },
+        "events": {
+            "doom": {
+                "sequence": [
+					{
+                        "run_command": {
+                            "command": [
+                                "music stop 5"
+                            ],
+                            "target": "self"
+                        }
+                    },
+					{
+                        "run_command": {
+                            "command": [
+                                "stopsound @a rysii.music"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "playsound rysii.music @a ~ ~ ~"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "summon zalcyan:rysii_summon"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "setblock ~ ~ ~ air"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.220",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "zalcyan:zighet_paper1_feature"
+		},
+		"places_block": {
+			"name": "zalcyan:zighet_paper1"
+		},
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			{
+				"name": "zalcyan:zighet_paper"
+			}
+		]
+	}
+}

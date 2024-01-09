@@ -17,8 +17,155 @@
 						}
 					],
 					"on_entry": [
-						"/tag @s add mar",
+						"/playsound item.shield.block @a ~ ~ ~",
 						"@s bridge:remove_command_id_1"
+					]
+				}
+			}
+		},
+		"controller.animation.bridge_marlar.shield": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"shield_1": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)==1"
+						},
+						{
+							"shield_2": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)==2"
+						},
+						{
+							"shield_3": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)==3"
+						},
+						{
+							"shield_4": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)==4"
+						},
+						{
+							"shield_5": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)==5"
+						},
+						{
+							"shield_6": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)==6"
+						},
+						{
+							"shield_7": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)==7"
+						},
+						{
+							"shield_8": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)==8"
+						},
+						{
+							"shield_9": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)==9"
+						},
+						{
+							"no_shield": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14) > 9"
+						}
+					]
+				},
+				"shield_1": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load marlar_shield1 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"shield_2": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load marlar_shield2 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"shield_3": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load marlar_shield3 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"shield_4": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load marlar_shield4 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"shield_5": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load marlar_shield5 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"shield_6": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load marlar_shield6 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"shield_7": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load marlar_shield7 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"shield_8": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load marlar_shield8 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"shield_9": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load marlar_shield9 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"no_shield": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"@s zalcyan:complete_sheild_summon"
 					]
 				}
 			}

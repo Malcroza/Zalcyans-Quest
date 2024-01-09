@@ -1,0 +1,16 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "zalcyan:city_path_feature"
+		},
+
+		"structure_name": "zalcyan:city_path",
+
+		"facing_direction": "north",
+		"adjustment_radius": 0,
+
+		"constraints": {
+		}
+	}
+}

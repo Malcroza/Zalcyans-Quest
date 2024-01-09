@@ -1,0 +1,354 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:zighet",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"bridge_execute_commands"
+				]
+			},
+			"animations": {
+				"bridge_execute_commands": "controller.animation.bridge_zighet.execute_commands"
+			}
+		},
+		"component_groups": {
+			"subimago": {
+        "minecraft:is_baby": {
+        },
+        "minecraft:scale_by_age": {
+          "start_scale": 0.35,
+          "end_scale": 1.0
+        },
+        "minecraft:ageable": {
+          "duration": 20,
+          "feed_items": [
+            {
+              "item": "wheat",
+              "growth": 0.016667
+            },
+            {
+              "item": "sugar",
+              "growth": 0.025
+            },
+            {
+              "item": "hay_block",
+              "growth": 0.15
+            },
+            {
+              "item": "apple",
+              "growth": 0.05
+            },
+            {
+              "item": "golden_carrot",
+              "growth": 0.05
+            },
+            {
+              "item": "golden_apple",
+              "growth": 0.2
+            },
+            {
+              "item": "appleEnchanted",
+              "growth": 0.2
+            }
+          ],
+          "grow_up": {
+            "event": "minecraft:ageable_grow_up",
+            "target": "self"
+          }
+        }
+      },
+			"fly": {
+				"minecraft:movement.glide": {
+					"start_speed": 0.1,
+					"speed_when_turning": 0.2
+				},
+				"minecraft:physics": {
+					"has_gravity": false
+				},
+				"minecraft:movement": {
+					"value": 1.8
+				},
+				"minecraft:behavior.circle_around_anchor": {
+					"priority": 3,
+					"radius_change": 1,
+					"radius_adjustment_chance": 0.004,
+					"height_adjustment_chance": 0.002857,
+					"goal_radius": 1,
+					"angle_change": 15,
+					"radius_range": [
+						5,
+						15
+					],
+					"height_offset_range": [
+						-4,
+						5
+					],
+					"height_above_target_range": [
+						15,
+						25
+					]
+				},
+				"minecraft:behavior.swoop_attack": {
+					"priority": 0,
+					"damage_reach": 0.2,
+					"speed_multiplier": 1,
+					"delay_range": [
+						0,
+						2
+					]
+				}
+			},
+			"walk": {
+				"minecraft:movement.basic": {},
+				"minecraft:navigation.walk": {
+					"is_amphibious": true,
+					"can_pass_doors": true,
+					"can_walk": true,
+					"can_break_doors": true
+				},
+				"minecraft:annotation.break_door": {},
+				"minecraft:jump.static": {},
+				"minecraft:can_climb": {},
+				"minecraft:behavior.melee_attack": {
+					"priority": 3
+				},
+				"minecraft:behavior.random_look_around": {
+					"priority": 9
+				},
+				"minecraft:physics": {},
+				"minecraft:movement": {
+					"value": 0.4
+				}
+			},
+			"bridge:execute_command_id_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player ? 5 : 0"
+			},
+			"minecraft:type_family": {
+				"family": [
+					"zighet",
+					"undead",
+					"monster",
+					"mob",
+					"insect",
+					"arthropod"
+				]
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/phantom.json"
+			},
+			"minecraft:nameable": {},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:attack": {
+				"damage": 6
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_air": true,
+				"breathes_water": false
+			},
+			"minecraft:collision_box": {
+				"width": 0.9,
+				"height": 0.5
+			},
+			"minecraft:follow_range": {
+				"value": 64,
+				"max": 64
+			},
+			"minecraft:despawn": {
+				"despawn_from_distance": {}
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 1,
+				"reselect_targets": true,
+				"scan_interval": 20,
+				"within_radius": 64,
+				"must_see_forget_duration": 0.5,
+				"target_search_height": 80,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "villager"
+						},
+						"max_dist": 64
+					},
+					{
+					"filters": {
+							"all_of": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"value": "player",
+											"subject": "other"
+										},
+										{
+											"test": "has_equipment",
+											"value": "zalcyan:zighet_queen_helmet",
+											"subject": "other",
+											"domain": "head",
+											"operator": "not"
+										}
+									]
+								}
+							]
+						},
+						"max_dist": 64
+					}
+				]
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 8,
+				"look_distance": 6,
+				"probability": 0.02
+			},
+			"minecraft:timer": {
+				"time": 5,
+				"time_down_event": {
+					"event": "alternate_pathing",
+					"filters": {
+						"test": "has_target",
+						"subject": "self",
+						"value": true
+					}
+				},
+				"looping": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"walk"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"subimago"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"bridge:execute_command_id_1"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:ageable_grow_up": {
+        "remove": {
+          "component_groups": [
+            "subimago"
+          ]
+        }
+		},
+			"alternate_pathing": {
+				"randomize": [
+					{
+						"sequence": [
+							{
+								"remove": {
+									"component_groups": [
+										"walk"
+									]
+								}
+							},
+							{
+								"add": {
+									"component_groups": [
+										"fly"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"remove": {
+									"component_groups": [
+										"fly"
+									]
+								}
+							},
+							{
+								"add": {
+									"component_groups": [
+										"walk"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"bridge:remove_command_id_1": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			}
+		}
+	}
+}

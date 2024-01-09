@@ -1,0 +1,32 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:rysii_block_glass",
+            "is_experimental": false,
+            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#ed640e",
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 10,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 200.5
+            },
+			"minecraft:material_instances": {
+                "*": {
+                    "texture": "rysii_block_glass",
+                    "render_method": "blend"
+                }
+            }
+        },
+        "events": {}
+    }
+}

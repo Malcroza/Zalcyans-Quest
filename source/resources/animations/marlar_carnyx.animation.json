@@ -1,0 +1,195 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.marlar_carnyx.first_person.hold": {
+			"loop": true,
+			"bones": {
+				"carnyx": {
+					"rotation": [-7.506, 60.22075, -50.14032],
+					"position": [-12, 6, 15],
+					"scale": 3.15
+				},
+				"clip": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.marlar_carnyx.first_person.hold2": {
+			"loop": true,
+			"bones": {
+				"carnyx": {
+					"rotation": [10, 60, -30],
+					"position": [-12, 6, 15],
+					"scale": 3.15
+				},
+				"RightArm": {
+					"position": [0, 0, -5]
+				}
+			}
+		},
+		"animation.marlar_carnyx.first_person.hold4": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.52,
+			"bones": {
+				"carnyx": {
+					"rotation": {
+						"0.0": [-15.01, 61.22, -50.14],
+						"0.52": [-15.006, 61.2207, -50.14032]
+					},
+					"position": {
+						"0.0": [12, 6, -2],
+						"0.52": [12, 6, -2]
+					},
+					"scale": {
+						"0.0": [6.15, 6.15, 6.15],
+						"0.52": [6.15, 6.15, 6.15]
+					}
+				},
+				"RightArm": {
+					"position": {
+						"0.0": [0, 0, -5],
+						"0.52": [0, 0, -5]
+					}
+				},
+				"inner_carnyx": {
+					"rotation": {
+						"0.0": [9.5, 0.7, -2],
+						"0.52": [9.5, 0.7, -2]
+					},
+					"position": {
+						"0.0": [-0.65, 0, 2.32],
+						"0.2": [-0.65, 0, 2.32],
+						"0.52": [-0.65, 9, 2.32]
+					}
+				},
+				"barrel": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.32": [1, 1, 1],
+						"0.52": [0.5, 0.5, 0.5]
+					}
+				}
+			}
+		},
+		"animation.marlar_carnyx.shoot": {
+			"loop": true,
+			"bones": {
+				"capleft1": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft3": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright1": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright2": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright3": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft2": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft5": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft6": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft7": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright5": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright6": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright7": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"fire": {
+					"scale": 1
+				},
+				"stage1": {
+					"scale": 2
+				}
+			}
+		},
+		"animation.marlar_carnyx.fire": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.32,
+			"bones": {
+				"fire": {
+					"scale": {
+						"0.04": [1, 1, 1],
+						"0.16": [1.4, 1.4, 1.4],
+						"0.32": [1, 1, 1]
+					}
+				},
+				"stage2": {
+					"scale": {
+						"0.04": [0, 0, 0],
+						"0.12": [0, 0, 0],
+						"0.16": [0, 0, 0],
+						"0.32": [0, 0, 0]
+					}
+				},
+				"stage3": {
+					"scale": {
+						"0.04": [0, 0, 0],
+						"0.12": [1, 1, 1],
+						"0.16": [0, 0, 0],
+						"0.32": [0, 0, 0]
+					}
+				},
+				"stage4": {
+					"scale": {
+						"0.04": [0, 0, 0],
+						"0.12": [0, 0, 0],
+						"0.16": [1, 1, 1],
+						"0.24": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.marlar_carnyx.fire_hold": {
+			"loop": true,
+			"bones": {
+				"fire": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.marlar_carnyx.first_person.hold3": {
+			"loop": true,
+			"bones": {
+				"carnyx": {
+					"rotation": [-15.006, 61.2207, -50.14032],
+					"position": [12, 6, -2],
+					"scale": 6.15
+				},
+				"RightArm": {
+					"position": [0, 0, -5]
+				},
+				"inner_carnyx": {
+					"rotation": [9.5, 0.7, -2],
+					"position": [-0.65, 6, 1.32]
+				},
+				"barrel": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.marlar_carnyx.sound": {
+			"animation_length": 5,
+			"sound_effects": {
+				"0.0": {
+					"effect": "fear"
+				}
+			}
+		}
+	}
+}

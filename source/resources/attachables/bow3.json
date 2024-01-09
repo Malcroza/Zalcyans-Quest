@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan3:bow",
+      "materials": {
+        "default": "phantom",
+        "enchanted": "entity_alphatest_glint",
+		"glow": "zal2"
+      },
+      "textures": {
+        "default": "textures/models/equipment/h_orb_blaster",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.h_orb_blaster"
+      },
+      "animations": {
+		"h_orb_blaster_first_person": "animation.h_orb_blaster.first_person.hold",
+		"h_orb_blaster_first_person2": "animation.h_orb_blaster.first_person.hold2",
+		"h_orb_blaster_first_person3": "animation.h_orb_blaster.first_person.hold4",
+		"hold": "animation.h_orb_blaster.fire_hold",
+		"charge": "animation.h_orb_blaster.charge",
+		"charge2": "animation.h_orb_blaster.charge2",
+		"charge3": "animation.h_orb_blaster.charge3",
+		"fire": "animation.h_orb_blaster.fire",
+		"shoot_cont": "controller.animation.h_orb_blaster.attack",
+		"fire_cont": "controller.animation.h_orb_blaster.fire"
+      },
+      "scripts": {
+        "animate": [
+			{
+			"shoot_cont": "c.is_first_person"
+			}
+          ,
+		  "fire_cont"
+        ]
+      },
+      "render_controllers": [ "controller.render.bow3"],
+	   "sound_effects": {
+				"loaded": "h_orb.loaded",
+				"slide": "h_orb.slide",
+				"click": "sound.metal.click"
+			}
+    }
+  }
+}

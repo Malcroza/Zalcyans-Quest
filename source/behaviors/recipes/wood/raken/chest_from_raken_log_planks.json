@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:chest_from_raken_log_planks"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AAA",
+			"A A",
+			"AAA"
+		],
+		"key": {
+			"A": {
+				"item": "zalcyan:raken_log_planks"
+			}
+		},
+		"result": {
+			"item": "chest",
+			"count": 1
+		},
+		"priority": 2
+	}
+}

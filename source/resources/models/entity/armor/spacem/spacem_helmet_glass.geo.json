@@ -1,0 +1,50 @@
+{
+	"format_version": "1.10.0",
+	"geometry.spacem_helmet_glass": {
+		"texturewidth": 128,
+		"textureheight": 128,
+		"visible_bounds_width": 3,
+		"visible_bounds_height": 4,
+		"visible_bounds_offset": [0, 2, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 24, 0]
+			},
+			{
+				"name": "head",
+				"parent": "body",
+				"pivot": [0, 24, 0],
+				"cubes": [
+					{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0], "inflate": 0.9},
+					{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [81, 0], "inflate": 0.81}
+				]
+			},
+			{
+				"name": "la",
+				"parent": "head",
+				"pivot": [1, 26, 0],
+				"rotation": [0, 7.5, -27.5]
+			},
+			{
+				"name": "ra",
+				"parent": "head",
+				"pivot": [-1, 26, 0],
+				"rotation": [0, -7.5, 27.5]
+			},
+			{
+				"name": "hat",
+				"parent": "head",
+				"pivot": [0, 24, 0],
+				"cubes": [
+					{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 16]}
+				]
+			}
+		]
+	}
+}

@@ -23,7 +23,7 @@
       },
         "spawn_egg": {
           "base_color": "#202e37",
-          "overlay_color": "#a8ca58"
+          "overlay_color": "#41851b"
         },
       "geometry": {
         "default": "geometry.skreepog_pod"

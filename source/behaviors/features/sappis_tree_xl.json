@@ -1,0 +1,16 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "zalcyan:sappis_tree_xl"
+		},
+
+		"features": [
+			["zalcyan:sappis_tree_xl_east_proxy", 1],
+			["zalcyan:sappis_tree_xl_north_proxy", 1],
+			["zalcyan:sappis_tree_xl_west_proxy", 1],
+			["zalcyan:sappis_tree_xl_south_proxy", 1]
+		]
+	}
+}

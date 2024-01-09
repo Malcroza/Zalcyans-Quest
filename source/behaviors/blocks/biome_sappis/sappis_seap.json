@@ -1,0 +1,57 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:sappis_seap",
+            "is_experimental": false,
+            "register_to_creative_menu": false
+        },
+        "components": {
+			"minecraft:collision_box": false,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "sappis_seap",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:friction": 0.3,
+            "minecraft:map_color": "#45563e",
+            "minecraft:light_dampening": 0.0,
+            "minecraft:light_emission": 0.0,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.0
+            },
+            "minecraft:geometry": "geometry.sappis_seap",
+            "minecraft:selection_box": {
+                "origin": [
+                    -5.65,
+                    0,
+                    -5.65
+                ],
+                "size": [
+                    11.3,
+                    2,
+                    11.3
+                ]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:sappis_seap_block"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+			"minecraft:loot": "loot_tables/nothing.json"
+        },
+        "events": {
+        }
+    }
+}

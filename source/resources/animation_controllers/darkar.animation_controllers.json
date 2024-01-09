@@ -1,0 +1,128 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.darkar.general": {
+			"states": {
+				"default": {
+					"animations": [
+						"darkar_general",
+						"look_at_target",
+						"cape"
+					]
+				}
+			}
+		},
+		"controller.animation.darkar.move": {
+			"initial_state" : "crouching",
+			"states": {
+				"moving": {
+					"animations" : [ "moving"],
+					"transitions" : [
+						{
+							"running": "query.modified_move_speed >= 0.95"
+						},
+						{
+							"crouching": "query.modified_move_speed <= 0.35"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"running" : {
+					"animations" : [ "run", "run_rot" ],
+					"transitions" : [
+						{
+							"moving" : "query.modified_move_speed < 0.95 && query.modified_move_speed > 0.35"
+						},
+						{
+							"crouching": "query.modified_move_speed <= 0.35"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"crouching" : {
+					"animations" : [ "moving", "crouch_rot" ],
+					"transitions" : [
+						{
+							"moving" : "query.modified_move_speed < 0.95 && query.modified_move_speed > 0.35"
+						},
+						{
+							"running": "query.modified_move_speed >= 0.95"
+						}
+					],
+					"blend_transition": 0.1
+				}
+			}
+		},
+		"controller.animation.darkar.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"attackzero": "query.is_delayed_attacking && math.random_integer(1,5)==1"
+						},
+						{
+							"attackone": "query.is_delayed_attacking && math.random_integer(1,5)==2"
+						},
+						{
+							"attacktwo": "query.is_delayed_attacking && math.random_integer(1,5)==3"
+						},
+						{
+							"attackthree": "query.is_delayed_attacking && math.random_integer(1,5)==4"
+						},
+						{
+							"attackfour": "query.is_delayed_attacking && math.random_integer(1,5)==5"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"attackzero" : {
+					"animations" : [ "attackzero" ],
+					"transitions" : [
+						{
+							"default" : "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.7
+				},
+				"attackone" : {
+					"animations" : [ "attackone" ],
+					"transitions" : [
+						{
+							"default" : "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.7
+				},
+				"attacktwo" : {
+					"animations" : [ "attacktwo" ],
+					"transitions" : [
+						{
+							"default" : "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.7
+				},
+				"attackthree" : {
+					"animations" : [ "attackthree" ],
+					"transitions" : [
+						{
+							"default" : "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attackfour" : {
+					"animations" : [ "attackfour" ],
+					"transitions" : [
+						{
+							"default" : "query.is_delayed_attacking == 0"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		}
+	}
+}

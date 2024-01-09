@@ -1,0 +1,55 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:neo_pod_stone",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "neo_pod_stone",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:map_color": "#E0B61B",
+            "minecraft:unit_cube": {},
+            "minecraft:on_player_destroyed": {
+                "event": "doom",
+                "target": "self"
+            },
+            "minecraft:on_interact": {
+                "event": "doom",
+                "target": "self"
+            },
+            "minecraft:loot": "loot_tables/nothing.json"
+        },
+        "events": {
+            "doom": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "summon zalcyan:neo_pod_summon"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": "setblock ~ ~ ~ air"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:darkar",
+			"materials": {
+				"default": "phantom",
+				"glow": "zal2"
+				
+			},
+			"textures": {
+				"default": "textures/entity/darkar",
+				"glow": "textures/models/armor/dymal_assassin_armor"
+			},
+			"geometry": {
+				"default": "geometry.darkar",
+				"glow": "geometry.dymal_assassin_helmet_glow"
+			},
+			"animations": {
+
+				"attackzero": "animation.darkar.attackzero",
+				"attackone": "animation.darkar.attackone",
+				"attacktwo": "animation.darkar.attacktwo",
+				"attackthree": "animation.darkar.attackthree",
+				"attackfour": "animation.darkar.attackfour",
+				"moving": "animation.darkar.move",
+				"darkar_general": "animation.darkar.general",
+				"move": "controller.animation.darkar.move",
+				"run": "animation.darkar.run",
+				"run_rot": "animation.darkar.run_rot",
+				"cape": "animation.darkar.cape",
+				"crouch": "animation.darkar.crouch",
+				"crouch_rot": "animation.darkar.crouch_rot",
+				"general": "controller.animation.darkar.general",
+				"roaring": "animation.darkar.roaring",
+				"look_at_target_default": "animation.humanoid.look_at_target.default",
+				"look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+				"look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+				"controller_look_at_target": "controller.animation.humanoid.look_at_target",
+				"attacking": "controller.animation.darkar.attack",
+				"look_at_target": "animation.darkar.look_at_target"
+
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"general",
+					"attacking"
+				]
+			},
+			"render_controllers": [
+				"controller.render.darkar", "controller.render.dymal_assassin_helmet_glow" 
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#05162c",
+				"overlay_color": "#111e2e"
+			},
+			"sound_effects": {
+				"roar": "mob.roar"
+			}
+		}
+	}
+}

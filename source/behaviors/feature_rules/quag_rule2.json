@@ -1,0 +1,42 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:quag_rule2",
+			"places_feature": "zalcyan:quag_feature2"
+		},
+
+		"conditions": {
+			"placement_pass": "first_pass",
+
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "roofed"
+							}
+						]
+					}
+				]
+			}
+		},
+
+		"distribution": {
+			"iterations": 256,
+
+			"x": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"y": "(q.noise(v.worldx / 650, v.worldz / 650) + q.noise(v.worldx, v.worldz) * 0.025 < -0.4 && (query.heightmap(variable.worldx, variable.worldz) >= 64)) ? (q.heightmap(v.worldx, v.worldz) - 2) : -70"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:raken_var_weighted"
+    },
+    "features": [
+      [ "zalcyan:raken_feature", 4 ],
+      [ "zalcyan:raken1_feature", 2 ],
+      [ "zalcyan:raken2_feature", 1 ],
+      [ "zalcyan:raken3_feature", 1 ]
+    ]
+  }
+}

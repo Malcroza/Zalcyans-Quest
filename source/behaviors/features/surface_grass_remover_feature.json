@@ -1,0 +1,37 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.220",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "zalcyan:surface_grass_remover_feature"
+		},
+		"places_block": {
+			"name": "minecraft:air"
+		},
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			{
+				"name": "minecraft:dirt"
+			},
+			{
+				"name": "minecraft:grass"
+			},
+			{
+				"name": "minecraft:gravel"
+			},
+			{
+				"name": "minecraft:podzol"
+			},
+			{
+				"name": "minecraft:sand"
+			},
+			{
+				"name": "minecraft:tallgrass"
+			},
+			{
+				"name": "minecraft:double_plant"
+			}
+		]
+	}
+}

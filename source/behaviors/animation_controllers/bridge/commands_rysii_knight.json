@@ -1,0 +1,85 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bridge_rysii_knight.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						}
+					]
+				},
+				"execute_command_id_1": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 1"
+						}
+					],
+					"on_entry": [
+						"/playsound item.shield.block @a ~ ~ ~",
+						"@s bridge:remove_command_id_1"
+					]
+				}
+			}
+		},
+		"controller.animation.rysii_knight.break_block": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"break": "query.is_roaring"
+						}
+					]
+				},
+				"break": {
+					"transitions": [
+						{
+							"default": "!query.is_roaring"
+						}
+					],
+					"on_entry": [
+						"/fill ~-2 ~ ~-2 ~+2 ~+3 ~+2 air destroy"
+					]
+				}
+			}
+		},
+		"controller.animation.bridge_rysii_knight.shield": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"shield_1": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)<7"
+						},
+						{
+							"shield_2": "(query.property('zalcyan:equip_custom_shield') == true) && math.random_integer(1,14)>=7"
+						}
+					]
+				},
+				"shield_1": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load rysii_shield1 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				},
+				"shield_2": {
+					"transitions": [
+						{
+							"default": "(query.property('zalcyan:equip_custom_shield') == false)"
+						}
+					],
+					"on_entry": [
+						"/structure load rysii_shield2 ~ ~ ~",
+						"@s zalcyan:complete_sheild_summon"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,136 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:ds_phase_door_activator",
+            "is_experimental": false,
+            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "construction"
+            },
+            "states": {
+				"zalcyan:texture": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#123437",
+            "minecraft:light_dampening": 15,
+            "minecraft:light_emission": 0,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 200.5
+            },
+            "minecraft:on_interact": {
+                "event": "activate",
+                "target": "self"
+            },
+            "minecraft:on_step_on": {
+                "event": "activate"
+            },
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+						"*": {
+							"texture": "ds_phase_door_activator",
+							"render_method": "alpha_test"
+						}
+					}
+        },
+        "permutations": [
+			{
+                "condition": "q.block_state('zalcyan:texture') == false",
+                "components": {
+                    "minecraft:material_instances": {
+						"*": {
+							"texture": "ds_phase_door_activator",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:light_emission": 0,
+					"minecraft:unit_cube": {}
+                }
+            },
+			{
+                "condition": "q.block_state('zalcyan:texture') == true",
+                "components": {
+                    "minecraft:material_instances": {
+						"*": {
+							"texture": "ds_phase_door_activator_off",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:light_emission": 2,
+					"minecraft:unit_cube": {}
+                }
+            }
+        ],
+        "events": {
+			"activate": {
+                "sequence": [
+					{
+						"condition": "q.block_state('zalcyan:texture') == 0",
+                        "run_command": {
+                            "command": [
+                                "playsound phase.button.up @a ~ ~ ~"
+                            ]
+                        }
+                    },
+					{
+						"condition": "q.block_state('zalcyan:texture') == 1",
+                        "run_command": {
+                            "command": [
+                                "playsound phase.button.down @a ~ ~ ~"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~-1 ~-1 ~ ~+1 ~+1 ~ zalcyan:ds_phase_door_opening replace zalcyan:ds_phase_door_closed"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~-1 ~-1 ~ ~+1 ~+1 zalcyan:ds_phase_door_opening replace zalcyan:ds_phase_door_closed"
+                            ]
+                        }
+                    },
+
+					{
+                        "run_command": {
+                            "command": [
+                                "fill ~-1 ~-1 ~ ~+1 ~+1 ~ zalcyan:ds_phase_door_closing replace zalcyan:ds_phase_door_open"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~-1 ~-1 ~ ~+1 ~+1 zalcyan:ds_phase_door_closing replace zalcyan:ds_phase_door_open"
+                            ]
+                        }
+                    },
+					{
+					"condition": "q.block_state('zalcyan:texture') == false",
+					"set_block_state": {
+						"zalcyan:texture": true
+						}
+					},
+					{
+					"condition": "q.block_state('zalcyan:texture') == true",
+					"set_block_state": {
+						"zalcyan:texture": false
+						}
+					}
+                ]
+            }
+		}
+    }
+}

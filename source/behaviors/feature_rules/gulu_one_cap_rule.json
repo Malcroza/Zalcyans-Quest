@@ -1,0 +1,35 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:gulu_one_cap_rule",
+			"places_feature": "zalcyan:gulu_one_cap_feature"
+		},
+
+		"conditions": {
+			"placement_pass": "before_surface_pass",
+
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "mesa"
+						}
+					]
+				}
+			]
+		},
+
+		"distribution": {
+			"iterations": "(q.noise(v.originx / 740, v.originz / 740) > 0.42)",
+			"scatter_chance": 30,
+
+			"x": 0,
+			"z": 0,
+			"y": "(query.heightmap(variable.worldx, variable.worldz))-3"
+		}
+	}
+}

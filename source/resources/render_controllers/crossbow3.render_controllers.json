@@ -1,0 +1,11 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.crossbow3": {
+      "geometry": "Geometry.default",
+      "materials": [ { "blaster_main": "Material.default" },
+					 { "container": "Material.eyepiece" } ],
+      "textures": [ "Texture.default" ]
+    }
+  }
+}

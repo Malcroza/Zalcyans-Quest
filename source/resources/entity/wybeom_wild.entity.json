@@ -1,0 +1,117 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:wybeom_wild",
+			"materials": {
+				"default": "phantom",
+				"invisible": "phantom_invisible"
+			},
+			"textures": {
+				"wybeom0": "textures/entity/wybeom/wybeom0",
+				"wybeom1": "textures/entity/wybeom/wybeom1",
+				"wybeom2": "textures/entity/wybeom/wybeom2",
+				"wybeom3": "textures/entity/wybeom/wybeom3",
+				"wybeom4": "textures/entity/wybeom/wybeom4",
+				"wybeom5": "textures/entity/wybeom/wybeom5",
+				"wybeom6": "textures/entity/wybeom/wybeom6",
+				"wybeom7": "textures/entity/wybeom/wybeom7",
+				"wybeom8": "textures/entity/wybeom/wybeom8"
+			},
+			"geometry": {
+				"default": "geometry.wybeom"
+			},
+			"scripts": {
+						  "initialize": [
+                    "v.vertical_previous = query.yaw_speed;",
+					"v.vertical_previous1 = query.yaw_speed;",
+					"v.vertical_previous2 = query.yaw_speed;",
+					"v.vertical_previous3 = query.yaw_speed;",
+					"v.vertical_previous4 = query.yaw_speed;",
+					"v.vertical_previous5 = query.yaw_speed;",
+					"v.vertical_previous6 = query.yaw_speed;",
+					"v.vertical_previous7 = query.yaw_speed;",
+					"v.vertical_previous8 = query.yaw_speed;",
+					"v.vertical_previous9 = query.yaw_speed;",
+					"v.vertical_previous10 = query.yaw_speed;",
+					"v.vertical_previous11 = query.yaw_speed;",
+					"v.vertical_previous12 = query.yaw_speed;",
+					"v.vertical_previous13 = query.yaw_speed;",
+					"v.vertical_previous14 = query.yaw_speed;",
+					"v.vertical_previous15 = query.yaw_speed;",
+					"v.vertical_previous16 = query.yaw_speed;",
+					"v.vertical_previous17 = query.yaw_speed;",
+					"v.vertical_previous18 = query.yaw_speed;",
+					"v.vertical_previous19 = query.yaw_speed;",
+					"v.vertical_previous20 = query.yaw_speed;",
+					
+                    "v.vertical_accumulateddeltas = 0;"
+					
+                ],
+                "pre_animation": [
+					"v.vertical_previous20 = v.vertical_previous19;",
+					"v.vertical_previous19 = v.vertical_previous18;",
+					"v.vertical_previous18 = v.vertical_previous17;",
+					"v.vertical_previous17 = v.vertical_previous18;",
+					"v.vertical_previous16 = v.vertical_previous15;",
+					"v.vertical_previous15 = v.vertical_previous14;",
+					"v.vertical_previous14 = v.vertical_previous13;",
+					"v.vertical_previous13 = v.vertical_previous12;",
+					"v.vertical_previous12 = v.vertical_previous11;",
+					"v.vertical_previous11 = v.vertical_previous10;",
+					"v.vertical_previous10 = v.vertical_previous9;",
+					"v.vertical_previous9 = v.vertical_previous8;",
+					"v.vertical_previous8 = v.vertical_previous7;",
+					"v.vertical_previous7 = v.vertical_previous6;",
+					"v.vertical_previous6 = v.vertical_previous5;",
+					"v.vertical_previous5 = v.vertical_previous4;",
+					"v.vertical_previous4 = v.vertical_previous3;",
+					"v.vertical_previous3 = v.vertical_previous2;",
+					"v.vertical_previous2 = v.vertical_previous1;",
+					"v.vertical_previous1 = v.vertical_previous;",
+					"v.vertical_previous = query.yaw_speed;",
+					"v.vertical_interpolated = (v.vertical_previous+v.vertical_previous1+v.vertical_previous2+v.vertical_previous3+v.vertical_previous4+v.vertical_previous5+v.vertical_previous6+v.vertical_previous7+v.vertical_previous8+v.vertical_previous9+v.vertical_previous10+v.vertical_previous11+v.vertical_previous12+v.vertical_previous13+v.vertical_previous14+v.vertical_previous15+v.vertical_previous16+v.vertical_previous17+v.vertical_previous18+v.vertical_previous19+v.vertical_previous20)/21;"
+
+                ],
+				"animate": [
+					"wybeom_base_pose_controller",
+					"wings",
+					"legs",
+					"look_at_target",
+					"idle"
+				]
+			},
+			"animations": {
+				"wybeom_base_pose": "animation.wybeom_wild.base_pose",
+				"wybeom_base_pose_controller": "controller.animation.wybeom.base_pose",
+				"move": "animation.wybeom_wild.move",
+				"look_at_target": "animation.wybeom_wild.look_at_target",
+				"air_wings": "animation.wybeom_wild.air_wings",
+				"air_legs": "animation.wybeom_wild.air_legs",
+				"ground_legs": "animation.wybeom_wild.ground_legs",
+				"ground_wings": "animation.wybeom_wild.ground_wings",
+				"idle": "animation.wybeom_wild.idle",
+				"sit": "animation.wybeom_wild.sit",
+				"wings": "controller.animation.wybeom.wings",
+				"legs": "controller.animation.wybeom.legs",
+				"wing_flap": "animation.wybeom_wild.wing_flap",
+				"random_look": "animation.wybeom_wild.random_look"
+				
+			},
+
+			"render_controllers": [ "controller.render.wybeom" ],
+			"spawn_egg": {
+				"base_color": "#147c57",
+				"overlay_color": "#51a54b"
+			},
+			"sound_effects": {
+				"flap1": "mob.wybeom.flap1",
+				"flap2": "mob.wybeom.flap2",
+				"flap3": "mob.wybeom.flap3",
+				"flap4": "mob.wybeom.flap4",
+				"flap5": "mob.wybeom.flap5",
+				"flap6": "mob.wybeom.flap6"
+			}
+		}
+	}
+}

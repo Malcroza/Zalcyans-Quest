@@ -1,0 +1,38 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:bow",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.bows"
+				}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 3600,
+			"minecraft:frame_count": 3,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "marlar_carnyx_item"
+			},
+			"minecraft:chargeable":{
+			"movement_modifier": 1.1
+			},
+			"minecraft:shooter": {
+        "charge_on_draw": false,
+        "launch_power_scale": 1.0,
+        "max_draw_duration": 10.1,
+        "max_launch_power": 1.0,
+        "scale_power_by_draw_duration": true
+      },
+			"minecraft:durability": {
+				"max_durability": 25
+			},
+			"minecraft:use_animation": "bow"
+		},
+		"events": {
+		}
+	}
+}

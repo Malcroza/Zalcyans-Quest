@@ -1,0 +1,13 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:zighet_hive_scatter4"
+		},
+		"iterations": 1,
+		"places_feature": "zalcyan:zighet_hive",
+		"x": 0,
+		"z": 0,
+		"y": 90
+	}
+}

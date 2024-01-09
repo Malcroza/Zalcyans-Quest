@@ -1,0 +1,52 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:mynis_trunkmushroom_north"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 11,
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -5.65,
+                    0,
+                    -5.65
+                ],
+                "size": [
+                    11.3,
+                    16,
+                    11.3
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "mynis_trunkmushroom",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:geometry": "geometry.mynis_trunkmushroom",
+            "minecraft:map_color": "#EE61F3",
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:mynis_log",
+                            "zalcyan:mynis_log_stripped"
+                        ],
+                        "allowed_faces": [
+                            "north"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:loot": "loot_tables/items/mynis_trunkmushroom_item.json"
+        },
+        "events": {}
+    }
+}

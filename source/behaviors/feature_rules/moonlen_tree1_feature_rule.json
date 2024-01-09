@@ -3,19 +3,20 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"identifier": "minecraft:moonlen_tree1_feature_rule",
+			"identifier": "zalcyan:moonlen_tree1_feature_rule",
 			"places_feature": "minecraft:moonlen_tree1_mcstructure"
 		},
 		"conditions": {
 			"minecraft:biome_filter": {
 				"test": "has_biome_tag",
 				"operator": "==",
-				"value": "moonlen"
+				"value": "meadow"
 			},
 			"placement_pass": "first_pass"
 		},
 		"distribution": {
-			"iterations": 1,
+			"iterations": "(q.noise(v.originx / 820, v.originz / 820) < -0.2)",
+			"scatter_chance": 80,
 			"x": "math.random_integer(0, 3)",
 			"y": "query.above_top_solid(v.worldx, v.worldz) - 5",
 			"z": "math.random_integer(0, 3)"

@@ -1,78 +1,26 @@
-//bridge-file-version: #9
 {
-	"format_version": "1.16.100",
+	"format_version": "1.20.40",
 	"minecraft:item": {
 		"description": {
-			"identifier": "zalcyan:marlar_blaster"
+			"identifier": "zalcyan:marlar_blaster",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.bows"
+				}
 		},
 		"components": {
 			"minecraft:max_stack_size": 1,
-			"minecraft:use_duration": 3600,
-			"minecraft:frame_count": 3,
-			"minecraft:hand_equipped": true,
 			"minecraft:icon": {
 				"texture": "marlar_blaster"
 			},
-			"minecraft:on_use": {
-				"on_use": {
-					"event": "shoot",
-					"target": "self"
-				}
-			},
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.bows"
-			},
-			"minecraft:durability": {
-				"max_durability": 25
-			},
-			"minecraft:use_animation": "bow",
-			"minecraft:repairable": {
-				"repair_items": [
-					{
-						"items": [
-							"zalcyan:lor_gem"
-						],
-						"repair_amount": 10
-					},
-					{
-						"items": [
-							"zalcyan:marlar_blaster"
-						],
-						"repair_amount": "query.remaining_durability"
-					},
-					{
-						"items": [
-							"zalcyan:lor_gem_broken"
-						],
-						"repair_amount": 2
-					}
-				]
+			"minecraft:display_name": {
+				"value": "§4Marlar Blaster \n §cBroken"
+			}
+			,
+			"minecraft:fuel": {
+				"duration": 30
 			}
 		},
-		"events": {
-			"shoot": {
-				"sequence": [
-					{
-						"shoot": {
-							"projectile": "zalcyan:r_orb",
-							"launch_power": 1.7
-						}
-					},
-					{
-						"run_command": {
-							"command": [
-								"playsound sound.lazar.shoot @s ~ ~ ~ 0.6"
-							]
-						}
-					},
-					{
-						"damage": {
-							"type": "durability",
-							"amount": 1
-						}
-					}
-				]
-			}
-		}
+		"events": {}
 	}
 }

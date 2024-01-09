@@ -1,17 +1,25 @@
-//bridge-file-version: #1
+//bridge-file-version: #5
 {
-	"format_version": "1.16.100",
+	"format_version": "1.20.40",
 	"minecraft:item": {
 		"description": {
 			"identifier": "zalcyan:mili_staff",
-			"category": "items"
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.sword"
+				}
 		},
 		"components": {
 			"minecraft:max_stack_size": 1,
 			"minecraft:use_duration": 3600,
 			"minecraft:hand_equipped": true,
 			"minecraft:durability": {
-				"max_damage": 131
+				"max_damage": 131,
+				"max_durability": 131,
+				"damage_chance": {
+					"min": 1,
+					"max": 2
+				}
 			},
 			"minecraft:damage": 1,
 			"minecraft:enchantable": {
@@ -22,10 +30,25 @@
 			"minecraft:icon": {
 				"texture": "mili_staff"
 			},
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.items"
+			"minecraft:allow_off_hand": true,
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"zalcyan:mili_staff"
+						],
+						"repair_amount": "query.remaining_durability"
+					}
+				]
 			}
 		},
-		"events": {}
+		"events": {
+			"damage": {
+				"damage": {
+					"type": "durability",
+					"amount": 1
+				}
+			}
+		}
 	}
 }

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:friss_door",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.door"
+				}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "door_friss"
+			},
+			"minecraft:block_placer": {
+				"block": "zalcyan:friss_door_bottom"
+			},
+			"minecraft:fuel": {
+				"duration": 10
+			}
+		}
+	}
+}

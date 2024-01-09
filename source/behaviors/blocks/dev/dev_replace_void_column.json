@@ -1,0 +1,50 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan_dev:dev_replace_void_column"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1000
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:map_color": "#E0B61B",
+			"minecraft:material_instances": {
+                "*": {
+                    "render_method": "blend",
+                    "texture": "dev_replace_void_column_block"
+                }
+            },
+            "minecraft:on_interact": {
+                "event": "activate",
+                "target": "self"
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 100
+            }
+        },
+        "events": {
+            "activate": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~ ~-2 ~+16 ~+60 ~+14 air replace structure_void"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "say complete"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

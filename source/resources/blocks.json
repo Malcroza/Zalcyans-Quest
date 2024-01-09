@@ -1,5 +1,6 @@
-//bridge-file-version: #159
+
 {
+	"format_version": "1.19.30", 
 	"ancient_debris": {
 		"sound": "ancient_debris",
 		"textures": {
@@ -10,6 +11,18 @@
 			"up": "ancient_debris_top",
 			"west": "ancient_debris_side"
 		}
+	},
+	"zalcyan_dev:dev_void_column": {
+		"textures": "dev_void_column_block",
+		"sound": "stone"
+	},
+	"zalcyan_dev:dev_replace_void_column": {
+		"textures": "dev_replace_void_column_block",
+		"sound": "stone"
+	},
+	"zalcyan_dev:dev_replace_void_fill": {
+		"textures": "dev_replace_void_fill_block",
+		"sound": "stone"
 	},
 	"argen_stone": {
 		"textures": "argen_stone",
@@ -33,7 +46,39 @@
 	},
 	"zalcyan:gulu_ground": {
 		"textures": {
-			"up": "gulu_ground_top",
+			"up": "gulu_ground_top0",
+			"down": "gulu_dirt",
+			"side": "gulu_ground_side"
+		},
+		"sound": "nylium"
+	},
+	"zalcyan:gulu_ground1": {
+		"textures": {
+			"up": "gulu_ground_top1",
+			"down": "gulu_dirt",
+			"side": "gulu_ground_side"
+		},
+		"sound": "nylium"
+	},
+	"zalcyan:gulu_ground2": {
+		"textures": {
+			"up": "gulu_ground_top2",
+			"down": "gulu_dirt",
+			"side": "gulu_ground_side"
+		},
+		"sound": "nylium"
+	},
+	"zalcyan:gulu_ground3": {
+		"textures": {
+			"up": "gulu_ground_top3",
+			"down": "gulu_dirt",
+			"side": "gulu_ground_side"
+		},
+		"sound": "nylium"
+	},
+	"zalcyan:gulu_ground4": {
+		"textures": {
+			"up": "gulu_ground_top4",
 			"down": "gulu_dirt",
 			"side": "gulu_ground_side"
 		},
@@ -138,6 +183,22 @@
 		},
 		"sound": "honey_block"
 	},
+	"zalcyan:lorzol1": {
+		"textures": {
+			"up": "lorzol1",
+			"side": "lorzol_side1",
+			"down": "lorzol_dirt"
+		},
+		"sound": "honey_block"
+	},
+	"zalcyan:lorzol2": {
+		"textures": {
+			"up": "lorzol2",
+			"side": "lorzol_side2",
+			"down": "lorzol_dirt"
+		},
+		"sound": "honey_block"
+	},
 	"zalcyan:lorzol_dirt": {
 		"textures": "lorzol_dirt",
 		"sound": "coral"
@@ -152,8 +213,24 @@
 	},
 	"zalcyan:moonlen_mould": {
 		"textures": {
-			"side": "moonlen_mould_side",
-			"up": "moonlen_mould_top",
+			"side": "moonlen_mould_side1",
+			"up": "moonlen_mould_top1",
+			"down": "moonlen_stone_top"
+		},
+		"sound": "nether_wart"
+	},
+	"zalcyan:moonlen_mould1": {
+		"textures": {
+			"side": "moonlen_mould_side2",
+			"up": "moonlen_mould_top2",
+			"down": "moonlen_stone_top"
+		},
+		"sound": "nether_wart"
+	},
+	"zalcyan:moonlen_mould2": {
+		"textures": {
+			"side": "moonlen_mould_side3",
+			"up": "moonlen_mould_top3",
 			"down": "moonlen_stone_top"
 		},
 		"sound": "nether_wart"
@@ -223,7 +300,17 @@
 	},
 	"zalcyan:friss_cap": {
 		"textures": "friss_cap",
-		"sound": "slime"
+		"sound": "slime",
+		"brightness_gamma": 1,
+		"isotropic": true
+		
+	},
+	"zalcyan:friss_cap1": {
+		"textures": "friss_cap1",
+		"sound": "slime",
+		"brightness_gamma": 1,
+		"isotropic": true
+		
 	},
 	"zalcyan:friss_stem": {
 		"textures": {
@@ -277,7 +364,31 @@
 		"textures": {
 			"up": "raken_ground_top",
 			"down": "raken_dirt",
-			"side": "raken_ground_side"
+			"side": "raken_ground_side1"
+		},
+		"sound": "grass"
+	},
+	"zalcyan:raken_ground1": {
+		"textures": {
+			"up": "raken_ground_top1",
+			"down": "raken_dirt",
+			"side": "raken_ground_side2"
+		},
+		"sound": "grass"
+	},
+	"zalcyan:raken_ground2": {
+		"textures": {
+			"up": "raken_ground_top2",
+			"down": "raken_dirt",
+			"side": "raken_ground_side1"
+		},
+		"sound": "grass"
+	},
+	"zalcyan:raken_ground3": {
+		"textures": {
+			"up": "raken_ground_top3",
+			"down": "raken_dirt",
+			"side": "raken_ground_side2"
 		},
 		"sound": "grass"
 	},
@@ -394,7 +505,7 @@
 		"sound": "vines",
 		"textures": "mya_vine_body"
 	},
-	"mya_vine_tip": {
+	"zalcyan:mya_vine_tip": {
 		"sound": "vines",
 		"textures": "mya_vine_tip"
 	},
@@ -470,6 +581,10 @@
 		"sound": "wood",
 		"textures": "mynis_planks"
 	},
+	"zalcyan:mynis_double_slab": {
+		"sound": "wood",
+		"textures": "mynis_planks"
+	},
 	"zalcyan:mynis_log": {
 		"sound": "wood",
 		"textures": {
@@ -506,6 +621,39 @@
 		"sound": "grass",
 		"textures": {
 			"up": "mynis_top",
+			"down": "mynis_dirt",
+			"side": "mynis_side"
+		},
+		"isotropic": {
+			"up": true
+		}
+	},
+	"zalcyan:mynis1": {
+		"sound": "grass",
+		"textures": {
+			"up": "mynis_top1",
+			"down": "mynis_dirt",
+			"side": "mynis_side"
+		},
+		"isotropic": {
+			"up": true
+		}
+	},
+	"zalcyan:mynis2": {
+		"sound": "grass",
+		"textures": {
+			"up": "mynis_top2",
+			"down": "mynis_dirt",
+			"side": "mynis_side"
+		},
+		"isotropic": {
+			"up": true
+		}
+	},
+	"zalcyan:mynis3": {
+		"sound": "grass",
+		"textures": {
+			"up": "mynis_top3",
 			"down": "mynis_dirt",
 			"side": "mynis_side"
 		},
@@ -602,5 +750,633 @@
 	"zalcyan:quag_plant_tall": {
 		"sound": "grass",
 		"textures": "quag_plant_tall"
+	},
+	"zalcyan:miren_grass_tall_top": {
+		"sound": "grass",
+		"textures": "miren_grass_tall"
+	},
+	"zalcyan:miren_grass_orange_top": {
+		"sound": "grass",
+		"textures": "miren_grass_orange"
+	},
+	"zalcyan:raken_grass_tall_top": {
+		"sound": "grass",
+		"textures": "raken_grass_tall"
+	},
+	"zalcyan:mynis_grass_tall_top": {
+		"sound": "grass",
+		"textures": "mynis_grass_tall"
+	},
+	"zalcyan:quag_plant_tall_top": {
+		"textures": "quag_plant_tall",
+		"sound": "grass"
+	},
+	"zalcyan:kylar_cyan": {
+		"textures": {
+			"up": "kylar_cyan_top",
+			"down": "kylar_cyan_top",
+			"side": "kylar_cyan"
+		},
+		"sound": "stone"
+	},
+	"zalcyan:kylar_crystal": {
+		"textures": "kylar_crystal",
+		"sound": "stone",
+		"isotropic": true
+	},
+	"zalcyan:kylar_grass": {
+		"textures": {
+			"up": "kylar_grass_top",
+			"down": "kylar_dirt",
+			"side": "kylar_grass_side"
+		},
+		"sound": "grass"
+	},
+	"kylar_drop_body": {
+		"textures": "kylar_drop_body",
+		"sound": "slime"
+	},
+	"kylar_drop_body": {
+		"textures": "kylar_drop_body",
+		"sound": "slime"
+	},
+	"zalcyan:kylar_short_grass": {
+		"textures": "kylar_short_grass",
+		"sound": "grass"
+	},
+	"zalcyan:kylar_dirt": {
+		"textures": "kylar_dirt",
+		"sound": "stone"
+	},
+	"zalcyan:sappis_orange": {
+		"textures": "sappis_orange",
+		"sound": "slime",
+		"isotropic": true
+	},
+	"hydriir": {
+		"sound": "glass"
+	},
+	"zalcyan:kylar_log": {
+		"textures": {
+			"up": "kylar_log_top",
+			"down": "kylar_log_top",
+			"side": "kylar_log_side"
+		},
+		"sound": "wood"
+	},
+	"zalcyan:kylar_log_stripped": {
+		"textures": {
+			"up": "kylar_log_stripped_top",
+			"down": "kylar_log_stripped_top",
+			"side": "kylar_log_stripped_side"
+		},
+		"sound": "wood"
+	},
+	"zalcyan:kylar_log_planks": {
+		"textures": "kylar_log_planks",
+		"sound": "wood"
+	},
+	"zalcyan:kylar_log_carved": {
+		"textures": "kylar_log_carved",
+		"sound": "wood"
+	},
+	"zalcyan:kylar_log_semi_carved": {
+		"textures": "kylar_log_semi_carved",
+		"sound": "wood"
+	},
+	"zalcyan:kylar_log_chipped": {
+		"textures": "kylar_log_chipped",
+		"sound": "wood"
+	},
+	"zalcyan:kylar_log_full": {
+		"textures": "kylar_log_side",
+		"sound": "wood"
+	},
+	"zalcyan:sappis_log": {
+		"textures": {
+			"up": "sappis_log_top",
+			"down": "sappis_log_top",
+			"side": "sappis_log_side"
+		},
+		"sound": "wood"
+	},
+	"zalcyan:sappis_log_stripped": {
+		"textures": {
+			"up": "sappis_log_stripped_top",
+			"down": "sappis_log_stripped_top",
+			"side": "sappis_log_stripped_side"
+		},
+		"sound": "wood"
+	},
+	"zalcyan:sappis_log_planks": {
+		"textures": "sappis_log_planks",
+		"sound": "wood"
+	},
+	"zalcyan:sappis_log_carved": {
+		"textures": "sappis_log_carved",
+		"sound": "wood"
+	},
+	"zalcyan:sappis_log_semi_carved": {
+		"textures": "sappis_log_semi_carved",
+		"sound": "wood"
+	},
+	"zalcyan:sappis_log_chipped": {
+		"textures": "sappis_log_chipped",
+		"sound": "wood"
+	},
+	"zalcyan:sappis_log_full": {
+		"textures": "sappis_log_side",
+		"sound": "wood"
+	},
+	"zalcyan:sappis": {
+		"textures": {
+			"up": "sappis_top",
+			"down": "sappis_dirt",
+			"side": "sappis_side"
+		},
+		"sound": "grass",
+		"isotropic": {
+			"up": true
+		}
+	},
+	"zalcyan:sappis_dirt": {
+		"sound": "gravel",
+		"textures": "sappis_dirt"
+	},
+	"zalcyan:sappis_leaf": {
+		"sound": "grass",
+		"textures": "sappis_leaf"
+	},
+	"zalcyan:sappis_seap": {
+		"sound": "slime",
+		"textures": "sappis_seap"
+	},
+	"zalcyan:zighet_comb": {
+		"sound": "coral",
+		"textures": "zighet_comb1"
+	},
+	"zalcyan:zighet_comb1": {
+		"sound": "coral",
+		"textures": "zighet_comb2"
+	},
+	"zalcyan:zighet_comb2": {
+		"sound": "coral",
+		"textures": "zighet_comb3"
+	},
+	"zalcyan:zighet_comb3": {
+		"sound": "coral",
+		"textures": "zighet_comb4"
+	},
+	"zalcyan:zighet_comb4": {
+		"sound": "coral",
+		"textures": "zighet_comb5"
+	},
+	"zalcyan:zighet_comb5": {
+		"sound": "coral",
+		"textures": "zighet_comb6"
+	},
+	"zalcyan:zighet_comb_full": {
+		"sound": "honey_block",
+		"textures": "zighet_comb_full"
+	},
+	"zalcyan:zighet_drip": {
+		"textures": "zighet_drip",
+		"sound": "grass"
+	},
+	"zalcyan:zighet_drip_tip": {
+		"textures": "zighet_drip_tip",
+		"sound": "honey_block"
+	},
+	"zalcyan:zighet_paper": {
+		"textures": "zighet_paper1",
+		"sound": "grass"
+	},
+	"zalcyan:zighet_paper1": {
+		"textures": "zighet_paper2",
+		"sound": "grass"
+	},
+	"zalcyan:zighet_paper2": {
+		"textures": "zighet_paper3",
+		"sound": "grass"
+	},
+	"zalcyan:zighet_paper3": {
+		"textures": "zighet_paper4",
+		"sound": "grass"
+	},
+	"zalcyan:zighet_paper4": {
+		"textures": "zighet_paper5",
+		"sound": "grass"
+	},
+	"zalcyan:zighet_egg": {
+		"textures": "zighet_egg",
+		"sound": "stone"
+	},
+	"zalcyan:zighet_queen_egg": {
+		"textures": {
+			"up": "zighet_queen_egg_top",
+			"down": "zighet_comb1",
+			"side": "zighet_queen_egg_side"
+		},
+		"sound": "stone"
+	},
+	"zalcyan:ds_light1": {
+		"textures": {
+			"side": "ds_light1",
+			"down": "ds_metal_plating",
+			"up": "ds_metal_plating"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light1_rusting": {
+		"textures": {
+			"side": "ds_light1_rusting",
+			"down": "ds_metal_plating_rusting",
+			"up": "ds_metal_plating_rusting"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light1_rusted": {
+		"textures": {
+			"side": "ds_light1_rusted",
+			"down": "ds_metal_plating_rusted",
+			"up": "ds_metal_plating_rusted"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light2": {
+		"textures": {
+			"side": "ds_light2",
+			"down": "ds_metal_plating",
+			"up": "ds_metal_plating"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light3": {
+		"textures": {
+			"side": "ds_light3",
+			"down": "ds_metal_plating",
+			"up": "ds_metal_plating"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light3_rusting": {
+		"textures": {
+			"side": "ds_light3_rusting",
+			"down": "ds_metal_plating_rusting",
+			"up": "ds_metal_plating_rusting"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light3_rusted": {
+		"textures": {
+			"side": "ds_light3_rusted",
+			"down": "ds_metal_plating_rusted",
+			"up": "ds_metal_plating_rusted"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light4": {
+		"textures": {
+			"side": "ds_light4",
+			"down": "ds_metal_plating",
+			"up": "ds_metal_plating"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light5": {
+		"textures": {
+			"side": "ds_light5",
+			"down": "ds_metal_plating",
+			"up": "ds_metal_plating"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light5_rusting": {
+		"textures": {
+			"side": "ds_light5_rusting",
+			"down": "ds_metal_plating_rusting",
+			"up": "ds_metal_plating_rusting"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light5_rusted": {
+		"textures": {
+			"side": "ds_light5_rusted",
+			"down": "ds_metal_plating_rusted",
+			"up": "ds_metal_plating_rusted"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light6": {
+		"textures": {
+			"side": "ds_light6",
+			"down": "ds_metal_plating",
+			"up": "ds_metal_plating"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light6_rusting": {
+		"textures": {
+			"side": "ds_light6_rusting",
+			"down": "ds_metal_plating_rusting",
+			"up": "ds_metal_plating_rusting"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_light6_rusted": {
+		"textures": {
+			"side": "ds_light6_rusted",
+			"down": "ds_metal_plating_rusted",
+			"up": "ds_metal_plating_rusted"
+		},
+		"sound": "glass"
+	},
+	"zalcyan:ds_metal_block": {
+		"textures": "ds_metal_block",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_block_rusting": {
+		"textures": "ds_metal_block_rusting",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_block_rusted": {
+		"textures": "ds_metal_block_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_exterior": {
+		"textures": "ds_metal_exterior",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_exterior_rusting": {
+		"textures": "ds_metal_exterior_rusting",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_exterior_rusted": {
+		"textures": "ds_metal_exterior_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_floor": {
+		"textures": "ds_metal_floor",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_floor_rusting": {
+		"textures": "ds_metal_floor_rusting",
+		"sound": "stone"
+	},
+	"zalcyan:ds_metal_floor_rusted": {
+		"textures": "ds_metal_floor_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_grooved": {
+		"textures": {
+			"side": "ds_metal_grooved",
+			"down": "ds_metal_block",
+			"up": "ds_metal_block"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_grooved_rusting": {
+		"textures": {
+			"side": "ds_metal_grooved_rusting",
+			"down": "ds_metal_block_rusting",
+			"up": "ds_metal_block_rusting"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_grooved_rusted": {
+		"textures": {
+			"side": "ds_metal_grooved_rusted",
+			"down": "ds_metal_block_rusted",
+			"up": "ds_metal_block_rusted"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_plating": {
+		"textures": "ds_metal_plating",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_plating_rusting": {
+		"textures": "ds_metal_plating_rusting",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_plating_rusted": {
+		"textures": "ds_metal_plating_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_plating2": {
+		"textures": "ds_metal_plating2",
+		"sound": "stone"
+	},
+	"zalcyan:ds_metal_plating2_rusting": {
+		"textures": "ds_metal_plating2_rusting",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_plating2_rusted": {
+		"textures": "ds_metal_plating2_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_scaffolding": {
+		"textures": "ds_metal_scaffolding",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_scaffolding_rusting": {
+		"textures": "ds_metal_scaffolding_rusting",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_scaffolding_rusted": {
+		"textures": "ds_metal_scaffolding_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_tape": {
+		"textures": {
+			"side": "ds_metal_tape",
+			"down": "ds_metal_block",
+			"up": "ds_metal_block"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_tape_rusting": {
+		"textures": {
+			"side": "ds_metal_tape_rusting",
+			"down": "ds_metal_block_rusting",
+			"up": "ds_metal_block_rusting"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_tape_rusted": {
+		"textures": {
+			"side": "ds_metal_tape_rusted",
+			"down": "ds_metal_block_rusted",
+			"up": "ds_metal_block_rusted"
+		},
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_trapdoor": {
+		"textures": "ds_metal_trapdoor",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_wall": {
+		"textures": "ds_metal_wall",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_wall_rusting": {
+		"textures": "ds_metal_wall_rusting",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_wall_rusted": {
+		"textures": "ds_metal_wall_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_wiring": {
+		"textures": "ds_metal_wiring",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_wiring_rusting": {
+		"textures": "ds_metal_wiring_rusting",
+		"sound": "metal"
+	},
+	"zalcyan:ds_metal_wiring_rusted": {
+		"textures": "ds_metal_wiring_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_phase_door_closed": {
+		"textures": "ds_phase_door_closed",
+		"sound": "metal"
+	},
+	"zalcyan:ds_phase_door_open": {
+		"textures": "ds_phase_door_open",
+		"sound": "metal"
+	},
+	"zalcyan:ds_phase_door_opening": {
+		"textures": "ds_phase_door_opening",
+		"sound": "metal"
+	},
+	"zalcyan:ds_phase_door_closing": {
+		"textures": "ds_phase_door_opening",
+		"sound": "metal"
+	},
+	"zalcyan:scaffolding_yellow": {
+		"textures": "scaffolding_yellow",
+		"sound": "stone"
+	},
+	"zalcyan:ds_decoration1": {
+		"textures": "ds_decoration1",
+		"sound": "stone"
+	},
+	"zalcyan:ds_decoration2": {
+		"textures": "ds_decoration2",
+		"sound": "stone"
+	},
+	"zalcyan:ds_decoration3": {
+		"textures": "ds_decoration3",
+		"sound": "stone"
+	},
+	"zalcyan:ds_decoration4": {
+		"textures": "ds_decoration4",
+		"sound": "stone"
+	},
+	"zalcyan:ds_decoration5": {
+		"textures": "ds_decoration5",
+		"sound": "stone"
+	},
+	"zalcyan:ds_decoration6": {
+		"textures": "ds_decoration6",
+		"sound": "stone"
+	},
+	"zalcyan:ds_decoration7": {
+		"textures": "ds_decoration7",
+		"sound": "stone"
+	},
+	"zalcyan:ds_decoration8": {
+		"textures": "ds_decoration8",
+		"sound": "stone"
+	},
+	"zalcyan:ds_shelf": {
+		"textures": "ds_shelf",
+		"sound": "metal"
+	},
+	"zalcyan:ds_shelf_rusting": {
+		"textures": "ds_shelf_rusting",
+		"sound": "metal"
+	},
+	"zalcyan:ds_shelf_rusted": {
+		"textures": "ds_shelf_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_exterior_shelf": {
+		"textures": "ds_exterior_shelf",
+		"sound": "stone"
+	},
+	"zalcyan:ds_pipe": {
+		"textures": "ds_pipe",
+		"sound": "metal"
+	},
+	"zalcyan:ds_pipe_rusting": {
+		"textures": "ds_pipe_rusting",
+		"sound": "metal"
+	},
+	"zalcyan:ds_pipe_rusted": {
+		"textures": "ds_pipe_rusted",
+		"sound": "metal"
+	},
+	"zalcyan:ds_glass": {
+		"textures": "ds_glass",
+		"sound": "glass"
+	},
+	"zalcyan:ds_phase_door_activator": {
+		"textures": "ds_phase_door_activator",
+		"sound": "metal"
+	},
+	"zalcyan:rysii_block": {
+		"textures": "rysii_block",
+		"sound": "ancient_debris"
+	},
+	"zalcyan:rysii_block_summon": {
+		"textures": "rysii_block_summon",
+		"sound": "ancient_debris"
+	},
+	"zalcyan:rysii_block_glass": {
+		"textures": "rysii_block_glass",
+		"sound": "glass"
+	},
+	"zalcyan:rysii_brick_block": {
+		"textures": "rysii_brick_block",
+		"sound": "ancient_debris"
+	},
+	"zalcyan:rysii_slab": {
+		"textures": "rysii_block",
+		"sound": "ancient_debris"
+	},
+	"zalcyan:rysii_double_slab": {
+		"textures": "rysii_brick_block",
+		"sound": "ancient_debris"
+	},
+	"zalcyan:rysii_pillar": {
+		"textures": {
+			"side": "rysii_pillar",
+			"down": "rysii_pillar_top",
+			"up": "rysii_pillar_top"
+		},
+		"sound": "ancient_debris"
+	},
+	"zalcyan:marlar_banner1": {
+		"textures": "marlar_banner1",
+		"sound": "metal"
+	},
+	"zalcyan:neo_pod_stone": {
+		"textures": "neo_pod_stone",
+		"sound": "metal"
+	},
+	"zalcyan:sappis_seap_block": {
+		"textures": "sappis_seap_block",
+		"sound": "gravel"
+	},
+	"zalcyan:zighet_loot_box": {
+		"sound": "coral",
+		"textures": "zighet_loot_box"
+	},
+	"zalcyan:ds_loot_box1": {
+		"sound": "ancient_debris",
+		"textures": "ds_loot_box1"
 	}
 }

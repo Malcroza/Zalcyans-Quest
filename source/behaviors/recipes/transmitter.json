@@ -1,6 +1,6 @@
 //bridge-file-version: #2
 {
-	"format_version": 1.16,
+	"format_version": "1.17.41",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "zalcyan:transmitter"

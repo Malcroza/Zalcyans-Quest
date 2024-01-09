@@ -1,10 +1,13 @@
 //bridge-file-version: #7
 {
-	"format_version": "1.16.100",
+	"format_version": "1.20.40",
 	"minecraft:item": {
 		"description": {
 			"identifier": "zalcyan:mafis_berries",
-			"category": "Items"
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.miscFood"
+				}
 		},
 		"components": {
 			"minecraft:use_animation": "eat",
@@ -12,10 +15,7 @@
 			"minecraft:food": {
 				"nutrition": 1,
 				"can_always_eat": false,
-				"saturation_modifier": "good"
-			},
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.miscFood"
+				"saturation_modifier": 2
 			},
 			"minecraft:icon": {
 				"texture": "mafis_berries"

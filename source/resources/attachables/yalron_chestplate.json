@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan:yalron_chestplate",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted",
+				"clear": "charged_creeper"
+      },
+      "textures": {
+        "default": "textures/models/armor/yalron_armor",
+        "enchanted": "textures/misc/enchanted_item_glint",
+				"clear": "textures/models/armor/yalron_armor_clear"
+      },
+      "geometry": {
+        "default": "geometry.yalron_chestplate"
+		
+      },
+	  "animations": {
+				"yalcape": "animation.yalron.cape",
+				"yalcape_cont": "controller.animation.yalcape_cont"
+	  },
+      "scripts": {
+        "parent_setup": "variable.helmet_layer_visible = 0.0;",
+        "animate": [
+          "yalcape"
+        ]
+      },
+      "render_controllers": [ "controller.render.yalron_armor" ]
+    }
+  }
+}

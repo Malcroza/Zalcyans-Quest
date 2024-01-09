@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:stick_from_quag_planks"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"A",
+			"A"
+		],
+		"key": {
+			"A": {
+				"item": "zalcyan:quag_planks"
+			}
+		},
+		"result": {
+			"item": "stick",
+			"count": 4
+		},
+		"priority": 2
+	}
+}

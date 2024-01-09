@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:lorzol_var_weighted"
+    },
+    "features": [
+      [ "zalcyan:lorzol_feature", 4 ],
+      [ "zalcyan:lorzol1_feature", 2 ],
+      [ "zalcyan:lorzol2_feature", 1 ]
+    ]
+  }
+}

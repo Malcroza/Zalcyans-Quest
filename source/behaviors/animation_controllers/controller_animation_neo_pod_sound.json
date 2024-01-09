@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.neo_pod.sound": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"sound": "query.has_rider == 1"
+						}
+					],
+					"on_exit": [
+						"/tag @p[r=5] add ship_third_camera",
+						"/tag @p[r=5] remove no_ship_third_camera",
+						"/camera @p[r=5] fade time 0.1 0.2 0.4 color 1 1 1"
+						
+					]
+				},
+				"sound": {
+					"animations": [ "neo_pod_sound" ],
+					"transitions": [
+						{
+							"default": "query.has_rider == 0"
+						}
+					],
+					"on_exit": [
+						"/tag @p[r=5] remove ship_third_camera",
+						"/tag @p[r=5] add no_ship_third_camera",
+						"/camera @a[r=10] clear",
+						"/camera @p[r=5] fade time 0.1 0.2 0.4 color 1 1 1"
+					]
+				}
+			}
+		}
+	}
+}

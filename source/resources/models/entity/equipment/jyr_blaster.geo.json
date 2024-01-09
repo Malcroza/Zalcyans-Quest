@@ -1,0 +1,131 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.jyr_blaster",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 17,
+				"visible_bounds_height": 16,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "Body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "RightArm",
+					"pivot": [-5, 22, 0],
+					"rotation": [-10, 0, 0]
+				},
+				{
+					"name": "blaster_main",
+					"parent": "RightArm",
+					"pivot": [-5.5, 16, -5]
+				},
+				{
+					"name": "blaster",
+					"parent": "blaster_main",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "inner_blaster",
+					"parent": "blaster",
+					"pivot": [-5, 16, 1],
+					"cubes": [
+						{"origin": [-7, 2, -8.5], "size": [1, 6, 1], "pivot": [-6, 5, -3], "rotation": [0, 180, 0], "uv": [45, 0]},
+						{"origin": [-6, 4, -2], "size": [1, 8, 2], "uv": [33, 0]},
+						{"origin": [-7, 2, -2.5], "size": [3, 6, 4], "uv": [84, 0]},
+						{"origin": [-5.5, 6, -3], "size": [0, 7, 5], "uv": [16, -5]}
+					],
+					"locators": {
+						"blast": {
+							"offset": [-6, -44, -1],
+							"rotation": [0, 0, 90]
+						}
+					}
+				},
+				{
+					"name": "barrel",
+					"parent": "inner_blaster",
+					"pivot": [-5.5, 1, -0.5],
+					"rotation": [0, -45, 0]
+				},
+				{
+					"name": "fire",
+					"parent": "barrel",
+					"pivot": [-5, 2, -1]
+				},
+				{
+					"name": "stage1",
+					"parent": "fire",
+					"pivot": [-5.5, 2, -0.5],
+					"cubes": [
+						{"origin": [-13, 2, -8], "size": [15, 0, 15.5], "uv": [81, 10]}
+					]
+				},
+				{
+					"name": "stage2",
+					"parent": "fire",
+					"pivot": [-5.5, 2, -0.5],
+					"cubes": [
+						{"origin": [-13, 2, -8], "size": [15, 0, 15.5], "uv": [81, 27]}
+					]
+				},
+				{
+					"name": "stage3",
+					"parent": "fire",
+					"pivot": [-5.5, 2, -0.5],
+					"cubes": [
+						{"origin": [-13, 2, -8], "size": [15, 0, 15.5], "uv": [47, 28]}
+					]
+				},
+				{
+					"name": "clip",
+					"parent": "inner_blaster",
+					"pivot": [-5.5, 4.5, -0.5],
+					"cubes": [
+						{"origin": [-5.5, 3, 0], "size": [0, 3, 1], "uv": [0, 9]}
+					]
+				},
+				{
+					"name": "back",
+					"parent": "inner_blaster",
+					"pivot": [-4, 13, -1],
+					"rotation": [-65, 0, 0],
+					"cubes": [
+						{"origin": [-3, 12.82635, -4.48481], "size": [1, 5, 2], "inflate": 0.1, "pivot": [-4, 11.82635, -1.98481], "rotation": [0, 180, 0], "uv": [3, 0]},
+						{"origin": [-3.5, 11.82635, -4.48481], "size": [2, 2, 2], "inflate": 0.15, "pivot": [-4, 11.82635, -1.98481], "rotation": [0, 180, 0], "uv": [69, 7]}
+					]
+				},
+				{
+					"name": "projectile",
+					"parent": "inner_blaster",
+					"pivot": [-5.5, 2, 0]
+				},
+				{
+					"name": "glow",
+					"parent": "projectile",
+					"pivot": [-5.5, 2, -1.5],
+					"cubes": [
+						{"origin": [-37, 0, -33], "size": [63, 0, 63], "uv": [-63, 65]}
+					]
+				},
+				{
+					"name": "ball",
+					"parent": "projectile",
+					"pivot": [-5.5, 1, -0.5],
+					"cubes": [
+						{"origin": [-7.5, -1, -2.5], "size": [4, 4, 4], "uv": [100, 1]}
+					]
+				}
+			]
+		}
+	]
+}

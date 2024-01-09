@@ -1,0 +1,83 @@
+{
+	"format_version": "1.8.0",
+	"geometry.yalron_leggings": {
+		"texturewidth": 128,
+		"textureheight": 128,
+		"visible_bounds_width": 3,
+		"visible_bounds_height": 4,
+		"visible_bounds_offset": [0, 2, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 24, 0]
+			},
+			{
+				"name": "sash",
+				"parent": "body",
+				"pivot": [5, 23.5, 0],
+				"rotation": [0, 0, -47.5]
+			},
+			{
+				"name": "sash2",
+				"parent": "body",
+				"pivot": [-5, 23.5, 0],
+				"rotation": [0, 0, 47.5]
+			},
+			{
+				"name": "rightLeg",
+				"parent": "body",
+				"pivot": [-2, 12, 0],
+				"cubes": [
+					{"origin": [-4, 0, -2], "size": [4, 12, 4], "uv": [0, 51], "inflate": 0.45},
+					{"origin": [-4, 0, -2], "size": [4, 12, 4], "uv": [25, 59], "inflate": 0.67}
+				]
+			},
+			{
+				"name": "rightFoot",
+				"parent": "rightLeg",
+				"pivot": [-6, 12, 0]
+			},
+			{
+				"name": "leftLeg",
+				"parent": "body",
+				"pivot": [2, 12, 0],
+				"mirror": true,
+				"cubes": [
+					{"origin": [0, 0, -2], "size": [4, 12, 4], "uv": [0, 51], "inflate": 0.45},
+					{"origin": [0, 0, -2], "size": [4, 12, 4], "uv": [25, 59], "inflate": 0.67}
+				]
+			},
+			{
+				"name": "Left_foot",
+				"parent": "leftLeg",
+				"pivot": [1, 12, 1]
+			},
+			{
+				"name": "rightArm",
+				"parent": "body",
+				"pivot": [-5, 22, 0]
+			},
+			{
+				"name": "rightItem",
+				"parent": "rightArm",
+				"pivot": [-6, 15, 2]
+			},
+			{
+				"name": "leftArm",
+				"parent": "body",
+				"pivot": [5, 22, 0],
+				"mirror": true
+			},
+			{
+				"name": "leftItem",
+				"parent": "leftArm",
+				"pivot": [6, 15, 2]
+			}
+		]
+	}
+}

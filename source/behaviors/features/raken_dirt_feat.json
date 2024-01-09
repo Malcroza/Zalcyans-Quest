@@ -1,0 +1,37 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.220",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "zalcyan:raken_dirt_feat"
+		},
+		"places_block": {
+			"name": "zalcyan:raken_dirt"
+		},
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			{
+				"name": "minecraft:dirt"
+			},
+			{
+				"name": "minecraft:grass"
+			},
+			{
+				"name": "minecraft:gravel"
+			},
+			{
+				"name": "minecraft:podzol"
+			},
+			{
+				"name": "minecraft:sand"
+			},
+			{
+				"name": "minecraft:hardened_clay"
+			},
+			{
+				"name": "minecraft:stained_hardened_clay"
+			}
+		]
+	}
+}

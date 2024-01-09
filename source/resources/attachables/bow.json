@@ -1,0 +1,48 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan:bow",
+      "materials": {
+        "default": "phantom",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/models/equipment/marlar_carnyx",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.marlar_carnyx"
+      },
+      "animations": {
+		"marlar_carnyx_first_person": "animation.marlar_carnyx.first_person.hold",
+		"marlar_carnyx_first_person2": "animation.marlar_carnyx.first_person.hold2",
+		"marlar_carnyx_first_person3": "animation.marlar_carnyx.first_person.hold4",
+		"hold": "animation.marlar_carnyx.fire_hold",
+		"fire": "animation.marlar_carnyx.fire",
+		"shoot": "animation.marlar_carnyx.shoot",
+		"marlar_carnyx_shoot": "animation.marlar_carnyx.shoot",
+		"shoot_cont": "controller.animation.marlar_carnyx.attack",
+		"fire_cont": "controller.animation.marlar_carnyx.fire",
+		"sound": "animation.marlar_carnyx.sound",
+		"cont_sound": "controller.animation.marlar_carnyx.sound"
+      },
+      "scripts": {
+        "animate": [
+			{
+			"shoot_cont": "c.is_first_person"
+			},
+		  
+            "marlar_carnyx_shoot"
+          ,
+		  "fire_cont",
+		  "cont_sound"
+        ]
+      },
+			"sound_effects": {
+				"fear": "sound.carnyx.fear"
+			},
+      "render_controllers": [ "controller.render.item_default"]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+	"format_version" : "1.10.0",
+	
+	"animation_controllers" : {
+		"controller.animation.zighet_bullet.particles" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"part" : "query.is_moving"
+						}
+					]
+				},
+				"part" : {
+					"particle_effects": [
+						{
+							"effect": "lazar_trail"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "!query.is_moving"
+						}
+					]
+				}
+			}
+
+		},
+		"controller.animation.zighet_bullet_trail.particles": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "trail",
+							"locator": "part_emitter"
+						}
+					]
+				}
+			}
+		}
+	} 
+}

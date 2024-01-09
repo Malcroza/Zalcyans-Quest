@@ -9,15 +9,6 @@
 					"locator": "part_emitter"
 				}
 			}
-		},
-		"animation.orb.new": {
-			"loop": true,
-			"particle_effects": {
-				"0.0": {
-					"effect": "1_explosion",
-					"locator": "part_emitter"
-				}
-			}
 		}
 	}
 }

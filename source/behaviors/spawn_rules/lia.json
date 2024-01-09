@@ -1,4 +1,4 @@
-//bridge-file-version: #1
+//bridge-file-version: #2
 {
 	"format_version": "1.8.0",
 	"minecraft:spawn_rules": {
@@ -19,12 +19,21 @@
 					"max": "hard"
 				},
 				"minecraft:weight": {
-					"default": 5
+					"default": 8
 				},
 				"minecraft:biome_filter": {
-					"test": "has_biome_tag",
-					"operator": "==",
-					"value": "desert"
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "desert"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "mesa"
+						}
+					]
 				}
 			}
 		]

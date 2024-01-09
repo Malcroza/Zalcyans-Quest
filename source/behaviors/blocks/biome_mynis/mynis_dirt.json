@@ -1,0 +1,95 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:mynis_dirt",
+            "is_experimental": false,
+            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 3
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#F7CDFD",
+            "minecraft:light_emission": 0,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 10
+            },
+            "minecraft:on_interact": {
+                "event": "grow",
+                "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+            }
+        },
+        "events": {
+            "grow": {
+                "sequence": [
+                    {
+                        "randomize": [
+                            {
+                                "set_block_at_pos": {
+                                    "block_type": "zalcyan:mynis",
+                                    "block_offset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "set_block_at_pos": {
+                                    "block_type": "zalcyan:mynis1",
+                                    "block_offset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "set_block_at_pos": {
+                                    "block_type": "zalcyan:mynis2",
+                                    "block_offset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "set_block_at_pos": {
+                                    "block_type": "zalcyan:mynis3",
+                                    "block_offset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "decrement_stack": {}
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "particle minecraft:endrod ~ ~ ~"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "playsound item.bone_meal.use @a ~ ~ ~"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

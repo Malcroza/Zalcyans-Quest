@@ -1,0 +1,94 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:moonlen_mould1",
+            "is_experimental": false,
+            "register_to_creative_menu": true
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#6EFFF7",
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 200.5
+            },
+            "minecraft:on_interact": {
+                "event": "grow",
+                "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+            },
+            "minecraft:loot": "loot_tables/blocks/moonlen_stone.json"
+        },
+        "events": {
+            "grow": {
+                "sequence": [
+                    {
+                        "randomize": [
+                            {
+                                "set_block_at_pos": {
+                                    "block_type": "zalcyan:moonlen_fungus",
+                                    "block_offset": [
+                                        0,
+                                        1,
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "set_block_at_pos": {
+                                    "block_type": "zalcyan:mushroom3",
+                                    "block_offset": [
+                                        0,
+                                        1,
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "set_block_at_pos": {
+                                    "block_type": "zalcyan:mushroom3_2",
+                                    "block_offset": [
+                                        0,
+                                        1,
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "set_block_at_pos": {
+                                    "block_type": "zalcyan:mushroom3_3",
+                                    "block_offset": [
+                                        0,
+                                        1,
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "decrement_stack": {}
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "particle minecraft:endrod ~ ~ ~"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "playsound item.bone_meal.use @a ~ ~ ~"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

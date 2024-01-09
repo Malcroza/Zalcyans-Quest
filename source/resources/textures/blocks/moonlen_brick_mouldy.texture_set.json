@@ -1,8 +1,0 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "moonlen_brick_mouldy",
-		"metalness_emissive_roughness": "moonlen_brick_mouldy_mer",
-		"heightmap": "moonlen_brick_mouldy_heightmap"
-	}
-}

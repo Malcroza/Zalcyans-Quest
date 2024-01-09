@@ -1,0 +1,49 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:cave_mould_frills"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 15,
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -4,
+                    0,
+                    -4
+                ],
+                "size": [
+                    8,
+                    16,
+                    8
+                ]
+            },
+            "minecraft:geometry": "geometry.gulu_grass",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "cave_mould_frills",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:cave_mould"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            }
+        },
+        "events": {}
+    }
+}

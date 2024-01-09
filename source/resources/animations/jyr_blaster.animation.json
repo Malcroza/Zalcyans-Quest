@@ -1,0 +1,376 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.jyr_blaster.first_person.hold": {
+			"loop": true,
+			"bones": {
+				"blaster": {
+					"rotation": [-7.506, 60.22075, -50.14032],
+					"position": [-12, 6, 15],
+					"scale": 3.15
+				},
+				"clip": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.jyr_blaster.first_person.hold2": {
+			"loop": true,
+			"bones": {
+				"blaster": {
+					"rotation": [10, 60, -30],
+					"position": [-12, 6, 15],
+					"scale": 3.15
+				},
+				"RightArm": {
+					"position": [0, 0, -5]
+				}
+			}
+		},
+		"animation.jyr_blaster.first_person.hold4": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.52,
+			"bones": {
+				"blaster": {
+					"rotation": {
+						"0.0": [-15.01, 61.22, -50.14],
+						"0.52": [-10.63524, 61.76973, -45.04346]
+					},
+					"position": {
+						"0.0": [12, 6, -2],
+						"0.52": [12, 9, -5]
+					},
+					"scale": {
+						"0.0": [6.15, 6.15, 6.15],
+						"0.52": [6.15, 6.15, 6.15]
+					}
+				},
+				"RightArm": {
+					"position": {
+						"0.0": [0, 0, -5],
+						"0.52": [0, 0, -5]
+					}
+				},
+				"inner_blaster": {
+					"rotation": {
+						"0.0": [9.5, 0.7, -2],
+						"0.52": [9.5, 0.7, -2]
+					},
+					"position": {
+						"0.0": [-0.65, 0, 2.32],
+						"0.2": [-0.65, 0, 2.32],
+						"0.52": [-0.65, 9, 2.32]
+					}
+				}
+			}
+		},
+		"animation.jyr_blaster.fire": {
+			"animation_length": 0.32,
+			"bones": {
+				"stage2": {
+					"scale": {
+						"0.04": [0, 0, 0],
+						"0.12": [0, 0, 0],
+						"0.16": [0, 0, 0],
+						"0.32": [0, 0, 0]
+					}
+				},
+				"stage3": {
+					"scale": {
+						"0.04": [0, 0, 0],
+						"0.12": [1, 1, 1],
+						"0.16": [0, 0, 0],
+						"0.32": [0, 0, 0]
+					}
+				},
+				"stage4": {
+					"scale": {
+						"0.04": [0, 0, 0],
+						"0.12": [0, 0, 0],
+						"0.16": [1, 1, 1],
+						"0.24": [0, 0, 0]
+					}
+				},
+				"ball": {
+					"scale": 0
+				},
+				"glow": {
+					"scale": 0
+				},
+				"inner_blaster": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": [-12.5, 0, 0],
+						"0.32": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.16": [0, 3, 0],
+						"0.32": [0, 0, 0]
+					}
+				},
+				"barrel": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": [12.5, 0, 0],
+						"0.32": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.12": [1.4, 1.4, 1.4],
+						"0.28": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.jyr_blaster.fire_hold": {
+			"loop": true,
+			"bones": {
+				"ball": {
+					"scale": 0
+				},
+				"glow": {
+					"scale": 0
+				},
+				"barrel": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.jyr_blaster.first_person.hold3": {
+			"loop": true,
+			"bones": {
+				"blaster": {
+					"rotation": [-15.006, 61.2207, -50.14032],
+					"position": [12, 6, -2],
+					"scale": 6.15
+				},
+				"RightArm": {
+					"position": [0, 0, -5]
+				},
+				"inner_blaster": {
+					"rotation": [9.5, 0.7, -2],
+					"position": [-0.65, 6, 1.32]
+				},
+				"barrel": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.jyr_blaster.charge": {
+			"loop": true,
+			"animation_length": 30.4,
+			"bones": {
+				"ball": {
+					"rotation": [0, "query.anim_time*360 + math.min((query.item_in_use_duration/15),200)", 0],
+					"position": [0, "-(math.min((query.item_in_use_duration/150),10))", 0],
+					"scale": "math.sin(query.anim_time*150)/50+math.min((query.item_in_use_duration/400),2)"
+				},
+				"glow": {
+					"rotation": [0, "query.anim_time*600", 0],
+					"scale": "(math.sin(query.anim_time*600)/5+math.min((query.item_in_use_duration/250),2))/5"
+				},
+				"barrel": {
+					"scale": 0
+				},
+				"inner_blaster": {
+					"rotation": [
+						0,
+						"(math.cos(query.anim_time*100*math.min((query.item_in_use_duration),5))*math.min((query.item_in_use_duration/250),3))",
+						"(math.sin(query.anim_time*120*math.min((query.item_in_use_duration),5))*math.min((query.item_in_use_duration/250),3))"
+					]
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "charge1"
+				},
+				"0.8": {
+					"effect": "charge2"
+				},
+				"1.6": {
+					"effect": "charge2"
+				},
+				"2.4": {
+					"effect": "charge2"
+				},
+				"3.2": {
+					"effect": "charge2"
+				},
+				"4.0": {
+					"effect": "charge2"
+				},
+				"4.8": {
+					"effect": "charge2"
+				},
+				"5.6": {
+					"effect": "charge2"
+				},
+				"6.4": {
+					"effect": "charge2"
+				},
+				"7.2": {
+					"effect": "charge2"
+				},
+				"8.0": {
+					"effect": "charge2"
+				},
+				"8.8": {
+					"effect": "charge2"
+				},
+				"9.6": {
+					"effect": "charge2"
+				},
+				"10.4": {
+					"effect": "charge2"
+				},
+				"11.2": {
+					"effect": "charge2"
+				},
+				"12.0": {
+					"effect": "charge2"
+				},
+				"12.8": {
+					"effect": "charge2"
+				},
+				"13.6": {
+					"effect": "charge2"
+				},
+				"14.4": {
+					"effect": "charge2"
+				},
+				"15.2": {
+					"effect": "charge2"
+				},
+				"16.0": {
+					"effect": "charge2"
+				},
+				"16.8": {
+					"effect": "charge2"
+				},
+				"17.6": {
+					"effect": "charge2"
+				},
+				"18.4": {
+					"effect": "charge2"
+				},
+				"19.2": {
+					"effect": "charge2"
+				},
+				"20.0": {
+					"effect": "charge2"
+				},
+				"20.8": {
+					"effect": "charge2"
+				},
+				"21.6": {
+					"effect": "charge2"
+				},
+				"22.4": {
+					"effect": "charge2"
+				},
+				"23.2": {
+					"effect": "charge2"
+				},
+				"24.0": {
+					"effect": "charge2"
+				},
+				"24.8": {
+					"effect": "charge2"
+				},
+				"25.6": {
+					"effect": "charge2"
+				},
+				"26.4": {
+					"effect": "charge2"
+				},
+				"27.2": {
+					"effect": "charge2"
+				},
+				"28.0": {
+					"effect": "charge2"
+				},
+				"28.8": {
+					"effect": "charge2"
+				},
+				"29.6": {
+					"effect": "charge2"
+				},
+				"30.4": {
+					"effect": "charge2"
+				}
+			}
+		},
+		"animation.jyr_blaster.blend_timer": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.48,
+			"bones": {
+				"inner_blaster": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.jyr_blaster.fire_empty_crouched": {
+			"loop": true,
+			"bones": {
+				"fire": {
+					"scale": 0
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "empty"
+				}
+			}
+		},
+		"animation.jyr_blaster.fire_empty": {
+			"animation_length": 1.44,
+			"bones": {
+				"inner_blaster": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.36": [-15.02126, 13.35981, -49.26926],
+						"0.64": [-15.02126, 13.35981, -49.26926],
+						"0.72": [-5.02126, 13.35981, -49.26926],
+						"0.8": [-20.02126, 13.35981, -49.26926],
+						"0.88": [-5.02126, 13.35981, -49.26926],
+						"1.2": [-15.02126, 13.35981, -49.26926],
+						"1.32": [0, 20, 0],
+						"1.44": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.44": [0, 0, 0]
+					}
+				},
+				"fire": {
+					"scale": 0
+				}
+			},
+			"sound_effects": {
+				"0.04": {
+					"effect": "empty"
+				}
+			}
+		},
+		"animation.jyr_blaster.hold_idle": {
+			"loop": true,
+			"animation_length": 1.44,
+			"bones": {
+				"fire": {
+					"scale": 0
+				},
+				"projectile": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}

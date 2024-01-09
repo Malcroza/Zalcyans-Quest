@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:kylar_log_carved_from_kylar_log_semi_carved"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "zalcyan:kylar_log_semi_carved"
+			}
+		},
+		"result": {
+			"item": "zalcyan:kylar_log_carved",
+			"count": 4
+		}
+	}
+}

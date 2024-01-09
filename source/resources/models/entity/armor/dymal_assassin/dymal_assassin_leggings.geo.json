@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"geometry.dymal_assassin_leggings": {
+		"texturewidth": 128,
+		"textureheight": 128,
+		"visible_bounds_width": 3,
+		"visible_bounds_height": 4,
+		"visible_bounds_offset": [0, 2, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 24, 0]
+			},
+			{
+				"name": "rightLeg",
+				"parent": "body",
+				"pivot": [-2, 12, 0],
+				"cubes": [
+					{"origin": [-4, 0, -2], "size": [4, 12, 4], "uv": [32, 54], "inflate": 0.5},
+					{"origin": [-4, 0, -2], "size": [4, 12, 4], "uv": [16, 54], "inflate": 0.85}
+				]
+			},
+			{
+				"name": "leftLeg",
+				"parent": "body",
+				"pivot": [2, 12, 0],
+				"cubes": [
+					{"origin": [0, 0, -2], "size": [4, 12, 4], "uv": [32, 54], "inflate": 0.5, "mirror": true},
+					{"origin": [0, 0, -2], "size": [4, 12, 4], "uv": [16, 54], "inflate": 0.85, "mirror": true}
+				]
+			}
+		]
+	}
+}

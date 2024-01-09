@@ -1,0 +1,93 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:arvense"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.1
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:selection_box": {
+                "origin": [
+                    -1,
+                    0,
+                    -1
+                ],
+                "size": [
+                    2,
+                    16,
+                    2
+                ]
+            },
+            "minecraft:geometry": "geometry.arvense",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "arvense",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:map_color": "#2C5807",
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:raken_ground",
+							"zalcyan:raken_ground1",
+							"zalcyan:raken_ground2",
+							"zalcyan:raken_ground3",
+                            "minecraft:grass",
+                            "zalcyan:arvense"
+                        ],
+                        "allowed_faces": [
+                            "up",
+                            "down"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:loot": "loot_tables/items/arvense_item.json",
+            "minecraft:collision_box": false,
+            "minecraft:on_interact": {
+                "event": "grow",
+                "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+            }
+        },
+        "events": {
+            "grow": {
+                "sequence": [
+                    {
+                        "set_block_at_pos": {
+                            "block_type": "zalcyan:arvense",
+                            "block_offset": [
+                                0,
+                                1,
+                                0
+                            ]
+                        }
+                    },
+                    {
+                        "decrement_stack": {}
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "particle minecraft:endrod ~ ~ ~"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "playsound item.bone_meal.use @a ~ ~ ~"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

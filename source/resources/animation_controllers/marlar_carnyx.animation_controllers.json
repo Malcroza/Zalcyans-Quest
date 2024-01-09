@@ -1,0 +1,67 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.marlar_carnyx.attack": {
+			"initial_state": "look0",
+			"states": {
+				"default": {
+					"animations": ["marlar_carnyx_first_person"],
+					"transitions": [
+						{"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged == 1 && query.is_sneaking != 1"},
+						{"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.is_sneaking == 1"}
+					],
+					"blend_transition": 0.4
+				},
+				"look0": {
+					"animations": ["marlar_carnyx_first_person2"],
+					"transitions": [
+						{"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged != 1 && query.is_sneaking != 1"},
+						{"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.is_sneaking == 1"}
+					],
+					"blend_transition": 0.4
+				},
+				"look1": {
+					"animations": ["marlar_carnyx_first_person3"],
+					"transitions": [
+						{"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged != 1 && query.is_sneaking != 1"},
+						{"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged == 1 && query.is_sneaking != 1"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.marlar_carnyx.fire": {
+			"initial_state": "hold",
+			"states": {
+				"hold": {
+					"animations": ["hold"],
+					"transitions": [
+						{"fire": "query.main_hand_item_use_duration > 0.0"}
+					]
+				},
+				"fire": {
+					"animations": ["fire"],
+					"transitions": [
+						{"hold": "query.all_animations_finished"}
+					]
+				}
+			}
+		},
+		"controller.animation.marlar_carnyx.sound": {
+			"initial_state": "hold",
+			"states": {
+				"hold": {
+					"transitions": [
+						{"sound": "query.main_hand_item_use_duration > 0.0"}
+					]
+				},
+				"sound": {
+					"animations": ["sound"],
+					"transitions": [
+						{"hold": "query.all_animations_finished"}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,320 @@
+//bridge-file-version: #48
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:rysii_pod_bolt",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": true,
+			"runtime_identifier": "minecraft:snowball",
+			"scripts": {
+				"animate": [
+					"bridge_execute_commands",
+					"bridge_execute_commands2"
+				]
+			},
+			"animations": {
+				"bridge_execute_commands": "controller.animation.bridge_rysii_pod_bolt.execute_commands",
+				"bridge_execute_commands2": "controller.animation.bridge_rysii_pod_bolt.execute_commands_summon"
+			}
+		},
+		"component_groups": {
+			"despawning": {
+				"minecraft:type_family": {
+					"family": [
+						"rysii_pod_bolt_d"
+					]
+				},
+				"minecraft:despawn": {
+					"remove_child_entities": true,
+					"filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "self",
+								"value": "rysii_pod_bolt_d"
+							}
+						]
+					}
+				}
+			},
+			"zalcyan:rysii_pod_bolt_main": {
+				"minecraft:projectile": {
+					"power": 4,
+					"gravity": 0,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"should_bounce": false,
+					"offset": [
+						0,
+						0.5,
+						3.5
+					],
+					"multiple_targets": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 12,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"zalcyan:player_rysii_pod_bolt_standing": {
+				"minecraft:projectile": {
+					"power": 2,
+					"gravity": 0,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"should_bounce": false,
+					"offset": [
+						-0.18,
+						0.18,
+						0.2
+					],
+					"multiple_targets": true,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 36,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"zalcyan:rysii_pod_bolt_sneaking": {
+				"minecraft:projectile": {
+					"power": 2,
+					"gravity": 0,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"should_bounce": false,
+					"offset": [
+						0,
+						-0.1,
+						0
+					],
+					"multiple_targets": true,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 36,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"bridge:execute_command_id_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"bridge:execute_command_id_2": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"bridge:execute_no_command2": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.4,
+				"height": 0.4
+			},
+			"minecraft:despawn": {
+				"remove_child_entities": true,
+				"filters": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "self",
+							"value": "rysii_pod_bolt"
+						}
+					]
+				}
+			},
+			"minecraft:timer": {
+				"looping": false,
+				"time_down_event": {
+					"event": "minecraft:start_despawn",
+					"target": "self"
+				},
+				"time": [
+					8,
+					8
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"minecraft:start_despawn": {
+				"add": {
+					"component_groups": [
+						"despawning"
+					]
+				}
+			},
+			"minecraft:entity_born": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"bridge:execute_command_id_2"
+							]
+						}
+					},
+					{
+					"add": {
+							"component_groups": [
+								"zalcyan:rysii_pod_bolt_main"
+											]
+										},
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"value": "rysii_pod",
+										"subject": "other"
+									}
+								]
+							}
+						
+					}
+				]
+			},
+			"particle": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			},
+			"bridge:remove_command_id_1": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			},
+			"bridge:remove_command_id_2": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command2"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_2"
+					]
+				}
+			},
+			"minecraft:start_despawn": {
+				"add": {
+					"component_groups": [
+						"despawning"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": true
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:player_rysii_pod_bolt_sneaking"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": false
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:player_rysii_pod_bolt_standing"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

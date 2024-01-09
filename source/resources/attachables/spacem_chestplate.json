@@ -1,0 +1,25 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan:spacem_chestplate",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted",
+		"glass":"phantom"
+      },
+      "textures": {
+        "default": "textures/models/armor/spacem_armor",
+        "enchanted": "textures/misc/enchanted_item_glint_zal"
+      },
+      "geometry": {
+        "default": "geometry.spacem_chestplate",
+		"glass": "geometry.spacem_chestplate_lights"
+      },
+      "scripts": {
+        "parent_setup": "variable.helmet_layer_visible = 0.0;"
+      },
+      "render_controllers": [ "controller.render.armor", "controller.render.spacem_helmet_glass" ]
+    }
+  }
+}

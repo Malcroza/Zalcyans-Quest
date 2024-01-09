@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:quag_door",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.door"
+				}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "door_quag"
+			},
+			"minecraft:block_placer": {
+				"block": "zalcyan:quag_door_bottom"
+			},
+			"minecraft:fuel": {
+				"duration": 10
+			}
+		}
+	}
+}

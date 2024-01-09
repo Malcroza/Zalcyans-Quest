@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:ds_city_base_weighted"
+    },
+    "features": [
+      [ "zalcyan:ds_city_base1_feature", 12 ],
+      [ "zalcyan:ds_city_base2_feature", 6 ]
+    ]
+  }
+}

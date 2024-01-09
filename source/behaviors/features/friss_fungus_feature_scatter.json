@@ -6,7 +6,6 @@
 			"identifier": "zalcyan:friss_fungus_feature_scatter"
 		},
 		"iterations": 14,
-		"coordinate_eval_order": "zyx",
 		"x": {
 			"extent": [
 				-8,

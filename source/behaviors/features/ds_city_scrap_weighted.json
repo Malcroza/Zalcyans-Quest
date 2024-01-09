@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:ds_city_scrap_weighted"
+    },
+    "features": [
+      [ "minecraft:ds_city_scrap1_mcstructure", 12 ],
+      [ "minecraft:ds_city_scrap2_mcstructure", 6 ],
+      [ "minecraft:ds_city_scrap3_mcstructure", 6 ],
+      [ "minecraft:ds_city_scrap4_mcstructure", 6 ],
+      [ "minecraft:ds_city_scrap5_mcstructure", 6 ],
+      [ "minecraft:ds_city_scrap6_mcstructure", 6 ],
+      [ "minecraft:ds_city_scrap7_mcstructure", 26 ]
+    ]
+  }
+}

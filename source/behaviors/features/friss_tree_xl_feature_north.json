@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "zalcyan:friss_tree_xl_feature_north"
+		},
+
+		"structure_name": "zalcyan:friss_tree_xl",
+
+		"facing_direction": "north",
+		"adjustment_radius": 0,
+
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

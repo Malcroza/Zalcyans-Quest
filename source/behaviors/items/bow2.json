@@ -1,0 +1,64 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan2:bow",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.bows"
+				}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 100,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "marlar_blaster"
+			},
+			"minecraft:display_name": {
+				"value": "§4Marlar Blaster \n §o§8Requires Marlar Charges"
+			},
+			"minecraft:durability": {
+				"max_durability": 128
+			},
+			"minecraft:use_animation": "bow",
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"zalcyan:lor_gem"
+						],
+						"repair_amount": 10
+					},
+					{
+						"items": [
+							"zalcyan:marlar_blaster"
+						],
+						"repair_amount": "query.remaining_durability"
+					},
+					{
+						"items": [
+							"zalcyan:lor_gem_broken"
+						],
+						"repair_amount": 2
+					}
+				]
+			},
+			"minecraft:shooter": {
+				"ammunition": [
+					{
+						"item": "zalcyan:marlar_charge",
+						"use_offhand": true,
+						"search_inventory": true,
+						"use_in_creative": false
+					}
+				],
+				"max_draw_duration": 0.05,
+				"charge_on_draw": false
+			}
+		},
+		"events": {
+		}
+	}
+}

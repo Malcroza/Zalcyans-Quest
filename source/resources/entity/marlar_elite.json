@@ -24,7 +24,6 @@
 				"move": "controller.animation.marlar_elite.move",
 				"general": "controller.animation.marlar_elite.general",
 				"roaring": "animation.marlar_elite.roaring",
-				"head": "controller.animation.marlar_elite.head_movement",
 				"look_at_target_default": "animation.humanoid.look_at_target.default",
 				"look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
 				"look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
@@ -37,8 +36,7 @@
 				"animate": [
 					"move",
 					"general",
-					"attacking",
-					"head"
+					"attacking"
 				]
 			},
 			"render_controllers": [

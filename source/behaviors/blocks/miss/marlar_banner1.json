@@ -1,0 +1,50 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:marlar_banner1",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+			 "minecraft:map_color": "#030912",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -4,
+                    0,
+                    -4
+                ],
+                "size": [
+                    8,
+                    16,
+                    8
+                ]
+            },
+            "minecraft:geometry": "geometry.marlar_banner1",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "marlar_banner1",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            }
+        },
+        "events": {}
+    }
+}

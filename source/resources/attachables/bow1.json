@@ -1,0 +1,59 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan1:bow",
+      "materials": {
+        "default": "phantom",
+        "enchanted": "entity_alphatest_glint",
+		"glow": "zal2"
+      },
+      "textures": {
+        "default": "textures/models/equipment/jyr_blaster",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.jyr_blaster"
+      },
+      "animations": {
+		"jyr_blaster_first_person": "animation.jyr_blaster.first_person.hold",
+		"jyr_blaster_first_person2": "animation.jyr_blaster.first_person.hold2",
+		"jyr_blaster_first_person3": "animation.jyr_blaster.first_person.hold4",
+		"hold": "animation.jyr_blaster.fire_hold",
+		"hold_idle": "animation.jyr_blaster.hold_idle",
+		"charge": "animation.jyr_blaster.charge",
+		"fire": "animation.jyr_blaster.fire",
+		"fire_empty": "animation.jyr_blaster.fire_empty",
+		"fire_empty_crouched": "animation.jyr_blaster.fire_empty_crouched",
+		"jyr_blaster_shoot": "animation.jyr_blaster.shoot",
+		"shoot_cont": "controller.animation.jyr_blaster.attack",
+		"fire_cont": "controller.animation.jyr_blaster.fire",
+		"fire_empty_cont": "controller.animation.jyr_blaster.fire_empty",
+		"blend_timer":"animation.jyr_blaster.blend_timer",
+		"entity_fire": "controller.animation.jyr_blaster.fire_entity"
+      },
+      "scripts": {
+		  "pre_animation": [
+					"t.val = 0; t.i = 0; loop(27, {t.val = q.is_item_name_any('slot.inventory', t.i, 'zalcyan:light_charge'); t.val ? {return t.val;}; t.i = t.i+1;});",
+					"t.val1 = 0; t.i = 0; loop(9, {t.val1 = q.is_item_name_any('slot.hotbar', t.i, 'zalcyan:light_charge'); t.val1 ? {return t.val1;}; t.i = t.i+1;});",
+					"t.val2 = q.is_item_name_any('slot.weapon.offhand', 0, 'zalcyan:light_charge');"
+					
+                ],
+        "animate": [
+			{
+			"shoot_cont": "c.is_first_person"
+			},
+		  {"fire_cont": "t.val == 1 || t.val1 == 1 || t.val2 ==1"},
+		  {"fire_empty_cont": "t.val == 0 && t.val1 == 0 && t.val2 ==0 && !query.has_property('zalcyan:gun_spark')"},
+		  {"entity_fire": "query.has_property('zalcyan:gun_spark')" }
+        ]
+      },
+      "render_controllers": [ "controller.render.bow1"],
+	   "sound_effects": {
+				"charge1": "l_orb.charge1",
+				"charge2": "l_orb.charge2",
+				"empty": "sound.gun.empty"
+			}
+    }
+  }
+}

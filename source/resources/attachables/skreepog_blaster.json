@@ -16,19 +16,17 @@
       },
       "animations": {
 		"skreepog_blaster_first_person": "animation.skreepog_blaster.first_person.hold",
-		"skreepog_blaster_shoot": "animation.skreepog_blaster.shoot"
+		"skreepog_blaster_ripple": "animation.skreepog_blaster.ripple",
+		"skreepog_blaster_first_person_hold_sneak": "animation.skreepog_blaster.first_person.hold_sneak",
+		"shoot_cont": "controller.animation.skreepog_blaster.attack"
       },
       "scripts": {
-        "animate": [
-          {
-            "skreepog_blaster_first_person": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'skreepog_blaster'"
-          },
-		  
-            "skreepog_blaster_shoot"
-          ,
-		  {
-			"skreepog_blaster": "variable.skreepog_blaster"
-		  }
+        "animate": [  
+            "skreepog_blaster_ripple",
+			{
+			"shoot_cont": "c.is_first_person"
+			}
+			
         ]
       },
       "render_controllers": [ "controller.render.item_default" ]

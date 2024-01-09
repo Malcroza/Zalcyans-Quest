@@ -1,0 +1,131 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pod.base_pose": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "trail",
+							"locator": "blip"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.rysii_pod.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"basepose"
+					],
+					"transitions": [
+						{
+							"zoom": "query.modified_move_speed <= 0.1"
+						}
+					],
+					"blend_transition": 1.0
+				},
+				"zoom": {
+					"animations": [
+						"fold"
+					],
+					"transitions": [
+						{
+							"default": "query.modified_move_speed >= 0.1"
+						}
+					],
+					"blend_transition": 0.6
+				}
+			}
+		},
+		"controller.animation.rysii_pod.zoom": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"ridden": "query.has_rider"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"ridden": {
+					"animations": [
+						"exaust"
+					],
+					"transitions": [
+						{
+							"default": "!query.has_rider"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.rysii_pod.ride_shield": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"no_rider_idle"
+					],
+					"transitions": [
+						{
+							"rider": "query.has_rider"
+						}
+					],
+					"blend_transition": 1.4
+				},
+				"rider": {
+					"animations": [
+						"rider"
+					],
+					"transitions": [
+						{
+							"no_rider": "!query.has_rider"
+						}
+					],
+					"blend_transition": 1.4
+				},
+				"no_rider": {
+					"animations": [
+						"no_rider"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 1.4
+				}
+			}
+		},
+		"controller.animation.rysii_pod.smoke": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"smoke": "query.health < 20"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"smoke": {
+					"animations": [
+						"smoke"
+					],
+					"transitions": [
+						{
+							"default": "query.health >= 20"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		}
+	}
+}

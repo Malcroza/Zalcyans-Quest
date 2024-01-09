@@ -1,0 +1,35 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.220",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "zalcyan:moonlen_dirt_feature"
+		},
+		"places_block": {
+			"name": "zalcyan:moonlen_stone"
+		},
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			{
+				"name": "minecraft:dirt"
+			},
+			{
+				"name": "minecraft:grass"
+			}
+			,
+			{
+				"name": "minecraft:stone"
+			},
+			{
+				"name": "minecraft:gravel"
+			},
+			{
+				"name": "minecraft:podzol"
+			},
+			{
+				"name": "minecraft:sand"
+			}
+		]
+	}
+}

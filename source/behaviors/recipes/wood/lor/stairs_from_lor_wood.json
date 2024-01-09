@@ -1,0 +1,26 @@
+
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:stairs_from_lor_wood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"W  ",
+			"WW ",
+			"WWW"
+		],
+		"key": {
+			"W": {
+				"item": "zalcyan:lor_log_planks"
+			}
+		},
+		"result": {
+			"item": "zalcyan:lor_stairs",
+			"count": 4
+		}
+	}
+}

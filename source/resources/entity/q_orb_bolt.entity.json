@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:q_orb_bolt3",
+      "materials": {
+        "default": "orb"
+      },
+	  "particle_effects": {
+    "lazar_trail": "zalcyan:lazar_trail",
+	"lazar_sparks": "zalcyan:r_orb_sparks",
+	"fog": "zalcyan:r_orb_fog"
+	},
+      "textures": {
+        "default": "textures/entity/r_orb"
+      },
+      "geometry": {
+        "default": "geometry.r_orb"
+      },
+      "animations": {
+        "move": "animation.r_orb.move",
+		"elongate": "animation.r_orb.elongate", 		
+		"part": "controller.animation.r_orb.particles",
+		"moving": "controller.animation.r_orb.movement",
+		"close": "animation.r_orb.close",
+		"fog_part": "animation.r_orb.fog"
+      },
+      "scripts": {
+      },
+      "render_controllers": [ "controller.render.orb" ]
+    }
+  }
+}

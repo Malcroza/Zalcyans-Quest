@@ -76,9 +76,8 @@
 				"priority": 1,
 				"attack_duration": 0.96,
 				"speed_multiplier": 1,
-				"hit_delay_pct": 100,
+				"hit_delay_pct": 0.7,
 				"track_target": true,
-				"sound_event": {},
 				"reach_multiplier": 2
 			},
 			"minecraft:breathable": {

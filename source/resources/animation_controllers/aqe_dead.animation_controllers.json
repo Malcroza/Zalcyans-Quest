@@ -1,0 +1,46 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.aqe_d.general" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"diezero": "math.random_integer(1,5)==1"
+						},
+						{
+							"dieone": "math.random_integer(1,5)==2"
+						},
+						{
+							"dietwo": "math.random_integer(1,5)==3"
+						},
+						{
+							"diethree": "math.random_integer(1,5)==4"
+						},
+						{
+							"diefour": "math.random_integer(1,5)==5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"diezero" : {
+					"animations" : [ "aqe_die1"]
+				},
+				"dieone" : {
+					"animations" : [ "aqe_die2" ]
+				},
+				"dietwo" : {
+					"animations" : [ "aqe_die3" ]
+				},
+				"diethree" : {
+					"animations" : [ "aqe_die4" ]
+				},
+				"diefour" : {
+					"animations" : [ "aqe_die5" ]
+				}
+			}
+		}
+	}
+}

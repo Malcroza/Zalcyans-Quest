@@ -1,0 +1,15 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.vok_warrior_d.general": {
+			"states": {
+				"default": {
+					"animations": [
+						"vok_warrior_d.general"
+					]
+				}
+			}
+		}
+	}
+}

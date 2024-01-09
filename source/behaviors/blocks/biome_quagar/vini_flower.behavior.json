@@ -1,0 +1,53 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:vini_flower",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.1
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 1,
+            "minecraft:light_dampening": 0,
+            "minecraft:selection_box": {
+                "origin": [
+                    -3,
+                    2,
+                    -3
+                ],
+                "size": [
+                    6,
+                    8,
+                    6
+                ]
+            },
+            "minecraft:geometry": "geometry.vini_flower",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "vini_flower",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:map_color": "#e96635",
+            "minecraft:collision_box": false,
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:vini_leaf"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            }
+        },
+        "events": {}
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan_dev:dev_void_fill"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:material_instances": {
+                "*": {
+                    "render_method": "blend",
+                    "texture": "void_fill"
+                }
+            },
+            "minecraft:map_color": "#00FFFF",
+            "minecraft:unit_cube": {},
+            "minecraft:on_player_destroyed": {
+                "event": "activate",
+                "target": "self"
+            },
+            "minecraft:on_interact": {
+                "event": "activate",
+                "target": "self"
+            },
+            "minecraft:loot": "loot_tables/nothing.json",
+            "minecraft:random_ticking": {
+                "on_tick": {
+                    "event": "activate",
+                    "target": "self"
+                }
+            },
+            "minecraft:queued_ticking": {
+                "looping": true,
+                "on_tick": {
+                    "event": "activate"
+                },
+                "interval_range": [
+                    0,
+                    1
+                ]
+            },
+            "minecraft:collision_box": false
+        },
+        "events": {
+            "activate": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~+1 ~ ~ ~+1 ~ zalcyan_dev:dev_void_fill replace structure_void"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~-1 ~ ~ ~-1 ~ zalcyan_dev:dev_void_fill replace structure_void"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~+1 ~ ~ ~+1 ~ ~ zalcyan_dev:dev_void_fill replace structure_void"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~-1 ~ ~ ~-1 ~ ~ zalcyan_dev:dev_void_fill replace structure_void"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~ ~+1 ~ ~ ~+1 zalcyan_dev:dev_void_fill replace structure_void"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~ ~-1 ~ ~ ~-1 zalcyan_dev:dev_void_fill replace structure_void"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

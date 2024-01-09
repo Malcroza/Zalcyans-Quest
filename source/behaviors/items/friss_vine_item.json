@@ -1,10 +1,13 @@
 //bridge-file-version: #0
 {
-	"format_version": "1.16.100",
+	"format_version": "1.20.40",
 	"minecraft:item": {
 		"description": {
 			"identifier": "zalcyan:friss_vine_item",
-			"category": "nature"
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.nature"
+				}
 		},
 		"components": {
 			"minecraft:block_placer": {
@@ -20,9 +23,6 @@
 			},
 			"minecraft:icon": {
 				"texture": "friss_vine_item"
-			},
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.nature"
 			},
 			"minecraft:max_stack_size": 64,
 			"minecraft:stacked_by_data": true

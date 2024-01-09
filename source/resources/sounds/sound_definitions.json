@@ -1,6 +1,6 @@
-//bridge-file-version: #46
+//bridge-file-version: #47
 {
-	"format_version": "1.14.0",
+	"format_version": "1.20.20",
 	"sound_definitions": {
 		"mob.aqe.say": {
 			"category": "hostile",
@@ -53,6 +53,14 @@
 			"sounds": [
 				{
 					"name": "sounds/mob/orb/lazar"
+				}
+			]
+		},
+		"mob.orb.z_orb_shoot": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/mob/orb/z_orb_shoot"
 				}
 			]
 		},
@@ -146,9 +154,9 @@
 				"sounds/z_sounds/lazar"
 			]
 		},
-		"sound.lazar.hit": {
+		"sound.laser.hit": {
 			"sounds": [
-				"sounds/z_sounds/lazar_hit"
+				"sounds/z_sounds/laser_hit"
 			],
 			"category": "neutral"
 		},
@@ -232,6 +240,11 @@
 				"sounds/z_sounds/skreepog_engine"
 			]
 		},
+		"sound.rysii.beam": {
+			"sounds": [
+				"sounds/z_sounds/rysii_summon"
+			]
+		},
 		"mob.skreepog.say": {
 			"category": "hostile",
 			"sounds": [
@@ -246,6 +259,524 @@
 			"sounds": [
 				"sounds/mob/skreepog/skreepog_hit"
 			]
+		},
+		"mob.skreepog.sum": {
+			"sounds": [
+				{
+					"name": "sounds/mob/skreepog/skreepog_sum"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.zighet_fly1": {
+			"sounds": [
+				{
+					"name": "sounds/mob/zighet/zighet_fly1"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.zighet_fly2": {
+			"sounds": [
+				{
+					"name": "sounds/mob/zighet/zighet_fly2"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.zighet_fly3": {
+			"sounds": [
+				{
+					"name": "sounds/mob/zighet/zighet_fly3"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.zighet_fly4": {
+			"sounds": [
+				{
+					"name": "sounds/mob/zighet/zighet_fly4"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.zighet_fly5": {
+			"sounds": [
+				{
+					"name": "sounds/mob/zighet/zighet_fly5"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.zighet_fly6": {
+			"sounds": [
+				{
+					"name": "sounds/mob/zighet/zighet_fly6"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.vok_warrior_wing": {
+			"sounds": [
+				{
+					"name": "sounds/mob/vok_warrior/vok_warrior_wing"
+				}
+			],
+			"category": "hostile"
+		},
+		"sound.prismar.idle": {
+			"sounds": [
+				"sounds/z_sounds/prismar_idle"
+			],
+			"category": "neutral"
+		},
+		"sound.prismar.ignite": {
+			"sounds": [
+				"sounds/z_sounds/prismar_ignite"
+			],
+			"category": "neutral"
+		},
+		"sound.prismar.swing": {
+			"sounds": [
+				"sounds/z_sounds/prismar_swing",
+				"sounds/z_sounds/prismar_swing_l",
+				"sounds/z_sounds/prismar_swing_h"
+				
+			],
+			"category": "neutral"
+		},
+		"sound.prismar.swing_player": {
+			"sounds": [
+				"sounds/z_sounds/prismar_swing"
+				
+			],
+			"category": "neutral"
+		},
+		"mob.zighet.say": {
+			"sounds": [
+				"sounds/mob/zighet/zighet_say1",
+				"sounds/mob/zighet/zighet_say1",
+				"sounds/mob/zighet/zighet_say1"
+				
+			],
+			"category": "hostile"
+		},
+		"mob.zighet.hurt": {
+			"sounds": [
+				{
+					"name": "sounds/mob/zighet/zighet_hurt"
+				}
+			],
+			"category": "hostile"
+		},
+		"sound.sniper.shoot_large": {
+			"sounds": [
+				"sounds/z_sounds/large_sniper_shoot"
+				
+			],
+			"category": "neutral"
+		},
+		"rysii.pod.engine": {
+			"sounds": [
+				"sounds/z_sounds/rysii_engine"
+				
+			],
+			"category": "neutral"
+		},
+		"mob.wybeom.flap1": {
+			"sounds": [
+				{
+					"name": "sounds/mob/wybeom/wybeom_wing1"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.wybeom.flap2": {
+			"sounds": [
+				{
+					"name": "sounds/mob/wybeom/wybeom_wing2"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.wybeom.flap3": {
+			"sounds": [
+				{
+					"name": "sounds/mob/wybeom/wybeom_wing3"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.wybeom.flap4": {
+			"sounds": [
+				{
+					"name": "sounds/mob/wybeom/wybeom_wing4"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.wybeom.flap5": {
+			"sounds": [
+				{
+					"name": "sounds/mob/wybeom/wybeom_wing5"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.wybeom.flap6": {
+			"sounds": [
+				{
+					"name": "sounds/mob/wybeom/wybeom_wing6"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.zighet_queen.growl": {
+			"sounds": [
+				{
+					"name": "sounds/mob/zighet_queen/zighet_queen_growl"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.wybeom.hit": {
+			"sounds": [
+				{
+					"name": "sounds/mob/wybeom/wybeom_chirp2"
+				}
+			],
+			"category": "hostile"
+		},
+		"mob.wybeom.say": {
+			"sounds": [
+				"sounds/mob/wybeom/wybeom_chirp0",
+				"sounds/mob/wybeom/wybeom_chirp1",
+				"sounds/mob/wybeom/wybeom_chirp3"
+				
+			],
+			"category": "hostile"
+		},
+		"mob.marlar.say": {
+			"sounds": [
+				"sounds/mob/marlar/say",
+				"sounds/mob/marlar/say2",
+				"sounds/mob/marlar/say3",
+				"sounds/mob/marlar/say4",
+				"sounds/mob/marlar/say5",
+				"sounds/mob/marlar/say6"	
+			],
+			"category": "hostile"
+		},
+		"mob.marlar.celebrate": {
+			"sounds": [
+				"sounds/mob/marlar/celebrate",
+				"sounds/mob/marlar/celebrate2",
+				"sounds/mob/marlar/celebrate3"	
+			],
+			"category": "hostile"
+		},
+		"mob.marlar.die": {
+			"sounds": [
+				"sounds/mob/marlar/die",
+				"sounds/mob/marlar/die2",
+				"sounds/mob/marlar/die3",
+				"sounds/mob/marlar/die4",
+				"sounds/mob/marlar/die5",
+				"sounds/mob/marlar/die6",
+				"sounds/mob/marlar/die7",
+				"sounds/mob/marlar/die8",
+				"sounds/mob/marlar/die9"	
+			],
+			"category": "hostile"
+		},
+		"mob.marlar.hit": {
+			"sounds": [
+				"sounds/mob/marlar/hit",
+				"sounds/mob/marlar/hit2",
+				"sounds/mob/marlar/hit3",
+				"sounds/mob/marlar/hit4"	
+			],
+			"category": "hostile"
+		},
+		"mob.marlar.yell": {
+			"sounds": [
+				"sounds/mob/marlar/yell",
+				"sounds/mob/marlar/yell2",
+				"sounds/mob/marlar/yell3",
+				"sounds/mob/marlar/yell4"	
+			],
+			"category": "hostile"
+		},
+		"sound.carnyx.fear": {
+			"sounds": [
+				"sounds/music/carnyx/carnyx1",
+				"sounds/music/carnyx/carnyx2",
+				"sounds/music/carnyx/carnyx3",
+				"sounds/music/carnyx/carnyx4",
+				"sounds/music/carnyx/carnyx5"
+			],
+			"category": "player"
+		},
+		"rifle.zoom.scope": {
+			"sounds": [
+				"sounds/z_sounds/scope"
+				
+			],
+			"category": "player"
+		},
+		"blaster.charge.bolt_charge": {
+			"sounds": [
+				"sounds/z_sounds/bolt_charge"
+				
+			],
+			"category": "neutral"
+		},
+		"blaster.charge.blaster_charge": {
+			"sounds": [
+				"sounds/z_sounds/blaster_charge"
+				
+			],
+			"category": "neutral"
+		},
+		"blaster.neo.shoot": {
+			"sounds": [
+				"sounds/z_sounds/neo_shoot"
+				
+			],
+			"category": "hostile"
+		},
+		"neo.engine.charge_up": {
+			"sounds": [
+				"sounds/z_sounds/charge_up"
+				
+			],
+			"category": "hostile"
+		},
+		"neo.engine.landing": {
+			"sounds": [
+				"sounds/z_sounds/neo_landing"
+				
+			],
+			"category": "hostile"
+		},
+		"metal.hit.ring": {
+			"sounds": [
+				"sounds/z_sounds/metal_hit"
+				
+			],
+			"category": "hostile"
+		},
+		"zighet.music": {
+			"sounds": [
+				{
+					"name": "sounds/music/game/antlion",
+					"volume": 1.2
+				}
+			],
+			"category": "music"
+		},
+		"sound.gear.turn": {
+			"sounds": [
+				"sounds/z_sounds/gear_0",
+				"sounds/z_sounds/gear_1",
+				"sounds/z_sounds/gear_2",
+				"sounds/z_sounds/gear_3",
+				"sounds/z_sounds/gear_4",
+				"sounds/z_sounds/gear_5",
+				"sounds/z_sounds/gear_6"
+				
+			],
+			"category": "neutral"
+		},
+		"mob.skreepog_pillar.rocket_thrusters": {
+			"sounds": [
+				"sounds/mob/skreepog_pillar/rocket_thrusters"
+				
+			],
+			"category": "neutral"
+		},
+		"mob.skreepog_pillar.skreepog_blades": {
+			"sounds": [
+				"sounds/mob/skreepog_pillar/skreepog_blades"
+				
+			],
+			"category": "neutral"
+		},
+		"mob.skreepog_pillar.crash_land": {
+			"sounds": [
+				"sounds/mob/skreepog_pillar/crash_land"
+				
+			],
+			"category": "neutral"
+		},
+		"sound.sniper.laser": {
+			"sounds": [
+				"sounds/z_sounds/laser_sniper"
+				
+			],
+			"category": "neutral"
+		},
+		"rifle.zoom.scope3": {
+			"sounds": [
+				"sounds/z_sounds/scope3"
+				
+			],
+			"category": "player"
+		},
+		"blaster.charge.blaster_charge3": {
+			"sounds": [
+				"sounds/z_sounds/charge3"
+				
+			],
+			"category": "neutral"
+		},//needed for now to mute in blaster shots
+      "random.bow" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : []
+		},
+		"sound.gun.empty": {
+			"sounds": [
+				"sounds/z_sounds/gun_empty1",
+				"sounds/z_sounds/gun_empty2"	
+			],
+			"category": "neutral"
+		},
+		"aqe.orb_thrower.charge1": {
+			"sounds": [
+				"sounds/z_sounds/aqe_charge1"
+				
+			],
+			"category": "neutral"
+		},
+		"aqe.orb_thrower.charge2": {
+			"sounds": [
+				"sounds/z_sounds/aqe_charge2"
+				
+			],
+			"category": "neutral"
+		},
+		"aqe.orb_thrower.charge3": {
+			"sounds": [
+				"sounds/z_sounds/aqe_charge3"
+				
+			],
+			"category": "neutral"
+		},
+		"aqe.orb.shoot": {
+			"sounds": [
+				"sounds/z_sounds/aqe_orb_shoot"
+				
+			],
+			"category": "neutral"
+		},
+		"mob.marlar.swing": {
+			"sounds": [
+				"sounds/mob/marlar/marlar_swing1",
+				"sounds/mob/marlar/marlar_swing2",
+				"sounds/mob/marlar/marlar_swing3"
+			],
+			"category": "hostile"
+		},
+		"sound.orb.ricochet": {
+			"sounds": [
+				"sounds/z_sounds/laser_ricochet1",
+				"sounds/z_sounds/laser_ricochet2",
+				"sounds/z_sounds/laser_ricochet3",
+				"sounds/z_sounds/laser_ricochet4",
+				"sounds/z_sounds/laser_ricochet5"
+			],
+			"category": "neutral"
+		},
+		"light.button.press": {
+			"sounds": [
+				"sounds/z_sounds/light_button"
+				
+			],
+			"category": "neutral"
+		},
+		"phase.button.up": {
+			"sounds": [
+				"sounds/z_sounds/phase_up"
+				
+			],
+			"category": "neutral"
+		},
+		"phase.button.down": {
+			"sounds": [
+				"sounds/z_sounds/phase_down"
+				
+			],
+			"category": "neutral"
+		},
+		"rysii.bolt.shoot": {
+			"sounds": [
+				"sounds/z_sounds/rysii_bolt_shoot"
+				
+			],
+			"category": "hostile"
+		},
+		"h_orb.loaded": {
+			"sounds": [
+				"sounds/z_sounds/h_orb_loaded"
+				
+			],
+			"category": "neutral"
+		},
+		"h_orb.slide": {
+			"sounds": [
+				"sounds/z_sounds/h_orb_slide"
+				
+			],
+			"category": "neutral"
+		},
+		"h_orb.shoot": {
+			"sounds": [
+				"sounds/z_sounds/h_orb_shoot"
+				
+			],
+			"category": "neutral"
+		},
+		"sound.metal.click": {
+			"sounds": [
+				"sounds/z_sounds/metal_click1",
+				"sounds/z_sounds/metal_click2",
+				"sounds/z_sounds/metal_click3",
+				"sounds/z_sounds/metal_click4",
+				"sounds/z_sounds/metal_click5",
+				"sounds/z_sounds/metal_click6"
+			],
+			"category": "neutral"
+		},
+		"l_orb.charge1": {
+			"sounds": [
+				"sounds/z_sounds/l_orb_charge1"
+				
+			],
+			"category": "neutral"
+		},
+		"l_orb.charge2": {
+			"sounds": [
+				"sounds/z_sounds/l_orb_charge2"
+				
+			],
+			"category": "neutral"
+		},
+		"jyr.shoot": {
+			"sounds": [
+				"sounds/z_sounds/jyr_shoot"
+				
+			],
+			"category": "neutral"
+		},
+		"rysii.music": {
+			"sounds": [
+				{
+					"name": "sounds/music/game/oath_of_the rysii",
+					"volume": 0.8
+				}
+			],
+			"category": "music"
 		}
 	}
 }

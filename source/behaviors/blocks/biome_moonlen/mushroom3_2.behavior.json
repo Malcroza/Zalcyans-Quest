@@ -1,0 +1,52 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:mushroom3_2",
+            "menu_category": {
+                "category": "nature",
+                "group": "itemGroup.name.mushroom"
+            }
+        },
+        "components": {
+			"minecraft:map_color": "#56ceda",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4.0
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0.0,
+            "minecraft:light_dampening": 0.0,
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:geometry": "geometry.mushroom3_2",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "mushroom3_2",
+                    "render_method": "blend"
+                }
+            }
+        }
+    }
+}

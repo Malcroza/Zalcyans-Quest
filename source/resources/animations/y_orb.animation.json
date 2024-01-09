@@ -1,0 +1,54 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.y_orb.move": {
+			"loop": false,
+			"animation_length": 0.01,
+			"particle_effects": {
+				"0.0": {
+					"effect": "lazar_trail",
+					"locator": "part_emitter"
+				}
+			}
+		},
+		"animation.y_orb.position": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["- query.target_x_rotation", "-query.body_y_rotation + query.target_y_rotation", 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "lazar_trail",
+					"locator": "part_emitter"
+				}
+			}
+		},
+		"animation.y_orb.part2": {
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "lazar_trail2",
+					"locator": "part_emitter2"
+				}
+			}
+		},
+		"animation.y_orb.sparks": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.08,
+			"particle_effects": {
+				"0.08": [
+					{
+						"effect": "y_orb_fog",
+						"locator": "part_emitter3"
+					},
+					{
+						"effect": "lazar_sparks",
+						"locator": "part_emitter3"
+					}
+				]
+			}
+		}
+	}
+}

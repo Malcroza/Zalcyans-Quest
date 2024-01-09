@@ -1,0 +1,21 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.220",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "zalcyan:ds_loot_box1_feature"
+		},
+		"places_block": {
+			"name": "zalcyan:ds_loot_box1"
+		},
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": true,
+    "may_attach_to": {
+			"bottom": ["zalcyan:ds_metal_floor", "zalcyan:ds_metal_floor_rusting", "zalcyan:ds_metal_floor_rusted"]
+	},
+    "may_replace": [
+      "minecraft:air",
+	  "minecraft:structure_void"
+    ]
+	}
+}

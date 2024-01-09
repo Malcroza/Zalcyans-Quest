@@ -1,0 +1,82 @@
+{
+	"format_version": "1.8.0",
+	"geometry.yalron_chestplate": {
+		"texturewidth": 128,
+		"textureheight": 128,
+		"visible_bounds_width": 5,
+		"visible_bounds_height": 4,
+		"visible_bounds_offset": [0, 2, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 24, 0],
+				"cubes": [
+					{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [0, 34], "inflate": 0.54},
+					{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [0, 78], "inflate": 0.64},
+					{"origin": [-9, 18, -4], "size": [18, 7, 8], "uv": [0, 113], "inflate": 0.6}
+				]
+			},
+			{
+				"name": "sash",
+				"parent": "body",
+				"pivot": [5, 23.5, 0],
+				"rotation": [0, 0, -47.5],
+				"cubes": [
+					{"origin": [-7, 22.93, -3], "size": [13, 3, 6], "uv": [75, 91], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "sash2",
+				"parent": "body",
+				"pivot": [-5, 23.5, 0],
+				"rotation": [0, 0, 47.5],
+				"cubes": [
+					{"origin": [-6, 22.93, -3], "size": [13, 3, 6], "uv": [75, 91], "inflate": 0.5, "mirror": true}
+				]
+			},
+			{
+				"name": "rightArm",
+				"parent": "body",
+				"pivot": [-5, 22, 0],
+				"cubes": [
+					{"origin": [-8, 12, -2], "size": [4, 12, 4], "uv": [50, 47], "inflate": 0.56},
+					{"origin": [-8, 12, -2], "size": [4, 12, 4], "uv": [83, 45], "inflate": 0.8}
+				]
+			},
+			{
+				"name": "rightItem",
+				"parent": "rightArm",
+				"pivot": [-6, 15, 2]
+			},
+			{
+				"name": "leftArm",
+				"parent": "body",
+				"pivot": [5, 22, 0],
+				"mirror": true,
+				"cubes": [
+					{"origin": [4, 12, -2], "size": [4, 12, 4], "uv": [50, 47], "inflate": 0.56},
+					{"origin": [4, 12, -2], "size": [4, 12, 4], "uv": [83, 45], "inflate": 0.8}
+				]
+			},
+			{
+				"name": "leftItem",
+				"parent": "leftArm",
+				"pivot": [6, 15, 2]
+			},
+			{
+				"name": "yalcape",
+				"parent": "body",
+				"pivot": [0, 24, 4],
+				"rotation": [0, -180, 0],
+				"cubes": [
+					{"origin": [-5, 5, 4], "size": [10, 20, 1], "uv": [46, 71]}
+				]
+			}
+		]
+	}
+}

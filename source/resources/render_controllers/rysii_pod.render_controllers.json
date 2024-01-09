@@ -1,0 +1,22 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.rysii_pod": {
+		"arrays": {
+	    "textures": {
+		  "Array.skins": [
+		    "Texture.damaged_lvl3",
+		    "Texture.damaged_lvl2",
+		    "Texture.damaged_lvl1",
+			"Texture.default"
+		  ]
+		}
+	  },
+      "geometry": "Geometry.default",
+      "materials": [ { "head": "Material.default" },
+					 { "shell_inner": "Material.glass" },
+					 { "shell_cube": "Material.shell" }],
+      "textures": [ "Array.skins[math.clamp(query.health / 15, 0, 3)]" ]
+    }
+  }
+}

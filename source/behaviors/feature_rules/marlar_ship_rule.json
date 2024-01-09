@@ -24,11 +24,10 @@
 		},
 		"distribution": {
 			"iterations": 1,
-			"scatter_chance": 0.11,
+			"scatter_chance": 0.08,
 			"y": "Math.random(70, 200)",
 			"x": 0,
-			"z": 0,
-			"coordinate_eval_order": "yxz"
+			"z": 0
 		}
 	}
 }

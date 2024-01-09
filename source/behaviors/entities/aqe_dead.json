@@ -1,0 +1,180 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.8.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:aqe_dead",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:var0": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"minecraft:var1": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"minecraft:var2": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"minecraft:var3": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"minecraft:var4": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			},
+			"minecraft:var5": {
+				"minecraft:variant": {
+					"value": 5
+				}
+			},
+			"minecraft:var6": {
+				"minecraft:variant": {
+					"value": 6
+				}
+			},
+			"minecraft:var7": {
+				"minecraft:variant": {
+					"value": 7
+				}
+			},
+			"minecraft:despawndead": {
+				"minecraft:type_family": {
+					"family": [
+						"despawn_"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "self",
+							"value": "despawn_"
+						}
+					]
+				}
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:health": {
+				"value": {
+					"range_min": 10,
+					"range_max": 10
+				}
+			},
+			"minecraft:damage_sensor": [
+				{
+					"deals_damage": false
+				}
+			],
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collusion": false
+			},
+			"minecraft:equipment": {
+				"table": "loot_tables/entities/aqe_gear.json"
+			},
+				"minecraft:timer": {
+					"looping": false,
+					"randomInterval": false,
+					"time": 10.15,
+					"time_down_event": {
+						"event": "minecraft:event_dead"
+					}
+				}
+		},
+		"events": {
+			"minecraft:event_dead": {
+				"add": {
+					"component_groups": [
+						"minecraft:despawndead"
+					]
+				}
+			},
+			"minecraft:event_dead_var0": {
+				"add": {
+					"component_groups": [
+						"minecraft:var0"
+					]
+				}
+			},
+			"minecraft:event_dead_var1": {
+				"add": {
+					"component_groups": [
+						"minecraft:var1"
+					]
+				}
+			},
+			"minecraft:event_dead_var2": {
+				"add": {
+					"component_groups": [
+						"minecraft:var2"
+					]
+				}
+			},
+			"minecraft:event_dead_var3": {
+				"add": {
+					"component_groups": [
+						"minecraft:var3"
+					]
+				}
+			},
+			"minecraft:event_dead_var4": {
+				"add": {
+					"component_groups": [
+						"minecraft:var4"
+					]
+				}
+			},
+			"minecraft:event_dead_var5": {
+				"add": {
+					"component_groups": [
+						"minecraft:var5"
+					]
+				}
+			},
+			"minecraft:event_dead_var6": {
+				"add": {
+					"component_groups": [
+						"minecraft:var6"
+					]
+				}
+			},
+			"minecraft:event_dead_var7": {
+				"add": {
+					"component_groups": [
+						"minecraft:var7"
+					]
+				}
+			}
+		}
+	}
+}

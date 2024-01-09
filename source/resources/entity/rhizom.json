@@ -16,21 +16,14 @@
 			"animations": {
 				"moving": "animation.rhizom.move",
 				"rhizom_general": "animation.rhizom.general",
-				"attack0": "animation.rhizom.attack",
-				"attack1": "animation.rhizom.attack",
 				"move": "controller.animation.rhizom.move",
 				"general": "controller.animation.rhizom.general",
-				"attack": "controller.animation.rhizom.attack",
-				"roaring": "animation.rhizom.roaring",
-				"head": "controller.animation.rhizom.head_movement",
 				"look_at_target": "animation.rhizom.look_at_target"
 			},
 			"scripts": {
 				"animate": [
 					"move",
-					"general",
-					"attack",
-					"head"
+					"general"
 				]
 			},
 			"render_controllers": [

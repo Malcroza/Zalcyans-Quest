@@ -1,8 +1,0 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "friss_stem_side_stripped",
-		"metalness_emissive_roughness": "friss_stem_mer",
-		"heightmap": "friss_stem_side_stripped_heightmap"
-	}
-}

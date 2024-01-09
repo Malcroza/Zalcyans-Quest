@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.zighet_bullet.move": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": ["-query.target_x_rotation", "-query.body_y_rotation + query.target_y_rotation", 0]
+				},
+				"cubes": {
+					"rotation": ["math.sin(query.anim_time*80)*200", "math.cos(query.anim_time*80)*200", 0]
+				}
+			}
+		},
+		"animation.zighet_bullet.part": {
+			"animation_length": 0.04,
+			"particle_effects": {
+				"0.04": {
+					"effect": "lazar_trail",
+					"locator": "part_emitter"
+				}
+			}
+		},
+		"animation.zighet_bullet.elongate": {
+			"loop": true,
+			"bones": {
+				"cubes": {
+					"position": [0, 0, "query.anim_time*100"],
+					"scale": [1, 1, "query.anim_time*20"]
+				}
+			}
+		},
+		"animation.zighet_bullet.close": {
+			"loop": true,
+			"bones": {
+				"cubes": {
+					"scale": "query.ground_speed/11"
+				}
+			}
+		}
+	}
+}

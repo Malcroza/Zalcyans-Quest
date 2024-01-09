@@ -1,0 +1,56 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan:marlar_blaster",
+      "materials": {
+        "default": "phantom",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/models/equipment/marlar_blaster",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.marlar_blaster"
+      },
+      "animations": {
+		"marlar_blaster_first_person": "animation.marlar_blaster.first_person.hold",
+		"marlar_blaster_first_person2": "animation.marlar_blaster.first_person.hold2",
+		"marlar_blaster_first_person3": "animation.marlar_blaster.first_person.hold4",
+		"hold": "animation.marlar_blaster.fire_hold",
+		"hold_idle": "animation.marlar_blaster.hold_idle",
+		"fire": "animation.marlar_blaster.fire",
+		"fire_empty": "animation.marlar_blaster.fire_empty",
+		"fire_empty_crouched": "animation.marlar_blaster.fire_empty_crouched",
+		"shoot": "animation.marlar_blaster.shoot",
+		"marlar_blaster_shoot": "animation.marlar_blaster.shoot",
+		"shoot_cont": "controller.animation.marlar_blaster.attack",
+		"fire_cont": "controller.animation.marlar_blaster.fire",
+		"fire_empty_cont": "controller.animation.marlar_blaster.fire_empty"
+      },
+      "scripts": {
+		  "pre_animation": [
+					"t.val = 0; t.i = 0; loop(27, {t.val = q.is_item_name_any('slot.inventory', t.i, 'zalcyan:marlar_charge'); t.val ? {return t.val;}; t.i = t.i+1;});",
+					"t.val1 = 0; t.i = 0; loop(9, {t.val1 = q.is_item_name_any('slot.hotbar', t.i, 'zalcyan:marlar_charge'); t.val1 ? {return t.val1;}; t.i = t.i+1;});",
+					"t.val2 = q.is_item_name_any('slot.weapon.offhand', 0, 'zalcyan:marlar_charge');"
+					
+                ],
+        "animate": [
+			{
+			"shoot_cont": "c.is_first_person"
+			},
+		  
+            "marlar_blaster_shoot"
+          ,
+		  {"fire_cont": "t.val == 1 || t.val1 == 1 || t.val2 ==1"},
+		  {"fire_empty_cont": "t.val == 0 && t.val1 == 0 && t.val2 ==0"}
+        ]
+      },
+      "render_controllers": [ "controller.render.item_default"],
+	  "sound_effects": {
+				"empty": "sound.gun.empty"
+			}
+    }
+  }
+}

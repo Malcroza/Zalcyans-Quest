@@ -1,0 +1,100 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:rysii_knight",
+			"materials": { 
+				"default": "skeleton" 
+				},
+			"textures": { 
+				"default": "textures/entity/rysii_knight" 
+				},
+			"geometry": { 
+				"default": "geometry.rysii_knight" },
+			
+			"animations": {
+
+				
+				"look_at_target_default": "animation.rysii_knight.look_at_target.default",
+				"look_at_target_gliding": "animation.rysii_knight.look_at_target.gliding",
+				"look_at_target_swimming": "animation.rysii_knight.look_at_target.swimming",
+				
+				"moving": "animation.rysii_knight.move7",
+				"moving_arms": "animation.rysii_knight.move_arms",
+				"base_arms":"animation.rysii_knight.base_arms",
+				
+				"riding.arms": "animation.rysii_knight.riding.arms",
+				"riding.legs": "animation.rysii_knight.riding.legs",
+				
+				"holding": "animation.rysii_knight.holding",
+				
+				"bob": "animation.rysii_knight.bob",
+				
+
+				"bow_and_arrow": "animation.rysii_knight.bow_and_arrow",
+				
+				
+				"rysii_knight_attack1": "animation.rysii_knight.attack1",
+				"rysii_knight_attack2": "animation.rysii_knight.attack2",
+				"rysii_knight_attack3": "animation.rysii_knight.attack3",
+				"rysii_knight_attack4": "animation.rysii_knight.attack4",
+				"rysii_knight_attack5": "animation.rysii_knight.attack5",
+				"rysii_knight_attack6": "animation.rysii_knight.attack6",
+				
+				
+				"default": "controller.animation.rysii_knight.default",
+				
+				"look_at_target": "controller.animation.humanoid.look_at_target",
+				
+				"move": "controller.animation.rysii_knight.move",
+				
+				"riding": "controller.animation.humanoid.riding",
+				
+				"holdingc": "controller.animation.humanoid.holding",
+
+				"attack": "controller.animation.rysii_knight.attack",
+				
+				"sit":"animation.rysii_knight.sit",
+				"stand":"animation.rysii_knight.stand",
+				"fire": "animation.rysii_knight.fire",
+				"shield": "animation.rysii_knight.shield",
+				
+				"pounce": "animation.rysii_knight.pounce",
+				"stalk": "animation.rysii_knight.stalk",
+				"push": "animation.rysii_knight.push",
+				"body_part": "animation.rysii_knight.body_part"
+
+
+
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"move",
+					"riding",
+					"holdingc",
+					"attack",
+					"body_part"
+					
+					
+				]
+			},
+			"render_controllers": [
+				"controller.render.skeleton"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 9
+			},
+			"sound_effects": {
+				"swing": "sound.prismar.swing",
+				"flap" : "mob.enderdragon.flap"
+			},
+			"particle_effects": {
+				"z_z": "zalcyan:z_z",
+				"body":"zalcyan:rysii_body_part"
+			}
+		}
+	}
+}

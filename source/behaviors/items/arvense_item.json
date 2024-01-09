@@ -1,10 +1,13 @@
 //bridge-file-version: #1
 {
-	"format_version": "1.16.100",
+	"format_version": "1.20.40",
 	"minecraft:item": {
 		"description": {
 			"identifier": "zalcyan:arvense_item",
-			"category": "nature"
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.flower"
+				}
 		},
 		"components": {
 			"minecraft:block_placer": {
@@ -12,14 +15,14 @@
 				"use_on": [
 					"zalcyan:raken_ground",
 					"minecraft:grass",
-					"zalcyan:arvense"
+					"zalcyan:arvense",
+							"zalcyan:raken_ground1",
+							"zalcyan:raken_ground2",
+							"zalcyan:raken_ground3"
 				]
 			},
 			"minecraft:icon": {
 				"texture": "arvense_item"
-			},
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.flower"
 			},
 			"minecraft:max_stack_size": 64,
 			"minecraft:stacked_by_data": true

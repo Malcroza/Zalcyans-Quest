@@ -1,0 +1,262 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.neo_pod.exit": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.2,
+			"bones": {
+				"wing_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 0, -5]
+					}
+				},
+				"wing_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 0, 5]
+					}
+				},
+				"glass_bend": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.36": [-20, 0, 0],
+						"0.72": [-20, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.36": [0, 4, 0],
+						"0.72": [0, 4, 34]
+					}
+				},
+				"landinggear": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [30, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, -13, 9]
+					}
+				},
+				"foot": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [-30, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 0, 0]
+					}
+				},
+				"landinggear_back_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, -20, 0]
+					}
+				},
+				"landinggear_back_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, -20, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "landing"
+				}
+			}
+		},
+		"animation.neo_pod.idle": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"wing_left": {
+					"rotation": [0, 0, -5]
+				},
+				"wing_right": {
+					"rotation": [0, 0, 5]
+				},
+				"glass_bend": {
+					"rotation": [-20, 0, 0],
+					"position": [0, 4, 34]
+				},
+				"landinggear": {
+					"rotation": [30, 0, 0],
+					"position": [0, -13, 9]
+				},
+				"foot": {
+					"rotation": [-30, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"landinggear_back_left": {
+					"rotation": [0, 0, 0],
+					"position": [0, -20, 0]
+				},
+				"landinggear_back_right": {
+					"rotation": [0, 0, 0],
+					"position": [0, -20, 0]
+				}
+			}
+		},
+		"animation.neo_pod.general": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["query.target_x_rotation*1.2", 0, "-v.vertical_interpolated/2"]
+				}
+			}
+		},
+		"animation.neo_pod.enter": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.2,
+			"bones": {
+				"glass_bend": {
+					"rotation": {
+						"0.0": [-20, 0, 0],
+						"0.48": [-20, 0, 0],
+						"0.96": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 4, 34],
+						"0.48": [0, 4, 0],
+						"0.96": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "charge_up"
+				}
+			}
+		},
+		"animation.neo_pod.exaust": {
+			"loop": true,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "exaust",
+						"locator": "right_exaust"
+					},
+					{
+						"effect": "exaust",
+						"locator": "left_exaust"
+					}
+				]
+			}
+		},
+		"animation.neo_pod.smoke": {
+			"loop": "hold_on_last_frame",
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "smoke",
+						"locator": "smoke1"
+					},
+					{
+						"effect": "smoke",
+						"locator": "smoke2"
+					},
+					{
+						"effect": "smoke",
+						"locator": "smoke3"
+					},
+					{
+						"effect": "smoke",
+						"locator": "smoke4"
+					},
+					{
+						"effect": "smoke",
+						"locator": "smoke5"
+					}
+				]
+			}
+		},
+		"animation.neo_pod.spawn": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2.4,
+			"bones": {
+				"head": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"1.28": [1, 1, 1]
+					}
+				},
+				"control": {
+					"position": {
+						"0.0": [0, 17, 7],
+						"2.4": [0, 0, 0]
+					}
+				},
+				"fuelsaloge": {
+					"position": {
+						"0.0": [0, 29, -62],
+						"2.4": [0, 0, 0]
+					}
+				},
+				"wing_right_back": {
+					"position": {
+						"0.0": [-20, 20, 60],
+						"2.4": [0, 0, 0]
+					}
+				},
+				"wing_left_back": {
+					"position": {
+						"0.0": [20, 20, 60],
+						"2.4": [0, 0, 0]
+					}
+				},
+				"wing_left": {
+					"position": {
+						"0.0": [50, 50, 0],
+						"2.4": [0, 0, 0]
+					}
+				},
+				"wing_right": {
+					"position": {
+						"0.0": [-50, 50, 0],
+						"2.4": [0, 0, 0]
+					}
+				},
+				"terminal": {
+					"position": {
+						"0.0": [0, 14, -16],
+						"2.4": [0, 0, 0]
+					}
+				},
+				"top": {
+					"position": {
+						"0.0": [0, 36, 0],
+						"2.4": [0, 0, 0]
+					}
+				},
+				"back_frame": {
+					"position": {
+						"0.0": [0, 24, 0],
+						"2.4": [0, 0, 0]
+					}
+				},
+				"frame": {
+					"position": {
+						"0.0": [0, 23, -11],
+						"2.4": [0, 0, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.08": {
+					"effect": "neo_summon",
+					"locator": "summon"
+				}
+			}
+		}
+	}
+}

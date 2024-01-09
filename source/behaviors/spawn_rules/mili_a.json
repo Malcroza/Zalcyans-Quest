@@ -1,4 +1,4 @@
-//bridge-file-version: #1
+//bridge-file-version: #0
 {
 	"format_version": "1.8.0",
 	"minecraft:spawn_rules": {
@@ -9,26 +9,31 @@
 		"conditions": [
 			{
 				"minecraft:spawns_on_surface": {},
-				"minecraft:brightness_filter": {
-					"min": 7,
-					"max": 15,
-					"adjust_for_weather": true
-				},
-				"minecraft:difficulty_filter": {
-					"min": "easy",
-					"max": "hard"
-				},
 				"minecraft:weight": {
-					"default": 100
+					"default": 200
 				},
 				"minecraft:herd": {
-					"min_size": 3,
-					"max_size": 4
+					"min_size": 1,
+					"max_size": 6
 				},
-				"minecraft:biome_filter": {
-					"test": "has_biome_tag",
-					"operator": "==",
-					"value": "lorzoland"
+				"minecraft:density_limit": {
+					"surface": 16,
+					"underground": 0
+				},
+				"minecraft:biome_filter": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "monster"
+					}
+				],
+				"minecraft:spawns_on_block_filter": [
+					"zalcyan:lorzol",
+					"zalcyan:lorzol_dirt"
+				],
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 15
 				}
 			}
 		]

@@ -1,0 +1,54 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:miren_rock",
+            "menu_category": {
+                "category": "nature",
+                "group": "itemGroup.name.stone"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -7,
+                    0,
+                    -7
+                ],
+                "size": [
+                    13,
+                    3,
+                    13
+                ]
+            },
+            "minecraft:geometry": "geometry.miren_rock",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "miren_rock",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:map_color": "#EBEBEB",
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:lorzol_dirt"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            }
+        },
+        "events": {}
+    }
+}

@@ -1,0 +1,44 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.h_orb_summoner",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 16, 1]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 16, 1],
+					"locators": {
+						"part_emitter": [0, 16, 6]
+					}
+				},
+				{
+					"name": "cubes",
+					"parent": "head",
+					"pivot": [0, 16, 1],
+					"cubes": [
+						{"origin": [0, 13.5, -5], "size": [1, 5, 12], "uv": [14, 5]},
+						{"origin": [0, 13.5, -5], "size": [1, 5, 12], "pivot": [0, 16, 1], "rotation": [0, 0, 90], "uv": [0, 0]},
+						{"origin": [-0.5, 15.5, -3], "size": [1, 1, 8], "uv": [0, 17]}
+					]
+				}
+			]
+		}
+	]
+}

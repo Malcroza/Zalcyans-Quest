@@ -1,0 +1,92 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.crossbow2.attack": {
+			"initial_state": "look0",
+			"states": {
+				"default": {
+					"animations": ["rysii_blaster_first_person"],
+					"transitions": [
+						{"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged == 1 && query.is_sneaking != 1"},
+						{"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.is_sneaking == 1"}
+					],
+					"blend_transition": 0.4
+				},
+				"look0": {
+					"animations": ["rysii_blaster_first_person2"],
+					"transitions": [
+						{"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged != 1 && query.is_sneaking != 1"},
+						{"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.is_sneaking == 1"}
+					],
+					"blend_transition": 0.4
+				},
+				"look1": {
+					"animations": ["rysii_blaster_first_person3"],
+					"sound_effects": [
+						{"effect": "scope"}
+					],
+					"transitions": [
+						{"end_hold": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged != 1 && query.is_sneaking != 1"},
+						{"end_hold": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged == 1 && query.is_sneaking != 1"}
+					]
+				},
+				"end_hold": {
+					"animations": ["end_hold"],
+					"transitions": [
+						{"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged != 1 && query.is_sneaking != 1 && query.all_animations_finished"},
+						{"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged == 1 && query.is_sneaking != 1 && query.all_animations_finished"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.crossbow2.fire": {
+			"initial_state": "hold",
+			"states": {
+				"hold": {
+					"animations": ["hold", {"run": "c.is_first_person && query.is_sneaking != 1" }],
+					"transitions": [
+						{"cont_hold": "query.item_is_charged == 1"}
+					]
+				},
+				"cont_hold": {
+					"animations": ["hold", "sound_charge", {"load": "c.is_first_person && query.is_sneaking != 1" }],
+					"transitions": [
+						{"fire": "query.item_is_charged != 1"}
+					]
+				},
+				"fire": {
+					"animations": ["fire"],
+					"transitions": [
+						{"hold": "query.all_animations_finished"}
+					]
+				}
+			}
+		},
+		"controller.animation.crossbow2.third_person_charge": {
+			"initial_state": "hold",
+			"states": {
+				"hold": {
+					"animations": ["tp_uncharged"],
+					"transitions": [
+						{"cont_hold": "query.item_is_charged == 1"}
+					],
+					"blend_transition": 0.4
+				},
+				"cont_hold": {
+					"transitions": [
+						{"fire": "query.item_is_charged != 1"}
+					],
+					"blend_transition": 0.4
+				},
+				"fire": {
+					"animations": ["tp_uncharged"],
+					"transitions": [
+						{"hold": "query.all_animations_finished"}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		}
+	}
+}

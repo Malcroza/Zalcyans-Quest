@@ -1,0 +1,14 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.skreepog_pillar": {
+      "geometry": "Geometry.default",
+      "materials": [ { "main": "Material.default" },
+					 { "blane1": "Material.glow" },
+					 { "blane2": "Material.glow" },
+					 { "blane3": "Material.glow" }
+					 ],
+      "textures": [ "Texture.default" ]
+    }
+  }
+}

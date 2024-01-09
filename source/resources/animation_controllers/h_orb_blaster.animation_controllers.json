@@ -1,0 +1,117 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.h_orb_blaster.attack": {
+			"initial_state" : "look0",
+			"states": {
+				"default": {
+					"animations": [
+						"h_orb_blaster_first_person"
+					],
+					"transitions": [
+						{
+						"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged == 1 && query.is_sneaking != 1"
+						},
+						{
+						"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.is_sneaking == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"look0": {
+					"animations": [
+						"h_orb_blaster_first_person2"
+					],
+					"transitions": [
+						{
+						"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged != 1 && query.is_sneaking != 1"
+						},
+						{
+						"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.is_sneaking == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"look1": {
+					"animations": [
+						"h_orb_blaster_first_person3"
+					],
+					"transitions": [
+						{
+						"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged != 1 && query.is_sneaking != 1"
+						},
+						{
+						"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged == 1 && query.is_sneaking != 1"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.h_orb_blaster.fire": {
+			"initial_state" : "hold",
+			"states": {
+				"hold": {
+					"animations": [
+						"hold"
+					],
+					"transitions": [
+						{
+						"charge": "query.main_hand_item_use_duration > 0.0 && query.is_sneaking != 1"
+						},
+						{
+						"charge_sneak": "query.main_hand_item_use_duration > 0.0 && query.is_sneaking == 1"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						"charge",
+						"charge2"
+					],
+					"transitions": [
+						{
+						"fire": "query.all_animations_finished && query.main_hand_item_use_duration <= 0.0 && !query.is_charging"
+						},
+						{
+						"hold": "!query.all_animations_finished && query.main_hand_item_use_duration <= 0.0 && !query.is_charging"
+						},
+						{
+						"charge_sneak": "query.main_hand_item_use_duration > 0.0 && query.is_sneaking == 1"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"charge_sneak": {
+					"animations": [
+						"charge",
+						"charge3"
+					],
+					"transitions": [
+						{
+						"fire": "query.all_animations_finished && query.main_hand_item_use_duration <= 0.0 && !query.is_charging"
+						},
+						{
+						"hold": "!query.all_animations_finished && query.main_hand_item_use_duration <= 0.0 && !query.is_charging"
+						},
+						{
+						"charge": "query.main_hand_item_use_duration > 0.0 && query.is_sneaking != 1"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"fire": {
+					"animations": [
+						"fire"
+					],
+					"transitions": [
+						{
+						"hold": "query.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

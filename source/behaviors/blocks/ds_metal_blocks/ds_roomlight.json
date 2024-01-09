@@ -1,0 +1,197 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:ds_roomlight",
+			"is_experimental": false,
+            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "construction"
+            },
+            "states": {
+                "zalcyan:rotate": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+				"custom:texture": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.4
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 15,
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -3,
+                    13,
+                    -3
+                ],
+                "size": [
+                    6,
+                    3,
+                    6
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "ds_roomlight",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:geometry": "geometry.ds_roomlight",
+            "minecraft:map_color": "#081424",
+            "minecraft:on_player_placing": {
+                "event": "zalcyan:ground",
+                "target": "self"
+            },
+            "minecraft:on_interact": {
+                "event": "light",
+                "target": "self"
+            }
+        },
+        "permutations": [
+			{
+                "condition": "q.block_state('zalcyan:rotate') == 1",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            -180,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('zalcyan:rotate') == 2",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('zalcyan:rotate') ==3",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('zalcyan:rotate') == 4",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('zalcyan:rotate') == 5",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            270,
+                            0
+                        ]
+                    }
+                }
+            },
+			{
+                "condition": "q.block_state('zalcyan:rotate') == 6",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            180,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+			{
+                "condition": "q.block_state('custom:texture') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+					"*": {
+						"texture": "ds_roomlight",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:light_emission": 15
+                }
+            },
+			{
+                "condition": "q.block_state('custom:texture') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+					"*": {
+						"texture": "ds_roomlight_off",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:light_emission": 0
+                }
+            }
+        ],
+        "events": {
+            "zalcyan:ground": {
+                "sequence": [
+                    {
+                        "set_block_state": {
+                            "zalcyan:rotate": "query.block_face"
+                        }
+                    }
+                ]
+            },
+			"light": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+								"playsound light.button.press @a ~ ~ ~ 0.5"
+                            ]
+                        }
+                    },
+					{
+					"condition": "q.block_state('custom:texture') == 0",
+					"set_block_state": {
+						"custom:texture": 1
+						}
+					},
+					{
+					"condition": "q.block_state('custom:texture') == 1",
+					"set_block_state": {
+						"custom:texture": 0
+						}
+					}					
+                ]
+            }
+        }
+    }
+}

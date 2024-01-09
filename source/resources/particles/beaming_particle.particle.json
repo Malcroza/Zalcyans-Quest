@@ -47,17 +47,6 @@
 						"stretch_to_lifetime": true
 					}
 				}
-			},
-			"minecraft:particle_appearance_tinting": {
-				"color": {
-					"gradient": {
-						"0.0": "#FFFEFFA6",
-						"0.25": "#000000ff",
-						"0.5": "#FFFFFBA0",
-						"0.75": "#000000ff",
-						"1.0": "#000000ff"
-					}
-				}
 			}
 		}
 	}

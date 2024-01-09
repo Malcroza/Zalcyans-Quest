@@ -1,0 +1,37 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:geode_feature": {
+        "description": {
+            "identifier": "zalcyan:zighet_hive"
+        },
+
+        "max_radius": 80,
+
+        "filler": "minecraft:air",
+
+        "inner_layer": "zalcyan:zighet_comb",
+        "alternate_inner_layer": "zalcyan:zighet_comb_full",
+        "use_alternate_layer0_chance": 0.2,
+
+        "middle_layer": "zalcyan:zighet_paper",
+
+        "outer_layer": "zalcyan:zighet_paper",
+
+        "inner_placements": ["zalcyan:zighet_comb"],
+        "placements_require_layer0_alternate": true,
+        "use_potential_placements_chance": 0.125,
+
+        "min_distribution_points": 8,
+        "max_distribution_points": 8,
+        "min_outer_wall_distance": 10,
+        "max_outer_wall_distance": 10,
+        "min_point_offset": 0,
+        "max_point_offset": 5,
+        "noise_multiplier": 0.020,
+        "invalid_blocks_threshold": 10000,
+
+        "crack_point_offset": 4,
+        "generate_crack_chance": 0,
+        "base_crack_size": 5
+    }
+}

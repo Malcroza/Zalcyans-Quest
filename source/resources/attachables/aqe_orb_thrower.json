@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan:aqe_orb_thrower",
+      "materials": {
+        "default": "phantom",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/models/equipment/aqe_orb_thrower",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.aqe_orb_thrower"
+      },
+      "animations": {
+		"aqe_orb_thrower_first_person_crouch": "animation.aqe_orb_thrower.first_person.crouch",
+		"aqe_orb_thrower_first_person": "animation.aqe_orb_thrower.first_person.hold",
+		"shoot_cont": "controller.animation.aqe_orb_thrower.attack",
+		"rotate": "animation.aqe_orb_thrower.rotate",
+		"hold": "animation.aqe_orb_thrower.hold",
+		"charge": "animation.aqe_orb_thrower.charge",
+		"fire": "animation.aqe_orb_thrower.fire",
+		"cont_fire": "controller.animation.animation.aqe_orb_thrower.fire",
+		"cont_entity_fire": "controller.animation.animation.aqe_orb_thrower.cont_entity_fire"
+      },
+      "scripts": {
+        "animate": [
+			{
+			"shoot_cont": "c.is_first_person"
+			},
+			"rotate",
+			"cont_fire",
+		  {"cont_entity_fire": "query.has_property('zalcyan:gun_spark')" }
+        ]
+      },
+      "render_controllers": [ "controller.render.item_default"],
+	   "sound_effects": {
+				"aqe_charge1": "aqe.orb_thrower.charge1",
+				"aqe_charge2": "aqe.orb_thrower.charge2",
+				"aqe_charge3": "aqe.orb_thrower.charge3"
+			}
+    }
+  }
+}

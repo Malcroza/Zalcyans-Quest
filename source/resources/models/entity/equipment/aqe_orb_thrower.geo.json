@@ -1,0 +1,97 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.aqe_orb_thrower",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 21,
+				"visible_bounds_height": 16,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "Body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "RightArm",
+					"pivot": [-5, 22, 0],
+					"rotation": [-10, 0, 0]
+				},
+				{
+					"name": "blastar_main",
+					"parent": "RightArm",
+					"pivot": [-5.5, 16, -5]
+				},
+				{
+					"name": "blaster",
+					"parent": "blastar_main",
+					"pivot": [-6, 21, 0]
+				},
+				{
+					"name": "inner_blaster",
+					"parent": "blaster",
+					"pivot": [-6, 15, 1]
+				},
+				{
+					"name": "top",
+					"parent": "inner_blaster",
+					"pivot": [-6.5, 11.5, -1],
+					"rotation": [90, 0, 0],
+					"cubes": [
+						{"origin": [-7.5, 10, -3], "size": [3, 3, 3], "uv": [11, 0]}
+					],
+					"locators": {
+						"blast": {
+							"offset": [-6.5, 11.5, -1.5],
+							"rotation": [0, 0, 90]
+						}
+					}
+				},
+				{
+					"name": "main_spin",
+					"parent": "top",
+					"pivot": [-6, 11.5, -4.16667],
+					"cubes": [
+						{"origin": [-7.5, 10, -5], "size": [3, 3, 2], "uv": [12, 1]}
+					]
+				},
+				{
+					"name": "orb",
+					"parent": "main_spin",
+					"pivot": [-6, 11.5, -10.5],
+					"cubes": [
+						{"origin": [-8, 9.5, -12.5], "size": [4, 4, 4], "uv": [8, 22]}
+					]
+				},
+				{
+					"name": "pin_left",
+					"parent": "main_spin",
+					"pivot": [-6, 12, -3.5],
+					"cubes": [
+						{"origin": [-7, 8, -11], "size": [1, 4, 8], "pivot": [-6, 12, -3.5], "rotation": [0, 0, -180], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "pin_right",
+					"parent": "main_spin",
+					"pivot": [-6, 11.5, -4.16667],
+					"cubes": [
+						{"origin": [-7, 7, -11], "size": [1, 4, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "back",
+					"parent": "inner_blaster",
+					"pivot": [-5, 12, -1],
+					"rotation": [-65, 0, 0],
+					"cubes": [
+						{"origin": [-4.5, 11.82635, -4.4], "size": [1, 5, 2], "inflate": 0.1, "pivot": [-5, 10.82635, -1.98481], "rotation": [0, 180, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

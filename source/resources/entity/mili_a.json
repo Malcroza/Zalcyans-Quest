@@ -21,16 +21,13 @@
 				"move": "controller.animation.mili_a.move",
 				"general": "controller.animation.mili_a.general",
 				"attack": "controller.animation.mili_a.attack",
-				"roaring": "animation.mili_a.roaring",
-				"head": "controller.animation.mili_a.head_movement",
 				"look_at_target": "animation.mili_a.look_at_target"
 			},
 			"scripts": {
 				"animate": [
 					"move",
 					"general",
-					"attack",
-					"head"
+					"attack"
 				],
 				"pre_animation": [
 					"variable.attack = Math.sin(variable.attack_time * 30.0);"

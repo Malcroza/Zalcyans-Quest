@@ -14,11 +14,6 @@
 				"default": "geometry.caican"
 			},
 			"scripts": {
-				"initialize": [
-					"variable.runtimeid = 0;",
-					"variable.tailrotx = 0.0;",
-					"variable.wingrotz = 0.0;"
-				],
 				"animate": [
 					"caican_base_pose_controller",
 					"move"

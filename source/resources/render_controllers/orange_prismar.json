@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.orange_prismar": {
+      "geometry": "Geometry.default",
+      "materials": [ { "overlay": "Material.beam" },
+					 { "fire_face1": "Material.beam" },
+					 { "fire_face2": "Material.beam" },
+					 { "fire_face3": "Material.beam" },
+					 { "fire_face4": "Material.beam" },
+					 { "fire_face5": "Material.beam" },
+					 { "fire_face6": "Material.beam" },
+					 { "fire_face7": "Material.beam" },	
+					 { "fire_face8": "Material.beam" },	
+					 { "fire_face9": "Material.beam" },	
+					 { "fire_face10": "Material.beam" },
+					 { "fire_face11": "Material.beam" },
+					 { "fire_face12": "Material.beam" },
+					 { "fire_face13": "Material.beam" },	
+					 { "fire_face14": "Material.beam" },	
+					 { "fire_face15": "Material.beam" },	
+					 { "fire_face16": "Material.beam" },	
+					 { "fire_face17": "Material.beam" },	
+					 { "fire_face18": "Material.beam" },
+					 { "fire_face19": "Material.beam" },	
+					 { "fire_face20": "Material.beam" },	
+					 { "fire_face21": "Material.beam" } ],
+      "textures": [ "Texture.default" ],
+      "ignore_lighting" : true
+    }
+  }
+}

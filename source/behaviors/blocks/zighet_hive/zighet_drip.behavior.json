@@ -1,0 +1,54 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:zighet_drip"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.1
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -5.65,
+                    0,
+                    -5.65
+                ],
+                "size": [
+                    11.3,
+                    16,
+                    11.3
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "zighet_drip",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:geometry": "geometry.gulu_grass",
+            "minecraft:map_color": "#1E310A",
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:zighet_comb",
+                            "zalcyan:zighet_comb_full",
+                            "zalcyan:zighet_drip",
+                            "zalcyan:zighet_paper"
+                        ],
+                        "allowed_faces": [
+                            "down"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:loot": "loot_tables/nothing.json"
+        },
+        "events": {}
+    }
+}

@@ -1,0 +1,157 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.jyr_blaster.attack": {
+			"initial_state" : "look0",
+			"states": {
+				"default": {
+					"animations": [
+						"jyr_blaster_first_person"
+					],
+					"transitions": [
+						{
+						"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged == 1 && query.is_sneaking != 1"
+						},
+						{
+						"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.is_sneaking == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"look0": {
+					"animations": [
+						"jyr_blaster_first_person2"
+					],
+					"transitions": [
+						{
+						"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged != 1 && query.is_sneaking != 1"
+						},
+						{
+						"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.is_sneaking == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"look1": {
+					"animations": [
+						"jyr_blaster_first_person3"
+					],
+					"transitions": [
+						{
+						"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged != 1 && query.is_sneaking != 1"
+						},
+						{
+						"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged == 1 && query.is_sneaking != 1"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.jyr_blaster.fire": {
+			"initial_state" : "hold",
+			"states": {
+				"hold": {
+					"animations": [
+						"hold"
+					],
+					"transitions": [
+						{
+						"charge": "query.main_hand_item_use_duration > 0.0"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"charge": {
+					"animations": [
+						"charge",
+						"blend_timer"
+					],
+					"transitions": [
+						{
+						"fire": "query.any_animation_finished && query.main_hand_item_use_duration <= 0.0 && !query.is_charging"
+						},
+						{
+						"hold": "!query.any_animation_finished && query.main_hand_item_use_duration <= 0.0 && !query.is_charging"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"fire": {
+					"animations": [
+						"fire"
+					],
+					"transitions": [
+						{
+						"hold": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.1
+				}
+			}
+		},
+		"controller.animation.jyr_blaster.fire_empty": {
+			"initial_state" : "hold",
+			"states": {
+				"hold": {
+					"animations": [
+						"hold_idle"
+					],
+					"transitions": [
+						{
+						"hold_cont": "query.main_hand_item_use_duration > 0.05"
+						}
+					]
+				},
+				"hold_cont": {
+					"animations": [
+						"hold_idle"
+					],
+					"transitions": [
+						{
+						"fire": "query.main_hand_item_use_duration < 0.05 && !query.item_is_charged == 1"
+						}
+					]
+				},
+				"fire": {
+					"animations": [
+					{"fire_empty": "query.is_sneaking != 1"},
+					{"fire_empty_crouched": "query.is_sneaking == 1"},
+					"hold_idle"
+					],
+					"transitions": [
+						{
+						"hold": "query.any_animation_finished"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.jyr_blaster.fire_entity": {
+			"initial_state" : "hold_entity",
+			"states": {
+				"hold_entity": {
+					"animations": [
+					"hold"
+					],
+					"transitions": [
+						{
+						"fire_entity": "query.is_charged"
+						}
+					]
+				},
+				"fire_entity": {
+					"animations": [
+					"fire"
+					],
+					"transitions": [
+						{
+						"hold_entity": "query.any_animation_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

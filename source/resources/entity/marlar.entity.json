@@ -1,59 +1,98 @@
 {
-  "format_version": "1.8.0",
-  "minecraft:client_entity": {
-    "description": {
-      "identifier": "zalcyan:marlar",
-      "materials": { "default": "skeleton" },
-      "textures": { "default": "textures/entity/marlar" },
-      "geometry": { "default": "geometry.marlar" },
-      "scripts": {
-        "pre_animation": [
-          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
-        ]
-      },
-      "animations": {
-        "marlar_base_pose": "animation.marlar.base_pose",
-        "look_at_target_default": "animation.marlar.look_at_target.default",
-        "look_at_target_gliding": "animation.marlar.look_at_target.gliding",
-        "look_at_target_swimming": "animation.marlar.look_at_target.swimming",
-        "move": "animation.marlar.move",
-        "riding.arms": "animation.marlar.riding.arms",
-        "riding.legs": "animation.marlar.riding.legs",
-        "holding": "animation.marlar.holding",
-        "brandish_spear": "animation.marlar.brandish_spear",
-        "charging": "animation.marlar.charging",
-        "attack.rotations": "animation.marlar.attack.rotations",
-        "sneaking": "animation.marlar.sneaking",
-        "bob": "animation.marlar.bob",
-        "damage_nearby_mobs": "animation.marlar.damage_nearby_mobs",
-        "bow_and_arrow": "animation.marlar.bow_and_arrow",
-        "swimming": "animation.marlar.swimming",
-        "use_item_progress": "animation.marlar.use_item_progress",
-        "skeleton_attack": "animation.skeleton.attack"
-      },
-      "animation_controllers": [
-        { "marlar_base_pose": "controller.animation.humanoid.base_pose" },
-        { "look_at_target": "controller.animation.humanoid.look_at_target" },
-        { "move": "controller.animation.humanoid.move" },
-        { "riding": "controller.animation.humanoid.riding" },
-        { "holding": "controller.animation.humanoid.holding" },
-        { "brandish_spear": "controller.humanoid.marlar.brandish_spear" },
-        { "charging": "controller.animation.humanoid.charging" },
-        { "attack": "controller.animation.humanoid.attack" },
-        { "sneaking": "controller.animation.humanoid.sneaking" },
-        { "bob": "controller.animation.humanoid.bob" },
-        { "damage_nearby_mobs": "controller.animation.humanoid.damage_nearby_mobs" },
-        { "bow_and_arrow": "controller.animation.humanoid.bow_and_arrow" },
-        { "swimming": "controller.animation.humanoid.swimming" },
-        { "use_item_progress": "controller.animation.humanoid.use_item_progress" },
-        { "skeleton_attack": "controller.animation.humanoid.attack" }
-      ],
-      "render_controllers": [ "controller.render.skeleton" ],
-      "enable_attachables": true,
-      "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 9
-      }
-    }
-  }
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:marlar",
+			"materials": { 
+				"default": "skeleton" 
+				},
+			"textures": { 
+				"default": "textures/entity/marlar" 
+				},
+			"geometry": { 
+				"default": "geometry.marlar_v2" },
+			
+			"animations": {
+
+				
+				"look_at_target_default": "animation.marlar_v2.look_at_target.default",
+				"look_at_target_gliding": "animation.marlar_v2.look_at_target.gliding",
+				"look_at_target_swimming": "animation.marlar_v2.look_at_target.swimming",
+				
+				"moving": "animation.marlar_v2.move7",
+				"moving_arms": "animation.marlar_v2.move_arms",
+				"base_arms":"animation.marlar_v2.base_arms",
+				
+				"riding.arms": "animation.marlar_v2.riding.arms",
+				"riding.legs": "animation.marlar_v2.riding.legs",
+				
+				"holding": "animation.marlar_v2.holding",
+				
+				"bob": "animation.marlar_v2.bob",
+				
+
+				"bow_and_arrow": "animation.marlar_v2.bow_and_arrow",
+				
+				
+				"marlar_attack1": "animation.marlar_v2.attack1",
+				"marlar_attack2": "animation.marlar_v2.attack2",
+				"marlar_attack3": "animation.marlar_v2.attack3",
+				"marlar_attack4": "animation.marlar_v2.attack4",
+				"marlar_attack5": "animation.marlar_v2.attack5",
+				
+				
+				"default": "controller.animation.marlar.default",
+				
+				"look_at_target": "controller.animation.humanoid.look_at_target",
+				
+				"move": "controller.animation.marlar.move",
+				
+				"riding": "controller.animation.humanoid.riding",
+				
+				"holdingc": "controller.animation.humanoid.holding",
+
+				"attack": "controller.animation.marlar.attack",
+				
+				"sit":"animation.marlar_v2.sit",
+				"stand":"animation.marlar_v2.stand",
+				"fire": "animation.marlar_v2.fire",
+				"shield": "animation.marlar_v2.shield",
+				
+				"breath": "animation.marlar_v2.breath",
+				
+				"celebrate": "animation.marlar_v2.celebrate"
+
+
+
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"move",
+					"riding",
+					"holdingc",
+					"attack",
+					"breath"
+					
+					
+				]
+			},
+			"render_controllers": [
+				"controller.render.skeleton"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#81b7ca",
+				"overlay_color": "#4f5d68"
+			},
+			"sound_effects": {
+				"swing": "mob.marlar.swing",
+				"celebrate": "mob.marlar.celebrate"
+			},
+			"particle_effects": {
+				"z_z": "zalcyan:z_z",
+				"breath": "zalcyan:z_breath"
+			}
+		}
+	}
 }

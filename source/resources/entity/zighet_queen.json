@@ -1,0 +1,83 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:zighet_queen",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"default": "textures/entity/zighet_queen"
+			},
+			"geometry": {
+				"default": "geometry.zighet_queen"
+			},
+			"animations": {
+				"walk_ground": "animation.zighet_queen.walk.ground",
+				"wings_ground": "animation.zighet_queen.wings.ground",
+				"body_fly": "animation.zighet_queen.body.fly",
+				"wings_fly": "animation.zighet_queen.wings.fly",
+				"attack_air": "animation.zighet_queen.attack.air",
+				"live": "animation.zighet_queen.live",
+				"attack_ground": "animation.zighet_queen.attack.ground",
+				"die": "animation.zighet_queen.die",
+				"die_air": "animation.zighet_queen.die_air",
+				"idle_ground": "animation.zighet_queen.ground.idle",
+				"summon": "animation.zighet_queen.summon",
+				"summon_rot": "animation.zighet_queen.summon_rot",
+				"growl": "animation.zighet_queen.growl",
+				"growl_rot": "animation.zighet_queen.growl_rot",
+				"melee": "animation.zighet_queen.melee",		
+				"wings": "controller.animation.zighet_queen.wings",
+				"look_at_target": "animation.zighet.look_at_target",
+				"movement": "controller.animation.zighet_queen.movement_body",
+				"attack": "controller.animation.zighet_queen.attack",
+				"general": "controller.animation.zighet_queen.general",
+				"death_rotate_cancel": "animation.zighet.death_rotate_cancel",
+				"cont_summon": "controller.animation.zighet_queen.summon",
+				"cont_roar": "controller.animation.zighet_queen.roar",
+				"sound_fly": "animation.zighet_queen.sound_fly"
+				
+			},
+			"scripts": {
+				"scale": "2.7",
+				
+				"animate": [
+					"wings",
+					"movement",
+					"attack",
+					"general",
+					"summon",
+					"cont_roar",
+					"cont_summon"
+					
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"render_controllers": [
+				"controller.render.zighet_queen"
+			],
+			"spawn_egg": {
+				"base_color": "#436451",
+				"overlay_color": "#98cbaf"
+			},
+			"sound_effects": {
+				"zighet_queen_fly1": "mob.zighet_fly1",
+				"zighet_queen_fly2": "mob.zighet_fly2",
+				"zighet_queen_fly3": "mob.zighet_fly3",
+				"zighet_queen_fly4": "mob.zighet_fly4",
+				"zighet_queen_fly5": "mob.zighet_fly5",
+				"zighet_queen_fly6": "mob.zighet_fly6"
+			},
+			"particle_effects": {
+				"block_part": "zalcyan:block_part"
+			},
+			"sound_effects": {
+				"growl": "mob.zighet_queen.growl"
+			}
+		}
+	}
+}

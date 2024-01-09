@@ -1,0 +1,15 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.spacem_helmet_fir.hold": {
+			"loop": true,
+			"bones": {
+				"blaster": {
+					"rotation": [0, 0, 0],
+					"position": [-4, -4, 24],
+					"scale": 3.15
+				}
+			}
+		}
+	}
+}

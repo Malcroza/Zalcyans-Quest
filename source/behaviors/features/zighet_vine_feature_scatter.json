@@ -1,0 +1,27 @@
+{
+    "format_version": "1.13.0",
+    
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "zalcyan:zighet_vine_feature_scatter"
+        },
+        
+        "places_feature": "zalcyan:zighet_vine_snap_feature",
+        
+        "iterations": 3468,
+        
+        "x": {
+            "distribution": "uniform",
+            "extent": [-6, 22]
+        },
+        "z": {
+            "distribution": "uniform",
+            "extent": [-6, 22]
+        },
+        "y": {
+            "distribution": "uniform",
+            "extent": [0, 160]
+        },
+		"project_input_to_floor": true
+    }
+}

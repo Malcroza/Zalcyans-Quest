@@ -1,0 +1,218 @@
+//bridge-file-version: #43
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:h_orb_shooter",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": true,
+			"scripts": {
+				"animate": [
+					"bridge_execute_commands"
+				]
+			},
+			"animations": {
+				"bridge_execute_commands": "controller.animation.bridge_h_orb_shooter.execute_commands"
+			}
+		},
+		"component_groups": {
+			 "minecraft:on_tame": {
+				"minecraft:is_tamed": {
+				},
+
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 2
+        },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "must_see": true,
+        "reselect_targets": false,
+        "entity_types": [
+          {
+            "filters": {
+              "all_of": [
+                {
+					"test": "is_owner",
+					"subject": "other",
+					"value": false
+                },
+                {
+                  "test": "has_property",
+                  "subject": "other",
+				  "operator": "not",
+                  "value": "minecraft:is_tamed"
+                },
+				{
+				  "test": "is_family",
+				  "subject": "other",
+				  "operator": "not",
+				  "value": "pod"
+				}
+              ]
+            },
+            "max_dist": 64
+          }
+        ]
+      }
+        
+		},
+			"despawning": {
+				"minecraft:type_family": {
+					"family": [
+						"h_orb"
+					]
+				},
+				"minecraft:skin_id": {
+					"value": 1
+				},
+				"minecraft:despawn": {
+					"remove_child_entities": true,
+					"filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "self",
+								"value": "h_orb"
+							}
+						]
+					}
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+				"minecraft:movement": {
+                "value": 10.9
+            },
+            "minecraft:flying_speed": {
+                "value": 10.9
+            },
+            "minecraft:movement.glide": {
+				"start_speed": 1.1,
+				"speed_when_turning": 0.3
+			},
+			"minecraft:fire_immune": true,
+				"minecraft:attack": {
+				"damage": 3
+			},
+			"minecraft:behavior.melee_attack": {
+        "priority": 0
+      },
+				"minecraft:behavior.swoop_attack": {
+					"priority": 0,
+					"damage_reach": 0.6,
+					"speed_multiplier": 3.3,
+					"delay_range": [ 0, 0 ]
+			},
+			"minecraft:behavior.circle_around_anchor": {
+				"priority": 8,
+				"radius_change": 1.0,
+				"radius_adjustment_chance": 0.004,
+				"height_adjustment_chance": 0.002857,
+				"goal_radius": 1.0,
+				"angle_change": 15.0,
+				"radius_range": [ 5.0, 15.0 ],
+				"height_offset_range": [ -1.0, 1.0 ],
+				"height_above_target_range": [ 2.0, 4.0 ]
+			},
+            "minecraft:breathable": {
+                "totalSupply": 15,
+                "suffocateTime": 0
+            },
+            "minecraft:collision_box": {
+				"width": 0.3,
+				"height": 0.3
+			},
+            "minecraft:follow_range": {
+                "value": 64
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+			"minecraft:behavior.look_at_target":{
+				"priority":0,
+				"angle_of_view_horizontal":90,
+				"angle_of_view_vertical":90,
+				"look_distance":64,
+				"probability":1.0
+				},
+            "minecraft:jump.static": {},
+            "minecraft:can_fly": {},
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:physics": {
+				"has_gravity": false
+			},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+              },
+			"minecraft:despawn": {
+				"despawn_from_distance": {"max_distance":128,"min_distance":78},
+				"despawn_from_simulation_edge":true,
+				"remove_child_entities": true
+			},
+			"minecraft:timer": {
+				"looping": false,
+				"time_down_event": {
+					"event": "minecraft:start_despawn",
+					"target": "self"
+				},
+				"time": [
+					8,
+					10
+				]
+			}
+		},
+		"events": {
+			"minecraft:start_despawn": {
+				"add": {
+					"component_groups": [
+						"despawning"
+					]
+				}
+			},
+			"minecraft:on_tame": {
+			"add": {
+				"component_groups": [
+					"minecraft:on_tame"
+				]
+			}
+			},
+			"minecraft:entity_born": {
+				"add": {
+				"component_groups": [
+				"bridge:execute_no_command"
+				]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+				"component_groups": [
+				"bridge:execute_no_command"
+				]
+				}
+			},
+			"minecraft:entity_transformed": {
+				"add": {
+				"component_groups": [
+				"bridge:execute_no_command"
+				]
+			}
+			}
+		}
+	}
+}

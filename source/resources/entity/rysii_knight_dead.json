@@ -1,0 +1,43 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:rysii_knight_dead",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/rysii_knight"
+			},
+			"geometry": {
+				"default": "geometry.rysii_knight"
+			},
+			"animations": {
+				"die": "animation.rysii_knight.die",
+				"die2": "animation.rysii_knight.die2",
+				"die3": "animation.rysii_knight.die3",
+				"die4": "animation.rysii_knight.die4",
+				"die5": "animation.rysii_knight.die5",
+				"die6": "animation.rysii_knight.die6",
+				"die7": "animation.rysii_knight.die7",
+				"die8": "animation.rysii_knight.die8",
+				"general": "controller.animation.rysii_knight_d.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			},
+			"render_controllers": [
+				"controller.render.skeleton"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 9
+			}
+			
+		}
+	}
+}

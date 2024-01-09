@@ -14,7 +14,7 @@
 						{
 							"test": "has_biome_tag",
 							"operator": "==",
-							"value": "quag"
+							"value": "roofed"
 						}
 					]
 				}
@@ -22,7 +22,6 @@
 		},
 		"distribution": {
 			"iterations": 3,
-			"coordinate_eval_order": "zyx",
 			"x": {
 				"distribution": "uniform",
 				"extent": [

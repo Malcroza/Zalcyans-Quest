@@ -1,0 +1,33 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:skreepog_ship_rule",
+			"places_feature": "zalcyan:skreepog_ship_feature"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "monster"
+							}
+						]
+					}
+				]
+			},
+			"placement_pass": "final_pass"
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.02,
+			"y": "Math.random(110, 250)",
+			"x": 0,
+			"z": 0
+		}
+	}
+}

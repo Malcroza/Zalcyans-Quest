@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "zalcyan:city_main_sequence"
+		},
+
+		"features": [
+			"zalcyan:city_foundation_aggragate",
+			"zalcyan:city_tower_north_proxy",
+			"zalcyan:city_scrap_feature_north_proxy"
+		]
+	}
+}

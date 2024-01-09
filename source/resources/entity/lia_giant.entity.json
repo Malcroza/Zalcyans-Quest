@@ -14,23 +14,12 @@
 				"default": "geometry.lia"
 			},
 			"scripts": {
-				"initialize": [
-					"variable.runtimeid = 0;",
-					"variable.tailrotx = -5.0;",
-					"variable.wingrotz = 0.0;"
-				],
 				"animate": [
-					"lia_giant_base_pose_controller",
 					"move"
 				]
 			},
 			"animations": {
-				"phantom_base_pose": "animation.lia_giant.base_pose",
-				"phantom_base_pose_controller": "controller.animation.lia_giant.base_pose",
 				"move": "animation.lia_giant.move"
-			},
-			"particle_effects": {
-				"wing_dust": "minecraft:phantom_trail_particle"
 			},
 			"sound_effects": {
 				"flap": "mob.phantom.flap"

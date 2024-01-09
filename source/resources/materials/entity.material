@@ -6,9 +6,60 @@
     },
 	"orb:entity": {
       "+defines": [ "ALPHA_TEST" ],
-      "+states": [ "Blending", "DisableCulling" ],
+      "+states": [ "Blending", "DisableCulling", "DisableDepthWrite", "DisableAlphaWrite", "EnableAlphaToCoverage" ],
       "blendSrc": "One",
       "blendDst": "One"
-    }
+    },
+	"pod:entity": {
+      "+defines": [ "ALPHA_TEST" ],
+      "+states": [ "Blending", "DisableCulling", "DisableDepthWrite", "DisableAlphaWrite", "EnableAlphaToCoverage" ],
+      "blendSrc": "SourceAlpha",
+      "blendDst": "One"
+    },
+	"pod1:entity": {
+      "+defines": [ "BLEND" ],
+      "+states": [ "Blending", "DisableCulling", "DisableDepthWrite", "DisableAlphaWrite" ],
+      "blendSrc": "SourceAlpha",
+      "blendDst": "One"
+    },
+	"dull_glow:entity_alphablend": {
+    "+defines": [
+      "USE_EMISSIVE"
+    ],
+    "+states": [
+      "Blending",
+      "DisableCulling",
+      "DisableDepthWrite",
+      "DisableAlphaWrite"
+    ]
+  },
+	  "ncull:entity_nocull": {
+      "+defines": [ "ALPHA_TEST" ],
+	  "+states": [ "Blending", "DisableCulling" ],
+      "+samplerStates": [
+        {
+          "samplerIndex": 1,
+          "textureWrap": "Repeat"
+        }
+      ],
+      "msaaSupport": "Both"
+
+    },
+	"zal2:entity": {
+      "+defines": [ "ALPHA_TEST" ],
+      "+states": [ "Blending", "DisableCulling", "DisableDepthWrite", "DisableAlphaWrite", "EnableAlphaToCoverage" ],
+      "blendSrc": "SourceAlpha",
+      "blendDst": "One"
+    },
+	"zal3:entity_alphablend": {
+    "+defines": [
+      "BLEND"
+    ],
+    "+states": [
+      "DisableCulling",
+      "DisableDepthWrite",
+	  "EnableAlphaToCoverage"
+    ]
+  }
   }
 }

@@ -1,0 +1,98 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.neo_pod.zoom": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"ridden": "query.has_rider"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"ridden": {
+					"particle_effects": [
+						{
+							"effect": "exaust",
+							"locator": "right_exaust"
+						},
+						{
+							"effect": "exaust",
+							"locator": "left_exaust"
+						}
+					],
+					"transitions": [
+						{
+							"default": "!query.has_rider"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.neo_pod.ride_shield": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"ridden": "query.has_rider"
+						}
+					],
+					"blend_transition": 0.0
+				},
+				"ridden": {
+					"animations": [
+						"rider"
+					],
+					"transitions": [
+						{
+							"no_ride": "!query.has_rider"
+						}
+					],
+					"blend_transition": 0.0
+				},
+				"no_ride": {
+					"animations": [
+						"no_rider"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.0
+				}
+			}
+		},
+		"controller.animation.neo_pod.smoke": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"smoke": "query.health < 20"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"smoke": {
+					"animations": [
+						"smoke"
+					],
+					"transitions": [
+						{
+							"default": "query.health >= 20"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		}
+	}
+}

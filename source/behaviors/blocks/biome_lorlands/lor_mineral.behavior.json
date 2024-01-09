@@ -1,0 +1,67 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:lor_mineral",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": {
+                "origin": [
+                    -6,
+                    0,
+                    -7.6499999999999995
+                ],
+                "size": [
+                    12,
+                    13,
+                    14.7
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -6,
+                    0,
+                    -7.6499999999999995
+                ],
+                "size": [
+                    12,
+                    13,
+                    14.7
+                ]
+            },
+            "minecraft:geometry": "geometry.lor_mineral",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "lor_mineral",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:loot": "loot_tables/lor_gem.json",
+            "minecraft:on_player_destroyed": {
+                "event": "mite",
+                "target": "self"
+            }
+        },
+        "events": {
+            "mite": {
+                "run_command": {
+                    "command": [
+                        "summon zalcyan:glistening_mite",
+                        "summon zalcyan:glistening_mite",
+                        "summon zalcyan:glistening_mite"
+                    ],
+                    "target": "self"
+                }
+            }
+        }
+    }
+}

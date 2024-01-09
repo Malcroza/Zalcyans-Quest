@@ -1,0 +1,53 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:miren_grass"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.01
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -5.65,
+                    0,
+                    -5.65
+                ],
+                "size": [
+                    11.3,
+                    16,
+                    11.3
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "miren_grass",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:geometry": "geometry.gulu_grass",
+            "minecraft:map_color": "#631002",
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:lorzol",
+							"zalcyan:lorzol1",
+							"zalcyan:lorzol2"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:loot": "loot_tables/nothing.json"
+        },
+        "events": {}
+    }
+}

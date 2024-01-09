@@ -14,28 +14,32 @@
 						{
 							"test": "has_biome_tag",
 							"operator": "==",
-							"value": "mynis"
+							"value": "mesa"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "desert"
 						}
 					]
 				}
 			]
 		},
 		"distribution": {
-			"iterations": 5,
-			"coordinate_eval_order": "zyx",
+			"iterations": 10,
 			"x": {
 				"distribution": "uniform",
 				"extent": [
 					0,
-					18
+					16
 				]
 			},
-			"y": "query.heightmap(variable.worldx, variable.worldz) - 0",
+			"y": "(q.noise(v.worldx / 740, v.worldz / 740) + q.noise(v.worldx, v.worldz) * 0.05 < -0.43 && (query.heightmap(variable.worldx, variable.worldz) >= 64)) ? (q.heightmap(v.worldx, v.worldz)) : -70",
 			"z": {
 				"distribution": "uniform",
 				"extent": [
 					0,
-					18
+					16
 				]
 			}
 		}

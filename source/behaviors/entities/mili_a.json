@@ -98,7 +98,6 @@
 				"speed_multiplier": 1,
 				"hit_delay_pct": 0.01,
 				"track_target": true,
-				"sound_event": {},
 				"reach_multiplier": 2
 			},
 			"minecraft:breathable": {

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:ds_city_floor_feature_scatter"
+		},
+
+		"places_feature": "zalcyan:ds_city_floor_weighted",
+
+		"iterations": 1,
+
+		"x": 0,
+		"z": 0,
+		"y": "query.above_top_solid(v.worldx, v.worldz) - v.originy"
+	}
+}

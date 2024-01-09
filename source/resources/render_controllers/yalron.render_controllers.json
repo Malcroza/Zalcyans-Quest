@@ -1,0 +1,15 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.yalron": {
+      "arrays": {
+        "materials": {
+          "Array.materials": [ "Material.clear", "Material.default" ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Array.materials[v.look_at_entity]" } ],
+      "textures": [ "Texture.default" ]
+    }
+  }
+}

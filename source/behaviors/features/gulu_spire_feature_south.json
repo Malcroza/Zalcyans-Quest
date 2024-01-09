@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "zalcyan:gulu_spire_feature_south"
+		},
+
+		"structure_name": "zalcyan:gulu_spire",
+
+		"facing_direction": "south",
+		"adjustment_radius": 0,
+
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

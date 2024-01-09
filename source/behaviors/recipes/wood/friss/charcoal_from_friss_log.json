@@ -1,0 +1,13 @@
+
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "minecraft:furnace_charcoal_from_friss_log"
+    },
+
+    "tags": ["furnace"],
+    "input": "zalcyan:friss_stem",
+    "output": "minecraft:charcoal"
+  }
+}

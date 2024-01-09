@@ -1,0 +1,19 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:city_air_concrete_remover_scatter_top"
+		},
+
+		"places_feature": "zalcyan:city_air_concrete_remover",
+
+		"iterations": 151,
+		"x": 0,
+		"z": 0,
+		"y": {
+			"extent": [0, 150],
+			"distribution": "fixed_grid"
+		}
+	}
+}

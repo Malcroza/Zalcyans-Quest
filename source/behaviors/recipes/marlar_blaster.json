@@ -1,0 +1,23 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:marlar_blaster"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "zalcyan:marlar_blaster"
+			}
+		},
+		"result": {
+			"item": "zalcyan2:bow"
+		}
+	}
+}

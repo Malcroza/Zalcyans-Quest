@@ -1,8 +1,0 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "lorzol_dirt_rocks",
-        "metalness_emissive_roughness": "lorzol_dirt_rocks_mer",
-        "heightmap": "lorzol_dirt_rocks_heightmap"
-    }
-}

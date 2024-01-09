@@ -49,7 +49,7 @@
 				"default": {
 					"transitions": [
 						{
-							"attack0": "variable.attack > 0"
+							"attack": "variable.attack > 0"
 						}
 					],
 					"blend_transition": 0.4

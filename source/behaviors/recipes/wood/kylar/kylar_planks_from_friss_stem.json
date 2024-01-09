@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:kylar_log_planks_from_kylar_log_stem"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "planks",
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "zalcyan:kylar_log",
+				"data": 0
+			}
+		},
+		"result": {
+			"item": "zalcyan:kylar_log_planks",
+			"data": 4,
+			"count": 4
+		}
+	}
+}

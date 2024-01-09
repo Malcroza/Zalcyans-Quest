@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:ds_city_roof_weighted"
+    },
+    "features": [
+      [ "zalcyan:ds_city_roof1_feature", 55 ],
+      [ "zalcyan:ds_city_roof2_feature", 52 ],
+      [ "zalcyan:ds_city_roof3_feature", 3 ]
+    ]
+  }
+}

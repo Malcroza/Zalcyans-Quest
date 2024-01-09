@@ -1,0 +1,36 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:mynis_munchpoog_tower_1_rule",
+			"places_feature": "zalcyan:munchpoog_tower_1_mcstructure"
+		},
+		"conditions": {
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "mesa"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "desert"
+						}
+					]
+				}
+			],
+			"placement_pass": "surface_pass"
+		},
+		"distribution": {
+			"iterations": "( q.noise(v.originx / 740, v.originz / 740) < -0.89)",
+			"scatter_chance": 20,
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz) - 7",
+			"z": 0
+		}
+	}
+}

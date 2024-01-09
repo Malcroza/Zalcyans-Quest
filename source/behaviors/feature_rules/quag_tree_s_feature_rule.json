@@ -3,19 +3,19 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"identifier": "minecraft:quag_tree_s_feature_rule",
+			"identifier": "zalcyan:quag_tree_s_feature_rule",
 			"places_feature": "minecraft:quag_tree_s_mcstructure"
 		},
 		"conditions": {
 			"minecraft:biome_filter": {
 				"test": "has_biome_tag",
 				"operator": "==",
-				"value": "quag"
+				"value": "roofed"
 			},
 			"placement_pass": "surface_pass"
 		},
 		"distribution": {
-			"iterations": 1,
+			"iterations": "(q.noise(v.originx / 650, v.originz / 650) < -0.4)",
 			"scatter_chance": 10,
 			"x": 0,
 			"y": "query.heightmap(variable.worldx, variable.worldz) - 4",

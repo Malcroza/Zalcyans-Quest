@@ -7,6 +7,7 @@
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball",
 			"scripts": {
 				"animate": [
 					"bridge_execute_commands"
@@ -17,46 +18,11 @@
 			}
 		},
 		"component_groups": {
-			"zalcyan:hard_orb": {
+			"zalcyan:player_orb_sneaking": {
 				"minecraft:projectile": {
 					"on_hit": {
 						"impact_damage": {
-							"damage": [
-								1,
-								5
-							],
-							"knockback": true,
-							"semi_random_diff_damage": false
-						},
-						"stick_in_ground": {
-							"shake_time": 0.0001
-						},
-						"arrow_effect": {},
-						"definition_event": {
-							"event_trigger": {
-								"event": "particle",
-								"target": "self"
-							}
-						}
-					},
-					"power": 1.6,
-					"gravity": 0.05,
-					"uncertainty_base": 16,
-					"uncertainty_multiplier": 4,
-					"anchor": 1,
-					"should_bounce": true,
-					"offset": [
-						0,
-						-0.1,
-						0
-					]
-				}
-			},
-			"zalcyan:player_orb": {
-				"minecraft:projectile": {
-					"on_hit": {
-						"impact_damage": {
-							"damage": 1,
+							"damage": 7,
 							"knockback": true,
 							"semi_random_diff_damage": true,
 							"max_critical_damage": 10,
@@ -72,12 +38,6 @@
 								"event": "particle",
 								"target": "self"
 							}
-						},
-						"particle_on_hit": {
-							"num_particles": 10,
-							"on_entity_hit": true,
-							"on_other_hit": true,
-							"particle_type": "zalcyan:orb_spark"
 						}
 					},
 					"power": 1.1,
@@ -88,8 +48,43 @@
 					"should_bounce": true,
 					"offset": [
 						0,
-						-0.1,
-						0
+						-0.45,
+						0.41
+					]
+				}
+			},
+			"zalcyan:player_orb": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"damage": 7,
+							"knockback": true,
+							"semi_random_diff_damage": true,
+							"max_critical_damage": 10,
+							"min_critical_damage": 9,
+							"power_multiplier": 0.97
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"arrow_effect": {},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"power": 1.1,
+					"gravity": 0.05,
+					"uncertainty_base": 1,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"should_bounce": true,
+					"offset": [
+						-0.18,
+						0,
+						0.41
 					]
 				}
 			},
@@ -98,18 +93,13 @@
 					"on_hit": {
 						"impact_damage": {
 							"damage": [
-								3,
-								6
+								2,
+								8
 							],
 							"knockback": true,
 							"semi_random_diff_damage": false
 						},
 						"arrow_effect": {},
-						"particle_on_hit": {
-							"num_particles": 10,
-							"on_entity_hit": true,
-							"on_other_hit": true
-						},
 						"definition_event": {
 							"event_trigger": {
 								"event": "particle",
@@ -117,7 +107,6 @@
 							}
 						}
 					},
-					"hit_sound": "mob.orb.zap",
 					"power": 1.6,
 					"gravity": 0.05,
 					"uncertainty_base": 16,
@@ -166,60 +155,10 @@
 					}
 				]
 			},
-			"minecraft:projectile": {
-				"on_hit": {
-					"impact_damage": {
-						"damage": [
-							1,
-							4
-						],
-						"knockback": true,
-						"semi_random_diff_damage": false,
-						"destroy_on_hit": true
-					},
-					"stick_in_ground": {
-						"shake_time": 0.0001
-					},
-					"arrow_effect": {},
-					"particle_on_hit": {
-						"particle_type": "lava",
-						"num_particles": 10,
-						"on_entity_hit": true,
-						"on_other_hit": true
-					},
-					"definition_event": {
-						"event_trigger": {
-							"event": "particle",
-							"target": "self"
-						},
-						"affect_projectile": true
-					}
-				},
-				"hit_sound": "lava.pop",
-				"shoot_sound": "tripod",
-				"power": 1.6,
-				"gravity": 0.05,
-				"uncertainty_base": 16,
-				"uncertainty_multiplier": 4,
-				"anchor": 1,
-				"should_bounce": true,
-				"offset": [
-					0,
-					-0.1,
-					0
-				]
-			},
 			"minecraft:physics": {},
 			"minecraft:pushable": {
 				"is_pushable": false,
 				"is_pushable_by_piston": true
-			},
-			"minecraft:conditional_bandwidth_optimization": {
-				"default_values": {
-					"max_optimized_distance": 80,
-					"max_dropped_ticks": 10,
-					"use_motion_prediction_hints": true
-				}
 			},
 			"minecraft:type_family": {
 				"family": [
@@ -232,20 +171,39 @@
 				"sequence": [
 					{
 						"filters": {
-							"test": "is_difficulty",
-							"value": "hard"
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": true
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
 						},
 						"add": {
 							"component_groups": [
-								"zalcyan:hard_orb"
+								"zalcyan:player_orb_sneaking"
 							]
 						}
 					},
 					{
 						"filters": {
-							"test": "is_family",
-							"subject": "other",
-							"value": "player"
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": false
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
 						},
 						"add": {
 							"component_groups": [

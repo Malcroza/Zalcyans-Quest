@@ -1,5 +1,5 @@
 ##bridge-file-version: #33
-##//items n stuff
+##items n stuff
 item.zalcyan:aqe_elite_sword=Graven Sword
 item.zalcyan:mili_staff=Mili Staff
 item.zalcyan:guliku=Aqe Orb Thrower
@@ -44,17 +44,59 @@ item.zalcyan:skreepog_helmet=§aSkreepog Helmet
 item.zalcyan:skreepog_chestplate=§aSkreepog Chestplate
 item.zalcyan:skreepog_leggings=§dSkreepog Leggings
 item.zalcyan:skreepog_boots=§aSkreepog boots
-item.zalcyan:skreepog_sword=§aSkreepog Sword
+item.zalcyan:skreepog_blaster=§aSkreepog Blaster
+item.zalcyan:skreepog_sword=Corrupted Skreepog Sword
+item.zalcyan:magwag_crystal=§4Magwag Crystal
+item.zalcyan:gulu_aso_item=Gulu Aso Plant
+item.zalcyan:raken_door=Raken Door
+item.zalcyan:mynis_door=Mynis Door
+item.zalcyan:lor_door=Lor Door
+item.zalcyan:quag_door=Quag Door
+item.zalcyan:friss_door=Friss Door
+item.zalcyan:ds_metal_door=Wired Door
+item.zalcyan:kylar_door=Kylar Door
+item.zalcyan:sappis_door=Sappis Door
+item.zalcyan:bow=§dMarlar Carnyx
+item.zalcyan3:bow=§dCrystalline Suppresor
+item.zalcyan1:crossbow=§dRysii Groundbreaker
+item.zalcyan2:crossbow=§dCosmic Rifle
+item.zalcyan3:crossbow=§dYalron Laser Rifle
+item.zalcyan:darkar_dagger=Darkar Dagger
+item.zalcyan:kylar_drip_item=Kylar Drip
+item.zalcyan:marlar_daggar=Marlar Blade
+item.zalcyan:orange_prismar=§dOrange Prismar
+item.zalcyan:rysii_helmet=§cRysii Helmet
+item.zalcyan:rysii_chestplate=§cRysii Chestplate
+item.zalcyan:rysii_leggings=§cRysii Leggings
+item.zalcyan:rysii_boots=§cRysii boots
+item.zalcyan:rysii_pod_summon=Rysii Firebird Summoner
+item.zalcyan:sappis_leaf_item=Sappis Leaf
+item.zalcyan:spaceb_helmet=§4Jyr Helmet
+item.zalcyan:spaceb_chestplate=§4Jyr Chestplate
+item.zalcyan:spaceb_leggings=§4Jyr Leggings
+item.zalcyan:spaceb_boots=§4Jyr boots
+item.zalcyan:spacem_helmet=§4Cosmic Helmet
+item.zalcyan:spacem_chestplate=§4Cosmic Chestplate
+item.zalcyan:spacem_leggings=§4Cosmic Leggings
+item.zalcyan:spacem_boots=§4Cosmic boots
 
 
 
-//action hints
+
+
+##action hints
 action.hint.exit.zalcyan:pod=Tap sneak to dismount
+action.hint.exit.zalcyan:skreepog_pod=Tap sneak to dismount
+action.hint.exit.zalcyan:rysii_pod=Tap sneak to dismount
+action.hint.exit.zalcyan:borgan_bullet=You can't escape!
 action.hint.tame.zalcyan:lightning_bug=Tame (only lasts one day)
 
-//entities n stuff
+##entities n stuff
 entity.zalcyan:aqe.name=Aqe
+entity.zalcyan:aqe_dead.name=Dead Aqe
 entity.zalcyan:aqe_elite.name=Aqe Elite
+entity.zalcyan:aqe_elite_dead.name=Dead Aqe Elite
+entity.zalcyan:aqe_elite_se.name=Aqe Elite
 entity.zalcyan:lia.name=Lia
 entity.zalcyan:lia_giant.name=Lia Giant
 entity.zalcyan:mili.name=Mili
@@ -66,11 +108,16 @@ entity.zalcyan:pod.name=Pod
 entity.zalcyan:friss_bug.name=Friss Beetle
 entity.zalcyan:caican.name=Caican
 entity.zalcyan:arglonar.name=Arglonar
+entity.zalcyan:arglonar_dead.name=Dead Arglonar
 entity.zalcyan:argen_block.name=Arglonar Essence
 entity.zalcyan:magwag.name=Magwag
 entity.zalcyan:magwag_spike.name=Magwag Spike
 entity.zalcyan:rhizom.name=Rhizom
+entity.zalcyan:marlar.name=Marauder
+entity.zalcyan:marlar_dead.name=Dead Marauder
 entity.zalcyan:marlar_elite.name=Astral Knight
+entity.zalcyan:marlar_elite_dead.name=Dead Astral Knight
+entity.zalcyan:marlar_elite_hologram.name=Astral Knight Hologram
 entity.zalcyan:marlar_emperor.name=§l§cEmperor Zorkan
 entity.zalcyan:orb.name=Aqe Orb
 entity.zalcyan:r_orb.name=Marlar laser
@@ -81,10 +128,50 @@ entity.zalcyan:varth.name=Varth
 entity.zalcyan:varth_bullet.name=Varth Tear
 entity.zalcyan:borgan.name=Borgan Spider
 entity.zalcyan:borgan_bullet.name=Borgan Web
-entity.zalcyan:vok_warrior.name=Vok Warrior
-entity.zalcyan:skreepog.name=Skreepog
+entity.zalcyan:vok_orb_summoner.name=Vok Summoner
+entity.zalcyan:vok_warrior.name=Vok Drone
+entity.zalcyan:vok_warrior_dead.name=Dead Vok Drone
+entity.zalcyan:skreepog.name=Corrupted Skreepog
+entity.zalcyan:skreepog_summon.name=Skreepog
+entity.zalcyan:skreepog_zombie.name=Corrupted Skreepog
+entity.zalcyan:skreepog_zombie_dead.name=Dead Corrupted Skreepog
+entity.zalcyan:skreepog_pillar.name=Skreepog Pillar
+entity.zalcyan:skreepog_dead.name=Dead Skreepog
+entity.zalcyan:zalcyan:skreepog_pilot.name=Skreepog
+entity.zalcyan:zalcyan:skreepog_pod.name=Skreepog Pod
+entity.zalcyan:zalcyan:s_orb.name=Skreepog Orb
+entity.zalcyan:munchpoog.name=Munchpoog
+entity.zalcyan:darkar.name=Dymal Assassin
+entity.zalcyan:dummy_projectile.name=Dummy Projectile
+entity.zalcyan:glistening_mite.name=Glistening Mite
+entity.zalcyan:h_orb_shooter.name=Crystalline Shard
+entity.zalcyan:h_orb_summoner.name=Crystalline Shard
+entity.zalcyan:kexp_summon.name=Explosive Blast
+entity.zalcyan:l_orb.name=Light Orb
+entity.zalcyan:lor.name=Lorlander Aqe
+entity.zalcyan:neo_pod.name=Marlar Fighter Jet
+entity.zalcyan:neo_pod_bolt.name=Marlar Fighter Jet
+entity.zalcyan:neo_pod_explosion.name=Jet Explosion
+entity.zalcyan:neo_pod_summon.name=Marlar Fighter Jet
+entity.zalcyan:prismar_blast.name=Prismar Blast
+entity.zalcyan:q_orb.name=Yalron Laser
+entity.zalcyan:q_orb_bolt.name=Yalron Laser
+entity.zalcyan:rysii_knight.name=Rysii Knight
+entity.zalcyan:rysii_knight_dead.name=Dead Rysii Knight
+entity.zalcyan:rysii_pod.name=Rysii Firebird
+entity.zalcyan:z_orb.name=Rysii Wrath
+entity.zalcyan:rysii_pod_bolt.name=Rysii Firebird
+entity.zalcyan:rysii_summon.name=Spawning Rysii Knight
+entity.zalcyan:wybeom.name=Wybeom Dragonfly
+entity.zalcyan:wybeom_wild.name=Wybeom Dragonfly
+entity.zalcyan:y_orb.name=Cosmic Blast
+entity.zalcyan:yalron.name=Yalron Dwifaller
+entity.zalcyan:zighet.name=Zighet Wasp
+entity.zalcyan:zighet_bullet.name=Zighet Wasp Spiddle
+entity.zalcyan:zighet_queen.name=Zighet Queen
 
-//spawn eggs n stuff
+
+##spawn eggs n stuff
 item.spawn_egg.entity.zalcyan:aqe.name=Spawn Aqe
 item.spawn_egg.entity.zalcyan:aqe_elite.name=Spawn Aqe Elite
 item.spawn_egg.entity.zalcyan:mili.name=Spawn Mili
@@ -110,18 +197,155 @@ item.spawn_egg.entity.zalcyan:light_bug_baby.name=Spawn Lightning Bug Larva
 item.spawn_egg.entity.zalcyan:varth.name=Spawn Varth
 item.spawn_egg.entity.zalcyan:borgan.name=Spawn Borgan
 item.spawn_egg.entity.zalcyan:vok_warrior.name=Spawn Vok Warrior
-item.spawn_egg.entity.zalcyan:skreepog.name=Spawn Skreepog
+item.spawn_egg.entity.zalcyan:skreepog_zombie.name=Spawn Corrupted Skreepog
+item.spawn_egg.entity.zalcyan:skreepog_summon.name=Spawn Skreepog
+item.spawn_egg.entity.zalcyan:skreepog_pod.name=Spawn Skreepog Pod
+item.spawn_egg.entity.zalcyan:munchpoog.name=Spawn Munchpoog
+item.spawn_egg.entity.zalcyan:zighet_queen.name=Spawn §l§cZighet Queen
+item.spawn_egg.entity.zalcyan:zighet.name=Spawn Zighet Wasp
+item.spawn_egg.entity.zalcyan:yalron.name=Spawn Yalron Dwifaller
+item.spawn_egg.entity.zalcyan:wybeom_wild.name=Spawn Wybeom Dragonfly
+item.spawn_egg.entity.zalcyan:wybeom.name=Spawn Wybeom Dragonfly (Non-wild)
+item.spawn_egg.entity.zalcyan:darkar.name=Spawn Dymal Assassin
+item.spawn_egg.entity.zalcyan:skreepog_pillar.name=Spawn §l§cSkreepog Pillar
+item.spawn_egg.entity.zalcyan:rysii_summon.name=Spawn §cRysii Knight
+item.spawn_egg.entity.zalcyan:rysii_pod.name=Spawn §cRysii Firebird
+item.spawn_egg.entity.zalcyan:neo_pod_summon.name=Spawn §cMarlar Fighter Jet
 
 
-//blocks n stuff
+##blocks n stuff
 tile.zalcyan:aqe_elite_stone.name=§6§lAqe Elite Stone
 tile.zalcyan:pod_stone.name=Pod Stone
 tile.zalcyan:argen_stone.name=Argen Stone
 tile.zalcyan:zmud.name=Mud
 tile.zalcyan:krackle_wood.name=Krackle Wood
 tile.zalcyan:bioluminescent_rod.name=Bioluminescent Rod
+tile.zalcyan:skreepog_pod_stone.name=Skreepog Pod Stone
+tile.zalcyan:orb_light.name=Orb Light
+tile.zalcyan:neo_pod_stone.name=§6§lNeo Pod Summon
+tile.zalcyan:marlar_banner1.name=Marlar Banner
 
-//Frissania
+
+
+
+
+
+
+##Zighet
+tile.zalcyan:zighet_queen_egg.name=§d§lZighet Queen Egg
+tile.zalcyan:zighet_egg.name=Zighet Egg
+tile.zalcyan:zighet_loot_box.name=§aZighet Loot Box
+tile.zalcyan:zighet_comb_full.name=§aFull Zighet Comb
+
+##DS
+tile.zalcyan:ds_loot_box1.name=§6Steel Loot Box
+
+tile.zalcyan:ds_metal_plating2.name=Small Steel Plating
+tile.zalcyan:ds_metal_plating2_rusting.name=Rusting Small Steel Plating
+tile.zalcyan:ds_metal_plating2_rusted.name=Rusted Small Steel Plating
+
+tile.zalcyan:ds_metal_floor.name=Steel floor
+tile.zalcyan:ds_metal_floor_rusting.name=Rusting Steel floor
+tile.zalcyan:ds_metal_floor_rusted.name=Rusted Steel floor
+
+tile.zalcyan:ds_metal_plating.name=Steel Plating
+tile.zalcyan:ds_metal_plating_rusting.name=Rusting Steel Plating
+tile.zalcyan:ds_metal_plating_rusted.name=Rusted Steel Plating
+
+tile.zalcyan:ds_shelf.name=Small Steel Shelf
+tile.zalcyan:ds_shelf_rusting.name=Rusting Small Steel Shelf
+tile.zalcyan:ds_shelf_rusted.name=Rusted Small Steel Shelf
+tile.zalcyan:ds_metal_trapdoor.name=Steel Trapdoor
+
+
+tile.zalcyan:ds_light3.name=Steel Red Band Light
+tile.zalcyan:ds_light3_rusting.name=Rusting Steel Red Band Light
+tile.zalcyan:ds_light3_rusted.name=Rusted Steel Red Band Light
+
+tile.zalcyan:ds_light1.name=Steel Pillar Light
+tile.zalcyan:ds_light1_rusting.name=Rusting Steel Pillar Light
+tile.zalcyan:ds_light1_rusted.name=Rusted Steel Pillar Light
+
+tile.zalcyan:ds_light2.name=Steel Server Base
+
+tile.zalcyan:ds_light5.name=Steel Wall Light
+tile.zalcyan:ds_light5_rusting.name=Rusting Steel Wall Light
+tile.zalcyan:ds_light5_rusted.name=Rusted Steel Wall Light
+
+tile.zalcyan:ds_light4.name=Steel Red Light Motif
+tile.zalcyan:ds_glass.name=Red Glass With Reinforced Steel
+
+
+
+tile.zalcyan:ds_light6.name=Steel Floodlight
+tile.zalcyan:ds_light6_rusting.name=Rusting Steel Floodlight
+tile.zalcyan:ds_light6_rusted.name=Rusted Steel Floodlight
+
+tile.zalcyan:ds_metal_exterior.name=Exterior Steel
+tile.zalcyan:ds_metal_exterior_rusting.name=Rusting Exterior Steel
+tile.zalcyan:ds_metal_exterior_rusted.name=Rusted Exterior Steel
+
+tile.zalcyan:ds_metal_tape.name=Steel Pipeing Block With Tape
+tile.zalcyan:ds_metal_tape_rusting.name=Rusting Steel Pipeing Block With Tape
+tile.zalcyan:ds_metal_tape_rusted.name=RustedSteel Pipeing Block With Tape
+
+tile.zalcyan:ds_metal_grooved.name=Steel Pipeing Block
+tile.zalcyan:ds_metal_grooved_rusting.name=Rusting Steel Pipeing Block
+tile.zalcyan:ds_metal_grooved_rusted.name=Rusted Steel Pipeing Block
+
+tile.zalcyan:ds_metal_wall.name=Exterior Steel
+tile.zalcyan:ds_metal_wall_rusting.name=Rusting Exterior Steel
+tile.zalcyan:ds_metal_wall_rusted.name=Rusted Exterior Steel
+
+tile.zalcyan:ds_metal_block.name=Steel Block
+tile.zalcyan:ds_metal_block_rusting.name=Rusting Steel Block
+tile.zalcyan:ds_metal_block_rusted.name=Rusted Steel Block
+
+tile.zalcyan:ds_pipe.name=Steel Pipe
+tile.zalcyan:ds_pipe_rusting.name=Rusting Steel Pipe
+tile.zalcyan:ds_pipe_rusted.name=Rusted Steel Pipe
+
+tile.zalcyan:ds_metal_wall.name=Steel Wall
+tile.zalcyan:ds_metal_wall_rusting.name=Rusting Steel Wall
+tile.zalcyan:ds_metal_wall_rusted.name=Rusted Steel Wall
+
+tile.zalcyan:ds_metal_scaffolding.name=Steel Scaffolding
+tile.zalcyan:ds_metal_scaffolding_rusting.name=Rusting Steel Scaffolding
+tile.zalcyan:ds_metal_scaffolding_rusted.name=Rusted Steel Scaffolding
+
+tile.zalcyan:ds_metal_wiring.name=Steel Wiring
+tile.zalcyan:ds_metal_wiring_rusting.name=Rusting Steel Wiring
+tile.zalcyan:ds_metal_wiring_rusted.name=Rusted Steel Wiring
+
+tile.zalcyan:ds_phase_door_open.name=Phase Door Open
+tile.zalcyan:ds_phase_door_opening.name=Phase Door Opening
+tile.zalcyan:ds_phase_door_closed.name=Phase Door Closed
+tile.zalcyan:ds_phase_door_closing.name=Phase Door Closing
+tile.zalcyan:ds_phase_door_activator.name=Phase Door Activator
+
+tile.zalcyan:ds_decoration1.name=Planet Display
+tile.zalcyan:ds_decoration2.name=Galactic Plans
+tile.zalcyan:ds_decoration6.name=Space Computation Block
+tile.zalcyan:ds_decoration3.name=Server Pillar
+tile.zalcyan:ds_decoration4.name=Creeper Head Jar
+tile.zalcyan:ds_decoration5.name=Satellite Dish
+tile.zalcyan:ds_decoration7.name=Steel Orange Light
+tile.zalcyan:ds_decoration8.name=Steel Zapper
+
+
+tile.zalcyan:ds_roomlight.name=Steel Roomlight
+tile.zalcyan:scaffolding_yellow.name=Yellow Scaffolding
+tile.zalcyan:ds_exterior_shelf.name=Exterior Shelf
+
+##Rysii
+tile.zalcyan:rysii_pillar.name=Rysii Pillar
+tile.zalcyan:rysii_slab.name=Rysii Brick Slab
+tile.zalcyan:rysii_brick_block.name=Rysii Brick
+tile.zalcyan:rysii_block_summon.name=Rysii Summon
+tile.zalcyan:rysii_block_glass.name=Rysii Glass
+tile.zalcyan:rysii_block.name=Rysii Block
+
+##Frissania
 tile.zalcyan:friss.name=Friss Sand
 tile.zalcyan:friss_roots.name=Friss Roots
 tile.zalcyan:friss_stem.name=Friss Stem
@@ -138,8 +362,12 @@ tile.zalcyan:friss_stem_stripped.name=Stripped Friss Stem
 tile.zalcyan:friss_trapdoor.name=Friss Trapdoor
 tile.zalcyan:friss_vine_fruited.name=Fruited Mafis Vine
 tile.zalcyan:friss_fungus.name=Friss Fungus
+tile.zalcyan:friss_gate.name=Friss Gate
+tile.zalcyan:friss_fence.name=Friss Fence
 
-//Lorzol
+
+
+##Lorzol
 tile.Lor Leaves.name=Lorzol Leaves
 tile.zalcyan:lor_rock.name=Lor Stone
 tile.zalcyan:lor_smoker.name=Lor Smoker
@@ -154,9 +382,10 @@ tile.zalcyan:lor_log_semi_carved.name=Chiseled Lorzol Log
 tile.zalcyan:lor_log_stripped.name=Stripped Lorzol Log
 tile.zalcyan:lor_log_planks.name=Lorzol Planks
 tile.zalcyan:lorzol_dirt.name=Lorzol Dirt
+tile.zalcyan:lorzol.name=Spotted Lorzol Grass
 tile.zalcyan:lorzol0.name=Lorzol Grass
-tile.zalcyan:lorzol1.name=Lorzol Grass
-tile.zalcyan:lorzol2.name=Lorzol Grass
+tile.zalcyan:lorzol1.name=Overgrown Lorzol Grass
+tile.zalcyan:lorzol2.name=Thick Lorzol Grass
 tile.zalcyan:lor_log_planks.name=Lorzol Log Planks
 tile.zalcyan:lor_slab.name=Lorzol Slab
 tile.zalcyan:lor_stairs.name=Lorzol Stairs
@@ -167,15 +396,16 @@ tile.zalcyan:miren_grass.name=Lorzol Grass
 tile.zalcyan:miren_grass_tall.name=Tall Lorzol Grass
 tile.zalcyan:miren_grass_orange.name=Orange Lorzol Grass
 tile.zalcyan:miren_rock.name=Lor stones
+tile.zalcyan:lor_gate.name=Lorzol Gate
+tile.zalcyan:lor_fence.name=Lorzol Fence
 
-
-//Gulumar
+##Gulumar
 tile.zalcyan:gulu_grass.name=Gulu Tallgrass
 tile.zalcyan:gulu_ground.name=Gulu Grass
-tile.zalcyan:gulu_ground1.name=Gulu Grass
-tile.zalcyan:gulu_ground2.name=Gulu Grass
-tile.zalcyan:gulu_ground3.name=Gulu Grass
-tile.zalcyan:gulu_ground4.name=Gulu Grass
+tile.zalcyan:gulu_ground1.name=Sporing Gulu Grass
+tile.zalcyan:gulu_ground2.name=Thick Gulu Grass
+tile.zalcyan:gulu_ground3.name=Overgrown Gulu Grass
+tile.zalcyan:gulu_ground4.name=Patchy Gulu Grass
 tile.zalcyan:gulu_stem_bottem.name=Gulu Stem Root
 tile.zalcyan:gulu_stem.name=Gulu Stem
 tile.zalcyan:mushroom1.name=Gulu Mushroom
@@ -191,11 +421,11 @@ tile.zalcyan:gulu_stone_rippled.name=Rippled Gulu Stone
 tile.zalcyan:gulu_stone_glyphs.name=Gulu Glyph Stone
 tile.zalcyan:gulu_stone_symbol.name=Gulu Symbol Stone
 
-//Moonlena
+##Moonlen
 tile.zalcyan:moonlen_stone.name=Moonlen Stone
-tile.zalcyan:moonlen_mould1.name=Moonlen Mould
-tile.zalcyan:moonlen_mould2.name=Moonlen Mould
-tile.zalcyan:moonlen_mould3.name=Moonlen Mould
+tile.zalcyan:moonlen_mould.name=Moonlen Mould
+tile.zalcyan:moonlen_mould1.name=Overgrown Moonlen Mould
+tile.zalcyan:moonlen_mould2.name=Thick Moonlen Mould
 tile.zalcyan:moonlen_mould_growth.name=Moonlen Mould Growth
 tile.zalcyan:mushroom3.name=Moonlen Mushroom
 tile.zalcyan:mushroom3_2.name=Large Moonlen Mushroom
@@ -214,16 +444,19 @@ tile.zalcyan:moonlen_spike_body.name=Moonlen Stalactite Stem
 tile.zalcyan:moonlen_spike_filler.name=Moonlen Stalactite Base
 tile.zalcyan:moonlen_fungus.name=Moonlen Fungus
 
-//Cryan
-tile.zalcyan:cryan_dirt.name=cryan_dirt
-tile.zalcyan:cryan_grass.name=cryan_grass
-tile.zalcyan:cryan_stone.name=cryan_stone
+##Cryan
+tile.zalcyan:cryan_dirt.name=Cryan Dirt
+tile.zalcyan:cryan_grass.name=Cryan Grass
+tile.zalcyan:cryan_stone.name=Cryan Stone
 
-//Raken
+##Raken
 tile.zalcyan:raken_cap_cover.name=Raken Growths
 tile.zalcyan:raken_dirt.name=Raken Dirt
 tile.zalcyan:raken_grass.name=Short Raken Grass
 tile.zalcyan:raken_ground.name=Raken Grass
+tile.zalcyan:raken_ground1.name= Thick Raken Grass
+tile.zalcyan:raken_ground2.name=Patchy Raken Grass
+tile.zalcyan:raken_ground3.name=Overgrown Raken Grass
 tile.zalcyan:raken_jell.name=Raken Cave Gel
 tile.zalcyan:raken_leaves.name=Raken Leaves
 tile.zalcyan:raken_log_planks.name=Raken Planks
@@ -237,9 +470,14 @@ tile.zalcyan:raken_door.name=Raken Door
 tile.zalcyan:raken_double_slab.name=Raken Double Slab
 tile.zalcyan:arvense.name=Arvense
 tile.zalcyan:raken_grass_tall.name=Tall Raken Grass
+tile.zalcyan:raken_gate.name=Raken Gate
+tile.zalcyan:raken_fence.name=Raken Fence
 
-//Mynis
+##Mynis
 tile.zalcyan:mynis.name=Mynis
+tile.zalcyan:mynis1.name=Thick Mynis
+tile.zalcyan:mynis2.name=Overgrown Mynis
+tile.zalcyan:mynis3.name=Patchy Mynis
 tile.zalcyan:mynis_cap_cover.name=Mynis Cap
 tile.zalcyan:mynis_cap_in.name=Mynis Gel
 tile.zalcyan:mynis_dirt.name=Mynis Crackle
@@ -263,10 +501,36 @@ tile.zalcyan:mynis_trunkmushroom_south.name=Mynis Trunkmushroom (South)
 tile.zalcyan:mynis_trunkmushroom_west.name=Mynis Trunkmushroom (West)
 tile.zalcyan:mynis_small_cap.name=Mog Cap
 tile.zalcyan:mynis_small_cap_stem.name=Mog Cap Stem
+tile.zalcyan:mynis_gate.name=Mynis Gate
+tile.zalcyan:mynis_fence.name=Mynis fence
+
+
+##quag
+tile.zalcyan:quag.name=Quagar Grass
+tile.zalcyan:quag_door.name=Quag Door
+tile.zalcyan:quag_double_slab.name=Quag Double Slab
+tile.zalcyan:quag_leaves.name=Frontill Leaves
+tile.zalcyan:quag_planks.name=Frontill Planks
+tile.zalcyan:quag_plant.name=Small Quag Grass
+tile.zalcyan:quag_plant_tall.name=Tall Quag Grass
+tile.zalcyan:quag_roots.name=Frontill Root
+tile.zalcyan:quag_slab.name=Frontill Slab
+tile.zalcyan:quag_stairs.name=Frontill Stairs
+tile.zalcyan:quag_stem.name=Frontill Trunk
+tile.zalcyan:quag_stem_stripped.name=Stripped Frontill Trunk
+tile.zalcyan:quag_stone.name=Quagite Stone
+tile.zalcyan:quag_stone_cobbled.name=Cobbled Quagite
+tile.zalcyan:quag_trapdoor.name=Frontill Trapdoor
+tile.zalcyan:vini_flower.name=Vini flower
+tile.zalcyan:vini_leaf.name=Vini fern
+tile.zalcyan:skreeshroom.name=Skreeshroom
+tile.zalcyan:quag_gate.name=Frontill Gate
+tile.zalcyan:quag_fence.name=Frontill fence
 
 
 
-//speaking
+
+##speaking
 emperor.msg1=§l§c[Emperor Zorkan] §6You cannot defeat me %1!
 emperor.msg2=§l§c[Emperor Zorkan] §6I am the true Emperor!
 emperor.msg3=§l§c[Emperor Zorkan] §6This world is mine!
@@ -294,10 +558,70 @@ emperor.msg24=§l§c[Emperor Zorkan] §6'Tis but a sctatch %1.
 emperor.msg25=§l§c[Emperor Zorkan] §6You are strong %1, but not strong enough!
 
 
-zalhello.msg1=§l§6 Hi §c§l%1,§l§6 it's §b§lZalcyan§l§6,§9§lCrovono§l§6, and §d§lMadlad§l§6. We are the creators of Zalcyan's Quest.
-zalhello.msg2=§l§6 If you Like this addon §c§l%1, §l§6consider supporting the addon on Patreon at §l§a patreon.com/zalcyan
-zalhello.msg3=§l§6 Thanks and have fun!
+zalhello.msg1=§l§6 Hi §c§l%1§l§6! This addon was created by §b§lZalcyan§l§6. 
+zalhello.msg2=§l§6 Contributors: §d§lMadlad§l§6 (RTX support) & §9§lCiosciaa§l§6 (addon expert).
+zalhello.msg3=§l§6 If you Like this addon §c§l%1, §l§6consider supporting the addon on Patreon at §l§a patreon.com/zalcyan
+zalhello.msg4=§l§6 Thanks and have fun!
 
 
 
 
+
+tile.zalcyan:hydriir.name=hydriir
+
+##Mak' Kylara
+tile.zalcyan:kylar_log.name=Mak' Kylara Log
+tile.zalcyan:kylar_log_chipped.name=Chipped Mak' Kylara Log
+tile.zalcyan:kylar_log_carved.name=Carved Mak' Kylara Log
+tile.zalcyan:kylar_log_semi_carved.name=Chiseled Mak' Kylara Log
+tile.zalcyan:kylar_log_stripped.name=Stripped Mak' Kylara Log
+tile.zalcyan:kylar_log_planks.name=Mak' Kylara Planks
+tile.zalcyan:kylar_log_planks.name=Mak' Kylara Log Planks
+tile.zalcyan:kylar_slab.name=Mak' Kylara Slab
+tile.zalcyan:kylar_stairs.name=Mak' Kylara Stairs
+tile.zalcyan:kylar_trapdoor.name=Mak' Kylara Trapdoor
+tile.zalcyan:kylar_door.name=Mak' Kylara Door
+tile.zalcyan:kylar_double_slab.name=Mak' Kylara Double Slab
+tile.zalcyan:kylar_log_full.name=Mak' Kylara Full Log
+tile.zalcyan:kylar_cyan.name=Kylal Slate
+tile.zalcyan:kylar_crystal.name=Mak' Kylara Crystal Leaves
+tile.zalcyan:kylar_gate.name=Mak' Kylara Gate
+tile.zalcyan:kylar_fence.name=Mak' Kylara Fence
+tile.zalcyan:kylar_grass.name=Kylar Grass
+tile.zalcyan:kylar_dirt.name=Kylar Dirt
+
+##Sappis
+tile.zalcyan:sappis_log.name=Sappis Log
+tile.zalcyan:sappis_log_chipped.name=Chipped Sappis Log
+tile.zalcyan:sappis_log_carved.name=Carved Sappis Log
+tile.zalcyan:sappis_log_semi_carved.name=Chiseled Sappis Log
+tile.zalcyan:sappis_log_stripped.name=Stripped Sappis Log
+tile.zalcyan:sappis_log_planks.name=Sappis Planks
+tile.zalcyan:sappis_log_planks.name=Sappis Log Planks
+tile.zalcyan:sappis_slab.name=Sappis Slab
+tile.zalcyan:sappis_stairs.name=Sappis Stairs
+tile.zalcyan:sappis_trapdoor.name=Sappis Trapdoor
+tile.zalcyan:sappis_door.name=Sappis Door
+tile.zalcyan:sappis_double_slab.name=Sappis Double Slab
+tile.zalcyan:sappis_log_full.name=Sappis Full Log
+tile.zalcyan:sappis_fence.name=Sappis Fence
+tile.zalcyan:sappis_gate.name=Sappis Gate
+tile.zalcyan:sappis_orange.name=Sappis Gwog
+tile.zalcyan:sappis_dirt.name=Sappis Dirt
+tile.zalcyan:sappis.name=Sappis Grass
+tile.zalcyan:sappis_seap_block.name=Sappis Seap
+
+
+
+##zighet
+tile.zalcyan:zighet_comb.name=Zighet Comb
+tile.zalcyan:zighet_comb1.name=Deep Zighet Comb
+tile.zalcyan:zighet_comb2.name=Egg Infested Zighet Comb
+tile.zalcyan:zighet_comb3.name=Dense Egg Infested Zighet Comb
+tile.zalcyan:zighet_comb4.name=Patchy Egg Infested Zighet Comb
+tile.zalcyan:zighet_comb5.name=Large Zighet Comb
+tile.zalcyan:zighet_paper.name=Zighet Paper
+tile.zalcyan:zighet_paper1.name=Lined Zighet Paper
+tile.zalcyan:zighet_paper2.name=Angled Zighet Paper
+tile.zalcyan:zighet_paper3.name=Broken Zighet Paper
+tile.zalcyan:zighet_paper4.name=Punctured Zighet Paper

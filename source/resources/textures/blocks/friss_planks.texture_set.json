@@ -1,8 +1,0 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "friss_planks",
-        "metalness_emissive_roughness": "friss_planks_mer",
-        "heightmap": "friss_planks_heightmap"
-    }
-}

@@ -3,21 +3,21 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"identifier": "minecraft:raken_tree_small_feature_rule",
+			"identifier": "zalcyan:raken_tree_small_feature_rule",
 			"places_feature": "minecraft:raken_tree_small_mcstructure"
 		},
 		"conditions": {
 			"minecraft:biome_filter": {
 				"test": "has_biome_tag",
 				"operator": "==",
-				"value": "raken"
+				"value": "swamp"
 			},
 			"placement_pass": "first_pass"
 		},
 		"distribution": {
-			"iterations": 0,
+			"iterations": "(q.noise(v.originx / 512, v.originz / 512) < -0.4)",
 			"x": "math.random_integer(0, 3)",
-			"y": "query.above_top_solid(v.worldx, v.worldz) - 2",
+			"y": "query.heightmap(variable.worldx, variable.worldz) - 2",
 			"z": "math.random_integer(0, 3)"
 		}
 	}

@@ -1,15 +1,15 @@
 //bridge-file-version: #0
 {
-	"format_version": "1.16.100",
+	"format_version": "1.20.40",
 	"minecraft:item": {
 		"description": {
 			"identifier": "zalcyan:marlar_elite_boots",
-			"category": "equipment"
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.boots"
+				}
 		},
 		"components": {
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.boots"
-			},
 			"minecraft:icon": {
 				"texture": "marlar_elite_boots",
 				"frame": 0
@@ -33,12 +33,9 @@
 					"zalcyan:marlar_elite_boots"
 				]
 			},
-			"minecraft:damage": 2,
-			"minecraft:armor": {
-				"protection": 2
-			},
 			"minecraft:wearable": {
-				"slot": "slot.armor.feet"
+				"slot": "slot.armor.feet",
+				"protection": 2
 			}
 		},
 		"events": {}

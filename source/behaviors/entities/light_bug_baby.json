@@ -205,8 +205,7 @@
 						"target": "self"
 					}
 				]
-			},
-			"sen": {}
+			}
 		},
 		"events": {
 			"minecraft:entity_spawned": {

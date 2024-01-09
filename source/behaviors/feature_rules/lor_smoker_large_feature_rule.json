@@ -3,22 +3,22 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"identifier": "minecraft:lor_smoker_large_feature_rule",
+			"identifier": "zalcyan:lor_smoker_large_feature_rule",
 			"places_feature": "minecraft:lor_smoker_large_mcstructure"
 		},
 		"conditions": {
 			"minecraft:biome_filter": {
 				"test": "has_biome_tag",
 				"operator": "==",
-				"value": "lorla"
+				"value": "savanna"
 			},
 			"placement_pass": "surface_pass"
 		},
 		"distribution": {
-			"iterations": 1,
+			"iterations": "(q.noise(v.originx / 512, v.originz / 512) < -0.47)",
 			"scatter_chance": 40,
 			"x": 0,
-			"y": "query.heightmap(variable.worldx, variable.worldz) - 3",
+			"y": "query.heightmap(variable.worldx, variable.worldz) - 4",
 			"z": 0
 		}
 	}

@@ -1,0 +1,29 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "zalcyan:fog_ds_city"
+		},
+		"distance": {
+			"air": {
+				"fog_start": 0,
+				"fog_end": 80,
+				"fog_color": "#746c63",
+				"render_distance_type": "fixed"
+			},
+			"water": {
+				"fog_start": 0,
+				"fog_end": 15,
+				"fog_color": "#554f49",
+				"render_distance_type": "fixed"
+			},
+			"weather": {
+				"fog_start": 0,
+				"fog_end": 72,
+				"fog_color": "#554f49",
+				"render_distance_type": "fixed"
+			}
+		}
+	}
+}

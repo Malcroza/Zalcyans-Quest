@@ -1,11 +1,11 @@
-//bridge-file-version: #23
+//bridge-file-version: #28
 {
 	"format_version": "1.8.0",
 	"minecraft:entity": {
 		"description": {
 			"identifier": "zalcyan:magwag_spike",
 			"is_spawnable": false,
-			"is_summonable": false,
+			"is_summonable": true,
 			"is_experimental": false
 		},
 		"component_groups": {
@@ -15,12 +15,14 @@
 					"height": 0.8
 				},
 				"minecraft:timer": {
-					"looping": false,
-					"randomInterval": false,
-					"time": 2.33,
 					"time_down_event": {
 						"event": "minecraft:event_dead"
-					}
+					},
+					"looping": true,
+					"time": [
+						2.5,
+						2.5
+					]
 				}
 			},
 			"minecraft:despawndead": {
@@ -205,6 +207,13 @@
 				"add": {
 					"component_groups": [
 						"minecraft:despawndead"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"minecraft:dead_"
 					]
 				}
 			}

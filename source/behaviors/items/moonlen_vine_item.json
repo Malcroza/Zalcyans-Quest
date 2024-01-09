@@ -1,9 +1,12 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.20.40",
 	"minecraft:item": {
 		"description": {
 			"identifier": "zalcyan:moonlen_vine_item",
-			"category": "nature"
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.nature"
+				}
 		},
 		"components": {
             "minecraft:block_placer": {
@@ -11,6 +14,8 @@
                 "use_on": ["zalcyan:moonlen_vine",
 				"zalcyan:moonlen_stone",
 				"zalcyan:moonlen_mould",
+				"zalcyan:moonlen_mould1",
+				"zalcyan:moonlen_mould2",
 				"zalcyan:moonlen_mould_growth",
 				"zalcyan:moonlen_crys",
 				"zalcyan:moonlen_crys_base",
@@ -24,9 +29,6 @@
 			"minecraft:icon": {
                 "texture": "moonlen_vine_item"
             },
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.nature"
-			 },
 			"minecraft:max_stack_size": 64,
 			"minecraft:stacked_by_data": true
 		}

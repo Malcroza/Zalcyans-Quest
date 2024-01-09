@@ -1,0 +1,16 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:quag_dirt_column"
+		},
+		"iterations": "t.heightmap=64+(q.heightmap(v.worldx, v.worldz) - 1); return t.heightmap;",
+		"places_feature": "zalcyan:quag_dirt_feature",
+		"x": 0,
+		"z": 0,
+		"y": {
+			"extent": [-64, "(q.heightmap(v.worldx, v.worldz) - 1)"],
+			"distribution": "fixed_grid"
+		}
+	}
+}

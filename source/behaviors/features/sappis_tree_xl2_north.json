@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "zalcyan:sappis_tree_xl2_north"
+		},
+
+		"structure_name": "zalcyan:sappis_tree_xl2",
+
+		"facing_direction": "north",
+		"adjustment_radius": 0,
+
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

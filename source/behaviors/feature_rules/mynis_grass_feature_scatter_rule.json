@@ -14,7 +14,12 @@
 						{
 							"test": "has_biome_tag",
 							"operator": "==",
-							"value": "mynis"
+							"value": "mesa"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "desert"
 						}
 					]
 				}
@@ -22,7 +27,6 @@
 		},
 		"distribution": {
 			"iterations": 10,
-			"coordinate_eval_order": "zyx",
 			"x": {
 				"distribution": "uniform",
 				"extent": [

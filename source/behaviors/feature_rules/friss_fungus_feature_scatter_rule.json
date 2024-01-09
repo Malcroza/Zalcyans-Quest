@@ -14,15 +14,15 @@
 						{
 							"test": "has_biome_tag",
 							"operator": "==",
-							"value": "frissania"
+							"value": "plains"
 						}
 					]
 				}
 			]
 		},
 		"distribution": {
-			"iterations": 20,
-			"coordinate_eval_order": "zyx",
+			"iterations": 10,
+			"scatter_chance": 90,
 			"x": {
 				"distribution": "uniform",
 				"extent": [

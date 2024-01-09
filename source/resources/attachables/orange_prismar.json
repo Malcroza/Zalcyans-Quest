@@ -1,0 +1,52 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan:orange_prismar",
+      "materials": {
+        "default": "enderman",
+		"beam": "orb",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/models/equipment/orange_prismar",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.orange_prismar",
+		"player": "geometry.humanoid.custom"
+      },
+      "animations": {
+		"orange_prismar_first_person": "animation.orange_prismar.first_person.hold",
+		"orange_prismar_shoot": "animation.orange_prismar.shoot",
+		"thrust": "animation.orange_prismar.thrust",
+		"default_rot": "animation.orange_prismar.default_rot",
+		"start": "animation.orange_prismar.start",
+		"sound_stable": "animation.orange_prismar.sound_stable",
+		"sound_cont":"controller.animation.orange_prismar.change",
+		"sound_swing":"animation.orange_prismar.sound_swing",
+		"cont_swing": "controller.animation.orange_prismar.swing",
+		"crouch": "controller.animation.orange_prismar.crouch",
+		"default_rot_crouch":"animation.orange_prismar.default_rot_crouch"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "crouch": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'orange_prismar'"
+          },
+		  
+            "orange_prismar_shoot",
+		  "sound_cont",
+			"cont_swing"
+        ]
+      },
+      "render_controllers": ["controller.render.orange_prismar"]
+	  ,
+	"sound_effects": {
+		"sound_idle": "sound.prismar.idle",
+		"sound_ignite": "sound.prismar.ignite",
+		"sound_swing": "sound.prismar.swing_player"
+	}
+    }
+  }
+}

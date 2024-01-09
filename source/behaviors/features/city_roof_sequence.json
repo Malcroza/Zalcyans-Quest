@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:sequence_feature": {
+		"description": {
+			"identifier": "zalcyan:city_roof_sequence"
+		},
+
+		"features": [
+			"zalcyan:ds_city_roof_feature_scatter",
+			"zalcyan:city_air_concrete_remover_scatter"
+		]
+	}
+}

@@ -1,0 +1,53 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:skreepog_pillar",
+      "materials": { "default": "phantom",
+	  "glow": "charged_creeper"},
+      "textures": {
+        "default": "textures/entity/skreepog_pillar"
+      },
+      "animations": {
+        "general": "controller.animation.skreepog_pillar.general",
+		"fold": "animation.skreepog_pillar.fold",
+		"zoom": "controller.animation.skreepog_pillar.zoom",
+		"exaust": "animation.skreepog_pillar.exaust",
+		"basepose": "animation.skreepog_pillar.basepose",
+		"mining": "animation.skreepog_pillar.mining",
+		"mining2": "animation.skreepog_pillar.mining2",
+		"non_summoning": "animation.skreepog_pillar.non_summoning",
+		"summoning": "animation.skreepog_pillar.summoning",
+		"summon": "animation.skreepog_pillar.summon",
+		"summon2": "animation.skreepog_pillar.summon2",
+		"general2": "controller.animation.skreepog_pillar.general2"
+
+      },
+      "scripts": {
+        "animate": [
+          "general",
+		  "general2",
+		  "zoom"
+        ]
+      },
+        "spawn_egg": {
+          "base_color": "#202e37",
+          "overlay_color": "#41851b"
+        },
+		"particle_effects": {
+			"skreepog_pillar_jet": "zalcyan:skreepog_pillar_jet",
+			"zdust": "zalcyan:zdust"
+			
+		},
+		"sound_effects": {
+			"rocket_thrusters": "mob.skreepog_pillar.rocket_thrusters",
+			"skreepog_blades": "mob.skreepog_pillar.skreepog_blades",
+			"crash_land": "mob.skreepog_pillar.crash_land"
+		},		
+		"geometry": {
+			"default": "geometry.skreepog_pillar"
+		},
+      "render_controllers": [ "controller.render.skreepog_pillar" ]
+    }
+  }
+}

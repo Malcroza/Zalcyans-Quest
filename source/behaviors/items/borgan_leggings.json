@@ -1,15 +1,15 @@
 //bridge-file-version: #1
 {
-	"format_version": "1.16.100",
+	"format_version": "1.20.40",
 	"minecraft:item": {
 		"description": {
 			"identifier": "zalcyan:borgan_leggings",
-			"category": "equipment"
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.leggings"
+				}
 		},
 		"components": {
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.leggings"
-			},
 			"minecraft:icon": {
 				"texture": "borgan_leggings",
 				"frame": 0
@@ -33,12 +33,9 @@
 					"zalcyan:borgan_leggings"
 				]
 			},
-			"minecraft:damage": 2,
-			"minecraft:armor": {
-				"protection": 3
-			},
 			"minecraft:wearable": {
-				"slot": "slot.armor.legs"
+				"slot": "slot.armor.legs",
+				"protection": 3
 			}
 		},
 		"events": {}

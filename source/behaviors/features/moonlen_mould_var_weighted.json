@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:moonlen_mould_var_weighted"
+    },
+    "features": [
+      [ "zalcyan:moonlen_mould_feature", 4 ],
+      [ "zalcyan:moonlen_mould1_feature", 2 ],
+      [ "zalcyan:moonlen_mould2_feature", 1 ]
+    ]
+  }
+}

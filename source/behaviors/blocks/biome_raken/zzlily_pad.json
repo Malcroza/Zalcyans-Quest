@@ -1,0 +1,50 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:zzlily_pad"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.1
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 1,
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    1,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    1,
+                    16
+                ]
+            },
+            "minecraft:geometry": "geometry.zlily_pad11",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "zlily_pad",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:map_color": "#93CF4C",
+            "minecraft:loot": "loot_tables/items/zlily_pad_item.json"
+        },
+        "events": {}
+    }
+}

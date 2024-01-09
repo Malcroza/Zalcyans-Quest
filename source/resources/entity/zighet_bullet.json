@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:zighet_bullet",
+      "materials": {
+        "default": "slime_outer"
+      },
+	  "particle_effects": {
+    "lazar_trail": "zalcyan:lazar_trail",
+	"lazar_sparks": "zalcyan:zighet_bullet_sparks"
+	},
+      "textures": {
+        "default": "textures/entity/zighet_bullet"
+      },
+      "geometry": {
+        "default": "geometry.zighet_bullet"
+      },
+      "animations": {
+        "move": "animation.zighet_bullet.move",
+		"elongate": "animation.zighet_bullet.elongate", 		
+		"part": "controller.animation.zighet_bullet.particles",
+		"moving": "controller.animation.zighet_bullet.movement",
+		"close": "animation.zighet_bullet.close",
+		"trail": "controller.animation.zighet_bullet_trail.particles"
+      },
+      "scripts": {
+        "animate": [
+          "move",
+		  "trail"
+        ]
+      },
+	  "particle_effects": {
+				"trail": "zalcyan:zighet_bullet_trail"
+	},
+      "render_controllers": [ "controller.render.orb" ]
+    }
+  }
+}

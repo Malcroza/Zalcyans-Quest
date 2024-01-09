@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:h_orb_shooter",
+      "materials": {
+        "default": "orb"
+      },
+	  "particle_effects": {
+    "trail": "zalcyan:h_trail",
+	"lazar_sparks": "zalcyan:h_orb_sparks",
+	"fog": "zalcyan:h_orb_fog"
+	},
+      "textures": {
+        "default": "textures/entity/h_orb_shooter"
+      },
+      "geometry": {
+        "default": "geometry.h_orb_shooter"
+      },
+      "animations": {
+        "move": "animation.h_orb_shooter.move",		
+		"part": "controller.animation.h_orb_shooter.particles",
+		"close": "animation.h_orb_shooter.close",
+		"fog_part": "animation.h_orb_shooter.fog",
+		"start": "animation.h_orb_shooter.start"
+      },
+      "scripts": {
+        "animate": [
+		  "part",
+		  "fog_part",
+		  "move",
+		  "start"
+		  
+        ]
+      },
+      "render_controllers": [ "controller.render.orb" ]
+    }
+  }
+}

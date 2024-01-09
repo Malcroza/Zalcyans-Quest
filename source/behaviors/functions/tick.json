@@ -1,7 +1,19 @@
 {
     "values": [
+		"zoom",
         "zmusic",
 		"zalhellos",
-		"preventrestruct"
+		"preventrestruct",
+		"fog_frissania_tick",
+		"fog_moonlen_tick",
+		"fog_mynis_tick",
+		"fog_quag_tick",
+		"fog_lorla_tick",
+		"fog_miren_tick",
+		"fog_gulumar_tick",
+		"fog_sappis_tick",
+		"fog_ds_city_tick",
+		"yalron_invis",
+		"remove_camera"
     ]
 }

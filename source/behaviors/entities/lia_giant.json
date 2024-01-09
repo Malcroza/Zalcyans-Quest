@@ -17,9 +17,6 @@
 				"minecraft:ageable": {
 					"duration": 1200
 				}
-			},
-			"minecraft:addrider": {
-				"entity_type": "zalcyan:aqe"
 			}
 		},
 		"components": {

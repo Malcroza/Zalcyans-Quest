@@ -1,0 +1,32 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:kylar_tree_large_feature_rule",
+			"places_feature": "minecraft:kylar_tree_large_snap"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass"
+		},
+		"distribution": {
+			"iterations": "(q.noise(v.originx / 850, v.originz / 850) < -0.41) ? 1 : 0",
+			"scatter_chance": 80,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": 40,
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}

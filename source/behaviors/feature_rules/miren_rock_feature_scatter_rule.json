@@ -14,7 +14,7 @@
 						{
 							"test": "has_biome_tag",
 							"operator": "==",
-							"value": "lorzoland"
+							"value": "birch"
 						}
 					]
 				}
@@ -22,7 +22,6 @@
 		},
 		"distribution": {
 			"iterations": 20,
-			"coordinate_eval_order": "zyx",
 			"x": {
 				"distribution": "uniform",
 				"extent": [

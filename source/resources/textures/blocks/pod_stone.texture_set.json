@@ -1,8 +1,0 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "pod_stone",
-		"metalness_emissive_roughness": "pod_stone_mer",
-		"heightmap": "pod_stone_heightmap"
-	}
-}

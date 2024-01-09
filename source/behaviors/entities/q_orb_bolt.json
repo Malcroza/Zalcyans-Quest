@@ -1,0 +1,274 @@
+//bridge-file-version: #43
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:q_orb_bolt",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball",
+			"scripts": {
+				"animate": [
+					"bridge_execute_commands"
+				]
+			},
+			"animations": {
+				"bridge_execute_commands": "controller.animation.bridge_q_orb_bolt.execute_commands"
+			}
+		},
+		"component_groups": {
+			"despawning": {
+				"minecraft:type_family": {
+					"family": [
+						"q_orb_bolt"
+					]
+				},
+				"minecraft:despawn": {
+					"remove_child_entities": true,
+					"filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "self",
+								"value": "q_orb_bolt"
+							}
+						]
+					}
+				}
+			},
+			"zalcyan:player_q_orb_bolt_standing": {
+				"minecraft:projectile": {
+					"shoot_sound": "sound.sniper.shoot_large",
+					"power": 2,
+					"gravity": 0,
+					"angle_offset": 0.01,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"should_bounce": false,
+					"offset": [
+						-0.22,
+						0,
+						0.1
+					],
+					"multiple_targets": true,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 30,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"zalcyan:player_q_orb_bolt_sneaking": {
+				"minecraft:projectile": {
+					"power": 2,
+					"gravity": 0,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"should_bounce": false,
+					"offset": [
+						0,
+						-0.1,
+						0
+					],
+					"multiple_targets": true,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 30,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"zalcyan:marlar_q_orb_bolt": {
+				"minecraft:projectile": {
+					"power": 2,
+					"gravity": 0,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"multiple_targets": true,
+					"should_bounce": false,
+					"offset": [
+						-0.27,
+						1.25,
+						0
+					],
+					"on_hit": {
+						"impact_damage": {
+							"damage": 30,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"bridge:execute_command_id_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:despawn": {
+				"remove_child_entities": true,
+				"filters": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "self",
+							"value": "q_orb_bolt"
+						}
+					]
+				}
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time_down_event": {
+					"event": "minecraft:start_despawn",
+					"target": "self"
+				},
+				"time": [
+					3.2,
+					3.2
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"minecraft:start_despawn": {
+				"add": {
+					"component_groups": [
+						"despawning"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": true
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:player_q_orb_bolt_sneaking"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": false
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:player_q_orb_bolt_standing"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "marlar"
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:marlar_q_orb_bolt"
+							]
+						}
+					}
+				]
+			},
+			"particle": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			},
+			"bridge:remove_command_id_1": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "zalcyan:friss_tree_xl_feature"
+		},
+
+		"features": [
+			["zalcyan:friss_tree_xl_feature_east_proxy", 1],
+			["zalcyan:friss_tree_xl_feature_north_proxy", 1],
+			["zalcyan:friss_tree_xl_feature_west_proxy", 1],
+			["zalcyan:friss_tree_xl_feature_south_proxy", 1]
+		]
+	}
+}

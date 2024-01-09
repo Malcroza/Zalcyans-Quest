@@ -1,0 +1,101 @@
+{
+	"format_version": "1.10.0",
+	"geometry.spacem_chestplate_lights": {
+		"texturewidth": 128,
+		"textureheight": 128,
+		"visible_bounds_width": 3,
+		"visible_bounds_height": 4,
+		"visible_bounds_offset": [0, 2, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 24, 0],
+				"cubes": [
+					{"origin": [2, 36, 5], "size": [1, 2, 1], "uv": [2, 5], "inflate": 0.1},
+					{"origin": [-1, 22, 6], "size": [2, 1, 1], "uv": [0, 0], "inflate": 0.01},
+					{"origin": [-1, 20, 6], "size": [2, 1, 1], "uv": [0, 0], "inflate": 0.01},
+					{"origin": [-1, 18, 6], "size": [2, 1, 1], "uv": [0, 0], "inflate": 0.01},
+					{"origin": [-1, 16, 6], "size": [2, 1, 1], "uv": [0, 0], "inflate": 0.01}
+				]
+			},
+			{
+				"name": "bodypivot",
+				"parent": "body",
+				"pivot": [0, 25, -5],
+				"rotation": [15, 0, 0],
+				"cubes": [
+					{"origin": [-4, 13, -5], "size": [8, 10, 4], "uv": [98, 42], "inflate": 0.3}
+				]
+			},
+			{
+				"name": "rightLeg",
+				"parent": "body",
+				"pivot": [-2, 12, 0]
+			},
+			{
+				"name": "flap",
+				"parent": "rightLeg",
+				"pivot": [-1, 23, 4],
+				"rotation": [-20, 15, 12.5]
+			},
+			{
+				"name": "flap4",
+				"parent": "rightLeg",
+				"pivot": [-1, 23, -1],
+				"rotation": [20, -15, 12.5]
+			},
+			{
+				"name": "rightFoot",
+				"parent": "rightLeg",
+				"pivot": [-6, 12, 0]
+			},
+			{
+				"name": "leftLeg",
+				"parent": "body",
+				"pivot": [2, 12, 0],
+				"mirror": true
+			},
+			{
+				"name": "flap2",
+				"parent": "leftLeg",
+				"pivot": [1, 25, 6],
+				"rotation": [-20, -15, -12.5]
+			},
+			{
+				"name": "flap5",
+				"parent": "leftLeg",
+				"pivot": [1, 23, -1],
+				"rotation": [20, 15, -12.5]
+			},
+			{
+				"name": "Left_foot",
+				"parent": "leftLeg",
+				"pivot": [1, 12, 1]
+			},
+			{
+				"name": "rightArm",
+				"parent": "body",
+				"pivot": [-5, 22, 0],
+				"cubes": [
+					{"origin": [-9, 19, -3], "size": [5, 6, 6], "uv": [90, 16], "inflate": 0.25},
+					{"origin": [-8.5, 11, -2.5], "size": [4, 4, 5], "uv": [67, 47], "inflate": 0.23}
+				]
+			},
+			{
+				"name": "leftArm",
+				"parent": "body",
+				"pivot": [5, 22, 0],
+				"mirror": true,
+				"cubes": [
+					{"origin": [4, 19, -3], "size": [5, 6, 6], "uv": [90, 16], "inflate": 0.25},
+					{"origin": [4.5, 11, -2.5], "size": [4, 4, 5], "uv": [67, 47], "inflate": 0.21}
+				]
+			}
+		]
+	}
+}

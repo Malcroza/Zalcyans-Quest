@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bridge_h_orb_shooter.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						}
+					],
+					"on_exit": [
+						"/particle zalcyan:h_orb_explode ~ ~ ~",
+						"/effect @e[r=2] weakness 5 1 true",
+						"/damage @e[r=2] 1 block_explosion",
+						"/playsound random.glass @a ~ ~ ~ 1.6",
+						"@s bridge:remove_command_id_1"
+						]
+					
+				},
+				"execute_command_id_1": {
+					"transitions": [
+					{
+							"execute_command_id_1": "query.skin_id == 0"
+						}
+					]
+				}
+				}
+			}
+		}
+	}
+}

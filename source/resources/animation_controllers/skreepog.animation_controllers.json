@@ -28,7 +28,7 @@
 			"states": {
 				"default": {
 					"animations": [
-						"skreepog.general"
+						"skreepog_general"
 					],
 					"transitions": [
 						{

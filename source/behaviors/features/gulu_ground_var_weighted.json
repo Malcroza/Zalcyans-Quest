@@ -1,0 +1,15 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:gulu_ground_var_weighted"
+    },
+    "features": [
+      [ "zalcyan:gulu_ground_feature", 4 ],
+      [ "zalcyan:gulu_ground1_feature", 2 ],
+      [ "zalcyan:gulu_ground2_feature", 1 ],
+      [ "zalcyan:gulu_ground3_feature", 1 ],
+      [ "zalcyan:gulu_ground4_feature", 1 ]
+    ]
+  }
+}

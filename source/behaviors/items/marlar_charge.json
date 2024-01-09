@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:marlar_charge",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.arrow"
+				}
+		},
+		"components": {
+			"minecraft:allow_off_hand": true,
+			"minecraft:max_stack_size": 64,
+			"minecraft:projectile": {
+				"projectile_entity": "zalcyan:r_orb",
+				"minimum_critical_power": 0.05
+			},
+			"minecraft:icon": {
+				"texture": "marlar_charge"
+			},
+			"minecraft:display_name": {
+				"value": "Marlar Charge"
+			}
+		},
+		"events": {}
+	}
+}

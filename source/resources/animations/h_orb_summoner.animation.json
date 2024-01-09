@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.h_orb_summoner.move": {
+			"loop": true,
+			"animation_length": 0.01,
+			"bones": {
+				"waist": {
+					"scale": 0
+				},
+				"cubes": {
+					"scale": [1, 1, 2.5]
+				}
+			}
+		},
+		"animation.h_orb_summoner.part": {
+			"animation_length": 0.04,
+			"particle_effects": {
+				"0.04": {
+					"effect": "lazar_trail",
+					"locator": "part_emitter"
+				}
+			}
+		}
+	}
+}

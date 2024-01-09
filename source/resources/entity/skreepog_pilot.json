@@ -1,59 +1,76 @@
 {
-  "format_version": "1.8.0",
-  "minecraft:client_entity": {
-    "description": {
-      "identifier": "zalcyan:skreepog_pilot",
-      "materials": { "default": "skeleton" },
-      "textures": { "default": "textures/entity/skreepog_pilot" },
-      "geometry": { "default": "geometry.skreepog_pilot" },
-      "scripts": {
-        "pre_animation": [
-          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
-        ]
-      },
-      "animations": {
-        "skreepog_pilot_base_pose": "animation.skreepog_pilot.base_pose",
-        "look_at_target_default": "animation.skreepog_pilot.look_at_target.default",
-        "look_at_target_gliding": "animation.skreepog_pilot.look_at_target.gliding",
-        "look_at_target_swimming": "animation.skreepog_pilot.look_at_target.swimming",
-        "move": "animation.skreepog_pilot.move",
-        "riding.arms": "animation.skreepog_pilot.riding.arms",
-        "riding.legs": "animation.skreepog_pilot.riding.legs",
-        "holding": "animation.skreepog_pilot.holding",
-        "brandish_spear": "animation.skreepog_pilot.brandish_spear",
-        "charging": "animation.skreepog_pilot.charging",
-        "attack.rotations": "animation.skreepog_pilot.attack.rotations",
-        "sneaking": "animation.skreepog_pilot.sneaking",
-        "bob": "animation.skreepog_pilot.bob",
-        "damage_nearby_mobs": "animation.skreepog_pilot.damage_nearby_mobs",
-        "bow_and_arrow": "animation.skreepog_pilot.bow_and_arrow",
-        "swimming": "animation.skreepog_pilot.swimming",
-        "use_item_progress": "animation.skreepog_pilot.use_item_progress",
-        "skeleton_attack": "animation.skeleton.attack"
-      },
-      "animation_controllers": [
-        { "skreepog_pilot_base_pose": "controller.animation.humanoid.base_pose" },
-        { "look_at_target": "controller.animation.humanoid.look_at_target" },
-        { "move": "controller.animation.humanoid.move" },
-        { "riding": "controller.animation.humanoid.riding" },
-        { "holding": "controller.animation.humanoid.holding" },
-        { "brandish_spear": "controller.humanoid.skreepog_pilot.brandish_spear" },
-        { "charging": "controller.animation.humanoid.charging" },
-        { "attack": "controller.animation.humanoid.attack" },
-        { "sneaking": "controller.animation.humanoid.sneaking" },
-        { "bob": "controller.animation.humanoid.bob" },
-        { "damage_nearby_mobs": "controller.animation.humanoid.damage_nearby_mobs" },
-        { "bow_and_arrow": "controller.animation.humanoid.bow_and_arrow" },
-        { "swimming": "controller.animation.humanoid.swimming" },
-        { "use_item_progress": "controller.animation.humanoid.use_item_progress" },
-        { "skeleton_attack": "controller.animation.humanoid.attack" }
-      ],
-      "render_controllers": [ "controller.render.skeleton" ],
-      "enable_attachables": true,
-      "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 9
-      }
-    }
-  }
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:skreepog_pilot",
+			"materials": { 
+				"default": "skeleton" 
+				},
+			"textures": { 
+				"default": "textures/entity/skreepog_pilot" 
+				},
+			"geometry": { 
+				"default": "geometry.skreepog_pilot" },
+			
+			"animations": {
+
+				
+				"look_at_target_default": "animation.skreepog_pilot.look_at_target.default",
+				"look_at_target_gliding": "animation.skreepog_pilot.look_at_target.gliding",
+				"look_at_target_swimming": "animation.skreepog_pilot.look_at_target.swimming",
+				
+				"moving": "animation.skreepog_pilot.move",
+				
+				"riding.arms": "animation.skreepog_pilot.riding.arms",
+				"riding.legs": "animation.skreepog_pilot.riding.legs",
+				
+				"holding": "animation.skreepog_pilot.holding",
+				
+				"bob": "animation.skreepog_pilot.bob",
+				
+
+				"bow_and_arrow": "animation.skreepog_pilot.bow_and_arrow",
+				
+				
+				"skreepog_attack": "animation.skreepog.attack",
+				
+				
+				"default": "controller.animation.skreepog_pilot.default",
+				
+				"look_at_target": "controller.animation.humanoid.look_at_target",
+				
+				"move": "controller.animation.skreepog_pilot.move",
+				
+				"riding": "controller.animation.humanoid.riding",
+				
+				"holdingc": "controller.animation.humanoid.holding",
+				
+
+				"attack": "controller.animation.skreepog_pilot.attack"
+
+
+
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"move",
+					"riding",
+					"holdingc",
+					"attack",
+					"default"
+					
+					
+				]
+			},
+			"render_controllers": [
+				"controller.render.skeleton"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 9
+			}
+		}
+	}
 }

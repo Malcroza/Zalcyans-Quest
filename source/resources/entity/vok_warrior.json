@@ -16,10 +16,14 @@
 			"animations": {
 				"move": "animation.vok_warrior.walk",
 				"vok_warrior_general": "animation.vok_warrior.idle",
+				"idle_limbs": "animation.vok_warrior.idle_limbs",
 				"attack": "animation.vok_warrior.melee",
+				"attack2": "animation.vok_warrior.melee2",
+				"attack3": "animation.vok_warrior.melee3",
 				"general": "controller.animation.vok_warrior.general",
 				"roaring": "animation.vok_warrior.blast",
-				"look_at_target": "animation.vok_warrior.look_at_target"
+				"look_at_target": "animation.vok_warrior.look_at_target",
+				"sit": "animation.vok_warrior.sit"
 			},
 			"scripts": {
 				"animate": [
@@ -33,11 +37,11 @@
 				"controller.render.vok_warrior"
 			],
 			"spawn_egg": {
-				"base_color": "#DFBC00",
-				"overlay_color": "#FAF3D4"
+				"base_color": "#3b7053",
+				"overlay_color": "#703b58"
 			},
 			"sound_effects": {
-				"roar": "mob.aqe.roar"
+				"wing": "mob.vok_warrior_wing"
 			}
 		}
 	}

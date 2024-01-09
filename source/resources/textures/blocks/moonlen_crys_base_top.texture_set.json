@@ -1,8 +1,0 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "moonlen_crys_base_top",
-		"metalness_emissive_roughness": "moonlen_crys_base_top_mer",
-		"heightmap": "moonlen_crys_base_top_heightmap"
-	}
-}

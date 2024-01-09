@@ -1,0 +1,48 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:rysii_pod_bolt",
+      "materials": {
+        "default": "orb"
+      },
+	  "particle_effects": {
+    "lazar_trail": "zalcyan:rysii_pod_bolt_lazar_trail",
+	"white_orb": "zalcyan:white_orb",
+	"lazar_sparks": "zalcyan:rysii_pod_bolt_sparks",
+	"fog": "zalcyan:rysii_pod_bolt_fog"
+	},
+	"sound_effects": {
+		"fire": "sound.lazar.shoot"
+	  },
+      "textures": {
+        "default": "textures/entity/rysii_pod_bolt"
+      },
+      "geometry": {
+        "default": "geometry.rysii_pod_bolt"
+      },
+      "animations": {
+        "move": "animation.rysii_pod_bolt.move",
+		"elongate": "animation.rysii_pod_bolt.elongate", 		
+		"part": "controller.animation.rysii_pod_bolt.particles",
+		"moving": "controller.animation.rysii_pod_bolt.movement",
+		"close": "animation.rysii_pod_bolt.close",
+		"fog_part": "animation.rysii_pod_bolt.fog",
+		"spawn":"controller.animation.rysii_pod_bolt.spawn"
+      },
+      "scripts": {
+		  "initialize": [
+	  "v.init = 0;"
+    ],
+        "animate": [
+          "move",
+		  "close",
+		  "part",
+		  "spawn"
+        ],
+		"should_update_bones_and_effects_offscreen": true
+      },
+      "render_controllers": [ "controller.render.orb" ]
+    }
+  }
+}

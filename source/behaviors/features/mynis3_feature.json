@@ -1,0 +1,40 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "zalcyan:mynis3_feature"
+		},
+
+		"places_block": "zalcyan:mynis3",
+
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false,
+		"may_replace": [
+			{
+				"name": "minecraft:dirt"
+			},
+			{
+				"name": "minecraft:grass"
+			},
+			{
+				"name": "minecraft:gravel"
+			},
+			{
+				"name": "minecraft:podzol"
+			},
+			{
+				"name": "minecraft:sand"
+			},
+			{
+				"name": "minecraft:hardened_clay"
+			},
+			{
+				"name": "minecraft:stained_hardened_clay"
+			},
+			{
+				"name": "minecraft:sandstone"
+			}
+		]
+	}
+}

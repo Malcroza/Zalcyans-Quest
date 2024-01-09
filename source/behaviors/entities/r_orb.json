@@ -1,4 +1,4 @@
-//bridge-file-version: #38
+//bridge-file-version: #43
 {
 	"format_version": "1.13.0",
 	"minecraft:entity": {
@@ -8,6 +8,13 @@
 			"is_summonable": true,
 			"is_experimental": true,
 			"runtime_identifier": "minecraft:snowball",
+			"properties":{
+			"zalcyan:invis": { 
+				"type": "bool", 
+				 "default": false,
+				"client_sync": true 
+				}				
+			 },
 			"scripts": {
 				"animate": [
 					"bridge_execute_commands"
@@ -37,64 +44,106 @@
 					}
 				}
 			},
-			"zalcyan:marlar_r_orb": {
+			"zalcyan:player_r_orb_standing": {
 				"minecraft:projectile": {
-					"power": 1.1,
+					"power": 2.2,
 					"gravity": 0,
 					"angle_offset": 0,
 					"inertia": 1,
 					"liquid_inertia": 1,
 					"should_bounce": false,
 					"offset": [
-						0,
-						1.2,
-						0
+						-0.32,
+						-0.15,
+						0.9
 					],
 					"multiple_targets": false,
-					"shoot_sound": "sound.lazar.shoot",
-					"hit_sound": "sound.lazar.hit",
 					"on_hit": {
 						"impact_damage": {
-							"damage": 16,
+							"damage": 5,
 							"knockback": true,
-							"semi_random_diff_damage": false,
-							"destroy_on_hit": true
-						}
-					},
-					"shoot_target": true
-				}
-			},
-			"zalcyan:player_r_orb": {
-				"minecraft:projectile": {
-					"power": 1.1,
-					"gravity": 0,
-					"angle_offset": 0,
-					"inertia": 1,
-					"liquid_inertia": 1,
-					"multiple_targets": true,
-					"should_bounce": false,
-					"offset": [
-						0,
-						0,
-						0
-					],
-					"hit_sound": "sound.lazar.hit",
-					"on_hit": {
-						"impact_damage": {
-							"damage": 22,
-							"knockback": true,
-							"semi_random_diff_damage": false,
-							"destroy_on_hit": false
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
 						},
 						"definition_event": {
 							"event_trigger": {
-								"event": "hit",
+								"event": "particle",
 								"target": "self"
-							},
-							"affect_projectile": true
+							}
 						}
 					},
-					"shoot_target": true
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"zalcyan:player_r_orb_sneaking": {
+				"minecraft:projectile": {
+					"power": 2.2,
+					"gravity": 0,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"should_bounce": false,
+					"offset": [
+						0,
+						-0.25,
+						0.4
+					],
+					"multiple_targets": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 7,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"zalcyan:marlar_r_orb": {
+				"minecraft:projectile": {
+					"power": 2.2,
+					"gravity": 0,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"multiple_targets": false,
+					"should_bounce": false,
+					"offset": [
+						-0.27,
+						1.25,
+						0
+					],
+					"on_hit": {
+						"impact_damage": {
+							"damage": 7,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
 				}
 			},
 			"bridge:execute_command_id_1": {
@@ -153,13 +202,43 @@
 				"sequence": [
 					{
 						"filters": {
-							"test": "is_family",
-							"subject": "other",
-							"value": "player"
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": true
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
 						},
 						"add": {
 							"component_groups": [
-								"zalcyan:player_r_orb"
+								"zalcyan:player_r_orb_sneaking"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": false
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:player_r_orb_standing"
 							]
 						}
 					},
@@ -177,12 +256,15 @@
 					}
 				]
 			},
-			"hit": {
+			"particle": {
 				"add": {
 					"component_groups": [
 						"bridge:execute_command_id_1"
 					]
-				}
+				},
+					"set_property": { 
+					"zalcyan:invis": true
+					}
 			},
 			"bridge:remove_command_id_1": {
 				"add": {

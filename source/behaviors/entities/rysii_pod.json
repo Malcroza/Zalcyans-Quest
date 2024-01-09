@@ -1,0 +1,371 @@
+//bridge-file-version: #27
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:rysii_pod",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"rysii_pod_fly",
+					"rysii_pod_fly_stop",
+					"rysii_pod_sound_c"
+				]
+			},
+			"animations": {
+				"rysii_pod_fly": "controller.animation.rysii_pod_fly",
+				"rysii_pod_fly_stop": "controller.animation.rysii_pod_fly_stop",
+				"rysii_pod_sound_c": "controller.animation.rysii_pod.sound",
+				"rysii_pod_sound": "animation.rysii_pod.sound"
+			}
+		},
+		"component_groups": {
+			"minecraft:air": {
+				"minecraft:movement": {
+					"value": 5,
+					"max": 5
+				}
+			},
+			"minecraft:ground": {
+				"minecraft:movement": {
+					"value": 0,
+					"max": 0
+				}
+			},
+			"rysii_pilot_riding": {
+				"minecraft:behavior.circle_around_anchor": {
+					"priority": 3,
+					"radius_change": 1,
+					"radius_adjustment_chance": 0.004,
+					"height_adjustment_chance": 0.002857,
+					"goal_radius": 1,
+					"angle_change": 25,
+					"radius_range": [
+						16,
+						32
+					],
+					"height_offset_range": [
+						5,
+						8
+					],
+					"height_above_target_range": [
+						0,
+						1
+					],
+					"speed_multiplier": 1
+				},
+				"minecraft:environment_sensor": {
+					"triggers": {
+						"0": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"operator": "=",
+										"value": 0
+									}
+								]
+							}
+						},
+						"event": "no_rysii_pilot_rider",
+						"target": "self"
+					}
+				},
+				"minecraft:physics": {
+					"has_gravity": false
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 0,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									}
+								]
+							},
+							"max_dist": 64,
+							"must_see": false
+						}
+					]
+				},
+				"minecraft:behavior.random_fly": {
+					"priority": 1,
+					"speed_multiplier": 0.5,
+					"y_offset": 10,
+					"can_land_on_trees": false,
+					"y_dist": 2,
+					"xz_dist": 5
+				},
+				"minecraft:behavior.avoid_mob_type": {
+					"priority": 0,
+					"max_dist": 5,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "rysii_pod"
+									}
+								]
+							}
+						}
+					],
+					"remove_target": false,
+					"ignore_visibility": true
+				}
+			},
+			"shoot": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"min_wait_time": 0,
+							"max_wait_time": 0,
+							"spawn_entity": "zalcyan:z_orb",
+							"single_use": true,
+							"num_to_spawn": 1,
+							"spawn_method": "born"
+						}
+					]
+				}
+			},
+			"is_dead": {
+				"minecraft:transformation": {
+					"into": "zalcyan:neo_pod_explosion",
+					"delay": {
+						"value": 0
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"on_environment": {
+							"filters": {
+								"any_of": [
+									{
+										"test": "on_ground",
+										"subject": "self",
+										"operator": "=",
+										"value": true
+									}
+								]
+							},
+							"event": "minecraft:ground"
+						}
+					},
+					{
+						"on_environment": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "on_ground",
+										"subject": "self",
+										"operator": "=",
+										"value": false
+									}
+								]
+							},
+							"event": "minecraft:air"
+						}
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 3,
+				"height": 3
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:can_power_jump": {},
+			"minecraft:jump.static": {},
+			"minecraft:horse.jump_strength": {
+				"value": {
+					"range_min": 0.5,
+					"range_max": 1
+				}
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"can_float": true
+			},
+			"minecraft:rideable": {
+				"crouching_skip_interact": true,
+				"seat_count": 1,
+				"family_types": [
+					"player",
+					"rysii"
+				],
+				"interact_text": "Ride",
+				"seats": [
+					{
+						"position": [
+							0,
+							0.9,
+							0
+						]
+					}
+				],
+				"rider_can_interact": true
+			},
+			"minecraft:input_ground_controlled": {},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:type_family": {
+				"family": [
+					"rysii_pod",
+					"rysii_pilot",
+					"ship",
+					"pod"
+				]
+			},
+			"minecraft:health": {
+				"value": 60,
+				"max": 60
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_water": true
+			},
+			"minecraft:flying_speed": {
+				"value": 9
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "fall",
+					"deals_damage": false
+				}
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "shoot",
+							"filters": {
+								"all_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"operator": "==",
+										"value": 1
+									}
+								]
+							}
+						},
+						"interact_text": "Fire",
+						"swing": true
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"event": "event_spawn_dead",
+							"target": "self",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_damage",
+										"value": "fatal"
+									}
+								]
+							}
+						}
+					},
+					{
+						"cause": "fall",
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:air": {
+				"add": {
+					"component_groups": [
+						"minecraft:air"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"minecraft:ground"
+					]
+				}
+			},
+			"minecraft:ground": {
+				"add": {
+					"component_groups": [
+						"minecraft:ground"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"minecraft:air"
+					]
+				}
+			},
+			"rysii_pilot_rider": {
+				"add": {
+					"component_groups": [
+						"rysii_pilot_riding"
+					]
+				}
+			},
+			"no_rysii_pilot_rider": {
+				"remove": {
+					"component_groups": [
+						"rysii_pilot_riding"
+					]
+				}
+			},
+			"shoot": {
+				"add": {
+					"component_groups": [
+						"shoot"
+					]
+				}
+			},
+			"event_spawn_dead": {
+				"add": {
+					"component_groups": [
+						"is_dead"
+					]
+				}
+			}
+		}
+	}
+}

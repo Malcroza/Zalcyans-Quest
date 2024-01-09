@@ -25,11 +25,11 @@
 				"skree_summon": "zalcyan:skreepog_summon"
 			},
 			"sound_effects": {
-				"skree_summon_sound": "mob.roar"
+				"skree_summon_sound": "mob.skreepog.sum"
 			},
 			"spawn_egg": {
-				"base_color": "#8a8185",
-				"overlay_color": "#fc0362"
+				"base_color": "#71e368",
+				"overlay_color": "#2ca881"
 			},
 			"render_controllers": [
 				"controller.render.marlar_elite_hologram"

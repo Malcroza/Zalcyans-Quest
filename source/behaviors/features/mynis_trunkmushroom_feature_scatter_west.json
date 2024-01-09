@@ -6,7 +6,6 @@
 			"identifier": "zalcyan:mynis_trunkmushroom_feature_scatter_west"
 		},
 		"iterations": 14,
-		"coordinate_eval_order": "zyx",
 		"x": {
 			"extent": [
 				-8,

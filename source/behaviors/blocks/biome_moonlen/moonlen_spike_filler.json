@@ -1,0 +1,52 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:moonlen_spike_filler",
+            "is_experimental": false,
+            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#1e2333",
+            "minecraft:light_dampening": 15,
+            "minecraft:light_emission": 0,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.5
+            },
+            "minecraft:on_placed": {
+                "event": "rewrite",
+                "target": "self"
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:moonlen_spike_body",
+                            "zalcyan:moonlen_spike1",
+                            "zalcyan:moonlen_spike_filler"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            }
+        },
+        "events": {
+            "rewrite": {
+                "run_command": {
+                    "command": [
+                        "setblock ~ ~ ~ zalcyan:moonlen_spike_body"
+                    ]
+                }
+            }
+        }
+    }
+}

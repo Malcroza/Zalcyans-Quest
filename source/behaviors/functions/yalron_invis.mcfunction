@@ -1,0 +1,1 @@
+effect @a[hasitem=[{item=zalcyan:yalron_helmet,location=slot.armor.head},{item=zalcyan:yalron_chestplate,location=slot.armor.chest},{item=zalcyan:yalron_leggings,location=slot.armor.legs},{item=zalcyan:yalron_boots,location=slot.armor.feet}]] invisibility 1 1 true

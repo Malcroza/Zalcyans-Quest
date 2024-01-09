@@ -1,0 +1,261 @@
+
+
+{
+	"format_version": "1.20.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:friss_gate",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.gate"
+			},
+			"states": {
+				"zalcyan:direction_facing": [
+					0, 1, 2, 3
+				],
+				"zalcyan:is_open": [
+					0, 1
+				]
+			}
+		},
+		"components": {
+			"minecraft:map_color": "#2eaeee",
+			"minecraft:geometry": { 
+				"identifier": "geometry.zal_gate", 
+				"bone_visibility": { 
+					"horizontal_open": false ,
+					"horizontal_closed": false ,
+					"vertical_open": false ,
+					"vertical_closed": false 
+				} 
+			},
+			"minecraft:on_player_placing": {
+				"event": "zalcyan:set_direction"
+			},
+			"minecraft:flammable": {
+				"destroy_chance_modifier": 45,
+				"catch_chance_modifier": 80
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.5
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "friss_planks",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:loot": "loot_tables/blocks/friss/friss_gate.json",	
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:breathability": "air",
+			"tag:wood": {}
+		},
+		"permutations": [
+			{
+				"condition": "(q.block_state('zalcyan:direction_facing') == 0 || q.block_state('zalcyan:direction_facing') == 1) && q.block_state('zalcyan:is_open') == false",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "zalcyan:open_gate"
+					},
+					"minecraft:geometry": { 
+						"identifier": "geometry.zal_gate", 
+						"bone_visibility": { 
+							"horizontal_open": false ,
+							"horizontal_closed": true ,
+							"vertical_open": false ,
+							"vertical_closed": false 
+						} 
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-2
+						],
+						"size": [
+							16,
+							16,
+							4
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-2
+						],
+						"size": [
+							16,
+							16,
+							4
+						]
+					}
+				}
+			},
+			{
+				"condition": "(q.block_state('zalcyan:direction_facing') == 0 || q.block_state('zalcyan:direction_facing') == 1) && q.block_state('zalcyan:is_open') == true",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "zalcyan:close_gate"
+					},
+					"minecraft:geometry": { 
+						"identifier": "geometry.zal_gate", 
+						"bone_visibility": { 
+							"horizontal_open": true ,
+							"horizontal_closed": false ,
+							"vertical_open": false ,
+							"vertical_closed": false 
+						} 
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-2
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-2
+						],
+						"size": [
+							16,
+							16,
+							4
+						]
+					}
+				}
+			},
+			{
+				"condition": "(q.block_state('zalcyan:direction_facing') == 2 || q.block_state('zalcyan:direction_facing') == 3) && q.block_state('zalcyan:is_open') == false",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "zalcyan:open_gate"
+					},
+					"minecraft:geometry": { 
+						"identifier": "geometry.zal_gate", 
+						"bone_visibility": { 
+							"horizontal_open": false ,
+							"horizontal_closed": false ,
+							"vertical_open": false ,
+							"vertical_closed": true 
+						} 
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-2,
+							0,
+							-8
+						],
+						"size": [
+							4,
+							16,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-2,
+							0,
+							-8
+						],
+						"size": [
+							4,
+							16,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "(q.block_state('zalcyan:direction_facing') == 2 || q.block_state('zalcyan:direction_facing') == 3) && q.block_state('zalcyan:is_open') == true",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "zalcyan:close_gate"
+					},
+					"minecraft:geometry": { 
+						"identifier": "geometry.zal_gate", 
+						"bone_visibility": { 
+							"horizontal_open": false ,
+							"horizontal_closed": false ,
+							"vertical_open": true ,
+							"vertical_closed": false 
+						} 
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-2,
+							0,
+							-8
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-2,
+							0,
+							-8
+						],
+						"size": [
+							4,
+							16,
+							16
+						]
+					}
+				}
+			}
+		],
+		"events": {
+			"zalcyan:set_direction": {
+				"sequence": [
+					{
+						"set_block_state": {
+							"zalcyan:direction_facing": "query.cardinal_facing_2d-2"
+						}
+					}
+				]
+			},
+			"zalcyan:close_gate": {
+				"sequence": [{
+						"run_command": {
+							"command": [
+								"playsound random.door_close @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"set_block_state": {
+							"zalcyan:is_open": 0
+						}
+					}
+				]
+			},
+			"zalcyan:open_gate": {
+				"sequence": [{
+						"run_command": {
+							"command": [
+								"playsound random.door_open @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"set_block_state": {
+							"zalcyan:is_open": 1
+						}
+					}
+				]
+			}
+		}
+	}
+}

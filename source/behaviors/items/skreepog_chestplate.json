@@ -1,14 +1,14 @@
 {
-  "format_version": "1.16.100",
+  "format_version": "1.20.40",
   "minecraft:item": {
     "description": {
       "identifier": "zalcyan:skreepog_chestplate",
-      "category": "equipment"
+      "menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.chestplate"
+				}
     },
     "components": {
-      "minecraft:creative_category": {
-				"parent": "itemGroup.name.chestplate"
-			},
 			"minecraft:icon": {
 				"texture": "skreepog_chestplate",
 				"frame": 0
@@ -32,12 +32,9 @@
           "zalcyan:skreepog_chestplate"
         ]
       },
-	  "minecraft:damage": 2,
-      "minecraft:armor": {
-        "protection": 4
-      },
       "minecraft:wearable": {
-        "slot": "slot.armor.chest"
+        "slot": "slot.armor.chest",
+		 "protection": 4
       }
     }
   }

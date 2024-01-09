@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:q_orb",
+      "materials": {
+        "default": "orb"
+      },
+	  "particle_effects": {
+	"lazar_sparks": "zalcyan:q_orb_sparks",
+	"q_orb_fog": "zalcyan:q_orb_fog",
+	"blue_beam": "zalcyan:blue_beam"
+	
+	},
+      "textures": {
+        "default": "textures/entity/q_orb"
+      },
+      "geometry": {
+        "default": "geometry.q_orb"
+      },
+      "animations": {
+		"position": "animation.q_orb.position",
+		"part_two": "animation.q_orb.part2",
+		"y_sparks": "animation.q_orb.sparks",
+		"trail": "controller.animation.q_orb.particles"
+      },
+      "scripts": {
+        "animate": [
+		  "position",
+		  "part_two",
+		  "trail",
+		  "y_sparks"
+        ]
+      },
+      "render_controllers": [ "controller.render.orb" ]
+    }
+  }
+}

@@ -1,132 +1,9 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.marlar.attack.rotations": {
-			"loop": true,
-			"bones": {
-				"body": {
-					"rotation": [0, "(math.sin(math.sqrt(variable.attack_time) * 360) * 11.46) - this", 0]
-				},
-				"leftarm": {
-					"rotation": ["(math.sin(math.sqrt(variable.attack_time) * 360) * 11.46)", 0, 0]
-				},
-				"rightarm": {
-					"rotation": ["math.sin(1.0 - math.pow(1.0 - variable.attack_time, 3.0) * 180.0) * (variable.is_brandishing_spear ? -1.0 : 1.0 )", "variable.is_brandishing_spear ? 0.0 : (math.sin(math.sqrt(variable.attack_time) * 360) * 11.46) * 2.0", 0]
-				}
-			}
-		},
-		"animation.marlar.big_head": {
-			"loop": true,
-			"bones": {
-				"hat": {
-					"scale": 1.4
-				},
-				"head": {
-					"scale": 1.4
-				}
-			}
-		},
-		"animation.marlar.base_pose": {
-			"loop": true,
-			"bones": {
-				"head": {
-					"rotation": [0, "-this", 0]
-				},
-				"leftArm": {
-					"rotation": ["-this", "-this", "-this"],
-					"position": ["5.0 - this", 0, "-this"]
-				},
-				"leftLeg": {
-					"rotation": ["-this", "-this", 0]
-				},
-				"rightArm": {
-					"rotation": ["-this", "-this", "-this"],
-					"position": ["-5.0 - this", 0, "-this"]
-				},
-				"rightLeg": {
-					"rotation": ["-this", "-this", 0]
-				},
-				"waist": {
-					"rotation": ["-this", "-this", "-this"]
-				}
-			}
-		},
-		"animation.marlar.bob": {
-			"loop": true,
-			"bones": {
-				"leftarm": {
-					"rotation": [0, 0, "-(math.cos(query.life_time * 103.2) * 2.865) - 2.865"]
-				},
-				"rightarm": {
-					"rotation": [0, 0, "(math.cos(query.life_time * 103.2) * 2.865) + 2.865"]
-				}
-			}
-		},
-		"animation.marlar.bow_and_arrow": {
-			"loop": true,
-			"bones": {
-				"leftArm": {
-					"rotation": ["query.target_x_rotation - 8.0 - math.sin(query.life_time * 76.8) * 2.865 - this", "query.target_y_rotation + 18.65", "-(math.cos(query.life_time * 103.2) * 2.865) - 2.865"]
-				},
-				"rightArm": {
-					"rotation": ["query.target_x_rotation - 83.0 + math.sin(query.life_time * 76.8) * 2.865 - this", "query.target_y_rotation - 5.73", "(math.cos(query.life_time * 103.2) * 2.865) + 2.865"]
-				},
-				"body": {
-					"rotation": [0, 0, 0]
-				}
-			}
-		},
-		"animation.marlar.brandish_spear": {
-			"loop": true,
-			"bones": {
-				"rightarm": {
-					"rotation": ["this * -0.5 - 157.5 - 22.5 * variable.charge_amount", "-this - (math.sin(math.sqrt(variable.attack_time) * 360) * 11.46)", 0]
-				}
-			}
-		},
-		"animation.marlar.charging": {
-			"loop": true,
-			"bones": {
-				"rightarm": {
-					"rotation": ["22.5 * variable.charge_amount - this", "-this", 0]
-				}
-			}
-		},
-		"animation.marlar.damage_nearby_mobs": {
-			"loop": true,
-			"override_previous_animation": true,
-			"bones": {
-				"leftarm": {
-					"rotation": [-45, 0, 0]
-				},
-				"leftleg": {
-					"rotation": [45, 0, 0]
-				},
-				"rightarm": {
-					"rotation": [45, 0, 0]
-				},
-				"rightleg": {
-					"rotation": [-45, 0, 0]
-				}
-			}
-		},
-		"animation.marlar.holding": {
-			"loop": true,
-			"bones": {
-				"leftarm": {
-					"rotation": ["variable.is_holding_left ? (-this * 0.5 - 18.0) : 0.0", 0, 0]
-				},
-				"rightarm": {
-					"rotation": ["variable.is_holding_right ? (-this * 0.5 - 18.0) : 0.0", 0, 0]
-				}
-			}
-		},
 		"animation.marlar.look_at_target.default": {
 			"loop": true,
 			"bones": {
-				"hat": {
-					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
-				},
 				"head": {
 					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
 				}
@@ -135,9 +12,6 @@
 		"animation.marlar.look_at_target.gliding": {
 			"loop": true,
 			"bones": {
-				"hat": {
-					"rotation": [-45, "query.target_y_rotation", 0]
-				},
 				"head": {
 					"rotation": [-45, "query.target_y_rotation", 0]
 				}
@@ -146,28 +20,8 @@
 		"animation.marlar.look_at_target.swimming": {
 			"loop": true,
 			"bones": {
-				"hat": {
-					"rotation": ["math.lerp(query.target_x_rotation, -45.0, variable.swim_amount)", "query.target_y_rotation", 0]
-				},
 				"head": {
 					"rotation": ["math.lerp(query.target_x_rotation, -45.0, variable.swim_amount)", "query.target_y_rotation", 0]
-				}
-			}
-		},
-		"animation.marlar.move": {
-			"loop": true,
-			"bones": {
-				"leftarm": {
-					"rotation": ["variable.tcos0", 0, 0]
-				},
-				"leftleg": {
-					"rotation": ["variable.tcos0 * -1.4", 0, 0]
-				},
-				"rightarm": {
-					"rotation": ["-variable.tcos0", 0, 0]
-				},
-				"rightleg": {
-					"rotation": ["variable.tcos0 * 1.4", 0, 0]
 				}
 			}
 		},
@@ -186,91 +40,356 @@
 			"loop": true,
 			"override_previous_animation": true,
 			"bones": {
-				"leftleg": {
+				"leftLeg": {
 					"rotation": [-72, -18, 0]
 				},
-				"rightleg": {
+				"rightLeg": {
 					"rotation": [-72, 18, 0]
+				},
+				"waist": {
+					"position": [0, -10, 0]
 				}
 			}
 		},
-		"animation.marlar.sneaking": {
+		"animation.marlar.bob": {
 			"loop": true,
 			"bones": {
+				"leftarm": {
+					"rotation": [0, 0, "-(math.cos(query.life_time * 103.2) * 2.865) - 2.865"]
+				},
+				"rightarm": {
+					"rotation": [0, 0, "(math.cos(query.life_time * 103.2) * 2.865) + 2.865"]
+				}
+			}
+		},
+		"animation.marlar.bow_and_arrow": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [
+						"query.target_x_rotation - 8.0 - math.sin(query.life_time * 76.8) * 2.865",
+						"query.target_y_rotation + 18.65",
+						"-(math.cos(query.life_time * 103.2) * 2.865) - 2.865"
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						"query.target_x_rotation - 83.0 + math.sin(query.life_time * 76.8) * 2.865",
+						"query.target_y_rotation - 5.73",
+						"(math.cos(query.life_time * 103.2) * 2.865) + 2.865"
+					]
+				},
 				"body": {
-					"rotation": ["0.5 - this", 0, 0]
-				},
-				"head": {
-					"position": [0, 1, 0]
-				},
-				"leftarm": {
-					"rotation": [72, 0, 0]
-				},
-				"leftleg": {
-					"position": [0, -3, 4]
-				},
-				"rightarm": {
-					"rotation": [72, 0, 0]
-				},
-				"rightleg": {
-					"position": [0, -3, 4]
+					"rotation": [0, 0, 0]
 				}
 			}
 		},
-		"animation.marlar.swimming": {
-			"animation_length": 1.3,
+		"animation.marlar.holding": {
 			"loop": true,
 			"bones": {
-				"leftarm": {
+				"leftArm": {
+					"rotation": ["variable.is_holding_left ? (0.5 - 18.0) : 0.0", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["variable.is_holding_right ? (0.5 - 18.0) : 0.0", 0, 0]
+				}
+			}
+		},
+		"animation.marlar.move": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["variable.is_holding_left ? 0 : Math.cos(query.modified_distance_moved * 38.17)* 57.3", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["Math.cos(query.modified_distance_moved * 38.17)* 57.3 * -1.4", 0, 0],
+					"position": [0, "Math.cos(query.modified_distance_moved * 38.17)* 0.8", "-Math.sin((query.modified_distance_moved+1) * 38.17)* 1.4"]
+				},
+				"rightArm": {
+					"rotation": ["variable.is_holding_right ? 0 : -Math.cos(query.modified_distance_moved * 38.17)* 57.3", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["Math.cos(query.modified_distance_moved * 38.17)* 57.3 * 1.4", 0, 0],
+					"position": [0, "-Math.cos(query.modified_distance_moved * 38.17)* 0.8", "Math.sin((query.modified_distance_moved+1) * 38.17)* 1.4"]
+				}
+			}
+		},
+		"animation.marlar.attack": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [
+						"-(-68.75 * math.sin(variable.attack_time * 180.0) + 22.92 * (math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 6.3))",
+						"5.73 - math.sin(variable.attack_time * 180.0) * 4.38",
+						0
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						"-(-68.75 * math.sin(variable.attack_time * 180.0) + 22.92 * (math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 6.3))",
+						"5.73 - math.sin(variable.attack_time * 180.0) * 4.38",
+						"5.73 - math.sin(variable.attack_time * 180.0) * 8.38"
+					]
+				}
+			}
+		},
+		"animation.marlar.attack2": {
+			"animation_length": 0.72,
+			"bones": {
+				"leftArm": {
 					"rotation": {
-						"0.7": {
-							"post": ["math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.left_arm_swim_amount)", "math.lerp(this, 180.0, variable.left_arm_swim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.left_arm_swim_amount)"],
-							"pre": ["math.lerp(this, 0.0, variable.left_arm_swim_amount)", "math.lerp(this, 180.0, variable.left_arm_swim_amount)", "math.lerp(this, 180.0 - 0.01877 * (-65.0 * math.mod(query.modified_distance_moved, 26.0) + math.mod(query.modified_distance_moved, 26.0) * math.mod(query.modified_distance_moved, 26.0)), variable.left_arm_swim_amount)"]
-						},
-						"1.1": ["math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.left_arm_swim_amount)", "math.lerp(this, 180.0, variable.left_arm_swim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.left_arm_swim_amount)"],
-						"1.3": {
-							"post": ["math.lerp(this, 90.0 - (22.5 * math.mod(query.modified_distance_moved, 26.0)), variable.left_arm_swim_amount)", "math.lerp(this, 180.0, variable.left_arm_swim_amount)", "math.lerp(this, 180.0, variable.left_arm_swim_amount)"],
-							"pre": ["math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.left_arm_swim_amount)", "math.lerp(this, 180.0, variable.left_arm_swim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.left_arm_swim_amount)"]
-						}
+						"0.0": [0, 0, 0],
+						"0.12": [-37.45372, 27.03402, 30.68206],
+						"0.48": [-20.94102, -40.78947, -59.63881],
+						"0.56": [3.74623, -22.52984, -67.45438],
+						"0.64": [-2.5, 0, 10],
+						"0.72": [0, 0, 0]
 					}
 				},
-				"leftleg": {
-					"rotation": ["math.lerp(this, math.cos(query.modified_distance_moved * 19.5 + 180.0) * 17.2, variable.left_arm_swim_amount)", 0, 0]
-				},
-				"rightarm": {
+				"rightArm": {
 					"rotation": {
-						"0.7": {
-							"post": ["math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.right_arm_swim_amount)", "math.lerp(this, 180.0, variable.right_arm_swim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.right_arm_swim_amount)"],
-							"pre": ["math.lerp(this, 0.0, variable.right_arm_swim_amount)", "math.lerp(this, 180.0, variable.right_arm_swim_amount)", "math.lerp(this, -0.1019 * (-65.0 * math.mod(query.modified_distance_moved, 26.0) + math.mod(query.modified_distance_moved, 26.0) * math.mod(query.modified_distance_moved, 26.0)), variable.right_arm_swim_amount)"]
-						},
-						"1.1": ["math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.right_arm_swim_amount)", "math.lerp(this, 180.0, variable.right_arm_swim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.right_arm_swim_amount)"],
-						"1.3": {
-							"post": ["math.lerp(this, 90.0 - (22.5 * math.mod(query.modified_distance_moved, 26.0)), variable.right_arm_swim_amount)", "math.lerp(this, 180.0, variable.right_arm_swim_amount)", "math.lerp(this, 180.0, variable.right_arm_swim_amount)"],
-							"pre": ["math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.right_arm_swim_amount)", "math.lerp(this, 180.0, variable.right_arm_swim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.right_arm_swim_amount)"]
-						}
+						"0.0": [0, 0, 0],
+						"0.12": [46.63503, 5.82587, 17.99154],
+						"0.16": [-3.36472, -6.52186, 54.19738],
+						"0.24": [-93.62808, -16.40151, 69.2156],
+						"0.36": [-89.13554, -16.76559, 53.56517],
+						"0.52": [-81.63554, -16.76559, 53.56517],
+						"0.72": [0, 0, 0]
 					}
 				},
-				"rightleg": {
-					"rotation": ["math.lerp(this, math.cos(query.modified_distance_moved * 19.5) * 17.2, variable.left_arm_swim_amount)", 0, 0]
-				}
-			}
-		},
-		"animation.marlar.use_item_progress": {
-			"loop": true,
-			"bones": {
-				"rightarm": {
-					"rotation": ["variable.use_item_startup_progress * -60.0 + variable.use_item_interval_progress * 11.25", "variable.use_item_startup_progress * -22.5 + variable.use_item_interval_progress * 11.25", "variable.use_item_startup_progress * -5.625 + variable.use_item_interval_progress * 11.25"]
-				}
-			}
-		},
-		"animation.skeleton.attack": {
-			"loop": true,
-			"bones": {
-				"leftarm": {
-					"rotation": ["-68.75 * math.sin(variable.attack_time * 180.0) + 22.92 * (math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3)", "5.73 - math.sin(variable.attack_time * 180.0) * 34.38 - this", "-this"]
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.12": [0, 37.5, 0],
+						"0.2": [0, 37.5, 0],
+						"0.4": [0, -27.5, 0],
+						"0.72": [0, 0, 0]
+					}
 				},
-				"rightarm": {
-					"rotation": ["-68.75 * math.sin(variable.attack_time * 180.0) + 22.92 * (math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3)", "-5.73 + math.sin(variable.attack_time * 180.0) * 34.38 - this", "-this"]
+				"rightItem": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.16": [0, 0, 0],
+						"0.24": [42.5, 0, 0],
+						"0.36": [0, 0, 0]
+					}
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": [0, 0, 17.5],
+						"0.24": [16.31833, 9.88476, 27.64251],
+						"0.52": [-43.75151, -10.75769, 36.64377],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.12": [0, -37.5, 0],
+						"0.4": [0, 27.5, 0],
+						"0.72": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.marlar.attack3": {
+			"animation_length": 0.72,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.16": [-46.06053, -35.6776, -91.3793],
+						"0.24": [-53.56624, -18.36007, -75.13189],
+						"0.4": [-147.22267, 20.18326, -106.90573],
+						"0.48": [-147.22267, 20.18326, -106.90573],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.16": [0, -30, 0],
+						"0.48": [0, 0, 0]
+					}
+				},
+				"rightItem": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.16": [0, 20, 0],
+						"0.32": [52.5, 20, 0],
+						"0.48": [0, 20, 0],
+						"0.72": [0, 0, 0]
+					},
+					"position": {
+						"0.16": [0, 0, 0],
+						"0.32": [-1, 0, -1],
+						"0.48": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2": [20, 0, -25],
+						"0.44": [-30.32301, 33.68824, -39.08028],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"body": {
+					"rotation": [0, 0, 0]
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.16": [0, 35, 0],
+						"0.48": [0, 0, 0]
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": [17.5, 0, 0],
+						"0.28": [16.93839, 4.46375, -14.33501],
+						"0.4": [-2.72898, 17.8684, -15.43916],
+						"0.56": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.08": [0, 2, 0],
+						"0.16": [0, 0, 1],
+						"0.56": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.marlar.attack4": {
+			"animation_length": 0.72,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.24": [-230.69577, 3.1622, -24.81197],
+						"0.32": [-230.69577, 3.1622, -24.81197],
+						"0.44": [-50.91581, -4.38459, -50.57236],
+						"0.52": [-39.6, -3.41, -39.33],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"rightItem": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.32": [0, 0, 0],
+						"0.4": [85, 0, 0],
+						"0.52": [85, 0, 0],
+						"0.72": [0, 0, 0]
+					},
+					"position": {
+						"0.32": [0, 0, 0],
+						"0.4": [-1, 0, -2],
+						"0.52": [-1, 0, -2],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.32": [-15, 10, 0],
+						"0.52": [18.49267, -20.98929, -9.96529],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.32": [-21.26765, -7.52076, -18.58597],
+						"0.52": [51.21358, 20.56425, -39.83866],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.32": [17.5, 0, 0],
+						"0.52": [-16.51794, 18.77712, 2.45582],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.32": [-12.5, 0, 0],
+						"0.56": [40, 0, 0],
+						"0.72": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.marlar.attack5": {
+			"animation_length": 0.72,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": [37.07723, -6.06809, 22.96341],
+						"0.2": [51.56429, 10.27786, 73.06326],
+						"0.36": [-85.81025, -6.75469, 77.09784],
+						"0.6": [-34.44, -6.75, 77.1],
+						"0.72": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 0, 3],
+						"0.4": [0, -1, -4],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 0, -17.5],
+						"0.44": [45, 0, -17.5],
+						"0.72": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 0, -1],
+						"0.4": [0, 0, 2],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 17.5, 0],
+						"0.32": [5, 6, 0],
+						"0.4": [0, -40, 0],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2": [10, 0, 0],
+						"0.4": [26.04835, -19.03771, -6.24605],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2": [-10, 0, 0],
+						"0.24": [-2.5, 0, 0],
+						"0.4": [-1.16524, 40.05085, 1.16524],
+						"0.72": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.12": [0, 3, -2],
+						"0.2": [0, 0, -3],
+						"0.24": [0, 0, -3],
+						"0.4": [-1, 0, -2],
+						"0.72": [0, 0, 0]
+					}
 				}
 			}
 		}

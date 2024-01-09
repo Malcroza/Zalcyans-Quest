@@ -1,8 +1,0 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "lor_geode",
-		"metalness_emissive_roughness": "lor_geode_mer",
-		"heightmap": "lor_geode_heightmap"
-	}
-}

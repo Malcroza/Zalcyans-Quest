@@ -1,0 +1,26 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "zalcyan:zighet_hive_aggragate"
+		},
+
+		"features": [
+			"zalcyan:zighet_hive_scatter",
+			"zalcyan:zighet_hive_scatter2",
+			"zalcyan:zighet_hive_scatter3",
+			"zalcyan:zighet_hive_scatter4",
+			"zalcyan:zighet_hive_scatter5",
+			"zalcyan:zighet_bone_scatter",
+			"zalcyan:zighet_tunnel_scatter",
+			"zalcyan:zighet_stair_scatter",
+			"zalcyan:zighet_egg_scatter",
+			"zalcyan:zighet_vine_feature_scatter",
+			"zalcyan:zighet_paper_var_weighted_scatter",
+			"zalcyan:zighet_comb_var_weighted_scatter",
+			"zalcyan:zighet_loot_box_scatter"
+		],
+		"early_out": "none"
+	}
+}

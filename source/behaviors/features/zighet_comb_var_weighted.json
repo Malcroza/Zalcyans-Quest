@@ -1,0 +1,15 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:zighet_comb_var_weighted"
+    },
+    "features": [
+      [ "zalcyan:zighet_comb1_feature", 1 ],
+      [ "zalcyan:zighet_comb2_feature", 2 ],
+      [ "zalcyan:zighet_comb3_feature", 1 ],
+      [ "zalcyan:zighet_comb4_feature", 4 ],
+      [ "zalcyan:zighet_comb5_feature", 4 ]
+    ]
+  }
+}

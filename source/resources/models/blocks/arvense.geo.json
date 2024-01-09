@@ -6,9 +6,9 @@
 				"identifier": "geometry.arvense",
 				"texture_width": 32,
 				"texture_height": 32,
-				"visible_bounds_width": 3,
-				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [0, 0.75, 0]
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1,
+				"visible_bounds_offset": [0, 0.5, 0]
 			},
 			"bones": [
 				{
@@ -54,8 +54,8 @@
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{
-							"origin": [-6, 3, -6],
-							"size": [12, 0, 12],
+							"origin": [-4.70711, 3.06163, -5.29558],
+							"size": [10, 0, 10],
 							"pivot": [0, 0, 0],
 							"rotation": [-5, -45, 0],
 							"uv": {
@@ -63,7 +63,7 @@
 								"east": {"uv": [0, 0], "uv_size": [14, 1]},
 								"south": {"uv": [0, 0], "uv_size": [14, 1]},
 								"west": {"uv": [0, 0], "uv_size": [14, 1]},
-								"up": {"uv": [32, 15], "uv_size": [-15, -15]},
+								"up": {"uv": [31, 14], "uv_size": [-13, -13]},
 								"down": {"uv": [0, 0], "uv_size": [0, 0]}
 							}
 						}
@@ -74,8 +74,8 @@
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{
-							"origin": [-6, 11, -5],
-							"size": [12, 0, 12],
+							"origin": [-4.41421, 10.87674, -4.09118],
+							"size": [9, 0, 9],
 							"pivot": [0, 0, 0],
 							"rotation": [5, -45, 0],
 							"uv": {
@@ -83,7 +83,7 @@
 								"east": {"uv": [0, 0], "uv_size": [14, 1]},
 								"south": {"uv": [0, 0], "uv_size": [14, 1]},
 								"west": {"uv": [0, 0], "uv_size": [14, 1]},
-								"up": {"uv": [32, 15], "uv_size": [-15, -15]},
+								"up": {"uv": [31, 14], "uv_size": [-13, -13]},
 								"down": {"uv": [0, 0], "uv_size": [0, 0]}
 							}
 						}

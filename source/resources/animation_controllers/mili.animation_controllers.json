@@ -43,7 +43,7 @@
 				},
 				"attacking": {
 					"animations": [
-						"attacking"
+						"attack1"
 					],
 					"transitions": [
 						{

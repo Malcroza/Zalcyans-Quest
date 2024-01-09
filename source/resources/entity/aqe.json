@@ -1,0 +1,63 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:aqe",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"aqe0": "textures/entity/aqe/aqe0",
+				"aqe1": "textures/entity/aqe/aqe1",
+				"aqe2": "textures/entity/aqe/aqe2",
+				"aqe3": "textures/entity/aqe/aqe3",
+				"aqe4": "textures/entity/aqe/aqe4",
+				"aqe5": "textures/entity/aqe/aqe5",
+				"aqe6": "textures/entity/aqe/aqe6",
+				"aqe7": "textures/entity/aqe/aqe7"
+			},
+			"geometry": {
+				"default": "geometry.aqe"
+			},
+			"animations": {
+				"walk": "animation.aqe.walk",
+				"run": "animation.aqe.run",
+				"idle": "animation.aqe.idle",
+				"attack0": "animation.aqe.punch1",
+				"attack1": "animation.aqe.punch1",
+				"move": "controller.animation.aqe.move",
+				"attack": "controller.animation.aqe.attack",
+				"look_at_target": "animation.aqe.look_at_target",
+				"has_target": "animation.aqe.has_target",
+				"riding.arms": "animation.humanoid.riding.arms.v1.0",
+				"riding.legs": "animation.humanoid.riding.legs.v1.0",
+				"riding": "controller.animation.humanoid.riding",
+				"sit": "animation.aqe.sit",
+				"stand": "animation.aqe.stand",
+				"nap": "controller.animation.aqe.nap",
+				"crouch": "animation.aqe.crouch"
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"attack",
+					"riding",
+					"nap"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"render_controllers": [
+				"controller.render.aqe"
+			],
+			"enable_attachables": true
+			,
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 12
+			}
+		}
+	}
+}

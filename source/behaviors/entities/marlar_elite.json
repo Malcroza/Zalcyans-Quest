@@ -9,6 +9,12 @@
 			"is_experimental": false
 		},
 		"component_groups": {
+			"minecraft:is_dead": {
+				"minecraft:transformation": {
+					"preserve_equipment": true,
+					"into": "zalcyan:marlar_elite_dead"
+				}
+			},
 			"marlar_angry": {
 				"minecraft:angry": {
 					"duration": 25,
@@ -48,6 +54,24 @@
 			}
 		},
 		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"event": "minecraft:event_spawn_dead",
+							"target": "self",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_damage",
+										"value": "fatal"
+									}
+								]
+							}
+						}
+					}
+				]
+			},
 			"minecraft:nameable": {},
 			"minecraft:movement": {
 				"value": 0.45
@@ -283,6 +307,13 @@
 			}
 		},
 		"events": {
+			"minecraft:event_spawn_dead": {
+				"add": {
+					"component_groups": [
+						"minecraft:is_dead"
+					]
+				}
+			},
 			"minecraft:on_calm": {
 				"remove": {
 					"component_groups": [

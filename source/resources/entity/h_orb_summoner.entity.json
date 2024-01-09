@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:h_orb_summoner",
+      "materials": {
+        "default": "orb"
+      },
+      "textures": {
+        "default": "textures/entity/h_orb_shooter"
+      },
+      "geometry": {
+        "default": "geometry.h_orb_summoner"
+      },
+      "animations": {
+        "move": "animation.h_orb_summoner.move"
+      },
+      "scripts": {
+        "animate": [
+		  "move"  
+        ]
+      },
+      "render_controllers": [ "controller.render.orb" ]
+    }
+  }
+}

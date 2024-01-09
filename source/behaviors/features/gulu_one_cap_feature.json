@@ -1,0 +1,16 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "zalcyan:gulu_one_cap_feature"
+		},
+
+		"features": [
+			["zalcyan:gulu_one_cap_feature_east_proxy", 1],
+			["zalcyan:gulu_one_cap_feature_north_proxy", 1],
+			["zalcyan:gulu_one_cap_feature_west_proxy", 1],
+			["zalcyan:gulu_one_cap_feature_south_proxy", 1]
+		]
+	}
+}

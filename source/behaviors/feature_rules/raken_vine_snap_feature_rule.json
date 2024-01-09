@@ -13,7 +13,7 @@
 						{
 							"test": "has_biome_tag",
 							"operator": "==",
-							"value": "raken"
+							"value": "swamp"
 						}
 					]
 				}
@@ -22,7 +22,6 @@
 		},
 		"distribution": {
 			"iterations": 50,
-			"coordinate_eval_order": "zyx",
 			"x": {
 				"distribution": "uniform",
 				"extent": [
@@ -33,8 +32,8 @@
 			"y": {
 				"distribution": "uniform",
 				"extent": [
-					27,
-					28
+					0,
+					50
 				]
 			},
 			"z": {

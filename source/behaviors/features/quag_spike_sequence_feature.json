@@ -1,0 +1,17 @@
+
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "zalcyan:quag_spike_sequence_feature"
+		},
+
+		"features": [
+			"zalcyan:quag_spike_feature_scatter1",
+			"zalcyan:quag_spike_feature_scatter2",
+			"zalcyan:quag_spike_feature_scatter3"
+		],
+		"early_out": "none"
+	}
+}

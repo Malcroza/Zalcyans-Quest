@@ -1,0 +1,179 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan3:bow",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.bows"
+				}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 2,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "h_orb_blaster"
+			},
+			"minecraft:chargeable":{
+			"movement_modifier": 1.1,
+			"on_complete": {
+			"event": "shoot",
+			"target": "self"
+			}
+			},
+			"minecraft:shooter": {
+				"ammunition": [
+					{
+						"item": "minecraft:stone",
+						"use_offhand": true,
+						"search_inventory": true,
+						"use_in_creative": true
+					}
+				],
+        "charge_on_draw": false,
+        "launch_power_scale": 1.0,
+        "max_draw_duration": 1.1,
+        "max_launch_power": 1.0,
+        "scale_power_by_draw_duration": true
+			},
+			"minecraft:durability": {
+				"max_durability": 75
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"zalcyan:lor_gem"
+						],
+						"repair_amount": 10
+					},
+					{
+						"items": [
+							"zalcyan3:bow"
+						],
+						"repair_amount": "query.remaining_durability"
+					},
+					{
+						"items": [
+							"zalcyan:lor_gem_broken"
+						],
+						"repair_amount": 2
+					}
+				]
+			},
+			"minecraft:display_name": {
+				"value": "§dCrystalline Suppresor \n §o§8Continuous press to shoot"
+			}
+		},
+		"events": {
+			"shoot": {
+				"sequence": [
+					{
+						"shoot": {
+							"projectile": "zalcyan:h_orb_summoner",
+							"launch_power": "math.random(0.1, 0.9)"
+						}
+					},
+					{
+						"shoot": {
+							"projectile": "zalcyan:h_orb_summoner",
+							"launch_power": "math.random(0.1, 0.9)"
+						}
+					},
+					{
+						"shoot": {
+							"projectile": "zalcyan:h_orb_summoner",
+							"launch_power": "math.random(0.1, 0.9)"
+						}
+					},
+					{
+						"shoot": {
+							"projectile": "zalcyan:h_orb_summoner",
+							"launch_power": "math.random(0.1, 0.9)"
+						}
+					},
+					{
+						"shoot": {
+							"projectile": "zalcyan:h_orb_summoner",
+							"launch_power": "math.random(0.1, 0.9)"
+						}
+					},
+					{
+						"randomize": [
+							{
+								"weight": 0.2,
+								"sequence": [
+									{
+										"run_command": {
+											"command": [
+												"playsound h_orb.shoot @s ~ ~ ~ 1.6 0.8"
+											]
+										}
+									}
+								]
+							},
+							{
+								"weight": 0.2,
+								"sequence": [
+									{
+										"run_command": {
+											"command": [
+												"playsound h_orb.shoot @s ~ ~ ~ 1.6 0.9"
+											]
+										}
+									}
+								]
+							},
+							{
+								"weight": 0.2,
+								"sequence": [
+									{
+										"run_command": {
+											"command": [
+												"playsound h_orb.shoot @s ~ ~ ~ 1.6 1.0"
+											]
+										}
+									}
+								]
+							},
+							{
+								"weight": 0.2,
+								"sequence": [
+									{
+										"run_command": {
+											"command": [
+												"playsound h_orb.shoot @s ~ ~ ~ 1.6 1.1"
+											]
+										}
+									}
+								]
+							},
+							{
+								"weight": 0.2,
+								"sequence": [
+									{
+										"run_command": {
+											"command": [
+												"playsound h_orb.shoot @s ~ ~ ~ 1.6 1.2"
+											]
+										}
+									}
+								]
+							}
+
+						]
+					},
+					{
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						}
+					}
+					
+				]
+			}
+		}
+	}
+}

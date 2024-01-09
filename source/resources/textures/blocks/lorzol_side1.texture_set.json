@@ -1,8 +1,0 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "lorzol_side1",
-		"metalness_emissive_roughness": "lorzol_side1_mer",
-		"heightmap": "lorzol_side1_heightmap"
-	}
-}

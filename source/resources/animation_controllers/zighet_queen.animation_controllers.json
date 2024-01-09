@@ -1,0 +1,231 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.zighet_queen.general": {
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target", "live"
+					]
+				}
+			}
+		},
+		"controller.animation.zighet_queen.wings" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"wings_air" : "query.is_alive == 1 && query.is_on_ground == 0"
+						},
+						{
+							"wings_ground" : "query.is_alive == 1 && query.is_on_ground == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"wings_air" : {
+					"animations" : [ "wings_fly", "sound_fly"],
+					"transitions" : [
+						{
+							"default" : "query.is_alive == 0"
+						},
+						{
+							"wings_ground" : "query.is_alive == 1 && query.is_on_ground == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"wings_ground" : {
+					"animations" : [ "wings_ground" ],
+					"transitions" : [
+						{
+							"default" : "query.is_alive == 0"
+						},
+						{
+							"wings_air" : "query.is_alive == 1 && query.is_on_ground == 0"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.zighet_queen.movement_body" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "idle_ground", "live" ],
+					"transitions" : [
+						{
+							"movement_air" : "query.modified_move_speed > 0.1 && query.is_on_ground == 0"
+						},
+						{
+							"movement_land" : "query.modified_move_speed > 0.1 && query.is_on_ground == 1"
+						},
+						{
+							"die_air" : "query.is_alive == 0 && query.is_on_ground == 0"
+						},
+						{
+							"die_ground" : "query.is_alive == 0 && query.is_on_ground == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"movement_air" : {
+					"animations" : ["body_fly" ],
+					"transitions" : [
+						{
+							"die_air" : "query.is_alive == 0 && query.is_on_ground == 0"
+						},
+						{
+							"movement_land" : "query.modified_move_speed > 0.1 && query.is_on_ground == 1"
+						},
+						{
+							"die_ground" : "query.is_alive == 0 && query.is_on_ground == 1"
+						},
+						{
+							"idle_air" : "query.modified_move_speed <= 0.1 && query.is_on_ground == 0"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"movement_land" : {
+					"animations" : [ "walk_ground"],
+					"transitions" : [
+						{
+							"default" : "query.modified_move_speed <= 0.1 && query.is_alive == 1"
+						},
+						{
+							"die_ground" : "query.is_alive == 0 && query.is_on_ground == 1"
+						},
+						{
+							"movement_air" : "query.modified_move_speed > 0.1 && query.is_on_ground == 0"
+						},
+						{
+							"die_air" : "query.is_alive == 0 && query.is_on_ground == 0"
+						}
+						
+					],
+					"blend_transition": 0.4
+				},
+				"idle_air" : {
+					"animations" : [ "body_fly"],
+					"transitions" : [
+						{
+							"die_ground" : "query.is_alive == 0 && query.is_on_ground == 1"
+						},
+						{
+							"movement_land" : "query.modified_move_speed > 0.1 && query.is_on_ground == 1"
+						},
+						{
+							"movement_air" : "query.modified_move_speed > 0.1 && query.is_on_ground == 0"
+						},
+						{
+							"die_air" : "query.is_alive == 0 && query.is_on_ground == 0"
+						}
+						
+					],
+					"blend_transition": 0.4
+				},
+				"die_ground" : {
+					"animations" : [ "die", "death_rotate_cancel" ],
+					"transitions" : [
+						{
+							"default" : "query.is_alive == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"die_air" : {
+					"animations" : [ "die_air", "death_rotate_cancel" ],
+					"transitions" : [
+						{
+							"default" : "query.is_alive == 1"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.zighet_queen.attack": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack_air": "variable.attack > 0 && query.variant == 1"
+						},
+						{
+							"attack_ground": "variable.attack > 0 && query.variant == 0"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"attack_air": {
+					"animations": [
+						"attack_air"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"attack_ground": {
+					"animations": [
+						"attack_ground"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.zighet_queen.summon" : {
+			"initial_state" : "default",
+			"states" : {
+				"casting" : {
+					"animations" : [ "summon", "summon_rot" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_casting"
+						}
+					],"blend_transition": 0.4
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"casting" : "query.is_casting"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.zighet_queen.roar" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"roaring" : "query.is_roaring == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"roaring" : {
+					"animations" : [ "growl", "growl_rot" ],
+					"transitions" : [
+						{
+							"default" : "query.is_roaring == 0"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		}
+	}
+}

@@ -15,7 +15,7 @@
 							{
 								"test": "has_biome_tag",
 								"operator": "==",
-								"value": "moonlen"
+								"value": "meadow"
 							}
 						]
 					}
@@ -23,8 +23,8 @@
 			}
 		},
 		"distribution": {
-			"iterations": 1,
-			"scatter_chance": 5,
+			"iterations": "(q.noise(v.originx / 820, v.originz / 820) < -0.2 && (query.heightmap(variable.worldx, variable.worldz) >= 64))",
+			"scatter_chance": 7,
 			"x": 0,
 			"z": 0,
 			"y": "query.above_top_solid(v.worldx, v.worldz) - 0"

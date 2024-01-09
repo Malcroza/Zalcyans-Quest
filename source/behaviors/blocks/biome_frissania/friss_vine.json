@@ -1,0 +1,78 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:friss_vine"
+        },
+        "components": {
+			"minecraft:map_color": "#5e52d0",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.three_cross",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "friss_vine",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -4,
+                    0,
+                    -4
+                ],
+                "size": [
+                    8,
+                    8,
+                    8
+                ]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "down"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:on_interact": {
+                "event": "fruit",
+                "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+            },
+            "minecraft:loot": "loot_tables/items/friss_vine_item.json"
+        },
+        "events": {
+            "fruit": {
+                "sequence": [
+                    {
+                        "set_block_at_pos": {
+                            "block_type": "zalcyan:friss_vine_fruited",
+                            "block_offset": [
+                                0,
+                                0,
+                                0
+                            ]
+                        }
+                    },
+                    {
+                        "decrement_stack": {}
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "particle minecraft:endrod ~ ~ ~"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

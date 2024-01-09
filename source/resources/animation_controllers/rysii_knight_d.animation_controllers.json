@@ -1,0 +1,81 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.rysii_knight_d.general": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"die": "math.round(math.random(1,8)) == 1"
+						},
+						{
+							"die2": "math.round(math.random(1,8)) == 2"
+						},
+						{
+							"die3": "math.round(math.random(1,8)) == 3"
+						},
+						{
+							"die4": "math.round(math.random(1,8)) == 4"
+						},
+						{
+							"die5": "math.round(math.random(1,8)) == 5"
+						},
+						{
+							"die6": "math.round(math.random(1,8)) == 6"
+						},
+						{
+							"die7": "math.round(math.random(1,8)) == 7"
+						},
+						{
+							"die8": "math.round(math.random(1,8)) == 8"
+						}
+						
+					],
+					"blend_transition": 0.2
+				},
+				"die": {
+					"animations": [
+						"die"
+					]
+				},
+				"die2": {
+					"animations": [
+						"die2"
+					]
+				},
+				"die3": {
+					"animations": [
+						"die3"
+					]
+				},
+				"die4": {
+					"animations": [
+						"die4"
+					]
+				},
+				"die5": {
+					"animations": [
+						"die5"
+					]
+				},
+				"die6": {
+					"animations": [
+						"die6"
+					]
+				},
+				"die7": {
+					"animations": [
+						"die7"
+					]
+				},
+				"die8": {
+					"animations": [
+						"die8"
+					]
+				}
+
+			}
+		}
+	}
+}

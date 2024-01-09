@@ -1,0 +1,23 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "zalcyan:city_tower1_sequence"
+		},
+
+		"features": [
+			"zalcyan:ds_city_base_feature_scatter",
+			"zalcyan:ds_city_floor_feature_scatter",
+			"zalcyan:ds_city_floor_feature_scatter",
+			"zalcyan:ds_city_floor_feature_scatter",
+			"zalcyan:ds_city_floor_feature_scatter",
+			"zalcyan:ds_city_floor_feature_scatter",
+			"zalcyan:ds_city_floor_feature_scatter",
+			"zalcyan:ds_city_floor_feature_scatter",
+			"zalcyan:ds_city_roof_feature_scatter",
+			"zalcyan:city_air_concrete_remover_scatter_top",
+			"zalcyan:ds_loot_box1_scatter"
+		]
+	}
+}

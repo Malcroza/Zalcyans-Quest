@@ -28,7 +28,6 @@
 				"animate": [
 					"move",
 					"general",
-					"head",
 					"summon_con",
 					"attack"
 				],

@@ -1,8 +1,0 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "raken_jell",
-        "metalness_emissive_roughness": "raken_jell_mer",
-        "heightmap": "friss_cap_heightmap"
-    }
-}

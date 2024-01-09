@@ -23,66 +23,6 @@
 					"blend_transition": 0.1
 				}
 			}
-		},
-		"controller.animation.rhizom.head_movement" : {
-			"initial_state" : "default",
-			"states" : {
-				"default" : {
-					"animations" : [ "rhizom.general" ],
-					"transitions" : [
-						{
-							"roaring" : "query.is_roaring == 1"
-						}
-					],
-					"blend_transition": 0.4
-				},
-				"roaring" : {
-					"animations" : [ "roaring" ],
-					"transitions" : [
-						{
-							"default" : "query.is_roaring == 0"
-						}
-					],
-					"blend_transition": 0.1
-				}
-			}
-		},
-		"controller.animation.rhizom.attack": {
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"attack0": "variable.attack > 0"
-						},
-						{
-							"attack1": "variable.attack > 0"
-						}
-					],
-					"blend_transition": 0.1
-				},
-				"attack0": {
-					"animations": [
-						"attack0"
-					],
-					"transitions": [
-						{
-							"default": "query.all_animations_finished"
-						}
-					],
-					"blend_transition": 0.1
-				},
-				"attack1": {
-					"animations": [
-						"attack1"
-					],
-					"transitions": [
-						{
-							"default": "query.all_animations_finished"
-						}
-					],
-					"blend_transition": 0.1
-				}
-			}
 		}
 	}
 }

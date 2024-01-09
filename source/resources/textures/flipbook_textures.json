@@ -3,5 +3,23 @@
     "flipbook_texture": "textures/blocks/beam_block",
     "atlas_tile": "beam_block",
     "ticks_per_frame": 8
+  },
+  { 
+    "flipbook_texture": "textures/blocks/kylar_crystal",
+    "atlas_tile": "kylar_crystal",
+    "ticks_per_frame": 40
+  },
+  { 
+    "flipbook_texture": "textures/blocks/kylar_drip_body",
+    "atlas_tile": "kylar_drip_body",
+    "ticks_per_frame": 300
+  },
+  { 
+    "flipbook_texture": "textures/blocks/sappis_seap",
+    "atlas_tile": "sappis_seap",
+    "ticks_per_frame": 8,
+	"frames": [ 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ],
+    "blend_frames": true
   }
+  
 ]

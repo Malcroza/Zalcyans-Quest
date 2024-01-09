@@ -1,0 +1,32 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:scaffolding_yellow",
+            "is_experimental": false,
+            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#f5ae38",
+            "minecraft:light_dampening": 1,
+            "minecraft:light_emission": 0,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 200.5
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "scaffolding_yellow",
+                    "render_method": "alpha_test"
+                }
+            }
+        },
+        "events": {}
+    }
+}

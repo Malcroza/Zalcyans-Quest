@@ -1,0 +1,72 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:zighet",
+			"materials": {
+				"default": "phantom"
+			},
+			"textures": {
+				"default": "textures/entity/zighet",
+				"young": "textures/entity/zighet_young"
+			},
+			"geometry": {
+				"default": "geometry.zighet"
+			},
+			"animations": {
+				"walk": "animation.zighet.walk_ground",
+				"wings_ground": "animation.zighet.wings_ground",
+				"wings_fly": "animation.zighet.wings_fly",
+				"fly": "animation.zighet.body_fly",
+				"attack_air": "animation.zighet.attack_air",
+				"attack_ground": "animation.zighet.attack_ground",
+				"live": "animation.zighet.live",
+				"die_ground": "animation.zighet.die",
+				"die_air": "animation.zighet.die_air",
+				"idle_ground": "animation.zighet.ground_idle",
+				"look_at_target": "animation.zighet.look_at_target",
+				"rotate": "animation.zighet.rotate",
+				"death_rotate_cancel": "animation.zighet.death_rotate_cancel",
+				"wings": "controller.animation.zighet.wings",
+				"movement": "controller.animation.zighet.movement_body",
+				"attack": "controller.animation.zighet.attack",
+				"general": "controller.animation.zighet.general",
+				"sound_fly": "animation.zighet.sound_fly",
+				"summon": "animation.zighet.summon"
+			},
+			"scripts": {
+				"animate": [
+					"wings",
+					"movement",
+					"attack",
+					"general",
+					"rotate",
+					"summon"
+					
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"render_controllers": [
+				"controller.render.zighet"
+			],
+			"spawn_egg": {
+				"base_color": "#98cbaf",
+				"overlay_color": "#436451"
+			},
+			"sound_effects": {
+				"zighet_fly1": "mob.zighet_fly1",
+				"zighet_fly2": "mob.zighet_fly2",
+				"zighet_fly3": "mob.zighet_fly3",
+				"zighet_fly4": "mob.zighet_fly4",
+				"zighet_fly5": "mob.zighet_fly5",
+				"zighet_fly6": "mob.zighet_fly6"
+			},
+			"particle_effects": {
+				"block_part": "zalcyan:block_part"
+			}
+		}
+	}
+}

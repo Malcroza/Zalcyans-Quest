@@ -24,29 +24,6 @@
 				}
 			}
 		},
-		"controller.animation.mili_a.head_movement" : {
-			"initial_state" : "default",
-			"states" : {
-				"default" : {
-					"animations" : [ "mili_a.general" ],
-					"transitions" : [
-						{
-							"roaring" : "query.is_roaring == 1"
-						}
-					],
-					"blend_transition": 0.4
-				},
-				"roaring" : {
-					"animations" : [ "roaring" ],
-					"transitions" : [
-						{
-							"default" : "query.is_roaring == 0"
-						}
-					],
-					"blend_transition": 0.4
-				}
-			}
-		},
 		"controller.animation.mili_a.attack": {
 			"states": {
 				"default": {

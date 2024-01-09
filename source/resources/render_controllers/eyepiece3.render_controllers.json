@@ -1,0 +1,21 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.eyepiece3": {
+	  "arrays": {
+	    "textures": {
+		  "Array.skins": [
+		    "Texture.eyepiece",
+		    "Texture.eyepiece_loaded"
+		  ]
+		}
+	  },
+      "geometry": "Geometry.eyepiece",
+      "materials": [ { "inner_blaster": "Material.eyepiece" },
+					 { "scope": "Material.eyepiece" },
+					 { "rim": "Material.default" }
+					 ],
+      "textures": [ "Array.skins[query.item_is_charged]" ]
+    }
+  }
+}

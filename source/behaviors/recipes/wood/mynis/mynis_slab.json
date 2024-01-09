@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:mynis_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wooden_slab",
+		"pattern": [
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "zalcyan:mynis_log_planks"
+			}
+		},
+		"result": {
+			"item": "zalcyan:mynis_slab",
+			"count": 6
+		}
+	}
+}

@@ -1,0 +1,33 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:sappis_leaf_feature_scatter_north"
+		},
+		"iterations": 14,
+		"x": {
+			"extent": [
+				-8,
+				8
+			],
+			"distribution": "gaussian"
+		},
+		"z": {
+			"extent": [
+				-8,
+				8
+			],
+			"distribution": "gaussian"
+		},
+		"y": {
+			"extent": [
+				-4,
+				4
+			],
+			"distribution": "gaussian"
+		},
+		"project_input_to_floor": false,
+		"places_feature": "zalcyan:sappis_leaf_feature_north"
+	}
+}

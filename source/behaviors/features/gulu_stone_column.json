@@ -1,0 +1,16 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:gulu_stone_column"
+		},
+		"iterations": "t.heightmap=(q.heightmap(v.worldx, v.worldz) - 3); return t.heightmap;",
+		"places_feature": "zalcyan:gulu_stone_feature",
+		"x": 0,
+		"z": 0,
+		"y": {
+			"extent": [-64, "(q.heightmap(v.worldx, v.worldz) - 3)"],
+			"distribution": "fixed_grid"
+		}
+	}
+}

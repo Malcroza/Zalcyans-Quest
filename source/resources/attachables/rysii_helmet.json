@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan:rysii_helmet",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted",
+		"light":"phantom"
+      },
+      "textures": {
+        "default": "textures/models/armor/rysii_armor",
+		"light": "textures/models/armor/rysii_armor_light",
+        "enchanted": "textures/misc/enchanted_item_glint_zal1"
+      },
+      "geometry": {
+        "default": "geometry.rysii_helmet",
+		"light": "geometry.rysii_helmet_light"
+      },
+	  "animations": {
+				"body_part": "animation.rysii_knight.body_part"
+	  },
+      "scripts": {
+        "parent_setup": "variable.helmet_layer_visible = 0.0;",
+        "animate": [
+          "body_part"
+        ]
+      },
+      "render_controllers": [ "controller.render.armor", "controller.render.armor_light"  ],
+			"particle_effects": {
+				"body":"zalcyan:rysii_body_part_player"
+			}
+    }
+  }
+}

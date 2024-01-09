@@ -6,12 +6,12 @@
 			"bones": {
 				"blaster": {
 					"rotation": [10, 60, -30],
-					"position": [-12, 6, 15],
+					"position": [-9, 3, 15],
 					"scale": 3.15
 				}
 			}
 		},
-		"animation.skreepog_blaster.shoot": {
+		"animation.skreepog_blaster.ripple": {
 			"animation_length": 0.4,
 			"loop": true,
 			"bones": {
@@ -61,6 +61,50 @@
 						"0.24": [-0.5, 0, 0],
 						"0.36": [-0.5, 0, 0],
 						"0.4": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.skreepog_blaster.first_person.hold_sneak": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.52,
+			"bones": {
+				"blaster": {
+					"rotation": {
+						"0.0": [-15.01, 61.22, -50.14],
+						"0.52": [-15.006, 61.2207, -50.14032]
+					},
+					"position": {
+						"0.0": [12, -11, -2],
+						"0.52": [12, 6, -2]
+					},
+					"scale": {
+						"0.0": [6.15, 6.15, 6.15],
+						"0.52": [6.15, 6.15, 6.15]
+					}
+				},
+				"RightArm": {
+					"position": {
+						"0.0": [0, 0, -5],
+						"0.52": [0, 0, -5]
+					}
+				},
+				"inner_blaster": {
+					"rotation": {
+						"0.0": [9.5, 0.7, -2],
+						"0.52": [9.5, 0.7, -2]
+					},
+					"position": {
+						"0.0": [-0.65, 0, 2.32],
+						"0.2": [-0.65, 0, 2.32],
+						"0.52": [-0.65, 3, 1.32]
+					}
+				},
+				"barrel": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.32": [1, 1, 1],
+						"0.52": [0.5, 0.5, 0.5]
 					}
 				}
 			}

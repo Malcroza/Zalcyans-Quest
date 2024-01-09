@@ -1,0 +1,110 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:rysii_pod",
+      "materials": { 
+	  "glass": "charged_creeper",
+	  "default": "phantom",
+	  "shell": "entity_emissive"},
+
+      "textures": {
+		  "default": "textures/entity/rysii_pod_glass",
+		  "damaged_lvl1": "textures/entity/rysii_pod_glass_damaged_lvl1",
+		  "damaged_lvl2": "textures/entity/rysii_pod_glass_damaged_lvl2",
+		  "damaged_lvl3": "textures/entity/rysii_pod_glass_damaged_lvl3"
+		
+      },
+      "animations": {
+        "general": "animation.rysii_pod.general",
+		"fold": "animation.rysii_pod.fold",
+		"zoom": "controller.animation.rysii_pod.zoom",
+		"exaust": "animation.rysii_pod.exaust",
+		"basepose": "animation.rysii_pod.basepose",
+		"no_rider": "animation.rysii_pod.no_rider",
+		"no_rider_idle": "animation.rysii_pod.no_rider_idle",
+		"rider": "animation.rysii_pod.rider",
+		"wing_spread": "animation.rysii_pod.wing_spread",
+		"rider_shield": "controller.animation.rysii_pod.ride_shield",
+		"smoke": "animation.rysii_pod.smoke",
+		"cont_smoke": "controller.animation.rysii_pod.smoke"
+
+      },
+      "scripts": {
+		  "initialize": [
+                    "v.vertical_previous = query.yaw_speed;",
+					"v.vertical_previous1 = query.yaw_speed;",
+					"v.vertical_previous2 = query.yaw_speed;",
+					"v.vertical_previous3 = query.yaw_speed;",
+					"v.vertical_previous4 = query.yaw_speed;",
+					"v.vertical_previous5 = query.yaw_speed;",
+					"v.vertical_previous6 = query.yaw_speed;",
+					"v.vertical_previous7 = query.yaw_speed;",
+					"v.vertical_previous8 = query.yaw_speed;",
+					"v.vertical_previous9 = query.yaw_speed;",
+					"v.vertical_previous10 = query.yaw_speed;",
+					"v.vertical_previous11 = query.yaw_speed;",
+					"v.vertical_previous12 = query.yaw_speed;",
+					"v.vertical_previous13 = query.yaw_speed;",
+					"v.vertical_previous14 = query.yaw_speed;",
+					"v.vertical_previous15 = query.yaw_speed;",
+					"v.vertical_previous16 = query.yaw_speed;",
+					"v.vertical_previous17 = query.yaw_speed;",
+					"v.vertical_previous18 = query.yaw_speed;",
+					"v.vertical_previous19 = query.yaw_speed;",
+					"v.vertical_previous20 = query.yaw_speed;",
+					
+                    "v.vertical_accumulateddeltas = 0;"
+					
+                ],
+                "pre_animation": [
+					"v.vertical_previous20 = v.vertical_previous19;",
+					"v.vertical_previous19 = v.vertical_previous18;",
+					"v.vertical_previous18 = v.vertical_previous17;",
+					"v.vertical_previous17 = v.vertical_previous18;",
+					"v.vertical_previous16 = v.vertical_previous15;",
+					"v.vertical_previous15 = v.vertical_previous14;",
+					"v.vertical_previous14 = v.vertical_previous13;",
+					"v.vertical_previous13 = v.vertical_previous12;",
+					"v.vertical_previous12 = v.vertical_previous11;",
+					"v.vertical_previous11 = v.vertical_previous10;",
+					"v.vertical_previous10 = v.vertical_previous9;",
+					"v.vertical_previous9 = v.vertical_previous8;",
+					"v.vertical_previous8 = v.vertical_previous7;",
+					"v.vertical_previous7 = v.vertical_previous6;",
+					"v.vertical_previous6 = v.vertical_previous5;",
+					"v.vertical_previous5 = v.vertical_previous4;",
+					"v.vertical_previous4 = v.vertical_previous3;",
+					"v.vertical_previous3 = v.vertical_previous2;",
+					"v.vertical_previous2 = v.vertical_previous1;",
+					"v.vertical_previous1 = v.vertical_previous;",
+					"v.vertical_previous = query.yaw_speed;",
+					"v.vertical_interpolated = (v.vertical_previous+v.vertical_previous1+v.vertical_previous2+v.vertical_previous3+v.vertical_previous4+v.vertical_previous5+v.vertical_previous6+v.vertical_previous7+v.vertical_previous8+v.vertical_previous9+v.vertical_previous10+v.vertical_previous11+v.vertical_previous12+v.vertical_previous13+v.vertical_previous14+v.vertical_previous15+v.vertical_previous16+v.vertical_previous17+v.vertical_previous18+v.vertical_previous19+v.vertical_previous20)/21;"
+
+                ],
+        "animate": [
+          "general",
+		  "zoom",
+		  "wing_spread",
+		  "rider_shield",
+		  "cont_smoke"
+        ]
+      },
+        "spawn_egg": {
+				"base_color": "#827272",
+				"overlay_color": "#9a3d21"
+			},
+			"particle_effects": {
+				"trail": "zalcyan:rysii_trail_particle",
+				"smoke": "zalcyan:neo_pod_smoke"
+			},
+			"sound_effects": {
+				"gear": "sound.gear.turn"
+			},
+      "geometry": {
+        "default": "geometry.rysii_pod"
+      },
+      "render_controllers": ["controller.render.rysii_pod"]
+    }
+  }
+}

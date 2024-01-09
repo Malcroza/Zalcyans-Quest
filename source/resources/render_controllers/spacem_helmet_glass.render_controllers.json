@@ -1,0 +1,11 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.spacem_helmet_glass": {
+      "geometry": "Geometry.glass",
+      "materials": [ { "*": "Material.glass" } ],
+      "textures": [ "Texture.default" ],
+      "ignore_lighting" : true
+    }
+  }
+}

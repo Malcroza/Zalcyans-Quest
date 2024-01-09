@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:zighet_paper_var_weighted"
+    },
+    "features": [
+      [ "zalcyan:zighet_paper1_feature", 1 ],
+      [ "zalcyan:zighet_paper2_feature", 2 ],
+      [ "zalcyan:zighet_paper3_feature", 1 ],
+      [ "zalcyan:zighet_paper4_feature", 4 ]
+    ]
+  }
+}

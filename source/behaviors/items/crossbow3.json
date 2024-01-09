@@ -1,0 +1,48 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan3:crossbow"
+		},
+		"components": {
+			"minecraft:use_duration": 0.05,
+			"minecraft:max_stack_size": 1,
+			"minecraft:fuel": {
+				"duration": 10
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 120,
+				"damage_chance": {
+					"min": 1,
+					"max": 2
+				}
+			},
+			"minecraft:icon": {
+				"texture": "zq_sniper3"
+			},
+			"minecraft:use_animation": "crossbow",
+			"minecraft:projectile": {
+				"projectile_entity": "zalcyan:q_orb_bolt"
+			},
+			"minecraft:shooter": {
+				"ammunition": [
+					{
+						"item": "zalcyan:yalron_charge",
+						"use_offhand": true,
+						"search_inventory": true,
+						"use_in_creative": true
+					}
+				],
+				"max_draw_duration": 0.05,
+				"charge_on_draw": true
+			},
+			"minecraft:display_name": {
+				"value": "§dYalron Laser Rifle \n §o§8Requires Yalron Charges"
+			}
+		},
+		"events": {	
+		}
+	}
+}

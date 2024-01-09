@@ -28,7 +28,6 @@
 			"initial_state" : "default",
 			"states" : {
 				"default" : {
-					"animations" : [ "aqe_elite.general" ],
 					"transitions" : [
 						{
 							"roaring" : "query.is_roaring == 1"

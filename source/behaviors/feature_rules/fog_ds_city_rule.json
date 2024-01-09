@@ -1,0 +1,54 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:fog_ds_city_rule",
+			"places_feature": "zalcyan:fog_ds_city_feature"
+		},
+
+		"conditions": {
+			"placement_pass": "before_surface_pass",
+
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "ocean"
+						},
+						{
+					"none_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "cold"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "frozen"
+						}
+					]
+				}
+					]
+				}
+			]
+		},
+
+		"distribution": {
+			"iterations": 256,
+
+			"x": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"y": "( q.noise(v.originx / 840, v.originz / 840) < -0.37) ? -64 : -70"
+		}
+	}
+}

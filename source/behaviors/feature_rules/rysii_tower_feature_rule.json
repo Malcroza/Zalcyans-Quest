@@ -1,0 +1,58 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:rysii_tower_feature_rule",
+			"places_feature": "zalcyan:rysii_tower_feature"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "monster"
+			},
+			"placement_pass": "final_pass"
+		},
+		"distribution": {
+			"iterations": "
+				v.tile.chunk_size = 35;
+
+				v.tile.origin.x = (16 * v.tile.chunk_size) * math.floor(v.originx / (16 * v.tile.chunk_size));
+				v.tile.origin.z = (16 * v.tile.chunk_size) * math.floor(v.originz / (16 * v.tile.chunk_size));
+
+				v.tile.current_chunk.x = math.mod(math.floor(v.originx / 16), v.tile.chunk_size);
+				v.tile.current_chunk.x < 0 ? {
+					v.tile.current_chunk.x = v.tile.current_chunk.x + v.tile.chunk_size;
+				};
+				v.tile.current_chunk.z = math.mod(math.floor(v.originz / 16), v.tile.chunk_size);
+				v.tile.current_chunk.z < 0 ? {
+					v.tile.current_chunk.z = v.tile.current_chunk.z + v.tile.chunk_size;
+				};
+
+				v.tile.target_chunk.x =
+					math.floor(
+						(v.tile.chunk_size / 2)
+						+ (v.tile.chunk_size / 2)
+							* query.noise(v.tile.origin.x - 12, v.tile.origin.z - 12)
+					)
+				;
+				v.tile.target_chunk.z =
+					math.floor(
+						(v.tile.chunk_size / 2)
+						+ (v.tile.chunk_size / 2)
+							* query.noise(v.tile.origin.x + 12, v.tile.origin.z + 12)
+					)
+				;
+
+				return
+					v.tile.current_chunk.x == v.tile.target_chunk.x
+					&& v.tile.current_chunk.z == v.tile.target_chunk.z
+				;
+			",
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz) - 3",
+			"z": 0
+		}
+	}
+}

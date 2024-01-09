@@ -1,0 +1,25 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:quag_spike_feature_rule",
+			"places_feature": "zalcyan:quag_spike_sequence_feature"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "roofed"
+			},
+			"placement_pass": "surface_pass"
+		},
+		"distribution": {
+			"iterations": "(q.noise(v.originx / 650, v.originz / 650) < -0.4)",
+			"scatter_chance": 80,
+			"x": "math.random_integer(0, 12)",
+			"y": "query.heightmap(variable.worldx, variable.worldz) - 0",
+			"z": "math.random_integer(0, 12)"
+		}
+	}
+}

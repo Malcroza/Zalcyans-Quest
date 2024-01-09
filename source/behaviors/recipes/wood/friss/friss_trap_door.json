@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:friss_trapdoor"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wooden_trap_door",
+		"pattern": [
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "zalcyan:friss_planks"
+			}
+		},
+		"result": {
+			"item": "zalcyan:friss_trapdoor",
+			"count": 2
+		}
+	}
+}

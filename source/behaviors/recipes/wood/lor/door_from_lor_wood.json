@@ -1,0 +1,26 @@
+
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:door_from_lor_wood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"WW ",
+			"WW ",
+			"WW "
+		],
+		"key": {
+			"W": {
+				"item": "zalcyan:lor_log_planks"
+			}
+		},
+		"result": {
+			"item": "zalcyan:lor_door",
+			"count": 3
+		}
+	}
+}

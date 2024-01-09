@@ -1,0 +1,60 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:yalron",
+			"materials": {
+				"default": "phantom",
+				"clear": "charged_creeper"
+			},
+			"textures": {
+				"default": "textures/entity/yalron"
+			},
+			"geometry": {
+				"default": "geometry.yalron"
+			},
+			"animations": {
+
+				"attackzero": "animation.yalron.attackzero",
+				"attackone": "animation.yalron.attackone",
+				"attacktwo": "animation.yalron.attacktwo",
+				"attackthree": "animation.yalron.attackthree",
+				"moving": "animation.yalron.move",
+				"yalron_general": "animation.yalron.general",
+				"move": "controller.animation.yalron.move",
+				"general": "controller.animation.yalron.general",
+				"roaring": "animation.yalron.roaring",
+				"look_at_target_default": "animation.humanoid.look_at_target.default",
+				"look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+				"look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+				"controller_look_at_target": "controller.animation.humanoid.look_at_target",
+				"attacking": "controller.animation.yalron.attack",
+				"look_at_target": "animation.yalron.look_at_target"
+
+			},
+			"scripts": {
+				"pre_animation": [
+					"v.rotation_to_camera_0 = -Math.atan2(-q.distance_from_camera * Math.sin(q.rotation_to_camera(0)) - 1, q.distance_from_camera * Math.cos(q.rotation_to_camera(0)));",
+					"v.look_at_entity = Math.abs(Math.abs(q.rotation_to_camera(1) - q.camera_rotation(1)) - 180) < (250 / q.distance_from_camera) && Math.abs(v.rotation_to_camera_0 + q.camera_rotation(0)) < (250 / q.distance_from_camera);"
+],
+				"animate": [
+					"move",
+					"general",
+					"attacking"
+				]
+			},
+			"render_controllers": [
+				"controller.render.yalron"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#1ce777",
+				"overlay_color": "#3a20b6"
+			},
+			"sound_effects": {
+				"roar": "mob.roar"
+			}
+		}
+	}
+}

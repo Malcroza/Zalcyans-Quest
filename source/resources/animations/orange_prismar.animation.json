@@ -1,0 +1,240 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.orange_prismar.first_person.hold": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [19.6888, -1.3027, -101.09368],
+					"position": [-12, 6, 15],
+					"scale": 3.15
+				},
+				"fire1": {
+					"position": [0, 0, "-(math.abs(math.cos(query.anim_time*200))/math.cos(query.anim_time*200)*math.sin(query.anim_time*200))*10-10"],
+					"scale": "math.abs(math.cos(query.anim_time*200))"
+				},
+				"fire2": {
+					"position": [0, 0, "-(math.abs(math.cos((query.anim_time-0.1)*200))/math.cos((query.anim_time-0.1)*200)*math.sin((query.anim_time-0.1)*200))*11-11"],
+					"scale": "math.abs(math.cos((query.anim_time-0.1)*200))"
+				},
+				"fire4": {
+					"position": [0, 0, "-(math.abs(math.cos((query.anim_time-0.6)*200))/math.cos((query.anim_time-0.6)*200)*math.sin((query.anim_time-0.6)*200))*13-13"],
+					"scale": "math.abs(math.cos((query.anim_time-0.6)*200))"
+				},
+				"fire3": {
+					"position": [0, 0, "-(math.abs(math.cos((query.anim_time-0.2)*200))/math.cos((query.anim_time-0.2)*200)*math.sin((query.anim_time-0.2)*200))*12-12"],
+					"scale": "math.abs(math.cos((query.anim_time-0.2)*200))"
+				},
+				"fire5": {
+					"position": [0, 0, "-(math.abs(math.cos((query.anim_time-0.5)*200))/math.cos((query.anim_time-0.5)*200)*math.sin((query.anim_time-0.5)*200))*11-11"],
+					"scale": "math.abs(math.cos((query.anim_time-0.8)*200))"
+				}
+			}
+		},
+		"animation.orange_prismar.shoot": {
+			"loop": true,
+			"animation_length": 0.48,
+			"bones": {
+				"fire1": {
+					"rotation": [0, 0, 0],
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 0, -15]
+					}
+				},
+				"fire2": {
+					"rotation": [0, 0, 0],
+					"position": {
+						"0.0": [0, 0, -15],
+						"0.12": [0, 0, 0],
+						"0.24": [0, 0, -3.75],
+						"0.36": [0, 0, -7.5],
+						"0.48": [0, 0, -11.25]
+					}
+				},
+				"fire3": {
+					"rotation": [0, 0, 0],
+					"position": {
+						"0.0": [0, 0, -7.5],
+						"0.12": [0, 0, -11.25],
+						"0.24": [0, 0, -15],
+						"0.36": [0, 0, 0],
+						"0.48": [0, 0, -3.75]
+					}
+				},
+				"fire4": {
+					"rotation": [0, 0, 0],
+					"position": {
+						"0.0": [0, 0, -3.75],
+						"0.12": [0, 0, -7.5],
+						"0.24": [0, 0, -11.25],
+						"0.36": [0, 0, -15],
+						"0.48": [0, 0, 0]
+					}
+				},
+				"fire5": {
+					"rotation": [0, 0, 0],
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.12": [0, 0, -3.75],
+						"0.24": [0, 0, -19.5],
+						"0.36": [0, 0, -11.25],
+						"0.48": [0, 0, -15]
+					}
+				},
+				"fire_face1": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire_face2": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire_face3": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire_face4": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire_face5": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire_face6": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire_face7": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire_face8": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire_face9": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire_face10": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire_face11": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire_face12": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire_face13": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire_face14": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire_face15": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire6": {
+					"rotation": [0, 0, 0],
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.12": [0, 0, -3.75],
+						"0.24": [0, 0, -10.5],
+						"0.36": [0, 0, -11.25],
+						"0.48": [0, 0, -15]
+					}
+				},
+				"fire_face16": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire_face17": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire_face18": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire7": {
+					"rotation": [0, 0, 0],
+					"position": {
+						"0.0": [0, 0, 1],
+						"0.12": [0, 0, -3.75],
+						"0.24": [0, 0, -2.5],
+						"0.36": [0, 0, -5.25],
+						"0.48": [0, 0, -15]
+					}
+				},
+				"fire_face19": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				},
+				"fire_face20": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-270", 0]
+				},
+				"fire_face21": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation-90", 0]
+				}
+			}
+		},
+		"animation.orange_prismar.thrust": {
+			"loop": true,
+			"animation_length": 0.32,
+			"bones": {
+				"rightItem2": {
+					"rotation": ["math.clamp(query.ground_speed * 1,0,30)", "math.clamp(query.ground_speed * 8,0,30)", 0]
+				},
+				"bone31": {
+					"rotation": [0, 0, "-90-query.target_y_rotation"],
+					"scale": [1, "query.ground_speed/30", 1]
+				}
+			}
+		},
+		"animation.orange_prismar.default_rot": {
+			"loop": true,
+			"bones": {
+				"rightItem2": {
+					"rotation": [120.3835, 71.6757, 11.14236],
+					"position": [-2, 0, 2],
+					"scale": 1.1
+				}
+			}
+		},
+		"animation.orange_prismar.default_rot_crouch": {
+			"loop": true,
+			"bones": {
+				"rightItem2": {
+					"rotation": [-8.61174, 58.18838, -44.03783],
+					"position": [0, 1, 3]
+				}
+			}
+		},
+		"animation.orange_prismar.start": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.04,
+			"bones": {
+				"bone2": {
+					"scale": {
+						"0.0": [0.2, 0.2, 0],
+						"0.8": [0.2, 0.2, 0],
+						"0.96": [1, 1, 1.1],
+						"1.0": [1, 1, 1]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.7": {
+					"effect": "sound_ignite"
+				}
+			}
+		},
+		"animation.orange_prismar.sound_stable": {
+			"loop": true,
+			"animation_length": 2.79719,
+			"sound_effects": {
+				"0.0": {
+					"effect": "sound_idle"
+				}
+			}
+		},
+		"animation.orange_prismar.sound_swing": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.12,
+			"sound_effects": {
+				"0.0": {
+					"effect": "sound_swing"
+				}
+			}
+		}
+	}
+}

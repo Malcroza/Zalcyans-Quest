@@ -6,7 +6,6 @@
 			"identifier": "zalcyan:raken_grass_feature_scatter"
 		},
 		"iterations": 14,
-		"coordinate_eval_order": "zyx",
 		"x": {
 			"extent": [
 				-8,

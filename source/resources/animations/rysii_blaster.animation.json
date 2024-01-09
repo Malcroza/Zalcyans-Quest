@@ -1,0 +1,278 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.rysii_blaster.first_person.hold3": {
+			"loop": true,
+			"bones": {
+				"blaster": {
+					"rotation": [-15.006, 61.2207, -50.14032],
+					"position": [12, 6, -2],
+					"scale": 6.15
+				},
+				"RightArm": {
+					"position": [0, 0, -5]
+				},
+				"inner_blaster": {
+					"rotation": [9.5, 0.7, -2],
+					"position": [-0.65, 17, -1.68]
+				},
+				"barrel": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.rysii_blaster.load": {
+			"animation_length": 0.72,
+			"bones": {
+				"blastar_main": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.24": [25.96295, 15.58394, -28.88636],
+						"0.72": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.rysii_blaster.first_person.hold": {
+			"loop": true,
+			"bones": {
+				"blaster": {
+					"rotation": [10, 60, -30],
+					"position": [-12, 6, 15],
+					"scale": 3.15
+				},
+				"clip": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.rysii_blaster.first_person.hold2": {
+			"loop": true,
+			"bones": {
+				"blaster": {
+					"rotation": [10, 60, -30],
+					"position": [-12, 6, 15],
+					"scale": 3.15
+				},
+				"RightArm": {
+					"position": [0, 0, -5]
+				}
+			}
+		},
+		"animation.rysii_blaster.first_person.hold4": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.52,
+			"bones": {
+				"blaster": {
+					"rotation": {
+						"0.0": [-15.01, 61.22, -50.14],
+						"0.52": [-15.006, 61.2207, -50.14032]
+					},
+					"position": {
+						"0.0": [12, 6, -2],
+						"0.52": [12, 6, -2]
+					},
+					"scale": {
+						"0.0": [6.15, 6.15, 6.15],
+						"0.52": [6.15, 6.15, 6.15]
+					}
+				},
+				"RightArm": {
+					"position": {
+						"0.0": [0, 0, -5],
+						"0.52": [0, 0, -5]
+					}
+				},
+				"inner_blaster": {
+					"rotation": {
+						"0.0": [9.5, 0.7, -2],
+						"0.52": [9.5, 0.7, -2]
+					},
+					"position": {
+						"0.0": [-0.65, 0, 2.32],
+						"0.2": [-0.65, 0, 2.32],
+						"0.52": [-0.65, 17, -1.68]
+					}
+				},
+				"barrel": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.32": [1, 1, 1],
+						"0.52": [0, 0, 0]
+					}
+				},
+				"scope_front": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.04": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.rysii_blaster.first_person.end_hold": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"blaster": {
+					"rotation": [-15.006, 61.2207, -50.14032],
+					"position": [12, 6, -2],
+					"scale": 6.15
+				},
+				"RightArm": {
+					"position": [0, 0, -5]
+				},
+				"inner_blaster": {
+					"rotation": [9.5, 0.7, -2],
+					"position": [-0.65, 17, -1.68]
+				},
+				"barrel": {
+					"scale": 0
+				},
+				"scope_front": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.rysii_blaster.shoot": {
+			"loop": true,
+			"bones": {
+				"capleft1": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft3": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright1": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright2": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright3": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft2": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft5": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft6": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capleft7": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright5": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright6": {
+					"position": ["math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				},
+				"capright7": {
+					"position": ["-math.sin(query.anim_time*100)", "math.sin(query.anim_time*50)*0.5", 0]
+				}
+			}
+		},
+		"animation.rysii_blaster.fire": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.28,
+			"bones": {
+				"fire": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.2": [1.4, 1.4, 1.4],
+						"0.28": [1, 1, 1]
+					}
+				},
+				"stage1": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.04": [1, 1, 1],
+						"0.16": [0, 0, 0],
+						"0.2": [0, 0, 0],
+						"0.28": [0, 0, 0]
+					}
+				},
+				"stage2": {
+					"scale": {
+						"0.04": [0, 0, 0],
+						"0.16": [0, 0, 0],
+						"0.2": [0, 0, 0],
+						"0.28": [0, 0, 0]
+					}
+				},
+				"stage3": {
+					"scale": {
+						"0.04": [0, 0, 0],
+						"0.16": [1, 1, 1],
+						"0.2": [0, 0, 0],
+						"0.28": [0, 0, 0]
+					}
+				},
+				"stage4": {
+					"scale": {
+						"0.04": [0, 0, 0],
+						"0.16": [0, 0, 0],
+						"0.2": [1, 1, 1],
+						"0.24": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.rysii_blaster.fire_hold": {
+			"loop": true,
+			"bones": {
+				"fire": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.rysii_blaster_eyepiece.screen": {
+			"loop": true,
+			"bones": {
+				"scope": {
+					"rotation": [0, "16.0 * Math.cos(148.9690267 * (query.anim_time - 0.6066))", 0],
+					"scale": ["1 * Math.cos(148.9690267 * (query.anim_time/2 - 0.2066))", 1, "1 * Math.cos(148.9690267 * (query.anim_time/2 - 0.2066))"]
+				}
+			}
+		},
+		"animation.rysii_blaster.third-person_charged": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"clip": {
+					"scale": 1
+				}
+			}
+		},
+		"animation.rysii_blaster.third-person_uncharged": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"clip": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.rysii_blaster.charge": {
+			"animation_length": 0.08,
+			"sound_effects": {
+				"0.0": {
+					"effect": "charge"
+				}
+			}
+		},
+		"animation.rysii_blaster.run": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.8,
+			"bones": {
+				"blastar_main": {
+					"rotation": {
+						"0.4": [0, 0, 0],
+						"0.8": ["-(math.clamp(query.modified_move_speed*38, 0, 30))", 0, "-(math.clamp(query.modified_move_speed*38, 0, 50))"]
+					},
+					"position": [0, 0, "(math.clamp(query.modified_move_speed*60, 0, 15))"]
+				}
+			}
+		}
+	}
+}

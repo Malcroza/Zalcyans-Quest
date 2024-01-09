@@ -1,8 +1,0 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "lor_log_chipped",
-		"metalness_emissive_roughness": "lor_log_chipped_mer",
-		"heightmap": "lor_log_chipped_heightmap"
-	}
-}

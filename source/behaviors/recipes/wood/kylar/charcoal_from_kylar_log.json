@@ -1,0 +1,13 @@
+
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "minecraft:furnace_charcoal_from_kylar_log"
+    },
+
+    "tags": ["furnace"],
+    "input": "zalcyan:kylar_log",
+    "output": "minecraft:charcoal"
+  }
+}

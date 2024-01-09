@@ -1,8 +1,0 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "moonlen_spike_tall1",
-        "metalness_emissive_roughness": [0,0,242],
-        "heightmap": "moonlen_spike_tall1_heightmap"
-    }
-}

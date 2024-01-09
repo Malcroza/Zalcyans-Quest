@@ -3,20 +3,20 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"identifier": "minecraft:lava_pit_feature_rule",
+			"identifier": "zalcyan:lava_pit_feature_rule",
 			"places_feature": "minecraft:lava_pit_mcstructure"
 		},
 		"conditions": {
 			"minecraft:biome_filter": {
 				"test": "has_biome_tag",
 				"operator": "==",
-				"value": "lorla"
+				"value": "savanna"
 			},
 			"placement_pass": "surface_pass"
 		},
 		"distribution": {
-			"iterations": 1,
-			"scatter_chance": 3,
+			"iterations": "(q.noise(v.originx / 512, v.originz / 512) < -0.47)",
+			"scatter_chance": 19,
 			"x": 0,
 			"y": "query.heightmap(variable.worldx, variable.worldz) - 34",
 			"z": 0

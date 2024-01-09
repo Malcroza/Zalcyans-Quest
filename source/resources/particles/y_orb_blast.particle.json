@@ -1,0 +1,57 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "zalcyan:y_orb_blast",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/y_orb_blast"
+			}
+		},
+		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "variable.size = 0.03;variable.lifetime = 2.2;"
+			},
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 20
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.01
+			},
+			"minecraft:emitter_shape_point": {
+				"direction": ["variable.particle_random_2-0.5", "variable.particle_random_3-0.5", 0]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "variable.particle_random_1*variable.lifetime"
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.atan((variable.particle_random_3-0.5)/(variable.particle_random_2-0.5))"
+			},
+			"minecraft:particle_initial_speed": 23,
+			"minecraft:particle_motion_parametric": {
+				"direction": ["(variable.particle_random_2-0.5)", "(variable.particle_random_3-0.5)", "(variable.particle_random_4-0.5)"],
+				"rotation": "math.atan((variable.particle_random_3-0.5)/(variable.particle_random_2-0.5))"
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["variable.size*(variable.particle_random_1*variable.lifetime-variable.particle_age)*60", "variable.size*(variable.particle_random_1*variable.lifetime-variable.particle_age)*5"],
+				"facing_camera_mode": "direction_z",
+				"direction": {
+					"mode": "derive_from_velocity"
+				},
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 15,
+					"uv": [0, 0],
+					"uv_size": [16, 16]
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"collision_drag": 1,
+				"collision_radius": 0.05
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": ["Math.clamp(math.lerp(0.8509, 0, variable.particle_age*2), 0, 1)", "Math.clamp(math.lerp(1, 0.7842, variable.particle_age*2), 0, 1)", "Math.clamp(math.lerp(1,1, variable.particle_age*2), 0, 1)", "Math.clamp(1/(variable.particle_age*20), 0, 1)"]
+			}
+		}
+	}
+}

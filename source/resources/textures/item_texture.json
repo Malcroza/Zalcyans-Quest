@@ -1,4 +1,4 @@
-//bridge-file-version: #25
+//bridge-file-version: #28
 {
 	"resource_pack_name": "vanilla",
 	"texture_data": {
@@ -195,6 +195,46 @@
 				"textures/items/borgan_leggings"
 			]
 		},
+		"spacem_boots": {
+			"textures": [
+				"textures/items/spacem_boots"
+			]
+		},
+		"spacem_chestplate": {
+			"textures": [
+				"textures/items/spacem_chestplate"
+			]
+		},
+		"spacem_helmet": {
+			"textures": [
+				"textures/items/spacem_helmet"
+			]
+		},
+		"spacem_leggings": {
+			"textures": [
+				"textures/items/spacem_leggings"
+			]
+		},
+		"spaceb_boots": {
+			"textures": [
+				"textures/items/spaceb_boots"
+			]
+		},
+		"spaceb_chestplate": {
+			"textures": [
+				"textures/items/spaceb_chestplate"
+			]
+		},
+		"spaceb_helmet": {
+			"textures": [
+				"textures/items/spaceb_helmet"
+			]
+		},
+		"spaceb_leggings": {
+			"textures": [
+				"textures/items/spaceb_leggings"
+			]
+		},
 		"borgan_shell": {
 			"textures": [
 				"textures/items/borgan_shell"
@@ -228,6 +268,216 @@
 		"skreepog_blaster": {
 			"textures": [
 				"textures/items/skreepog_blaster"
+			]
+		},
+		"magwag_crystal": {
+			"textures": [
+				"textures/items/magwag_crystal"
+			]
+		},
+		"gulu_aso_item": {
+			"textures": [
+				"textures/items/gulu_aso_item"
+			]
+		},
+		"door_raken": {
+			"textures": [
+				"textures/items/door_raken"
+			]
+		},
+		"door_mynis": {
+			"textures": [
+				"textures/items/door_mynis"
+			]
+		},
+		"door_lor": {
+			"textures": [
+				"textures/items/door_lor"
+			]
+		},
+		"door_quag": {
+			"textures": [
+				"textures/items/door_quag"
+			]
+		},
+		"door_friss": {
+			"textures": [
+				"textures/items/door_friss"
+			]
+		},
+		"rysii_blaster": {
+			"textures": [
+				"textures/items/rysii_blaster"
+			]
+		},
+		"orange_prismar": {
+			"textures": [
+				"textures/items/orange_prismar"
+			]
+		},
+		"rysii_boots": {
+			"textures": [
+				"textures/items/rysii_boots"
+			]
+		},
+		"rysii_chestplate": {
+			"textures": [
+				"textures/items/rysii_chestplate"
+			]
+		},
+		"rysii_helmet": {
+			"textures": [
+				"textures/items/rysii_helmet"
+			]
+		},
+		"rysii_leggings": {
+			"textures": [
+				"textures/items/rysii_leggings"
+			]
+		},
+		"zq_sniper": {
+			"textures": [
+				"textures/items/zq_sniper"
+			]
+		},
+		"kylar_drip_item": {
+			"textures": [
+				"textures/items/kylar_drip_item"
+			]
+		},
+		"darkar_dagger": {
+			"textures": [
+				"textures/items/darkar_dagger"
+			]
+		},
+		"marlar_charge": {
+			"textures": [
+				"textures/items/marlar_charge"
+			]
+		},
+		"yalron_boots": {
+			"textures": [
+				"textures/items/yalron_boots"
+			]
+		},
+		"yalron_chestplate": {
+			"textures": [
+				"textures/items/yalron_chestplate"
+			]
+		},
+		"yalron_helmet": {
+			"textures": [
+				"textures/items/yalron_helmet"
+			]
+		},
+		"yalron_leggings": {
+			"textures": [
+				"textures/items/yalron_leggings"
+			]
+		},
+		"door_kylar": {
+			"textures": [
+				"textures/items/door_kylar"
+			]
+		},
+		"door_sappis": {
+			"textures": [
+				"textures/items/door_sappis"
+			]
+		},
+		"sappis_leaf_item": {
+			"textures": [
+				"textures/items/sappis_leaf_item"
+			]
+		},
+		"marlar_carnyx_item": {
+			"textures": [
+				"textures/items/marlar_carnyx_item"
+			]
+		},
+		"zq_sniper3": {
+			"textures": [
+				"textures/items/zq_sniper3"
+			]
+		},
+		"dymal_assassin_boots": {
+			"textures": [
+				"textures/items/dymal_assassin_boots"
+			]
+		},
+		"dymal_assassin_chestplate": {
+			"textures": [
+				"textures/items/dymal_assassin_chestplate"
+			]
+		},
+		"dymal_assassin_helmet": {
+			"textures": [
+				"textures/items/dymal_assassin_helmet"
+			]
+		},
+		"dymal_assassin_leggings": {
+			"textures": [
+				"textures/items/dymal_assassin_leggings"
+			]
+		},
+		"marlar_daggar": {
+			"textures": [
+				"textures/items/marlar_daggar"
+			]
+		},
+		"rysii_charge": {
+			"textures": [
+				"textures/items/rysii_charge"
+			]
+		},
+		"gp_charge": {
+			"textures": [
+				"textures/items/gp_charge"
+			]
+		},
+		"yalron_charge": {
+			"textures": [
+				"textures/items/yalron_charge"
+			]
+		},
+		"door_ds_metal": {
+			"textures": [
+				"textures/items/door_ds_metal"
+			]
+		},
+		"h_orb_blaster": {
+			"textures": [
+				"textures/items/h_orb_blaster"
+			]
+		},
+		"jyr_blaster": {
+			"textures": [
+				"textures/items/jyr_blaster"
+			]
+		},
+		"light_charge": {
+			"textures": [
+				"textures/items/light_charge"
+			]
+		},
+		"aqe_heart": {
+			"textures": [
+				"textures/items/aqe_heart"
+			]
+		},
+		"zighet_queen_helmet": {
+			"textures": [
+				"textures/items/zighet_queen_helmet"
+			]
+		},
+		"rysii_pod_summon": {
+			"textures": [
+				"textures/items/rysii_pod_summon"
+			]
+		},
+		"vok_summon": {
+			"textures": [
+				"textures/items/vok_summon"
 			]
 		}
 	},

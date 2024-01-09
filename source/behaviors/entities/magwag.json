@@ -1,4 +1,4 @@
-//bridge-file-version: #16
+//bridge-file-version: #17
 {
 	"format_version": "1.16.0",
 	"minecraft:entity": {
@@ -521,7 +521,7 @@
 								"num_entities_spawned": 10,
 								"entity_type": "zalcyan:magwag_spike",
 								"size": 20,
-								"entity_lifespan": 2.3,
+								"entity_lifespan": 2.5,
 								"sound_event": "mob.magwag.summon"
 							}
 						],

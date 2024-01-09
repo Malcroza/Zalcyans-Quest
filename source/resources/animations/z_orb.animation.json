@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.z_orb.position": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["- query.target_x_rotation", "-query.body_y_rotation + query.target_y_rotation", 0]
+				},
+				"head_rot": {
+					"rotation": ["math.sin(query.anim_time*20)*1000", "math.cos(query.anim_time*20)*1000", 0]
+				}
+			}
+		},
+		"animation.z_orb.sparks": {
+			"animation_length": 0.4,
+			"particle_effects": {
+				"0.08": [
+					{
+						"effect": "lazar_aura",
+						"locator": "part_emitter3"
+					},
+					{
+						"effect": "lazar_trail",
+						"locator": "part_emitter3"
+					}
+				]
+			}
+		}
+	}
+}

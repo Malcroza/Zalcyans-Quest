@@ -6,7 +6,6 @@
 			"identifier": "minecraft:mus_scatter"
 		},
 		"iterations": 24,
-		"coordinate_eval_order": "zyx",
 		"x": {
 			"extent": [
 				-8,

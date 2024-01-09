@@ -1,0 +1,45 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:fog_mynis_rule",
+			"places_feature": "zalcyan:fog_mynis_feature"
+		},
+
+		"conditions": {
+			"placement_pass": "before_surface_pass",
+
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "mesa"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "desert"
+						}
+					]
+				}
+			]
+		},
+
+		"distribution": {
+			"iterations": 256,
+
+			"x": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"y": "(q.noise(v.worldx / 740, v.worldz / 740) + q.noise(v.worldx, v.worldz) * 0.03 < -0.43) ? -64 : -70"
+		}
+	}
+}

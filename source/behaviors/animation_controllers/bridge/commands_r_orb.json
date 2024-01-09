@@ -8,17 +8,19 @@
 						{
 							"execute_command_id_1": "query.skin_id == 1"
 						}
+					],
+					"on_entry": [
+						"/playsound sound.lazar.shoot @a ~ ~ ~ 1.0",
+						"/camerashake add @a[r=2] 0.2 0.2"
 					]
 				},
 				"execute_command_id_1": {
 					"transitions": [
-						{
-							"default": "query.skin_id != 1"
-						}
 					],
 					"on_entry": [
-						"playsound sound.lazar.hit @s ~ ~ ~ 0.9",
-						"@s bridge:remove_command_id_1"
+						"/particle zalcyan:r_orb_sparks ~ ~ ~",
+						"@s bridge:remove_command_id_1",
+						"/playsound sound.orb.ricochet @a ~ ~ ~ 1.2"
 					]
 				}
 			}

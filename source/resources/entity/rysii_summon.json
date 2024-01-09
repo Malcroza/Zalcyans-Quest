@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:rysii_summon",
+			"materials": {
+				"default": "charged_creeper"
+			},
+			"textures": {
+				"default": "textures/entity/rysii_knight"
+			},
+			"geometry": {
+				"default": "geometry.rysii_summon"
+			},
+			"animations": {
+				"rysii_summon.general": "animation.rysii_summon",
+				"general": "controller.animation.rysii_summon.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			},
+			"particle_effects": {
+				"skree_summon": "zalcyan:rysii_summon"
+			},
+			"sound_effects": {
+				"skree_summon_sound": "sound.rysii.beam"
+			},
+			"spawn_egg": {
+				"base_color": "#827272",
+				"overlay_color": "#e73500"
+			},
+			"render_controllers": [
+				"controller.render.marlar_elite_hologram"
+			]
+		}
+	}
+}

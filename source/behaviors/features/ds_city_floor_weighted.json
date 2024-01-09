@@ -1,0 +1,16 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "zalcyan:ds_city_floor_weighted"
+    },
+    "features": [
+      [ "zalcyan:ds_city_floor1_feature", 12 ],
+      [ "zalcyan:ds_city_floor2_feature", 6 ],
+      [ "zalcyan:ds_city_floor3_feature", 3 ],
+      [ "zalcyan:ds_city_floor4_feature", 1 ],
+      [ "zalcyan:ds_city_floor5_feature", 3 ],
+      [ "zalcyan:ds_city_floor6_feature", 3 ]
+    ]
+  }
+}

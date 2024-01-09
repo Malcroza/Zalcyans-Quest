@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:city_path_feature_north_proxy"
+		},
+
+		"places_feature": "zalcyan:city_path_feature",
+
+		"iterations": "((((q.noise(v.originx / 160, v.originz / 540) < -0.20) || (q.noise(v.originx / 160, v.originz / 540) > 0.20)) && math.mod(math.round(math.abs(v.originx))/16,2) >= 1) ||
+					  (((q.noise(v.originx / 540, v.originz / 160) < -0.20) || (q.noise(v.originx / 540, v.originz / 160) > 0.20)) && math.mod(math.round(math.abs(v.originz))/16,2) >= 1))",
+
+		"x": 16,
+		"z": 16,
+		"y": 0
+	}
+}

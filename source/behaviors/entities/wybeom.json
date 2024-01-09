@@ -1,0 +1,392 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "zalcyan:wybeom",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "bridge_execute_commands",
+                    "wybeom_fly",
+                    "wybeom_fly_stop"
+                ]
+            },
+            "animations": {
+                "bridge_execute_commands": "controller.animation.wybeom.execute_commands",
+                "wybeom_fly": "controller.animation.wybeom_fly",
+                "wybeom_fly_stop": "controller.animation.wybeom_fly_stop"
+            }
+        },
+        "component_groups": {
+            "minecraft:wybeom_wild": {
+                "minecraft:type_family": {
+                    "family": [
+                        "wybeom"
+                    ]
+                },
+                "minecraft:tameable": {
+                    "probability": 0.33,
+                    "tame_items": [
+                        "zalcyan:aqe_heart"
+                    ],
+                    "tame_event": {
+                        "event": "minecraft:on_tame",
+                        "target": "self"
+                    }
+                }
+            },
+            "minecraft:wybeom_tame": {
+                "minecraft:type_family": {
+                    "family": [
+                        "wybeom"
+                    ]
+                },
+                "minecraft:is_tamed": {},
+                "minecraft:rideable": {
+                    "crouching_skip_interact": true,
+                    "seat_count": 1,
+                    "pull_in_entities": false,
+                    "family_types": ["player"],
+                    "interact_text": "Ride",
+                    "seats": [
+                        {
+                            "position": [
+                                0,
+                                1.1,
+                                0.4
+                            ],
+                            "min_rider_count": 0,
+                            "max_rider_count": 1
+                        },
+                        {
+                            "position": [
+                                0,
+                                -1,
+                                0.7
+                            ],
+                            "min_rider_count": 2,
+                            "max_rider_count": 2
+                        }
+                    ],
+                    "rider_can_interact": false
+                },
+                "minecraft:inventory": {
+                    "inventory_size": 1,
+                    "container_type": "horse"
+                }
+            },
+            "minecraft:wybeom_saddled": {
+                "minecraft:is_saddled": {},
+                "minecraft:input_ground_controlled": {},
+                "minecraft:can_power_jump": {}
+            },
+            "minecraft:var0": {
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "minecraft:var1": {
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "minecraft:var2": {
+                "minecraft:variant": {
+                    "value": 2
+                }
+            },
+            "minecraft:var3": {
+                "minecraft:variant": {
+                    "value": 3
+                }
+            },
+            "minecraft:var4": {
+                "minecraft:variant": {
+                    "value": 4
+                }
+            },
+            "minecraft:var5": {
+                "minecraft:variant": {
+                    "value": 5
+                }
+            },
+            "minecraft:var6": {
+                "minecraft:variant": {
+                    "value": 6
+                }
+            },
+            "minecraft:var7": {
+                "minecraft:variant": {
+                    "value": 7
+                }
+            },
+            "minecraft:var8": {
+                "minecraft:variant": {
+                    "value": 8
+                }
+            },
+            "bridge:execute_command_id_1": {
+                "minecraft:skin_id": {
+                    "value": 1
+                }
+            },
+            "bridge:execute_no_command": {
+                "minecraft:skin_id": {
+                    "value": 0
+                }
+            }
+        },
+        "components": {
+      "minecraft:behavior.random_stroll": {
+        "priority": 6,
+        "speed_multiplier": 0.4
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 7,
+        "look_distance": 6.0,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 8
+      },
+			"minecraft:leashable": {
+        "soft_distance": 4.0,
+        "hard_distance": 6.0,
+        "max_distance": 10.0
+      },
+			"minecraft:nameable": {
+      },
+            "minecraft:movement": {
+                "value": 0.6
+            },
+            "minecraft:equippable": {
+                "slots": [
+                    {
+                        "slot": 0,
+                        "item": "saddle",
+                        "accepted_items": [
+                            "saddle"
+                        ],
+                        "on_equip": {
+                            "event": "minecraft:wybeom_saddled"
+                        },
+                        "on_unequip": {
+                            "event": "minecraft:wybeom_unsaddled"
+                        }
+                    }
+                ]
+            },
+            "minecraft:scale": {
+                "value": 1.2
+            },
+            "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+            "minecraft:movement.basic":{},
+            "minecraft:collision_box": {
+                "width": 1.8,
+                "height": 2
+            },
+            "minecraft:knockback_resistance": {
+                "value": 0.7,
+                "max": 0.7
+            },
+            "minecraft:jump.static": {},
+            "minecraft:horse.jump_strength": {
+                "value": {
+                    "range_min": 2.5,
+                    "range_max": 3
+                }
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "wybeom"
+                ]
+            },
+            "minecraft:health": {
+                "value": 60,
+                "max": 60
+            },
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": 0,
+                "breathes_water": true
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "fall",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "minecraft:wybeom_wild"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "minecraft:event_tame_var0": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:var0",
+                        "minecraft:wybeom_tame"
+                    ]
+                }
+            },
+            "minecraft:event_tame_var1": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:var1",
+                        "minecraft:wybeom_tame"
+                    ]
+                }
+            },
+            "minecraft:event_tame_var2": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:var2",
+                        "minecraft:wybeom_tame"
+                    ]
+                }
+            },
+            "minecraft:event_tame_var3": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:var3",
+                        "minecraft:wybeom_tame"
+                    ]
+                }
+            },
+            "minecraft:event_tame_var4": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:var4",
+                        "minecraft:wybeom_tame"
+                    ]
+                }
+            },
+            "minecraft:event_tame_var5": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:var5",
+                        "minecraft:wybeom_tame"
+                    ]
+                }
+            },
+            "minecraft:event_tame_var6": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:var6",
+                        "minecraft:wybeom_tame"
+                    ]
+                }
+            },
+            "minecraft:event_tame_var7": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:var7",
+                        "minecraft:wybeom_tame"
+                    ]
+                }
+            },
+            "minecraft:air": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:air"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "minecraft:ground"
+                    ]
+                }
+            },
+            "minecraft:ground": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:ground"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "minecraft:air"
+                    ]
+                }
+            },
+            "minecraft:on_tame": {
+                "remove": {
+                    "component_groups": [
+                        "minecraft:wybeom_wild"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "minecraft:wybeom_tame"
+                    ]
+                }
+            },
+            "interact": {
+                "add": {
+                    "component_groups": [
+                        "bridge:execute_command_id_1"
+                    ]
+                }
+            },
+            "bridge:remove_command_id_1": {
+                "add": {
+                    "component_groups": [
+                        "bridge:execute_no_command"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "bridge:execute_command_id_1"
+                    ]
+                }
+            },
+            "minecraft:wybeom_saddled": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:wybeom_saddled"
+                    ]
+                }
+            },
+            "minecraft:wybeom_unsaddled": {
+                "remove": {
+                    "component_groups": [
+                        "minecraft:wybeom_saddled"
+                    ]
+                }
+            }
+        }
+    }
+}

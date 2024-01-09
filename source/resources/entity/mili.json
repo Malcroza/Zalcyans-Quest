@@ -29,7 +29,7 @@
 			"animations": {
 				"general": "controller.animation.mili.general",
 				"attack": "controller.animation.mili.attack",
-				"attack1": "animation.mili.attack1",
+				"attack1": "animation.mili.attack",
 				"basepose": "animation.mili.idle",
 				"walking": "animation.mili.walk",
 				"look_at_target": "animation.mili.look_at_target"

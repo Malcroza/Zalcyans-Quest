@@ -1,0 +1,42 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:sappis_grass_tall_feature_scatter_rule",
+			"places_feature": "zalcyan:sappis_grass_tall_feature_scatter"
+		},
+		"conditions": {
+			"placement_pass": "before_surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "jungle"
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 25,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					15
+				]
+			},
+			"y": "(q.noise(v.worldx / 740, v.worldz / 740) + q.noise(v.worldx, v.worldz) * 0.005 > 0.63 && q.noise(v.worldx/20, v.worldz/20) >= 0 && (query.heightmap(variable.worldx, variable.worldz) >= 64)) ? (q.heightmap(v.worldx, v.worldz)) : -70",
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					15
+				]
+			}
+		}
+	}
+}

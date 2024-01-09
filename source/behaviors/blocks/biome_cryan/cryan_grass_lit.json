@@ -1,0 +1,39 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:cryan_grass_lit",
+            "is_experimental": false,
+            "register_to_creative_menu": true
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#0E8F79",
+            "minecraft:light_dampening": 15,
+            "minecraft:light_emission": 1,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.5
+            },
+            "minecraft:queued_ticking": {
+                "interval_range": [
+                    15,
+                    20
+                ],
+                "looping": true,
+                "on_tick": {
+                    "event": "set_back_unlit"
+                }
+            }
+        },
+        "events": {
+            "set_back_unlit": {
+                "set_block": {
+                    "block_type": "zalcyan:cryan_grass"
+                }
+            }
+        }
+    }
+}

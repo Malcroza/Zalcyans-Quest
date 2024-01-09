@@ -3,19 +3,20 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"identifier": "minecraft:moonlen_cave_mushroom_feature_rule",
+			"identifier": "zalcyan:moonlen_cave_mushroom_feature_rule",
 			"places_feature": "zalcyan:moonlen_cave_mushroom_sequence_feature"
 		},
 		"conditions": {
 			"minecraft:biome_filter": {
 				"test": "has_biome_tag",
 				"operator": "==",
-				"value": "moonlen"
+				"value": "meadow"
 			},
 			"placement_pass": "final_pass"
 		},
 		"distribution": {
-			"iterations": 8,
+			"iterations": "(q.noise(v.originx / 820, v.originz / 820) < -0.2 && (query.heightmap(variable.worldx, variable.worldz) >= 64))",
+			"scatter_chance": 30,
 			"x": "math.random_integer(0, 3)",
 			"y": "query.above_top_solid(v.worldx, v.worldz)",
 			"z": "math.random_integer(0, 3)"

@@ -1,0 +1,42 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:lor_obsidian_rule",
+			"places_feature": "zalcyan:lor_obsidian_feature"
+		},
+
+		"conditions": {
+			"placement_pass": "before_surface_pass",
+
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "savanna"
+							}
+						]
+					}
+				]
+			}
+		},
+
+		"distribution": {
+			"iterations": 256,
+
+			"x": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"y": "(q.noise(v.worldx/10, v.worldz/10) < 0.25 && q.noise(v.worldx/10, v.worldz/10) > -0.25 && q.noise(v.worldx / 512, v.worldz / 512) < -0.47 && (query.heightmap(variable.worldx, variable.worldz) >= 64)) ? (q.heightmap(v.worldx, v.worldz) - 1) : -70"
+		}
+	}
+}

@@ -1,0 +1,134 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.marlar_carnyx",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 17,
+				"visible_bounds_height": 16,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "Body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "RightArm",
+					"pivot": [-5, 22, 0],
+					"rotation": [-10, 0, 0]
+				},
+				{
+					"name": "blastar_main",
+					"parent": "RightArm",
+					"pivot": [-5.5, 16, -5]
+				},
+				{
+					"name": "carnyx",
+					"parent": "blastar_main",
+					"pivot": [-5, 22, -9]
+				},
+				{
+					"name": "inner_carnyx",
+					"parent": "carnyx",
+					"pivot": [-5, 16, -8]
+				},
+				{
+					"name": "barrel",
+					"parent": "inner_carnyx",
+					"pivot": [-5.5, 3, -10.5],
+					"rotation": [0, 0, 7.5],
+					"cubes": [
+						{"origin": [-6.5, 13, -39.5], "size": [2, 2, 39], "uv": [0, 62]},
+						{"origin": [-6.5, -3.5, 11], "size": [2, 2, 9], "pivot": [0, 0, -4], "rotation": [90, 0, 0], "uv": [30, 92]},
+						{"origin": [-7.5, 4, -44.5], "size": [4, 11, 5], "uv": [8, 67]},
+						{"origin": [-7.5, 12, -37.5], "size": [4, 4, 3], "uv": [60, 60]},
+						{"origin": [-7.5, 12, -33.5], "size": [4, 4, 3], "uv": [60, 60]},
+						{"origin": [-6.5, 11, -47.5], "size": [1, 12, 10], "uv": [36, 106]}
+					]
+				},
+				{
+					"name": "fire",
+					"parent": "barrel",
+					"pivot": [-5, 4, -43]
+				},
+				{
+					"name": "stage1",
+					"parent": "fire",
+					"pivot": [-5.5, 4, -42.5],
+					"cubes": [
+						{"origin": [-13, 4, -50], "size": [15, 0, 15.5], "uv": [81, 6]}
+					]
+				},
+				{
+					"name": "stage2",
+					"parent": "fire",
+					"pivot": [-5.5, 4, -42.5],
+					"cubes": [
+						{"origin": [-13, 4, -50], "size": [15, 0, 15.5], "uv": [81, 37]}
+					]
+				},
+				{
+					"name": "stage3",
+					"parent": "fire",
+					"pivot": [-5.5, 4, -42.5],
+					"cubes": [
+						{"origin": [-15, 4, -52], "size": [19, 0, 19.5], "uv": [76, 66]}
+					]
+				},
+				{
+					"name": "stage4",
+					"parent": "fire",
+					"pivot": [-5.5, 4, -43.5],
+					"cubes": [
+						{"origin": [-16, 2, -53], "size": [21, 0, 21.5], "uv": [73, 98]}
+					]
+				},
+				{
+					"name": "ear_right",
+					"parent": "barrel",
+					"pivot": [-0.5, 10.5, -45],
+					"rotation": [0, -32.5, 0],
+					"cubes": [
+						{"origin": [-4.5, 13, -51.5], "size": [7, 1, 12], "uv": [59, 82]}
+					]
+				},
+				{
+					"name": "ear_left",
+					"parent": "barrel",
+					"pivot": [-10.5, 10.5, -45],
+					"rotation": [0, 32.5, 0],
+					"cubes": [
+						{"origin": [-13.5, 13, -51.5], "size": [7, 1, 12], "uv": [59, 82], "mirror": true}
+					]
+				},
+				{
+					"name": "feather",
+					"parent": "barrel",
+					"pivot": [-7.5, 13.5, -35.5],
+					"rotation": [0, -17.5, 0],
+					"cubes": [
+						{"origin": [-7.5, 12, -35.5], "size": [2, 1, 8], "pivot": [-4.5, 3, -10.5], "rotation": [-2.5, 0, 0], "uv": [49, 76]}
+					]
+				},
+				{
+					"name": "feather2",
+					"parent": "barrel",
+					"pivot": [-7.5, 13.5, -35.5],
+					"rotation": [10, -32.5, 0],
+					"cubes": [
+						{"origin": [-8.5, 13, -36.5], "size": [2, 1, 8], "uv": [49, 76]}
+					]
+				},
+				{
+					"name": "feather3",
+					"parent": "barrel",
+					"pivot": [-7.5, 13.5, -35.5],
+					"rotation": [20, -60, 0]
+				}
+			]
+		}
+	]
+}

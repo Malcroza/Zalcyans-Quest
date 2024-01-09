@@ -1,0 +1,42 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "zalcyan:lor_air_rule",
+			"places_feature": "zalcyan:lor_air_feature"
+		},
+
+		"conditions": {
+			"placement_pass": "surface_pass",
+
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "savanna"
+							}
+						]
+					}
+				]
+			}
+		},
+
+		"distribution": {
+			"iterations": 256,
+
+			"x": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"y": "(q.noise(v.worldx/20, v.worldz/20) < 0.31 && q.noise(v.worldx/20, v.worldz/20) > -0.31 && q.noise(v.worldx / 512, v.worldz / 512) < -0.47 && (query.heightmap(variable.worldx, variable.worldz) >= 64)) ? (q.heightmap(v.worldx, v.worldz) - 1) : -70"
+		}
+	}
+}

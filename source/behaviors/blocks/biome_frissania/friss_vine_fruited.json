@@ -1,0 +1,67 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:friss_vine_fruited"
+        },
+        "components": {
+			"minecraft:map_color": "#83dfed",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.three_cross",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "fruited_friss_vine",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -4,
+                    0,
+                    -4
+                ],
+                "size": [
+                    8,
+                    8,
+                    8
+                ]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "down"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:on_interact": {
+                "event": "fruit"
+            },
+            "minecraft:loot": "loot_tables/items/friss_vine_fruit_and_vine.json"
+        },
+        "events": {
+            "fruit": {
+                "sequence": [
+                    {
+                        "spawn_loot": {
+                            "table": "loot_tables/fruit/friss_vine_fruit.json"
+                        }
+                    },
+                    {
+                        "set_block": {
+                            "block_type": "zalcyan:friss_vine"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

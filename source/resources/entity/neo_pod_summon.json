@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:neo_pod_summon",
+			"materials": {
+				"default": "charged_creeper"
+			},
+			"textures": {
+				"default": "textures/entity/neo_pod"
+			},
+			"geometry": {
+				"default": "geometry.neo_pod"
+			},
+			"animations": {
+				"neo_pod_summon.general": "animation.neo_pod.spawn",
+				"general": "controller.animation.neo_pod_summon.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			},
+			"particle_effects": {
+				"neo_summon": "zalcyan:neo_pod_summon"
+			},
+			"sound_effects": {
+				"skree_summon_sound": "sound.neo_pod.beam"
+			},
+			"spawn_egg": {
+				"base_color": "#658099",
+				"overlay_color": "#0e3e4b"
+			},
+			"render_controllers": [
+				"controller.render.marlar_elite_hologram"
+			]
+		}
+	}
+}

@@ -1,8 +1,0 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "zlily_pad",
-        "metalness_emissive_roughness": "zlily_pad_mer",
-        "heightmap": "zlily_pad_heightmap"
-    }
-}

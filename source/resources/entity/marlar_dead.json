@@ -1,0 +1,43 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:marlar_dead",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/marlar"
+			},
+			"geometry": {
+				"default": "geometry.marlar_v2"
+			},
+			"animations": {
+				"die": "animation.marlar_v2.die",
+				"die2": "animation.marlar_v2.die2",
+				"die3": "animation.marlar_v2.die3",
+				"die4": "animation.marlar_v2.die4",
+				"die5": "animation.marlar_v2.die5",
+				"die6": "animation.marlar_v2.die6",
+				"die7": "animation.marlar_v2.die7",
+				"die8": "animation.marlar_v2.die8",
+				"general": "controller.animation.marlar_d.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			},
+			"render_controllers": [
+				"controller.render.skeleton"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 9
+			}
+			
+		}
+	}
+}

@@ -1,8 +1,0 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "lor_log_stripped_side",
-		"metalness_emissive_roughness": "lor_log_side_mer",
-		"heightmap": "lor_log_stripped_side_heightmap"
-	}
-}

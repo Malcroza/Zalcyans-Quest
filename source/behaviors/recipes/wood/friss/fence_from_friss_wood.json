@@ -1,0 +1,29 @@
+
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "zalcyan:fence_from_friss_wood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"   ",
+			"WSW",
+			"WSW"
+		],
+		"key": {
+			"W": {
+				"item": "zalcyan:friss_planks"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": {
+			"item": "zalcyan:friss_fence",
+			"count": 3
+		}
+	}
+}

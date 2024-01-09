@@ -1,0 +1,95 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:zighet_egg",
+            "is_experimental": false,
+            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "zighet_egg",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:on_step_on": {
+                "event": "hatch"
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.1
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#FFFFFF",
+            "minecraft:light_dampening": 0.0,
+            "minecraft:light_emission": 0.0,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.0
+            },
+            "minecraft:geometry": "geometry.zighet_egg",
+            "minecraft:selection_box": {
+                "origin": [
+                    -2,
+                    0,
+                    -2
+                ],
+                "size": [
+                    4,
+                    6,
+                    4
+                ]
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -2,
+                    0,
+                    -2
+                ],
+                "size": [
+                    4,
+                    6,
+                    4
+                ]
+            }
+        },
+        "events": {
+            "hatch": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "playsound block.turtle_egg.break @a ~ ~+0.51 ~"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "summon zalcyan:zighet ~ ~+0.51 ~"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~ ~ ~ ~ ~ air"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

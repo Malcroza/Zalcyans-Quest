@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:neo_pod_bolt",
+      "materials": {
+        "default": "orb"
+      },
+	  "particle_effects": {
+    "lazar_trail": "zalcyan:neo_pod_bolt_lazar_trail",
+	"lazar_sparks": "zalcyan:neo_pod_bolt_sparks",
+	"fog": "zalcyan:neo_pod_bolt_fog"
+	},
+	"sound_effects": {
+		"fire": "sound.lazar.shoot"
+	  },
+      "textures": {
+        "default": "textures/entity/neo_pod_bolt"
+      },
+      "geometry": {
+        "default": "geometry.neo_pod_bolt"
+      },
+      "animations": {
+        "move": "animation.neo_pod_bolt.move",
+		"elongate": "animation.neo_pod_bolt.elongate", 		
+		"part": "controller.animation.neo_pod_bolt.particles",
+		"moving": "controller.animation.neo_pod_bolt.movement",
+		"close": "animation.neo_pod_bolt.close",
+		"fog_part": "animation.neo_pod_bolt.fog",
+		"spawn":"controller.animation.neo_pod_bolt.spawn"
+      },
+      "scripts": {
+		  "initialize": [
+	  "v.init = 0;"
+    ],
+        "animate": [
+          "move",
+		  "close",
+		  "part",
+		  "spawn"
+        ],
+		"should_update_bones_and_effects_offscreen": true
+      },
+      "render_controllers": [ "controller.render.orb" ]
+    }
+  }
+}

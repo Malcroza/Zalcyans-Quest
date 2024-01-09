@@ -1,0 +1,75 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.orange_prismar.change" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [
+						"start"
+					],
+					"transitions" : [
+						{
+							"stable" : "query.all_animations_finished"
+						}
+					]
+				},
+				"stable" : {
+					"animations" : [ "sound_stable" ],
+					"transitions" : [
+						{
+							"default" : "q.get_equipped_item_name != 'orange_prismar'"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.orange_prismar.swing" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"sound_swing" : "(c.owning_entity -> variable.attack_time) > 0.0"
+						}
+					]
+				},
+				"sound_swing" : {
+					"animations" : [ "sound_swing" ],
+					"transitions" : [
+						{
+							"default" : " (c.owning_entity -> variable.attack_time) == 0.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.orange_prismar.crouch": {
+			"initial_state" : "default",
+			"states": {
+				"default": {
+					"animations": [
+						"default_rot"
+					],
+					"transitions": [
+						{
+						"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'orange_prismar' && query.is_sneaking == 1"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"look1": {
+					"animations": [
+						"default_rot_crouch"
+					],
+					"transitions": [
+						{
+						"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'orange_prismar' && query.item_is_charged != 1 && query.is_sneaking != 1"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan:yalron_charge",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.arrow"
+				}
+		},
+		"components": {
+			"minecraft:allow_off_hand": true,
+			"minecraft:max_stack_size": 16,
+			"minecraft:projectile": {
+				"projectile_entity": "zalcyan:q_orb_bolt",
+				"minimum_critical_power": 0.3
+			},
+			"minecraft:icon": {
+				"texture": "yalron_charge"
+			},
+			"minecraft:display_name": {
+				"value": "Yalron Charge"
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"format_version": "1.16.220",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "zalcyan:sappis_leaf_feature_east"
+		},
+		"places_block": {
+			"name": "zalcyan:sappis_leaf_east"
+		},
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": true,
+		"may_replace": [
+			{
+				"name": "minecraft:air"
+			}
+		]
+	}
+}

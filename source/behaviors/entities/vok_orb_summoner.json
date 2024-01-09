@@ -1,0 +1,234 @@
+//bridge-file-version: #43
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:vok_orb_summoner",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": true,
+			"runtime_identifier": "minecraft:snowball"
+		},
+		"component_groups": {
+			"transforming": {
+				"minecraft:transformation": {
+				"into": "minecraft:vok_warrior<minecraft:on_tame>",
+				"keep_owner": true,
+				"delay": {
+					"block_assist_chance":0.0,
+					"block_radius":0,
+					"block_max":0,
+					"value":2}
+			}
+			},
+			"zalcyan:player_vok_orb_standing": {
+				"minecraft:projectile": {
+					"power": 0.2,
+					"gravity": 1,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"should_bounce": false,
+					"offset": [
+						-0.32,
+						-1.15,
+						0.9
+					],
+					"multiple_targets": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 1,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				},
+			"minecraft:transformation": {
+				"into": "zalcyan:vok_warrior<minecraft:on_tame>",
+				"keep_owner": true,
+				"delay": {
+					"value":0.15}
+			}
+			},
+			"zalcyan:player_vok_orb_sneaking": {
+				"minecraft:projectile": {
+					"power": 0.2,
+					"gravity": 1,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"should_bounce": false,
+					"offset": [
+						0,
+						-1.25,
+						0.4
+					],
+					"multiple_targets": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 1,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				},
+			"minecraft:transformation": {
+				"into": "zalcyan:vok_warrior<minecraft:on_tame>",
+				"keep_owner": true,
+				"delay": {
+					"value":0.15}
+			}
+			},
+			"zalcyan:marlar_vok_orb": {
+				"minecraft:projectile": {
+					"power": 0.2,
+					"gravity": 1,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"multiple_targets": false,
+					"should_bounce": false,
+					"offset": [
+						-0.27,
+						1.25,
+						0
+					],
+					"on_hit": {
+						"impact_damage": {
+							"damage": 5,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				},
+			"minecraft:transformation": {
+				"into": "minecraft:vok_warrior<minecraft:on_tame>",
+				"keep_owner": true,
+				"delay": {
+					"value":0.15}
+			}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.4,
+				"height": 0.4
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time_down_event": {
+					"event": "minecraft:start_transform",
+					"target": "self"
+				},
+				"time": [
+					1.5,
+					2
+				]
+			}
+		},
+		"events": {
+			"minecraft:start_transform": {
+				"add": {
+					"component_groups": [
+						"transforming"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": true
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:player_vok_orb_sneaking"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": false
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:player_vok_orb_standing"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "marlar"
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:marlar_vok_orb"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

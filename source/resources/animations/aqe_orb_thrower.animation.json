@@ -1,0 +1,158 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.aqe_orb_thrower.first_person.crouch": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.52,
+			"bones": {
+				"blaster": {
+					"rotation": {
+						"0.0": [-15.01, 61.22, -50.14],
+						"0.52": [-9.63132, 59.31418, -44.14133]
+					},
+					"position": {
+						"0.0": [12, 6, -2],
+						"0.52": [14, -6, -10]
+					},
+					"scale": {
+						"0.0": [6.15, 6.15, 6.15],
+						"0.52": [6.15, 6.15, 6.15]
+					}
+				},
+				"RightArm": {
+					"position": {
+						"0.0": [0, 0, -5],
+						"0.52": [0, 0, -5]
+					}
+				},
+				"inner_blaster": {
+					"rotation": {
+						"0.0": [9.5, 0.7, -2],
+						"0.52": [9.5, 0.7, -2]
+					},
+					"position": {
+						"0.0": [-0.65, 0, 2.32],
+						"0.2": [-0.65, 0, 2.32],
+						"0.52": [-0.65, 6, 2.32]
+					}
+				}
+			}
+		},
+		"animation.aqe_orb_thrower.rotate": {
+			"loop": true,
+			"bones": {
+				"orb": {
+					"rotation": ["math.sin(q.anim_time*200)*200", "math.cos(q.anim_time*100)*200", 0]
+				}
+			}
+		},
+		"animation.aqe_orb_thrower.first_person.hold": {
+			"loop": true,
+			"bones": {
+				"blaster": {
+					"rotation": [-7.506, 60.22075, -50.14032],
+					"position": [-12, 6, 15],
+					"scale": 3.15
+				}
+			}
+		},
+		"animation.aqe_orb_thrower.hold": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"orb": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.aqe_orb_thrower.charge": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.96,
+			"bones": {
+				"main_spin": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 0, -270]
+					}
+				},
+				"orb": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.52": [0, 0, 0],
+						"0.96": [1, 1, 1]
+					}
+				},
+				"pin_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [50, 0, 0],
+						"0.72": [0, 0, 0],
+						"0.96": [25, 0, 0]
+					}
+				},
+				"pin_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.48": [-50, 0, 0],
+						"0.72": [0, 0, 0],
+						"0.96": [-25, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.12": {
+					"effect": "aqe_charge1"
+				},
+				"0.44": {
+					"effect": "aqe_charge2"
+				},
+				"0.64": {
+					"effect": "aqe_charge3"
+				}
+			}
+		},
+		"animation.aqe_orb_thrower.fire": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.24,
+			"bones": {
+				"main_spin": {
+					"rotation": {
+						"0.0": [0, 0, -270],
+						"0.24": [0, 0, 0]
+					}
+				},
+				"orb": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.24": [0, 0, 0]
+					}
+				},
+				"pin_right": {
+					"rotation": {
+						"0.0": [25, 0, 0],
+						"0.12": [35, 0, 0],
+						"0.24": [0, 0, 0]
+					}
+				},
+				"pin_left": {
+					"rotation": {
+						"0.0": [-25, 0, 0],
+						"0.12": [-35, 0, 0],
+						"0.24": [0, 0, 0]
+					}
+				},
+				"inner_blaster": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": [-35, 0, 0],
+						"0.24": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.08": [0, 3, 0],
+						"0.24": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

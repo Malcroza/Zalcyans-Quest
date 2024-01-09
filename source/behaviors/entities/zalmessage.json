@@ -68,14 +68,16 @@
 					"range_max": 10
 				}
 			},
-			"minecraft:damage_sensor": [
-				{
-					"deals_damage": false
-				}
-			],
+			"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"cause": "all",
+							"deals_damage": false
+						}
+					]
+				},
 			"minecraft:physics": {
-				"has_gravity": true,
-				"has_collusion": false
+				"has_gravity": true
 			},
 			"minecraft:type_family": {
 				"family": [

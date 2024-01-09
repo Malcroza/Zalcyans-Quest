@@ -1,0 +1,27 @@
+{
+    "format_version": "1.13.0",
+    
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "zalcyan:ds_loot_box1_scatter"
+        },
+        
+        "places_feature": "zalcyan:ds_loot_box1_feature",
+        
+        "iterations": 52,
+        
+        "x": {
+            "distribution": "gaussian",
+            "extent": [-14, -2]
+        },
+        "z": {
+            "distribution": "gaussian",
+            "extent": [-14, -2]
+        },
+        "y": {
+            "distribution": "uniform",
+            "extent": [0, 85]
+        },
+		"project_input_to_floor": true
+    }
+}

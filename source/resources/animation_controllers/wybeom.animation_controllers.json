@@ -1,0 +1,69 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.wybeom.base_pose": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [ "wybeom_base_pose" ]
+				}
+			}
+		},
+		"controller.animation.wybeom.legs": {
+			"initial_state": "ground",
+			"states": {
+				"ground": {
+					"animations": [
+						"ground_legs"
+					],
+					"transitions": [
+						{
+							"air": "query.is_on_ground == 0"
+						}
+					],
+					"blend_transition": 1.0
+				},
+				"air": {
+					"animations": [
+						"air_legs"
+					],
+					"transitions": [
+						{
+							"ground": "query.is_on_ground == 1"
+						}
+					],
+					"blend_transition": 0.6
+				}
+			}
+		},
+		"controller.animation.wybeom.wings": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"ground_wings",
+						"random_look"
+					],
+					"transitions": [
+						{
+							"zoom": "query.is_on_ground == 0"
+						}
+					],
+					"blend_transition": 1.0
+				},
+				"zoom": {
+					"animations": [
+						"air_wings",
+						"wing_flap"
+					],
+					"transitions": [
+						{
+							"default": "query.is_on_ground == 1"
+						}
+					],
+					"blend_transition": 1.2
+				}
+			}
+		}
+	}
+}

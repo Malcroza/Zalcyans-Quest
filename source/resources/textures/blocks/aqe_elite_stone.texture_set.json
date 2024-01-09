@@ -1,8 +1,0 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "aqe_elite_stone",
-		"metalness_emissive_roughness": "aqe_elite_stone_mer",
-		"heightmap": "aqe_elite_stone_heightmap"
-	}
-}

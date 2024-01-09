@@ -1,0 +1,1044 @@
+//bridge-file-version: #36
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:zighet_queen",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {
+			"melee_start": {
+				"minecraft:behavior.float": {
+					"priority": 0
+				},
+				"minecraft:attack": {
+					"damage": 7,
+					"effect_name": "weakness",
+					"effect_duration": 10
+				},
+				"minecraft:jump.static": {},
+				"minecraft:knockback_resistance": {
+					"value": 1
+				},
+				"minecraft:movement": {
+					"value": 0.3
+				},
+				"minecraft:movement.basic": {},
+				"minecraft:navigation.walk": {
+					"avoid_damage_blocks": true,
+					"can_path_over_water": true,
+					"can_sink": false
+				},
+				"minecraft:physics": {
+					"has_gravity": true
+				},
+				"minecraft:break_blocks": {
+					"breakable_blocks": [
+						"zalcyan:zighet_loot_box",
+						"bamboo",
+						"bamboo_sapling",
+						"beetroot",
+						"brown_mushroom",
+						"carrots",
+						"carved_pumpkin",
+						"chorus_flower",
+						"chorus_plant",
+						"deadbush",
+						"double_plant",
+						"leaves",
+						"leaves2",
+						"lit_pumpkin",
+						"melon_block",
+						"melon_stem",
+						"potatoes",
+						"pumpkin",
+						"pumpkin_stem",
+						"red_flower",
+						"red_mushroom",
+						"crimson_fungus",
+						"warped_fungus",
+						"reeds",
+						"sapling",
+						"snow_layer",
+						"sweet_berry_bush",
+						"tallgrass",
+						"turtle_egg",
+						"vine",
+						"waterlily",
+						"wheat",
+						"yellow_flower",
+						"bamboo",
+						"bamboo_sapling",
+						"beetroot",
+						"brown_mushroom",
+						"carrots",
+						"carved_pumpkin",
+						"chorus_flower",
+						"chorus_plant",
+						"deadbush",
+						"double_plant",
+						"leaves",
+						"leaves2",
+						"lit_pumpkin",
+						"melon_block",
+						"melon_stem",
+						"potatoes",
+						"pumpkin",
+						"pumpkin_stem",
+						"red_flower",
+						"red_mushroom",
+						"crimson_fungus",
+						"warped_fungus",
+						"reeds",
+						"sapling",
+						"snow_layer",
+						"sweet_berry_bush",
+						"tallgrass",
+						"turtle_egg",
+						"vine",
+						"waterlily",
+						"wheat",
+						"yellow_flower"
+					]
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 1,
+					"attack_once": false,
+					"track_target": true,
+					"random_stop_interval": 0,
+					"reach_multiplier": 1.6,
+					"speed_multiplier": 1.8,
+					"attack_duration": 0.45,
+					"hit_delay_pct": 0.5,
+					"require_complete_path": true
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 4,
+					"time_down_event": {
+						"event": "switch_to_roar",
+						"target": "self",
+						"filters": {
+							"any_of": [
+								{
+									"test": "has_target",
+									"subject": "self",
+									"value": true
+								}
+							]
+						}
+					}
+				},
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"roar": {
+				"minecraft:behavior.float": {
+					"priority": 0
+				},
+				"minecraft:attack": {
+					"damage": 7
+				},
+				"minecraft:jump.static": {},
+				"minecraft:knockback_resistance": {
+					"value": 1
+				},
+				"minecraft:movement": {
+					"value": 0
+				},
+				"minecraft:movement.basic": {},
+				"minecraft:navigation.walk": {
+					"avoid_damage_blocks": true,
+					"can_path_over_water": true,
+					"can_sink": false
+				},
+				"minecraft:physics": {
+					"has_gravity": true
+				},
+				"minecraft:break_blocks": {
+					"breakable_blocks": [
+					"zalcyan:zighet_loot_box",
+						"bamboo",
+						"bamboo_sapling",
+						"beetroot",
+						"brown_mushroom",
+						"carrots",
+						"carved_pumpkin",
+						"chorus_flower",
+						"chorus_plant",
+						"deadbush",
+						"double_plant",
+						"leaves",
+						"leaves2",
+						"lit_pumpkin",
+						"melon_block",
+						"melon_stem",
+						"potatoes",
+						"pumpkin",
+						"pumpkin_stem",
+						"red_flower",
+						"red_mushroom",
+						"crimson_fungus",
+						"warped_fungus",
+						"reeds",
+						"sapling",
+						"snow_layer",
+						"sweet_berry_bush",
+						"tallgrass",
+						"turtle_egg",
+						"vine",
+						"waterlily",
+						"wheat",
+						"yellow_flower"
+					]
+				},
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"duration": 1,
+					"attack_time": 0.5,
+					"knockback_damage": 12,
+					"knockback_strength": 2,
+					"knockback_range": 5,
+					"knockback_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "arthropod"
+					},
+					"damage_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "arthropod"
+					},
+					"cooldown_time": 10
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 2.2,
+					"time_down_event": {
+						"event": "switch_to_melee",
+						"target": "self"
+					}
+				},
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"melee": {
+				"minecraft:behavior.float": {
+					"priority": 0
+				},
+				"minecraft:attack": {
+					"damage": 7,
+					"effect_name": "weakness",
+					"effect_duration": 10
+				},
+				"minecraft:jump.static": {},
+				"minecraft:knockback_resistance": {
+					"value": 1
+				},
+				"minecraft:movement": {
+					"value": 0.3
+				},
+				"minecraft:movement.basic": {},
+				"minecraft:navigation.walk": {
+					"avoid_damage_blocks": true,
+					"can_path_over_water": true,
+					"can_sink": false
+				},
+				"minecraft:physics": {
+					"has_gravity": true
+				},
+				"minecraft:break_blocks": {
+					"breakable_blocks": [
+					"zalcyan:zighet_loot_box",
+						"bamboo",
+						"bamboo_sapling",
+						"beetroot",
+						"brown_mushroom",
+						"carrots",
+						"carved_pumpkin",
+						"chorus_flower",
+						"chorus_plant",
+						"deadbush",
+						"double_plant",
+						"leaves",
+						"leaves2",
+						"lit_pumpkin",
+						"melon_block",
+						"melon_stem",
+						"potatoes",
+						"pumpkin",
+						"pumpkin_stem",
+						"red_flower",
+						"red_mushroom",
+						"crimson_fungus",
+						"warped_fungus",
+						"reeds",
+						"sapling",
+						"snow_layer",
+						"sweet_berry_bush",
+						"tallgrass",
+						"turtle_egg",
+						"vine",
+						"waterlily",
+						"wheat",
+						"yellow_flower",
+						"bamboo",
+						"bamboo_sapling",
+						"beetroot",
+						"brown_mushroom",
+						"carrots",
+						"carved_pumpkin",
+						"chorus_flower",
+						"chorus_plant",
+						"deadbush",
+						"double_plant",
+						"leaves",
+						"leaves2",
+						"lit_pumpkin",
+						"melon_block",
+						"melon_stem",
+						"potatoes",
+						"pumpkin",
+						"pumpkin_stem",
+						"red_flower",
+						"red_mushroom",
+						"crimson_fungus",
+						"warped_fungus",
+						"reeds",
+						"sapling",
+						"snow_layer",
+						"sweet_berry_bush",
+						"tallgrass",
+						"turtle_egg",
+						"vine",
+						"waterlily",
+						"wheat",
+						"yellow_flower"
+					]
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 1,
+					"attack_once": false,
+					"track_target": true,
+					"random_stop_interval": 0,
+					"reach_multiplier": 1.6,
+					"speed_multiplier": 1.8,
+					"attack_duration": 0.45,
+					"hit_delay_pct": 0.5,
+					"require_complete_path": true
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 7,
+					"time_down_event": {
+						"event": "switch_to_summon",
+						"target": "self"
+					}
+				},
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"summon": {
+				"minecraft:behavior.float": {
+					"priority": 0
+				},
+				"minecraft:movement": {
+					"value": 0.5
+				},
+				"minecraft:navigation.walk": {
+					"can_path_over_water": true,
+					"can_pass_doors": true,
+					"can_open_doors": true,
+					"avoid_water": true
+				},
+				"minecraft:movement.basic": {},
+				"minecraft:jump.static": {},
+				"minecraft:can_climb": {},
+				"minecraft:physics": {
+					"has_gravity": true
+				},
+				"minecraft:knockback_resistance": {
+					"value": 1
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 5.3,
+					"time_down_event": {
+						"event": "switch_to_fly_swoop",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.summon_entity": {
+					"priority": 1,
+					"summon_choices": [
+						{
+							"weight": 2,
+							"cooldown_time": 17,
+							"cast_duration": 5,
+							"particle_color": "#FFB3B3CC",
+							"sequence": [
+								{
+									"shape": "circle",
+									"target": "self",
+									"base_delay": 2,
+									"num_entities_spawned": 4,
+									"entity_type": "zalcyan:zighet",
+									"size": 3,
+									"sound_event": "prepare.summon",
+									"entity_lifespan": 60,
+									"summon_cap": 9,
+									"summon_cap_radius": 48
+								}
+							],
+							"max_activation_range": 60
+						}
+					]
+				},
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"fly_swoop": {
+				"minecraft:physics": {
+					"has_gravity": false
+				},
+				"minecraft:movement": {
+					"value": 1.8
+				},
+				"minecraft:movement.glide": {
+					"start_speed": 0.1,
+					"speed_when_turning": 0.2
+				},
+				"minecraft:behavior.avoid_mob_type": {
+					"priority": 0,
+					"max_dist": 16,
+					"ignore_visibility": true,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "ocelot"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "cat"
+									}
+								]
+							},
+							"max_dist": 16
+						},
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "ocelot"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "cat"
+									}
+								]
+							},
+							"max_dist": 16
+						},
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "ocelot"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "cat"
+									}
+								]
+							},
+							"max_dist": 16
+						}
+					]
+				},
+				"minecraft:behavior.swoop_attack": {
+					"priority": 0,
+					"damage_reach": 0.2,
+					"speed_multiplier": 1,
+					"delay_range": [
+						1,
+						2
+					]
+				},
+				"minecraft:behavior.circle_around_anchor": {
+					"priority": 3,
+					"radius_change": 1,
+					"radius_adjustment_chance": 0.004,
+					"height_adjustment_chance": 0.002857,
+					"goal_radius": 1,
+					"angle_change": 15,
+					"radius_range": [
+						5,
+						15
+					],
+					"height_offset_range": [
+						-4,
+						5
+					],
+					"height_above_target_range": [
+						6,
+						8
+					]
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 5.3,
+					"time_down_event": {
+						"event": "switch_to_fly_shoot",
+						"target": "self"
+					}
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"fly_shoot": {
+				"minecraft:behavior.float": {
+					"priority": 4
+				},
+				"minecraft:movement": {
+					"value": 0.4
+				},
+				"minecraft:flying_speed": {
+					"value": 0.2
+				},
+				"minecraft:navigation.hover": {
+					"can_path_over_water": true,
+					"can_sink": false,
+					"can_pass_doors": false,
+					"can_path_from_air": true,
+					"avoid_water": true,
+					"avoid_damage_blocks": true,
+					"avoid_sun": false
+				},
+				"minecraft:movement.hover": {},
+				"minecraft:jump.static": {},
+				"minecraft:can_fly": {},
+				"minecraft:physics": {
+					"has_gravity": true
+				},
+				"minecraft:shooter": {
+					"def": "zalcyan:zighet_bullet"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 0,
+					"attack_radius": 60,
+					"attack_interval_min": 1,
+					"attack_interval_max": 3
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 14,
+					"time_down_event": {
+						"event": "switch_to_fly_swoop_after_ranged",
+						"target": "self"
+					}
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"fly_swoop_after_ranged": {
+				"minecraft:physics": {
+					"has_gravity": false
+				},
+				"minecraft:movement": {
+					"value": 1.8
+				},
+				"minecraft:movement.glide": {
+					"start_speed": 0.1,
+					"speed_when_turning": 0.2
+				},
+				"minecraft:behavior.avoid_mob_type": {
+					"priority": 0,
+					"max_dist": 16,
+					"ignore_visibility": true,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "ocelot"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "cat"
+									}
+								]
+							},
+							"max_dist": 16
+						},
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "ocelot"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "cat"
+									}
+								]
+							},
+							"max_dist": 16
+						},
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "ocelot"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "cat"
+									}
+								]
+							},
+							"max_dist": 16
+						}
+					]
+				},
+				"minecraft:behavior.swoop_attack": {
+					"priority": 0,
+					"damage_reach": 0.2,
+					"speed_multiplier": 1,
+					"delay_range": [
+						1,
+						2
+					]
+				},
+				"minecraft:behavior.circle_around_anchor": {
+					"priority": 3,
+					"radius_change": 1,
+					"radius_adjustment_chance": 0.004,
+					"height_adjustment_chance": 0.002857,
+					"goal_radius": 1,
+					"angle_change": 15,
+					"radius_range": [
+						5,
+						15
+					],
+					"height_offset_range": [
+						-4,
+						5
+					],
+					"height_above_target_range": [
+						6,
+						8
+					]
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 4,
+					"time_down_event": {
+						"event": "switch_to_roar",
+						"target": "self"
+					}
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"zighet_angry": {
+				"minecraft:angry": {
+					"duration": 25,
+					"broadcast_anger": true,
+					"broadcast_anger_on_attack": true,
+					"broadcast_anger_on_being_attacked": true,
+					"broadcast_range": 36,
+					"broadcast_targets": [
+						"zighet"
+					],
+					"calm_event": {
+						"event": "minecraft:on_calm",
+						"target": "self"
+					},
+					"angry_sound": "angry",
+					"sound_interval": {
+						"range_min": 2,
+						"range_max": 5
+					}
+				}
+			},
+			"zighet_calm": {
+				"minecraft:on_target_acquired": {
+					"event": "minecraft:become_angry",
+					"target": "self"
+				}
+			}
+		},
+		"components": {
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 1
+					}
+				]
+			},
+			"minecraft:nameable": {},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player ? 20 : 0"
+			},
+			"minecraft:health": {
+				"max": 600,
+				"value": 600
+			},
+			"minecraft:type_family": {
+				"family": [
+					"zighet",
+					"undead",
+					"monster",
+					"mob",
+					"insect",
+					"arthropod"
+				]
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/zighet_queen.json"
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 0,
+				"must_see": false,
+				"reselect_targets": true,
+				"within_radius": 64,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "snowgolem"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "irongolem"
+								}
+							]
+						},
+						"max_dist": 42
+					},
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "wandering_trader"
+								}
+							]
+						},
+						"max_dist": 42,
+						"must_see": false
+					}
+				],
+				"must_reach": false,
+				"scan_interval": 10
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 8,
+				"look_distance": 6,
+				"probability": 0.02
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 9
+			},
+			"minecraft:collision_box": {
+				"height": 4.1,
+				"width": 4.1
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_air": true,
+				"breathes_water": false
+			},
+			"minecraft:attack": {
+				"damage": 7,
+				"effect_name": "weakness",
+				"effect_duration": 10
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:target_nearby_sensor": {},
+			"minecraft:on_target_escape": {
+				"event": "target_escape",
+				"target": "self"
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 1
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"melee_start",
+						"zighet_calm"
+					]
+				}
+			},
+			"target_nearby": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"roar",
+								"fly_swoop",
+								"fly_shoot",
+								"summon",
+								"fly_swoop_after_ranged"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"melee"
+							]
+						}
+					}
+				]
+			},
+			"switch_to_fly_swoop": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"fly_shoot",
+								"fly_swoop_after_ranged",
+								"summon",
+								"melee",
+								"roar"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"fly_swoop"
+							]
+						}
+					}
+				]
+			},
+			"switch_to_fly_shoot": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"fly_swoop",
+								"fly_swoop_after_ranged",
+								"summon",
+								"melee",
+								"roar"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"fly_shoot"
+							]
+						}
+					}
+				]
+			},
+			"switch_to_fly_swoop_after_ranged": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"fly_swoop",
+								"fly_shoot",
+								"summon",
+								"melee",
+								"roar"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"fly_swoop_after_ranged"
+							]
+						}
+					}
+				]
+			},
+			"switch_to_summon": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"fly_swoop",
+								"fly_shoot",
+								"fly_swoop_after_ranged",
+								"melee",
+								"roar"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"summon"
+							]
+						}
+					}
+				]
+			},
+			"switch_to_melee": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"fly_swoop",
+								"fly_shoot",
+								"fly_swoop_after_ranged",
+								"summon",
+								"roar"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"melee"
+							]
+						}
+					}
+				]
+			},
+			"switch_to_roar": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"melee_start",
+								"fly_swoop",
+								"fly_shoot",
+								"fly_swoop_after_ranged",
+								"summon",
+								"melee"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"roar"
+							]
+						}
+					}
+				]
+			},
+			"target_escape": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"melee",
+								"roar",
+								"summon",
+								"fly_swoop",
+								"fly_shoot",
+								"fly_swoop_after_ranged",
+								"melee_start"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"melee_start"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:on_calm": {
+				"remove": {
+					"component_groups": [
+						"zighet_angry"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"zighet_calm"
+					]
+				}
+			},
+			"minecraft:become_angry": {
+				"remove": {
+					"component_groups": [
+						"zighet_calm"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"zighet_angry"
+					]
+				}
+			}
+		}
+	}
+}

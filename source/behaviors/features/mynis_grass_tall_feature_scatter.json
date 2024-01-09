@@ -5,30 +5,11 @@
 		"description": {
 			"identifier": "zalcyan:mynis_grass_tall_feature_scatter"
 		},
-		"iterations": 14,
-		"coordinate_eval_order": "zyx",
-		"x": {
-			"extent": [
-				-8,
-				8
-			],
-			"distribution": "gaussian"
-		},
-		"z": {
-			"extent": [
-				-8,
-				8
-			],
-			"distribution": "gaussian"
-		},
-		"y": {
-			"extent": [
-				-4,
-				4
-			],
-			"distribution": "gaussian"
-		},
-		"project_input_to_floor": false,
+		"iterations": 1,
+		"x": 0,
+		"z": 0,
+		"y": 0,
+		"project_input_to_floor": true,
 		"places_feature": "zalcyan:mynis_grass_tall_feature"
 	}
 }

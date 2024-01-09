@@ -1,0 +1,23 @@
+{
+  "materials": {
+    "version": "1.0.0",
+	"terrain": {
+      "+defines": [ "ALPHA_TEST" ],
+      "+states": [ "Blending", "DisableCulling" ],
+      "blendSrc": "One",
+      "blendDst": "One"
+    },
+	  "ncull:entity_nocull": {
+      "+defines": [ "ALPHA_TEST" ],
+	  "+states": [ "Blending", "DisableCulling" ],
+      "+samplerStates": [
+        {
+          "samplerIndex": 1,
+          "textureWrap": "Repeat"
+        }
+      ],
+      "msaaSupport": "Both"
+
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:ds_phase_door_opening",
+            "is_experimental": false,
+            "register_to_creative_menu": false
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 200
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#2681a5",
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 1,
+			"minecraft:collision_box": false,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2000.5
+            },
+			"minecraft:queued_ticking": {
+                "looping": true,
+                "on_tick": {
+                    "event": "activate"
+                },
+                "interval_range": [
+                    4,
+                    6
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "ds_phase_door_opening",
+                    "render_method": "blend"
+                }
+            }
+        },
+        "events": {
+			"activate": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~+1 ~ ~ ~+1 ~ zalcyan:ds_phase_door_opening replace zalcyan:ds_phase_door_closed"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~-1 ~ ~ ~-1 ~ zalcyan:ds_phase_door_opening replace zalcyan:ds_phase_door_closed"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~+1 ~ ~ ~+1 ~ ~ zalcyan:ds_phase_door_opening replace zalcyan:ds_phase_door_closed"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~-1 ~ ~ ~-1 ~ ~ zalcyan:ds_phase_door_opening replace zalcyan:ds_phase_door_closed"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~ ~+1 ~ ~ ~+1 zalcyan:ds_phase_door_opening replace zalcyan:ds_phase_door_closed"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~ ~-1 ~ ~ ~-1 zalcyan:ds_phase_door_opening replace zalcyan:ds_phase_door_closed"
+                            ]
+                        }
+                    },
+					{
+                     "set_block_at_pos": {
+                            "block_type": "zalcyan:ds_phase_door_open",
+                             "block_offset": [
+                                        0,
+                                        0,
+                                        0
+                         ]
+                         }
+                    }
+                ]
+            }
+		}
+    }
+}

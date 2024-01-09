@@ -1,0 +1,28 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.wybeom": {
+		"part_visibility": [
+        { "saddle": "query.is_saddled" }
+      ],
+	  "arrays": {
+	    "textures": {
+		  "Array.skins": [
+		    "Texture.wybeom0",
+		    "Texture.wybeom1",
+		    "Texture.wybeom2",
+		    "Texture.wybeom3",
+			"Texture.wybeom4",
+			"Texture.wybeom5",
+			"Texture.wybeom6",
+			"Texture.wybeom7",
+			"Texture.wybeom8"
+		  ]
+		}
+	  },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.skins[query.variant]" ]
+    }
+  }
+}

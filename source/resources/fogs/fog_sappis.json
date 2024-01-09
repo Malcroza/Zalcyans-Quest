@@ -1,0 +1,28 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:fog_settings": {
+    "description": {
+      "identifier": "zalcyan:fog_sappis"
+    },
+    "distance": {
+      "air": {
+        "fog_start": 10.0,
+        "fog_end": 96.0,
+        "fog_color": "#94b565",
+        "render_distance_type": "fixed"
+      },
+      "water": {
+        "fog_start": 0.0,
+        "fog_end": 15.0,
+        "fog_color": "#79a862",
+        "render_distance_type": "fixed"
+      },
+      "weather": {
+        "fog_start": 10.0,
+        "fog_end": 96.0,
+        "fog_color": "#6b7564",
+        "render_distance_type": "fixed"
+      }
+    }
+  }
+}

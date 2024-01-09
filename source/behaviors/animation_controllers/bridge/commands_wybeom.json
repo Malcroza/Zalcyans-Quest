@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.wybeom.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						}
+					],
+					"on_entry": [
+						"/ride @p[r=10] start_riding @s teleport_rider"
+					]
+				},
+				"execute_command_id_1": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 1"
+						}
+					],
+					"on_entry": [
+						"/ride @s evict_riders",
+						"@s bridge:remove_command_id_1"
+					]
+				}
+			}
+		}
+	}
+}

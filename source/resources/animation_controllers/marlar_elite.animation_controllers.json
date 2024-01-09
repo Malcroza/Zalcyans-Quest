@@ -28,7 +28,6 @@
 			"initial_state" : "default",
 			"states" : {
 				"default" : {
-					"animations" : [ "marlar_elite.general" ],
 					"transitions" : [
 						{
 							"attackzero": "query.is_delayed_attacking && math.random_integer(1,4)==1"

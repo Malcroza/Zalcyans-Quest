@@ -1,0 +1,91 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pod.base_pose": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "trail",
+							"locator": "blip"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.skreepog_pillar.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"summon"
+					],
+					"transitions": [
+						{
+							"zoom": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0
+				},
+				"zoom": {
+					"animations": [
+						"summon2"
+					],
+					"transitions": [
+					]
+				}
+			}
+		},
+		"controller.animation.skreepog_pillar.general2": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"mining"
+					],
+					"transitions": [
+						{
+							"zoom": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 6.4
+				},
+				"zoom": {
+					"animations": [
+						"mining2"
+					],
+					"transitions": [
+					]
+				}
+			}
+		},
+		"controller.animation.skreepog_pillar.zoom": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"non_summoning"
+					],
+					"transitions": [
+						{
+							"ridden": "query.is_casting"
+						}
+					],
+					"blend_transition": 0
+				},
+				"ridden": {
+					"animations": [
+						"summoning"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_casting"
+						}
+					],
+					"blend_transition": 0
+				}
+			}
+		}
+	}
+}

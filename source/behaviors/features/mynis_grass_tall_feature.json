@@ -1,19 +1,22 @@
-//bridge-file-version: #0
+//bridge-file-version: #6
 {
-	"format_version": "1.16.220",
-	"minecraft:single_block_feature": {
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
 		"description": {
 			"identifier": "zalcyan:mynis_grass_tall_feature"
 		},
-		"places_block": {
-			"name": "zalcyan:mynis_grass_tall"
-		},
-		"enforce_survivability_rules": true,
-		"enforce_placement_rules": true,
-		"may_replace": [
-			{
-				"name": "minecraft:air"
+		"structure_name": "mystructure:mynis_grass_tall",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_allowlist": [
+					{
+						"name": "minecraft:air"
+					}
+				]
 			}
-		]
+		}
 	}
 }

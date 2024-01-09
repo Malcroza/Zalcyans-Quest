@@ -1,0 +1,294 @@
+
+{
+	"format_version": "1.10.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:skreepog_pillar",//IN DEVELOPMENT-NOT FINAL
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:is_dead": {
+				"minecraft:transformation": {
+					"into": "zalcyan:skreepog_pillar_s"
+				}
+			},
+			"skreepog_pillar_angry": {
+				"minecraft:angry": {
+					"duration": 25,
+					"broadcast_anger": true,
+					"broadcast_range": 20,
+					"calm_event": {
+						"event": "minecraft:on_calm",
+						"target": "self"
+					}
+				}
+			},
+			"skreepog_pillar_calm": {
+				"minecraft:on_target_acquired": {
+					"event": "minecraft:become_angry",
+					"target": "self"
+				}
+			}
+		},
+		"components": {
+			"minecraft:behavior.summon_entity": {
+				"priority": 0,
+				"summon_choices": [
+					{
+						"weight": 1,
+						"cast_duration": 15,
+						"cooldown_time": 10,
+						"min_activation_range": 0,
+						"max_activation_range": 64,
+						"sequence": [
+							{
+								"shape": "circle",
+								"target": "self",
+								"base_delay": 1.2,
+								"num_entities_spawned": 8,
+								"entity_type": "zalcyan:skreepog_summon",
+								"summon_cap": 20,
+								"summon_cap_radius": 30,
+								"size": 10,
+								"entity_lifespan": 40
+							}
+						]
+					}
+				]
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"minecraft:wood",
+					"minecraft:cobblestone",
+					"minecraft:planks",
+					"minecraft:glass",
+					"minecraft:furnace",
+					"minecraft:crafting_table",
+					"minecraft:cactus",
+					"minecraft:concrete",
+					"minecraft:mossy_cobblestone",
+					"minecraft:stonebrick",
+					"minecraft:web",
+					"minecraft:fence",
+					"minecraft:cobblestone_wall",
+					"minecraft:wooden_door",
+					"minecraft:chest",
+					"minecraft:glass_pane",
+					"minecraft:quartz_block",
+					"minecraft:leaves",
+					"minecraft:brick_block",
+					"minecraft:iron_block",
+					"minecraft:bookshelf",
+					"minecraft:jukebox",
+					"minecraft:concrete",
+					"minecraft:emerald_block",
+					"minecraft:diamond_block",
+					"minecraft:noteblock",
+					"minecraft:lapis_block",
+					"minecraft:sponge"
+				]
+			},
+			"minecraft:nameable": {},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:type_family": {
+				"family": [
+					"skreepog_pillar"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 5.6,
+				"height": 100.8
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"is_amphibious": false,
+				"can_pass_doors": false,
+				"can_break_doors": false,
+				"can_walk": false,
+				"avoid_water": false,
+				"can_path_over_water": false
+			},
+			"minecraft:jump.static": {},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:can_climb": {},
+			"minecraft:attack": {
+				"damage": 21,
+				"effect_name": "slowness",
+				"effect_duration": 5
+			},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:health": {
+				"value": 265,
+				"max": 265
+			},
+			"minecraft:breathable": {
+				"totalSupply": 15,
+				"suffocateTime": 0,
+				"breathesAir": true,
+				"breathesWater": true
+			},
+			"minecraft:damage_sensor": [
+				{
+					"on_damage": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_damage",
+									"value": "fatal"
+								}
+							]
+						},
+						"event": "minecraft:event_spawn_dead"
+					}
+				}
+			],
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"within_radius": 100,
+				"reselect_targets": true,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "snowgolem"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "irongolem"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "marlar_emperor"
+								}
+							]
+						},
+						"max_dist": 100
+					},
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "wandering_trader"
+								}
+							]
+						},
+						"max_dist": 100,
+						"must_see": false
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "illager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "monster"
+								}
+							]
+						},
+						"max_dist": 100
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "lor"
+						}
+					}
+				],
+				"must_see": true
+			},
+			"minecraft:physics": {},
+			"minecraft:fire_immune": true,
+			"minecraft:attack_cooldown": {
+				"attack_cooldown_time": [
+					0.1,
+					0.2
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1.0
+			},
+			"minecraft:ambient_sound_interval": {
+				"range": 10,
+				"value": 0
+			}
+		},
+		"events": {
+			"minecraft:event_spawn_dead": {
+				"add": {
+					"component_groups": [
+						"minecraft:is_dead"
+					]
+				}
+			},
+			"minecraft:on_calm": {
+				"remove": {
+					"component_groups": [
+						"skreepog_pillar_angry"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"skreepog_pillar_calm"
+					]
+				}
+			},
+			"minecraft:become_angry": {
+				"remove": {
+					"component_groups": [
+						"skreepog_pillar_calm"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"skreepog_pillar_angry"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"skreepog_pillar_calm"
+					]
+				}
+			}
+		}
+	}
+}

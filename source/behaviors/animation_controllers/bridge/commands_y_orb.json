@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bridge_y_orb.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						}
+					],
+					"on_entry": [
+						"/playsound sound.sniper.shoot_large @a ~ ~ ~ 0.6",
+						"/camerashake add @a[r=2] 0.2 0.2",
+						"/execute as @a at @s unless entity @s[y=~1.51,dy=0] if entity @s[y=~1.49,dy=0,hasitem=[{item=zalcyan2:crossbow,location=slot.weapon.mainhand}]] run effect @s slowness 3 9 true"
+					]
+				},
+				"execute_command_id_1": {
+					"transitions": [
+					],
+					"on_entry": [
+						"/particle zalcyan:y_orb_blast ~ ~ ~",
+						"/particle zalcyan:spark_blast ~ ~ ~",
+						"/particle zalcyan:y_orb_fog ~ ~ ~",
+						"/particle zalcyan:y_orb_sparks ~ ~ ~",						
+						"@s bridge:remove_command_id_1"
+					]
+				}
+			}
+		}
+	}
+}

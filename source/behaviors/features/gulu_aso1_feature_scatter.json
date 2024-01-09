@@ -1,0 +1,15 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:gulu_aso1_feature_scatter"
+		},
+		"iterations": 1,
+		"x": 0,
+		"z": 0,
+		"y": 0,
+		"project_input_to_floor": true,
+		"places_feature": "minecraft:gulu_aso1_feature"
+	}
+}

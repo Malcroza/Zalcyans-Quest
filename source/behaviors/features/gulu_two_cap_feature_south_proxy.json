@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:gulu_two_cap_feature_south_proxy"
+		},
+
+		"places_feature": "zalcyan:gulu_two_cap_feature_south",
+
+		"iterations": 1,
+
+		"x": -16,
+		"z": -16,
+		"y": 0
+	}
+}

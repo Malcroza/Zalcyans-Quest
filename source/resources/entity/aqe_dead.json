@@ -1,0 +1,45 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:aqe_dead",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"aqe0": "textures/entity/aqe/aqe0",
+				"aqe1": "textures/entity/aqe/aqe1",
+				"aqe2": "textures/entity/aqe/aqe2",
+				"aqe3": "textures/entity/aqe/aqe3",
+				"aqe4": "textures/entity/aqe/aqe4",
+				"aqe5": "textures/entity/aqe/aqe5",
+				"aqe6": "textures/entity/aqe/aqe6",
+				"aqe7": "textures/entity/aqe/aqe7"
+			},
+			"geometry": {
+				"default": "geometry.aqe"
+			},
+			"animations": {
+				"aqe_d.general": "animation.aqe.sit",
+				"aqe_die1": "animation.aqe.die1",
+				"aqe_die2": "animation.aqe.die2",
+				"aqe_die3": "animation.aqe.die3",
+				"aqe_die4": "animation.aqe.die4",
+				"aqe_die5": "animation.aqe.die5",
+				"general": "controller.animation.aqe_d.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			},
+			"particle_effects": {
+				"aqe_fluid": "zalcyan:aqe_fluid"
+			},
+			"render_controllers": [
+				"controller.render.aqe"
+			]
+		}
+	}
+}

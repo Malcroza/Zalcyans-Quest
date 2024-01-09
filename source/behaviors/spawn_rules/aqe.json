@@ -1,4 +1,4 @@
-//bridge-file-version: #0
+//bridge-file-version: #1
 {
 	"format_version": "1.8.0",
 	"minecraft:spawn_rules": {
@@ -20,10 +20,10 @@
 					"max": "hard"
 				},
 				"minecraft:weight": {
-					"default": 100
+					"default": 70
 				},
 				"minecraft:herd": {
-					"min_size": 4,
+					"min_size": 3,
 					"max_size": 5
 				},
 				"minecraft:biome_filter": {
@@ -39,6 +39,32 @@
 							"value": "desert"
 						}
 					]
+				}
+			},
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:weight": {
+					"default": 240
+				},
+				"minecraft:herd": {
+					"min_size": 3,
+					"max_size": 5
+				},
+				"minecraft:density_limit": {
+					"surface": 16,
+					"underground": 0
+				},
+				"minecraft:biome_filter": {
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "monster"
+				},
+				"minecraft:spawns_on_block_filter": [
+					"zalcyan:gulu_ground"
+				],
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 15
 				}
 			}
 		]

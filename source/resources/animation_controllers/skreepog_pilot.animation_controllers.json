@@ -1,11 +1,45 @@
 {
 	"format_version" : "1.10.0",
 	"animation_controllers" : {
+		"controller.animation.skreepog_pilot.default" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "bob","skreepog_attack" ]
+				}
+			}
+		},
 		"controller.animation.skreepog_pilot.attack" : {
 			"initial_state" : "default",
 			"states" : {
 				"default" : {
-					"animations" : [ "skeleton_attack" ]
+					"transitions" : [
+						{
+							"ranged" : "query.variant == 0 && query.has_target == 1"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"ranged" : {
+					"animations" : [ "bow_and_arrow" ],
+					"transitions" : [
+						{
+							"default" : "!query.variant == 0 || query.has_target == 0"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.skreepog_pilot.move": {
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"moving": "query.modified_move_speed"
+						}
+					],
+					"blend_transition": 0.4
 				}
 			}
 		}

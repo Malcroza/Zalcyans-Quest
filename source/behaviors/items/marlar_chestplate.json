@@ -1,14 +1,14 @@
 {
-  "format_version": "1.16.100",
+  "format_version": "1.20.40",
   "minecraft:item": {
     "description": {
       "identifier": "zalcyan:marlar_chestplate",
-      "category": "equipment"
+      "menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.chestplate"
+				}
     },
     "components": {
-      "minecraft:creative_category": {
-				"parent": "itemGroup.name.chestplate"
-			},
 			"minecraft:icon": {
 				"texture": "marlar_chestplate",
 				"frame": 0
@@ -32,12 +32,9 @@
           "zalcyan:marlar_chestplate"
         ]
       },
-	  "minecraft:damage": 2,
-      "minecraft:armor": {
-        "protection": 3
-      },
       "minecraft:wearable": {
-        "slot": "slot.armor.chest"
+        "slot": "slot.armor.chest",
+		"protection": 3
       }
     }
   }

@@ -1,0 +1,20 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.220",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "zalcyan:zighet_loot_box_feature"
+		},
+		"places_block": {
+			"name": "zalcyan:zighet_loot_box"
+		},
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": true,
+    "may_attach_to": {
+			"bottom": ["zalcyan:zighet_comb", "zalcyan:zighet_comb_full"]
+	},
+    "may_replace": [
+      "minecraft:air"
+    ]
+	}
+}

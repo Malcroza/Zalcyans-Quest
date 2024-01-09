@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan1:crossbow",
+      "materials": {
+        "default": "phantom",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/models/equipment/rysii_blaster",
+		"charged": "textures/models/equipment/rysii_blaster_charged",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.crossbow1",
+		"charged": "geometry.crossbow1_charged"
+      },
+      "animations": {
+		"crossbow1_first_person": "animation.crossbow1.first_person.hold",
+		"crossbow1_shoot": "animation.crossbow1.shoot",
+		"charge_sound": "controller.animation.crossbow1.sound"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "crossbow1_first_person": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow'"
+          },		  
+            "crossbow1_shoot",
+			"charge_sound"
+			
+        ]
+      },
+      "render_controllers": [ "controller.render.item_default", "controller.render.crossbow1_charged" ],
+			"sound_effects": {
+				"charge": "blaster.charge.bolt_charge"
+			}
+    }
+  }
+}

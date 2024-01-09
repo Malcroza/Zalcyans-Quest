@@ -1,0 +1,61 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan3:crossbow",
+      "materials": {
+        "default": "phantom",
+		"eyepiece": "zal2",
+		"eyepiece2": "zal2",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/models/equipment/zq_crossbow3",
+		"eyepiece": "textures/models/equipment/zq_crossbow3_eyepiece",
+        "enchanted": "textures/misc/enchanted_item_glint",
+		"eyepiece_loaded": "textures/models/equipment/zq_crossbow3_eyepiece_loaded"
+      },
+      "geometry": {
+        "default": "geometry.crossbow3",
+		"eyepiece": "geometry.crossbow3_eyepiece"
+      },
+      "animations": {
+		"crossbow3_first_person": "animation.crossbow3.first_person.hold",
+		"crossbow3_first_person2": "animation.crossbow3.first_person.hold2",
+		"crossbow3_first_person3": "animation.crossbow3.first_person.hold4",
+		"hold": "animation.crossbow3.fire_hold",
+		"fire": "animation.crossbow3.fire",
+		"crossbow3_shoot": "animation.crossbow3.shoot",
+		"shoot_cont": "controller.animation.crossbow3.attack",
+		"fire_cont": "controller.animation.crossbow3.fire",
+		"screen": "animation.crossbow3_eyepiece.screen",
+		"tp_cont_charge": "controller.animation.crossbow3.third_person_charge",
+		"tp_uncharged": "animation.crossbow3.third-person_uncharged",
+		"tp_charged": "animation.crossbow3.third-person_charged",
+		"sound_charge": "animation.crossbow3.charge",
+		"load": "animation.crossbow3.load",
+		"run": "animation.crossbow3.run",
+		"end_hold": "animation.crossbow3.first_person.end_hold"
+		
+      },
+      "scripts": {
+        "animate": [
+			{
+			"shoot_cont": "c.is_first_person"
+			},
+			"screen",
+		  
+            "crossbow3_shoot"
+          ,
+		  "fire_cont",
+		  "tp_cont_charge"
+        ]
+      },
+      "render_controllers": [ "controller.render.crossbow3", "controller.render.eyepiece3" ],
+	  "sound_effects": {
+				"scope": "rifle.zoom.scope3",
+				"charge": "blaster.charge.blaster_charge3"
+			}
+    }
+  }
+}

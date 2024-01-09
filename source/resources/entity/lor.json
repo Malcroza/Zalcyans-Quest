@@ -20,16 +20,13 @@
 				"attack1": "animation.lor.attack",
 				"move": "controller.animation.lor.move",
 				"general": "controller.animation.lor.general",
-				"attack": "controller.animation.lor.attack",
-				"roaring": "animation.lor.roaring",
-				"head": "controller.animation.lor.head_movement"
+				"attack": "controller.animation.lor.attack"
 			},
 			"scripts": {
 				"animate": [
 					"move",
 					"general",
-					"attack",
-					"head"
+					"attack"
 				],
 				"pre_animation": [
 					"variable.attack = Math.sin(variable.attack_time * 30.0);"

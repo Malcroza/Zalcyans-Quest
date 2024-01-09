@@ -3,20 +3,20 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"identifier": "minecraft:friss_tree_s_feature_rule",
+			"identifier": "zalcyan:friss_tree_s_feature_rule",
 			"places_feature": "minecraft:friss_tree_s_mcstructure"
 		},
 		"conditions": {
 			"minecraft:biome_filter": {
 				"test": "has_biome_tag",
 				"operator": "==",
-				"value": "frissania"
+				"value": "plains"
 			},
 			"placement_pass": "surface_pass"
 		},
 		"distribution": {
-			"iterations": 1,
-			"scatter_chance": 2,
+			"iterations": "(q.noise(v.originx / 850, v.originz / 850) < -0.41)",
+			"scatter_chance": 90,
 			"x": 0,
 			"y": "query.heightmap(variable.worldx, variable.worldz) - 1",
 			"z": 0

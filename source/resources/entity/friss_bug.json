@@ -12,16 +12,12 @@
       },
       "animations": {
         "flying": "animation.friss_bug.flying",
-        "controller_bee_sting": "controller.animation.bee.sting",
-        "bee_sting": "animation.friss_bug.sting",
-        "bee_no_stinger": "animation.bee.no_stinger",
-        "bee_fly_bobbing": "animation.friss_bug.fly.bobbing",
-        "bee_root_controller": "controller.animation.bee.root"
+        "friss_fly_bobbing": "animation.friss_bug.fly.bobbing",
+        "friss_root_controller": "controller.animation.friss_bug.root"
       },      
       "scripts": {
         "animate": [
-          "bee_root_controller",
-          { "bee_no_stinger": "query.mark_variant == 1" }
+          "friss_root_controller"
         ]
       },
       "render_controllers": [ "controller.render.friss_bug" ],

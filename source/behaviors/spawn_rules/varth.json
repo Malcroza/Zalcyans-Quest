@@ -1,31 +1,39 @@
-//bridge-file-version: #5
+//bridge-file-version: #0
 {
 	"format_version": "1.8.0",
 	"minecraft:spawn_rules": {
 		"description": {
 			"identifier": "zalcyan:varth",
-			"population_control": "monster"
+			"population_control": "animal"
 		},
 		"conditions": [
 			{
-				"minecraft:brightness_filter": {
-					"min": 0,
-					"max": 7,
-					"adjust_for_weather": true
-				},
+				"minecraft:spawns_on_surface": {},
 				"minecraft:weight": {
-					"default": 40
+					"default": 200
 				},
 				"minecraft:herd": {
-					"min_size": 3,
-					"max_size": 5
+					"min_size": 1,
+					"max_size": 6
 				},
-				"minecraft:biome_filter": {
-					"test": "has_biome_tag",
-					"operator": "==",
-					"value": "moonlen"
+				"minecraft:density_limit": {
+					"surface": 16,
+					"underground": 0
 				},
-				"minecraft:spawns_underground": {}
+				"minecraft:biome_filter": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "monster"
+					}
+				],
+				"minecraft:spawns_on_block_filter": [
+					"zalcyan:moonlen_mould"
+				],
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 15
+				}
 			}
 		]
 	}

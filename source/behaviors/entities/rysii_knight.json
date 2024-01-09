@@ -1,0 +1,1033 @@
+{
+    "format_version": "1.19.20",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "zalcyan:rysii_knight",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "properties": {
+                "zalcyan:gun_spark": {
+                    "type": "bool",
+                    "default": true,
+                    "client_sync": true
+                },
+                "zalcyan:shielded": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "zalcyan:equip_custom_shield": {
+                    "type": "bool",
+                    "default": true,
+                    "client_sync": true
+                }
+            },
+            "scripts": {
+                "animate": [
+                    "bridge_execute_commands",
+                    "shield_equip",
+                    "break_block"
+                ]
+            },
+            "animations": {
+                "bridge_execute_commands": "controller.animation.bridge_rysii_knight.execute_commands",
+                "place_block": "animation.place.block",
+                "shield_equip": "controller.animation.bridge_rysii_knight.shield",
+                "break_block": "controller.animation.rysii_knight.break_block"
+            }
+        },
+        "component_groups": {
+            "push": {
+                "minecraft:behavior.knockback_roar": {
+                    "priority": 1,
+                    "attack_time": 0.2,
+                    "cooldown_time": 10.5,
+                    "duration": 1,
+                    "knockback_damage": 4,
+                    "knockback_range": 4,
+                    "knockback_vertical_strength": 1,
+                    "knockback_horizontal_strength": 6,
+                    "knockback_filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "operator": "!=",
+                        "value": "rysii_knight"
+                    },
+                    "damage_filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "operator": "!=",
+                        "value": "rysii_knight"
+                    },
+                    "on_roar_end": {
+                        "event": "remove_push"
+                    }
+                }
+            },
+            "shield_block": {
+                "minecraft:behavior.delayed_attack": {
+                    "priority": 1,
+                    "attack_duration": 0.1,
+                    "attack_once": false,
+                    "cooldown_time": 10,
+                    "track_target": true,
+                    "require_complete_path": false,
+                    "random_stop_interval": 0,
+                    "reach_multiplier": 0.1,
+                    "speed_multiplier": 0.1,
+                    "hit_delay_pct": 0.5
+                },
+                "minecraft:attack": {
+                    "damage": 0
+                },
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "cause": "entity_attack",
+                            "deals_damage": false,
+                            "on_damage": {
+                                "event": "interact",
+                                "target": "self"
+                            }
+                        },
+                        {
+                            "cause": "projectile",
+                            "deals_damage": false,
+                            "on_damage": {
+                                "event": "interact",
+                                "target": "self"
+                            }
+                        },
+                        {
+                            "cause": "entity_explosion",
+                            "deals_damage": false,
+                            "on_damage": {
+                                "event": "interact",
+                                "target": "self"
+                            }
+                        },
+                        {
+                            "on_damage": {
+                                "event": "minecraft:event_spawn_dead",
+                                "target": "self",
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "has_damage",
+                                            "value": "fatal"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "cause": "fall",
+                            "deals_damage": false
+                        },
+                        {
+                            "on_damage": {
+                                "event": "rysii_push",
+                                "target": "self",
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "has_damage",
+                                            "value": "attack"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "looping": true,
+                    "time": [
+                        0.25,
+                        0.3
+                    ],
+                    "time_down_event": {
+                        "event": "no_shield_block_event",
+                        "target": "self"
+                    }
+                }
+            },
+            "no_shield_block": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "event": "minecraft:event_spawn_dead",
+                                "target": "self",
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "has_damage",
+                                            "value": "fatal"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "other_with_families": "rysii_knight"
+                                }
+                            },
+                            "deals_damage": false
+                        },
+                        {
+                            "cause": "entity_explosion",
+                            "deals_damage": false
+                        },
+                        {
+                            "cause": "fall",
+                            "deals_damage": false
+                        },
+                        {
+                            "on_damage": {
+                                "event": "rysii_push",
+                                "target": "self",
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "has_damage",
+                                            "value": "attack"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "cause": "projectile",
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "armor": {
+                "minecraft:equipment": {
+                    "table": "loot_tables/entities/rysii_knight_gear.json",
+                    "slot_drop_chance": [
+                        {
+                            "slot": "slot.weapon.mainhand",
+                            "drop_chance": 0
+                        }
+                    ]
+                }
+            },
+            "minecraft:is_dead": {
+                "minecraft:transformation": {
+                    "preserve_equipment": true,
+                    "into": "zalcyan:rysii_knight_dead"
+                }
+            },
+            "melee_attack": {
+                "minecraft:behavior.stalk_and_pounce_on_target": {
+                    "priority": 0,
+                    "stalk_speed": 1.2,
+                    "max_stalk_dist": 15,
+                    "leap_height": 1.1,
+                    "leap_dist": 1.5,
+                    "pounce_max_dist": 10,
+                    "interest_time": 0.1,
+                    "stuck_time": 2,
+                    "strike_dist": 2,
+                    "stuck_blocks": {
+                        "test": "is_block",
+                        "subject": "block",
+                        "operator": "==",
+                        "value": "snow_layer"
+                    }
+                },
+                "minecraft:behavior.delayed_attack": {
+                    "priority": 3,
+                    "max_path_time": 0.25,
+                    "path_fail_time_increase": 0.25,
+                    "attack_duration": 0.45,
+                    "attack_once": false,
+                    "cooldown_time": 0,
+                    "track_target": true,
+                    "require_complete_path": false,
+                    "random_stop_interval": 0,
+                    "reach_multiplier": 3.2,
+                    "speed_multiplier": 1.1,
+                    "hit_delay_pct": 0.9
+                },
+                "minecraft:attack": {
+                    "damage": 7
+                },
+                "minecraft:equipment": {
+                    "table": "loot_tables/entities/rysii_knight_gear_melee.json",
+                    "slot_drop_chance": [
+                        {
+                            "slot": "slot.weapon.mainhand",
+                            "drop_chance": 0
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "looping": true,
+                    "time": [
+                        1,
+                        3
+                    ],
+                    "time_down_event": {
+                        "event": "shield_block_event",
+                        "target": "self"
+                    }
+                }
+            },
+            "ranged_attack": {
+                "minecraft:behavior.ranged_attack": {
+                    "priority": 3,
+                    "charge_charged_trigger": 0.9,
+                    "charge_shoot_trigger": 1,
+                    "attack_interval_min": 0.6,
+                    "attack_interval_max": 1.2,
+                    "attack_radius": 24
+                },
+                "minecraft:behavior.charge_held_item": {
+                    "priority": 3,
+                    "items": [
+                        "zalcyan:rysii_charge"
+                    ]
+                },
+                "minecraft:shooter": {
+                    "def": "zalcyan:z_orb"
+                },
+                "minecraft:equipment": {
+                    "table": "loot_tables/entities/rysii_knight_gear_ranged.json",
+                    "slot_drop_chance": [
+                        {
+                            "slot": "slot.weapon.mainhand",
+                            "drop_chance": 0
+                        }
+                    ]
+                }
+            },
+            "rysii_knight_angry": {
+                "minecraft:angry": {
+                    "duration": 25,
+                    "broadcast_anger": true,
+                    "broadcast_anger_on_attack": true,
+                    "broadcast_anger_on_being_attacked": true,
+                    "broadcast_range": 26,
+                    "broadcast_targets": [
+                        "rysii_knight"
+                    ],
+                    "calm_event": {
+                        "event": "minecraft:on_calm",
+                        "target": "self"
+                    },
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "has_equipment",
+                                "value": "zalcyan:rysii_crown",
+                                "subject": "other",
+                                "domain": "head",
+                                "operator": "not"
+                            }
+                        ]
+                    },
+                    "angry_sound": "angry",
+                    "sound_interval": {
+                        "range_min": 2,
+                        "range_max": 5
+                    }
+                }
+            },
+            "rysii_knight_calm": {
+                "minecraft:on_target_acquired": {
+                    "event": "minecraft:become_angry",
+                    "target": "self"
+                }
+            },
+            "bridge:execute_command_id_1": {
+                "minecraft:skin_id": {
+                    "value": 1
+                }
+            },
+            "bridge:execute_no_command": {
+                "minecraft:skin_id": {
+                    "value": 0
+                }
+            }
+        },
+        "components": {
+            "minecraft:boss": {
+                "hud_range": 55,
+                "name": "§k§l§4Rysii Knight",
+                "should_darken_sky": true
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:behavior.pickup_items": {
+                "priority": 1,
+                "can_pickup_any_item": true,
+                "can_pickup_to_hand_or_equipment": true,
+                "goal_radius": 2.5,
+                "max_dist": 2,
+                "speed_multiplayer": 1,
+                "track_target": true
+            },
+            "minecraft:experience_reward": {
+                "on_death": "query.last_hit_by_player ? 15 + (query.equipment_count * Math.Random(1,3)) : 0"
+            },
+            "minecraft:equip_item": {},
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.9
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "rysii_knight"
+                ]
+            },
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": 0,
+                "breathes_air": true,
+                "breathes_water": true
+            },
+            "minecraft:health": {
+                "value": 117,
+                "max": 117
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 1
+                    }
+                ]
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/rysii_knight.json"
+            },
+            "minecraft:movement": {
+                "value": 0.36
+            },
+            "minecraft:navigation.walk": {
+                "is_amphibious": false,
+                "can_pass_doors": true,
+                "can_open_doors": true,
+                "avoid_water": true
+            },
+            "minecraft:annotation.open_door": {},
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:nameable": {},
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 1,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "rysii_knight",
+                            "operator": "!="
+                        },
+                        "max_dist": 16
+                    }
+                ]
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "target_search_height": 25,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "baby_turtle"
+                                },
+                                {
+                                    "test": "in_water",
+                                    "subject": "other",
+                                    "operator": "!=",
+                                    "value": true
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "value": "player",
+                                            "subject": "other"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "value": "zalcyan:zorkan_crown",
+                                            "subject": "other",
+                                            "domain": "head",
+                                            "operator": "not"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "value": "player",
+                                            "subject": "other"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "value": "zalcyan:rysii_knight_helmet",
+                                            "subject": "other",
+                                            "domain": "head",
+                                            "operator": "not"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "test": "is_sleeping",
+                                    "subject": "self",
+                                    "operator": "==",
+                                    "value": false
+                                }
+                            ]
+                        },
+                        "max_dist": 32,
+                        "walk_speed_multiplier": 0.9,
+                        "sprint_speed_multiplier": 1.5,
+                        "must_see": true
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "value": "skreepog",
+                                    "subject": "other"
+                                }
+                            ]
+                        },
+                        "max_dist": 32,
+                        "walk_speed_multiplier": 0.9,
+                        "sprint_speed_multiplier": 1.5,
+                        "must_see": true
+                    }
+                ],
+                "must_see": true,
+                "reselect_targets": true,
+                "must_see_forget_duration": 5
+            },
+            "minecraft:behavior.equip_item": {
+                "priority": 3
+            },
+            "minecraft:behavior.avoid_mob_type": {
+                "priority": 4,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "rysii_knight"
+                        },
+                        "max_dist": 6,
+                        "walk_speed_multiplier": 0.9,
+                        "sprint_speed_multiplier": 0.9
+                    }
+                ]
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 6,
+                "speed_multiplier": 0.7
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 100
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 8
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:shooter": {
+                "def": "zalcyan:z_orb"
+            },
+            "minecraft:follow_range": {
+                "value": 100,
+                "max": 100
+            },
+            "minecraft:target_nearby_sensor": {
+                "inside_range": 15,
+                "outside_range": 16,
+                "on_inside_range": {
+                    "event": "melee_mode",
+                    "target": "self"
+                },
+                "on_outside_range": {
+                    "event": "ranged_mode",
+                    "target": "self"
+                }
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_riding",
+                                    "subject": "self",
+                                    "operator": "=",
+                                    "value": true
+                                }
+                            ]
+                        },
+                        "event": "rysii_knight_rider",
+                        "target": "other"
+                    },
+                    {
+                        "event": "peace",
+                        "target": "self",
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "value": "player",
+                                    "subject": "other"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "value": "zalcyan:rysii_crown",
+                                    "subject": "other",
+                                    "domain": "head",
+                                    "operator": "=="
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "minecraft:behavior.find_mount": {
+                "start_delay": 1,
+                "within_radius": 30,
+                "max_failed_attempts": 30,
+                "priority": 1,
+                "avoid_water": true,
+                "target_needed": false,
+                "mount_distance": 20
+            },
+            "minecraft:behavior.nap": {
+                "priority": 0,
+                "cooldown_min": 5,
+                "cooldown_max": 20,
+                "mob_detect_dist": 16,
+                "mob_detect_height": 6,
+                "can_nap_filters": {
+                    "all_of": [
+                        {
+                            "test": "in_water",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": false
+                        },
+                        {
+                            "test": "clock_time",
+                            "operator": ">=",
+                            "value": 0.25
+                        },
+                        {
+                            "test": "clock_time",
+                            "operator": "<=",
+                            "value": 0.75
+                        },
+                        {
+                            "test": "on_ground",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        {
+                            "test": "weather_at_position",
+                            "subject": "self",
+                            "operator": "!=",
+                            "value": "thunderstorm"
+                        }
+                    ]
+                },
+                "wake_mob_exceptions": {
+                    "any_of": [
+                        {
+                            "test": "trusts",
+                            "subject": "other",
+                            "operator": "==",
+                            "value": true
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "operator": "==",
+                            "value": "rysii_knight"
+                        },
+                        {
+                            "test": "is_sneaking",
+                            "subject": "other",
+                            "operator": "==",
+                            "value": true
+                        }
+                    ]
+                }
+            },
+            "minecraft:shareables": {
+                "items": [
+                    {
+                        "item": "minecraft:skull:0",
+                        "want_amount": 1,
+                        "surplus_amount": 1,
+                        "priority": 0
+                    },
+                    {
+                        "item": "minecraft:skull:1",
+                        "want_amount": 1,
+                        "surplus_amount": 1,
+                        "priority": 0
+                    },
+                    {
+                        "item": "minecraft:carved_pumpkin",
+                        "want_amount": 1,
+                        "surplus_amount": 1,
+                        "priority": 1
+                    },
+                    {
+                        "item": "minecraft:shield",
+                        "want_amount": 1,
+                        "surplus_amount": 1,
+                        "priority": 0
+                    }
+                ]
+            },
+            "minecraft:knockback_resistance": {
+                "value": 0.3
+            },
+            "minecraft:break_blocks": {
+                "breakable_blocks": [
+                    "zalcyan:zighet_loot_box",
+                    "bamboo",
+                    "bamboo_sapling",
+                    "beetroot",
+                    "brown_mushroom",
+                    "carrots",
+                    "carved_pumpkin",
+                    "chorus_flower",
+                    "chorus_plant",
+                    "deadbush",
+                    "double_plant",
+                    "leaves",
+                    "leaves2",
+                    "lit_pumpkin",
+                    "melon_block",
+                    "melon_stem",
+                    "potatoes",
+                    "pumpkin",
+                    "pumpkin_stem",
+                    "red_flower",
+                    "red_mushroom",
+                    "crimson_fungus",
+                    "warped_fungus",
+                    "reeds",
+                    "sapling",
+                    "snow_layer",
+                    "sweet_berry_bush",
+                    "tallgrass",
+                    "turtle_egg",
+                    "vine",
+                    "waterlily",
+                    "wheat",
+                    "yellow_flower",
+                    "bamboo",
+                    "bamboo_sapling",
+                    "beetroot",
+                    "brown_mushroom",
+                    "carrots",
+                    "carved_pumpkin",
+                    "chorus_flower",
+                    "chorus_plant",
+                    "deadbush",
+                    "double_plant",
+                    "leaves",
+                    "leaves2",
+                    "lit_pumpkin",
+                    "melon_block",
+                    "melon_stem",
+                    "potatoes",
+                    "pumpkin",
+                    "pumpkin_stem",
+                    "red_flower",
+                    "red_mushroom",
+                    "crimson_fungus",
+                    "warped_fungus",
+                    "reeds",
+                    "sapling",
+                    "snow_layer",
+                    "sweet_berry_bush",
+                    "tallgrass",
+                    "turtle_egg",
+                    "vine",
+                    "waterlily",
+                    "wheat",
+                    "yellow_flower"
+                ]
+            }
+        },
+        "events": {
+            "rysii_push": {
+                "randomize": [
+                    {
+                        "weight": 80
+                    },
+                    {
+                        "weight": 20,
+                        "add": {
+                            "component_groups": [
+                                "push"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "remove_push": {
+                "remove": {
+                    "component_groups": [
+                        "push"
+                    ]
+                }
+            },
+            "minecraft:event_spawn_dead": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:is_dead"
+                    ]
+                }
+            },
+            "melee_mode": {
+                "remove": {
+                    "component_groups": [
+                        "ranged_attack"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "melee_attack"
+                    ]
+                }
+            },
+            "ranged_mode": {
+                "remove": {
+                    "component_groups": [
+                        "melee_attack",
+                        "shield_block"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "ranged_attack",
+                        "no_shield_block"
+                    ]
+                },
+                "set_property": {
+                    "zalcyan:shielded": false
+                }
+            },
+            "minecraft:entity_spawned": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "no_shield_block"
+                            ]
+                        }
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "armor"
+                            ]
+                        }
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "rysii_knight_calm"
+                            ]
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "zalcyan:shielded": false
+                        }
+                    }
+                ]
+            },
+            "minecraft:on_calm": {
+                "remove": {
+                    "component_groups": [
+                        "rysii_knight_angry"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "rysii_knight_calm"
+                    ]
+                }
+            },
+            "minecraft:become_angry": {
+                "remove": {
+                    "component_groups": [
+                        "rysii_knight_calm"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "rysii_knight_angry"
+                    ]
+                }
+            },
+            "peace": {
+                "add": {
+                    "component_groups": [
+                        "rysii_knight_calm"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "melee_attack",
+                        "ranged_attack",
+                        "rysii_knight_angry"
+                    ]
+                }
+            },
+            "interact": {
+                "add": {
+                    "component_groups": [
+                        "bridge:execute_command_id_1"
+                    ]
+                }
+            },
+            "bridge:remove_command_id_1": {
+                "add": {
+                    "component_groups": [
+                        "bridge:execute_no_command"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "bridge:execute_command_id_1"
+                    ]
+                }
+            },
+            "zalcyan:complete_sheild_summon": {
+                "set_property": {
+                    "zalcyan:equip_custom_shield": false
+                }
+            },
+            "shield_block_event": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "has_equipment",
+                            "subject": "self",
+                            "domain": "any",
+                            "operator": "equals",
+                            "value": "shield"
+                        },
+                        {
+                            "test": "has_target",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": true
+                        },
+                        {
+                            "test": "has_component",
+                            "subject": "self",
+                            "operator": "not",
+                            "value": "minecraft:behavior.knockback_roar"
+                        }
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "shield_block"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "melee_attack",
+                        "no_shield_block"
+                    ]
+                },
+                "set_property": {
+                    "zalcyan:shielded": true
+                }
+            },
+            "no_shield_block_event": {
+                "add": {
+                    "component_groups": [
+                        "melee_attack",
+                        "no_shield_block"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "shield_block"
+                    ]
+                },
+                "set_property": {
+                    "zalcyan:shielded": false
+                }
+            },
+            "minecraft:entity_transformed": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "no_shield_block"
+                            ]
+                        }
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "armor"
+                            ]
+                        }
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "rysii_knight_calm"
+                            ]
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "zalcyan:shielded": false
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

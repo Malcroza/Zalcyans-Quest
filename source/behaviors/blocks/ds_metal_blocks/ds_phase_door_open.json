@@ -1,0 +1,59 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:ds_phase_door_open",
+            "is_experimental": false,
+            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:map_color": "#41c7d1",
+            "minecraft:light_dampening": 0,
+			"minecraft:collision_box": false,
+            "minecraft:light_emission": 7,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 200.5
+            },
+            "minecraft:on_interact": {
+                "event": "activate",
+                "target": "self"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "ds_phase_door_open",
+                    "render_method": "blend"
+                }
+            }
+        },
+        "events": {
+			"activate": {
+                "sequence": [
+					{
+                     "set_block_at_pos": {
+                            "block_type": "zalcyan:ds_phase_door_closing",
+                             "block_offset": [
+                                        0,
+                                        0,
+                                        0
+                         ]
+                         }
+                    },
+					{
+                        "run_command": {
+                            "command": [
+								"playsound phase.button.down @a ~ ~ ~"
+                            ]
+                        }
+                    }
+                ]
+            }
+		}
+    }
+}

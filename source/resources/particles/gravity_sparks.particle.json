@@ -9,11 +9,6 @@
 			}
 		},
 		"components": {
-			"minecraft:emitter_local_space": {
-				"position": false,
-				"rotation": false,
-				"velocity": true
-			},
 			"minecraft:emitter_rate_instant": {
 				"num_particles": 120
 			},
@@ -40,6 +35,7 @@
 						"size_UV": [16, 16],
 						"step_UV": [0, 16],
 						"frames_per_second": 1,
+						"max_frame": 5,
 						"loop": true
 					}
 				}

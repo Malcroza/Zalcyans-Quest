@@ -1,0 +1,267 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:mynis_door_top_flipped",
+			"menu_category": {
+				"category": "none",
+				"group": "none"
+			},
+			"states": {
+				"zalcyan:is_open": [
+					false, true
+				],
+				"zalcyan:direction_facing": [
+					0, 1, 2, 3
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "mynis_door_top",
+					"render_method": "alpha_test",
+					"face_dimming": true,
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:placement_filter": {
+				"conditions": [{
+					"allowed_faces": [
+						"up"
+					],
+					"block_filter": [{
+						"tags": "query.any_tag('zalcyan_mynis_door_flipped')"
+					}]
+				}]
+			},
+			"minecraft:flammable": {
+				"destroy_chance_modifier": 45,
+				"catch_chance_modifier": 80
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.5
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "zalcyan:player_broken"
+			},
+			"minecraft:geometry": { 
+				"identifier": "geometry.zal_door_flipped", 
+				"bone_visibility": { 
+					"open": false ,
+					"closed": false
+				} 
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:map_color": "#b775c7",
+			"minecraft:light_dampening": 0,
+			"tag:zalcyan_mynis_door_flipped": {},
+			"tag:zalcyan_mynis_door_top": {},
+			"tag:door": {}
+		},
+		"permutations": [{
+				"condition": "q.block_state('zalcyan:direction_facing') == 0",
+				"components": {
+					"minecraft:transformation": { "rotation": [0, 180, 0] }
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:direction_facing') == 1",
+				"components": {
+					"minecraft:transformation": { "rotation": [0, 0, 0] }
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:direction_facing') == 2",
+				"components": {
+					"minecraft:transformation": { "rotation": [0, 270, 0] }
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:direction_facing') == 3",
+				"components": {
+					"minecraft:transformation": { "rotation": [0, 90, 0] }
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:is_open') == 0",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "zalcyan:open_door"
+					},
+					"minecraft:collision_box": {
+						"origin": [-8, 0, -8],
+						"size": [16, 16, 3]
+					},
+					"minecraft:selection_box": {
+						"origin": [-8, 0, -8],
+						"size": [16, 16, 3]
+					},
+					"minecraft:geometry": { 
+						"identifier": "geometry.zal_door_flipped", 
+						"bone_visibility": { 
+							"open": false 
+						} 
+					},
+					"tag:zalcyan:closed_mynis_door": {}
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:is_open') == 1",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "zalcyan:close_door"
+					},
+					"minecraft:collision_box": {
+						"origin": [5, 0, -8],
+						"size": [3, 16, 16]
+					},
+					"minecraft:selection_box": {
+						"origin": [5, 0, -8],
+						"size": [3, 16, 16]
+					},
+					"minecraft:geometry": { 
+						"identifier": "geometry.zal_door_flipped", 
+						"bone_visibility": { 
+							"closed": false
+						} 
+					},
+					"tag:zalcyan:open_mynis_door": {}
+				}
+			}
+		],
+		"events": {
+			"zalcyan:set_lower_block": {
+				"sequence": [
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==0&&q.block_state('zalcyan:is_open')==false",
+						"run_command": {
+							"command": [
+								"setblock ~~-1~ zalcyan:mynis_door_bottom_flipped [\"zalcyan:direction_facing\"=0, \"zalcyan:is_open\"=false, \"zalcyan:top_refresh\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==1&&q.block_state('zalcyan:is_open')==false",
+						"run_command": {
+							"command": [
+								"setblock ~~-1~ zalcyan:mynis_door_bottom_flipped [\"zalcyan:direction_facing\"=1, \"zalcyan:is_open\"=false, \"zalcyan:top_refresh\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==2&&q.block_state('zalcyan:is_open')==false",
+						"run_command": {
+							"command": [
+								"setblock ~~-1~ zalcyan:mynis_door_bottom_flipped [\"zalcyan:direction_facing\"=2, \"zalcyan:is_open\"=false, \"zalcyan:top_refresh\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==3&&q.block_state('zalcyan:is_open')==false",
+						"run_command": {
+							"command": [
+								"setblock ~~-1~ zalcyan:mynis_door_bottom_flipped [\"zalcyan:direction_facing\"=3, \"zalcyan:is_open\"=false, \"zalcyan:top_refresh\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==0&&q.block_state('zalcyan:is_open')==true",
+						"run_command": {
+							"command": [
+								"setblock ~~-1~ zalcyan:mynis_door_bottom_flipped [\"zalcyan:direction_facing\"=0, \"zalcyan:is_open\"=true, \"zalcyan:top_refresh\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==1&&q.block_state('zalcyan:is_open')==true",
+						"run_command": {
+							"command": [
+								"setblock ~~-1~ zalcyan:mynis_door_bottom_flipped [\"zalcyan:direction_facing\"=1, \"zalcyan:is_open\"=true, \"zalcyan:top_refresh\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==2&&q.block_state('zalcyan:is_open')==true",
+						"run_command": {
+							"command": [
+								"setblock ~~-1~ zalcyan:mynis_door_bottom_flipped [\"zalcyan:direction_facing\"=2, \"zalcyan:is_open\"=true, \"zalcyan:top_refresh\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==3&&q.block_state('zalcyan:is_open')==true",
+						"run_command": {
+							"command": [
+								"setblock ~~-1~ zalcyan:mynis_door_bottom_flipped [\"zalcyan:direction_facing\"=3, \"zalcyan:is_open\"=true, \"zalcyan:top_refresh\"=true]"
+							]
+						}
+					}
+				]
+			},
+			"zalcyan:close_door": {
+				"sequence": [{
+						"run_command": {
+							"command": [
+								"playsound random.door_close @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"set_block_state": {
+							"zalcyan:is_open": 0
+						}
+					},
+					{
+						"trigger": {
+							"event": "zalcyan:set_lower_block",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"zalcyan:open_door": {
+				"sequence": [{
+						"run_command": {
+							"command": [
+								"playsound random.door_open @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"set_block_state": {
+							"zalcyan:is_open": 1
+						}
+					},
+					{
+						"trigger": {
+							"event": "zalcyan:set_lower_block",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"zalcyan:player_broken": {
+				"sequence": [{
+						"spawn_loot":{
+							"table": "loot_tables/blocks/mynis/mynis_door.json"
+						}
+					},
+					{
+						"trigger": {
+							"event": "zalcyan:reset_bottom",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"zalcyan:reset_bottom": {
+				"run_command": {
+					"command": [
+						"setblock ~~-1~ air"
+					]
+				}
+			}
+		}
+	}
+}

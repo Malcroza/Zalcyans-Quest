@@ -1,0 +1,66 @@
+{
+	"format_version" : "1.10.0",
+	
+	"animation_controllers" : {
+		"controller.animation.rysii_pod_bolt.particles" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"part" : "query.is_moving"
+						}
+					]
+				},
+				"part" : {
+					"particle_effects": [
+						{
+							"effect": "lazar_trail",
+							"locator":"part_emitter"
+						},
+						{
+							"effect": "white_orb",
+							"locator":"part_emitter"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "!query.is_moving"
+						}
+					]
+				}
+			}
+
+		},
+		"controller.animation.rysii_pod_bolt.spawn" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"fog" : "v.init == 0"
+						}
+					]
+				},
+				"fog" : {
+					"animations" : [
+						{
+							"fog_part" : "v.init == 0"
+						}
+					],
+					"transitions" : [
+						{
+							"dummy" : "query.all_animations_finished"
+						}
+					],
+					"on_exit": [
+                        "v.init = 1;"
+                    ]
+				},
+				"dummy" : {
+				}
+			}
+
+		}
+	} 
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.bow3": {
+      "geometry": "Geometry.default",
+      "materials": [ { "blaster_main": "Material.default" },
+					 { "glow": "Material.glow" },
+					 { "ball": "Material.glow" },
+					 { "spike_inner1": "Material.glow" },
+					 { "spike_point1": "Material.glow" },
+					 { "spike_inner2": "Material.glow" },
+					 { "spike_point2": "Material.glow" },
+					 { "spike_inner3": "Material.glow" },
+					 { "spike_point3": "Material.glow" },
+					 { "spike_inner4": "Material.glow" },
+					 { "spike_point4": "Material.glow" },
+					 { "spike_inner5": "Material.glow" },
+					 { "spike_point5": "Material.glow" },
+					 { "spike_inner6": "Material.glow" },
+					 { "spike_point6": "Material.glow" }],
+      "textures": [ "Texture.default" ]
+    }
+  }
+}

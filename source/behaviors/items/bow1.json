@@ -1,0 +1,69 @@
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "zalcyan1:bow",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.bows"
+				}
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "§2Jyr Light Flare \n §o§8Continuous press to shoot; Requires Light Charges"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 100.4,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "jyr_blaster"
+			},
+			"minecraft:chargeable":{
+			"movement_modifier": 1.1
+			},
+			"minecraft:shooter": {
+				"ammunition": [
+					{
+						"item": "zalcyan:light_charge",
+						"use_offhand": true,
+						"search_inventory": true,
+						"use_in_creative": false
+					}
+				],
+        "charge_on_draw": false,
+		"max_launch_power": 0.0,
+        "launch_power_scale": 5.0,
+        "max_draw_duration": 2.0,
+        "max_launch_power": 25.0,
+        "scale_power_by_draw_duration": true
+			},
+			"minecraft:durability": {
+				"max_durability": 75
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"zalcyan:lor_gem"
+						],
+						"repair_amount": 10
+					},
+					{
+						"items": [
+							"zalcyan1:bow"
+						],
+						"repair_amount": "query.remaining_durability"
+					},
+					{
+						"items": [
+							"zalcyan:lor_gem_broken"
+						],
+						"repair_amount": 2
+					}
+				]
+			}
+		},
+		"events": {
+		}
+	}
+}

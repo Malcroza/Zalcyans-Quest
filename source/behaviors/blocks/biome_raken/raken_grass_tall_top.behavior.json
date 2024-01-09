@@ -1,0 +1,63 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:raken_grass_tall_top"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.05
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -5.65,
+                    0,
+                    -5.65
+                ],
+                "size": [
+                    11.3,
+                    16,
+                    11.3
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "raken_grass_tall",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:geometry": "geometry.two_cross_tall_top",
+            "minecraft:map_color": "#1E310A",
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "zalcyan:raken_grass_tall"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:loot": "loot_tables/nothing.json",
+            "minecraft:on_player_destroyed": {
+                "event": "break",
+                "target": "self"
+            }
+        },
+        "events": {
+            "break": {
+                "run_command": {
+                    "command": [
+                        "fill ~ ~-1 ~ ~ ~-1 ~ air replace zalcyan:raken_grass_tall"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:prismar_blast",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:dead_": {
+				"minecraft:collision_box": {
+					"width": 0.6,
+					"height": 0.8
+				},
+				"minecraft:timer": {
+					"looping": false,
+					"randomInterval": false,
+					"time": 1.15,
+					"time_down_event": {
+						"event": "minecraft:event_dead"
+					}
+				}
+			},
+			"minecraft:despawndead": {
+				"minecraft:type_family": {
+					"family": [
+						"despawn_"
+					]
+				}
+			},
+			"bridge:execute_command_id_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:projectile": {
+					"power": 1,
+					"gravity": 0,
+					"angle_offset": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"should_bounce": false,
+					"offset": [
+						0,
+						-1.15,
+						0.9
+					],
+					"multiple_targets": false,
+					"shoot_target": false,
+					"is_dangerous": true
+				},
+			"minecraft:behavior.knockback_roar": {
+				"priority": 0,
+				"attack_time": 0.3,
+				"cooldown_time": 10,
+				"duration": 1,
+				"knockback_damage": 0,
+				"knockback_strength": 5,
+				"knockback_range": 5,
+				"knockback_filters": {
+					"all_of": [
+						{
+					"test": "is_owner",
+					"subject": "other",
+					"value": false
+                }
+					]
+				},
+				"damage_filters": {
+					"none_of": [
+						{
+					"test": "is_owner",
+					"subject": "other",
+					"value": true
+                }
+					]
+				},
+"on_roar_end": {"event":"minecraft:event_dead"}
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "self",
+							"value": "despawn_"
+						}
+					]
+				}
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:health": {
+				"value": {
+					"range_min": 10,
+					"range_max": 10
+				}
+			},
+			"minecraft:damage_sensor": {"triggers": {"cause":"all","deals_damage":false}},
+			"minecraft:physics": {
+				"has_gravity": true
+			}
+		},
+		"events": {
+			"minecraft:entity_transformed": {
+				"add": {
+					"component_groups": [
+						"minecraft:dead_"
+					]
+				}
+			},
+			"minecraft:event_dead": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"bridge:execute_command_id_1"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"minecraft:despawndead"
+							]
+						}
+					}
+				]
+			},
+			"bridge:remove_command_id_1": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			}
+		}
+	}
+}

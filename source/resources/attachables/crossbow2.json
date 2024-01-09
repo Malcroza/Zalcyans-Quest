@@ -1,0 +1,61 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan2:crossbow",
+      "materials": {
+        "default": "phantom",
+		"eyepiece": "slime_outer",
+		"eyepiece2": "phantom",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/models/equipment/zq_crossbow2",
+		"eyepiece": "textures/models/equipment/zq_crossbow2_eyepiece",
+        "enchanted": "textures/misc/enchanted_item_glint",
+		"eyepiece_loaded": "textures/models/equipment/zq_crossbow2_eyepiece_loaded"
+      },
+      "geometry": {
+        "default": "geometry.rysii_blaster",
+		"eyepiece": "geometry.rysii_blaster_eyepiece"
+      },
+      "animations": {
+		"rysii_blaster_first_person": "animation.rysii_blaster.first_person.hold",
+		"rysii_blaster_first_person2": "animation.rysii_blaster.first_person.hold2",
+		"rysii_blaster_first_person3": "animation.rysii_blaster.first_person.hold4",
+		"hold": "animation.rysii_blaster.fire_hold",
+		"fire": "animation.rysii_blaster.fire",
+		"rysii_blaster_shoot": "animation.rysii_blaster.shoot",
+		"shoot_cont": "controller.animation.crossbow2.attack",
+		"fire_cont": "controller.animation.crossbow2.fire",
+		"screen": "animation.rysii_blaster_eyepiece.screen",
+		"tp_cont_charge": "controller.animation.crossbow2.third_person_charge",
+		"tp_uncharged": "animation.rysii_blaster.third-person_uncharged",
+		"tp_charged": "animation.rysii_blaster.third-person_charged",
+		"sound_charge": "animation.rysii_blaster.charge",
+		"load": "animation.rysii_blaster.load",
+		"run": "animation.rysii_blaster.run",
+		"end_hold": "animation.rysii_blaster.first_person.end_hold"
+		
+      },
+      "scripts": {
+        "animate": [
+			{
+			"shoot_cont": "c.is_first_person"
+			},
+			"screen",
+		  
+            "rysii_blaster_shoot"
+          ,
+		  "fire_cont",
+		  "tp_cont_charge"
+        ]
+      },
+      "render_controllers": [ "controller.render.crossbow2", "controller.render.eyepiece" ],
+	  "sound_effects": {
+				"scope": "rifle.zoom.scope",
+				"charge": "blaster.charge.blaster_charge"
+			}
+    }
+  }
+}

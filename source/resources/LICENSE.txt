@@ -1,0 +1,58 @@
+Zalcyan' Quest LICENSE
+
+
+This addon is only authorized on MCPEDL. If this addon is found elsewere, 
+we (MALCROZA STUDIOS™) reserve the right to enact legal action in accordince with intellectual property law.
+
+You are allowed to:
+	-modify this addon for your personal use
+	-learn from the code
+
+You are allowed with credit* to:
+	-Use this addon in gameplay (includng platforms such as Youtube® and Twitch®)
+	- share the link to the MCPEDL page
+	-share images of this addon
+
+You are prohibited to:
+	-directly copy any code from this addon
+	-distribute this addon with or without any modification
+	-make other download links
+
+
+If using NORMAL version (default):
+* credit should appear as follows as indicated between the dotted lines:
+
+------------------------------------------
+Zalcyan's Quest made by Zalcyan
+Contributors: Madlad, Ciosciaa
+MALCROZA STUDIOS™
+-> (link MCPEDL page here)
+------------------------------------------
+
+
+If using RTX version:
+* credit should appear as follows as indicated between the dotted lines:
+
+------------------------------------------
+Zalcyan's Quest made by Zalcyan, RTX by Madlad
+Contributors: Ciosciaa
+MALCROZA STUDIOS™
+-> (link MCPEDL page here)
+------------------------------------------
+
+MUSIC
+**All music is free to use with attribution**
+Antlion- Composed by Zalcyan (2023) "CC-BY-NC-ND-4.0"
+Emperor Zorkan Theme- Composed by Zalcyan (2023) "CC-BY-NC-ND-4.0"
+Oath of the Rysii- Composed by Zalcyan (2023) "CC-BY-NC-ND-4.0"
+
+
+Credits:
+-The all the people who make up the wonderful Bedrock Addons discord community!
+	This addon would not be possible without them.
+- The developers of Bridge, which made sorting out the code much easier!
+-Thanks to Clouddspiderr for the door, fence, stair and fence gate code! (https://mcpedl.com/cloudd-s-woodset-template/)
+
+
+This product comes "as-is". MALCROZA STUDIOS™ and it's employees are not liable for any action using this product. By using this addon, you (the user), agree to this statement. 
+©2021-2024 Zalcyan's Quest All Rights Reserved

@@ -6,7 +6,6 @@
 			"identifier": "zalcyan:vini_leaf_feature_scatter"
 		},
 		"iterations": 7,
-		"coordinate_eval_order": "zyx",
 		"x": {
 			"extent": [
 				-8,

@@ -1,0 +1,43 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:skreepog_dead",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/skreepog_pilot"
+			},
+			"geometry": {
+				"default": "geometry.marlar_v2"
+			},
+			"animations": {
+				"die": "animation.skreepog_dead.die",
+				"die2": "animation.skreepog_dead.die2",
+				"die3": "animation.skreepog_dead.die3",
+				"die4": "animation.skreepog_dead.die4",
+				"die5": "animation.skreepog_dead.die5",
+				"die6": "animation.skreepog_dead.die6",
+				"die7": "animation.skreepog_dead.die7",
+				"die8": "animation.skreepog_dead.die8",
+				"general": "controller.animation.skreepog_dead.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			},
+			"render_controllers": [
+				"controller.render.skeleton"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 9
+			}
+			
+		}
+	}
+}

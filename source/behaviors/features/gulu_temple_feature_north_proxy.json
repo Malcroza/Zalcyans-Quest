@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:gulu_temple_feature_north_proxy"
+		},
+
+		"places_feature": "zalcyan:gulu_temple_feature_north",
+
+		"iterations": 1,
+
+		"x": 16,
+		"z": 16,
+		"y": 0
+	}
+}

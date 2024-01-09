@@ -1,8 +1,0 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "mya_vine_tip",
-        "metalness_emissive_roughness": "mya_vine_tip_mer",
-        "heightmap": "mya_vine_tip_heightmap"
-    }
-}

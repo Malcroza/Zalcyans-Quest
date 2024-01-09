@@ -1,0 +1,495 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "zalcyan:raken_door_bottom",
+			"menu_category": {
+				"category": "none",
+				"group": "none"
+			},
+			"states": {
+				"zalcyan:is_open": [
+					false, true
+				],
+				"zalcyan:direction_facing": [
+					0, 1, 2, 3
+				],
+				"zalcyan:top_refresh": [
+					false, true
+				],
+				"zalcyan:doubledoor": [
+					false, true
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "raken_door_bottom",
+					"render_method": "alpha_test",
+					"face_dimming": true,
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:placement_filter": {
+				"conditions": [{
+					"allowed_faces": [
+						"up"
+					],
+					"block_filter": [{
+						"tags": "!query.any_tag('zalcyan_raken_door')"
+					}]
+				}]
+			},
+			"minecraft:flammable": {
+				"destroy_chance_modifier": 45,
+				"catch_chance_modifier": 80
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.5
+			},
+			"minecraft:on_player_placing": {
+				"event": "zalcyan:set_direction"
+			},
+			"minecraft:on_placed": {
+				"event": "zalcyan:setup"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "zalcyan:player_broken"
+			},
+			"minecraft:queued_ticking":{
+				"interval_range": [5,15],
+				"looping": true,
+                "on_tick": {
+                    "event": "zalcyan:door_tick"
+                }
+			},
+			"minecraft:geometry": { 
+				"identifier": "geometry.zal_door", 
+				"bone_visibility": { 
+					"open": false ,
+					"closed": false
+				} 
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:map_color": "#a35d39",
+			"minecraft:light_dampening": 0,
+			"tag:zalcyan_raken_door": {},
+			"tag:wood": {}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('zalcyan:direction_facing') == 0",
+				"components": {
+					"minecraft:transformation": { "rotation": [0, 180, 0] },
+					"tag:zaldir_0": {}
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:direction_facing') == 1",
+				"components": {
+					"minecraft:transformation": { "rotation": [0, 0, 0] },
+					"tag:zaldir_1": {}
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:direction_facing') == 2",
+				"components": {
+					"minecraft:transformation": { "rotation": [0, 270, 0] },
+					"tag:zaldir_2": {}
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:direction_facing') == 3",
+				"components": {
+					"minecraft:transformation": { "rotation": [0, 90, 0] },
+					"tag:zaldir_3": {}
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:is_open') == 0",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "zalcyan:open_door"
+					},
+					"minecraft:collision_box": {
+						"origin": [-8, 0, -8],
+						"size": [16, 16, 3]
+					},
+					"minecraft:selection_box": {
+						"origin": [-8, 0, -8],
+						"size": [16, 16, 3]
+					},
+					"minecraft:geometry": { 
+						"identifier": "geometry.zal_door", 
+						"bone_visibility": { 
+							"open": false 
+						} 
+					},
+					"tag:zalcyan:closed_raken_door": {}
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:is_open') == 1",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "zalcyan:close_door"
+					},
+					"minecraft:collision_box": {
+						"origin": [-8, 0, -8],
+						"size": [3, 16, 16]
+					},
+					"minecraft:selection_box": {
+						"origin": [-8, 0, -8],
+						"size": [3, 16, 16]
+					},
+					"minecraft:geometry": { 
+						"identifier": "geometry.zal_door", 
+						"bone_visibility": { 
+							"closed": false
+						} 
+					},
+					"tag:zalcyan:open_raken_door": {}
+				}
+			},
+			{
+				"condition": "q.block_state('zalcyan:doubledoor') == true",
+				"components": {
+					"tag:zalcyan_door_paired": {}
+				}
+			}
+		],
+		"events": {
+			"zalcyan:door_tick": {
+				"sequence": [
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,1,0,'zalcyan_raken_door_top')",
+						"run_command": {
+							"command": [
+								"setblock ~~~ air"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==0",
+						"trigger": {
+							"event": "zalcyan:dir0_check",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==1",
+						"trigger": {
+							"event": "zalcyan:dir1_check",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==2",
+						"trigger": {
+							"event": "zalcyan:dir2_check",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==3",
+						"trigger": {
+							"event": "zalcyan:dir3_check",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"zalcyan:dir0_check": {
+				"sequence": [
+					{
+						"condition": "q.block_state('zalcyan:doubledoor')==false && q.block_neighbor_has_any_tag(1,0,0,'zalcyan_raken_door') && q.block_neighbor_has_any_tag(1,0,0,'zaldir_0') && (!q.block_neighbor_has_any_tag(1,0,0,'zalcyan_door_paired'))",
+						"trigger": {
+							"event": "zalcyan:init_zalcyan:doubledoor0",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:doubledoor')==true && !q.block_neighbor_has_any_tag(1,0,0,'zalcyan_raken_door_flipped')",
+						"set_block_state": {
+							"zalcyan:doubledoor": false
+						}
+					}
+				]
+			},
+			"zalcyan:dir1_check": {
+				"sequence": [
+					{
+						"condition": "q.block_state('zalcyan:doubledoor')==false && q.block_neighbor_has_any_tag(-1,0,0,'zalcyan_raken_door') && q.block_neighbor_has_any_tag(-1,0,0,'zaldir_1') && (!q.block_neighbor_has_any_tag(-1,0,0,'zalcyan_door_paired'))",
+						"trigger": {
+							"event": "zalcyan:init_zalcyan:doubledoor1",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:doubledoor')==true && !q.block_neighbor_has_any_tag(-1,0,0,'zalcyan_raken_door_flipped')",
+						"set_block_state": {
+							"zalcyan:doubledoor": false
+						}
+					}
+				]
+			},
+			"zalcyan:dir2_check": {
+				"sequence": [
+					{
+						"condition": "q.block_state('zalcyan:doubledoor')==false && q.block_neighbor_has_any_tag(0,0,-1,'zalcyan_raken_door') && q.block_neighbor_has_any_tag(0,0,-1,'zaldir_2') && (!q.block_neighbor_has_any_tag(0,0,-1,'zalcyan_door_paired'))",
+						"trigger": {
+							"event": "zalcyan:init_zalcyan:doubledoor2",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:doubledoor')==true && !q.block_neighbor_has_any_tag(0,0,-1,'zalcyan_raken_door_flipped')",
+						"set_block_state": {
+							"zalcyan:doubledoor": false
+						}
+					}
+				]
+			},
+			"zalcyan:dir3_check": {
+				"sequence": [
+					{
+						"condition": "q.block_state('zalcyan:doubledoor')==false && q.block_neighbor_has_any_tag(0,0,1,'zalcyan_raken_door') && q.block_neighbor_has_any_tag(0,0,1,'zaldir_3') && (!q.block_neighbor_has_any_tag(0,0,1,'zalcyan_door_paired'))",
+						"trigger": {
+							"event": "zalcyan:init_zalcyan:doubledoor3",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:doubledoor')==true && !q.block_neighbor_has_any_tag(0,0,1,'zalcyan_raken_door_flipped')",
+						"set_block_state": {
+							"zalcyan:doubledoor": false
+						}
+					}
+				]
+			},
+			"zalcyan:init_zalcyan:doubledoor0": {
+				"sequence": [
+					{
+						"set_block_state": {
+							"zalcyan:doubledoor": true
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"setblock ~1~~ zalcyan:raken_door_bottom_flipped [\"zalcyan:direction_facing\"=0, \"zalcyan:is_open\"=false]"
+							]
+						}
+					}
+				]
+			},
+			"zalcyan:init_zalcyan:doubledoor1": {
+				"sequence": [
+					{
+						"set_block_state": {
+							"zalcyan:doubledoor": true
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"setblock ~-1~~ zalcyan:raken_door_bottom_flipped [\"zalcyan:direction_facing\"=1, \"zalcyan:is_open\"=false]"
+							]
+						}
+					}
+				]
+			},
+			"zalcyan:init_zalcyan:doubledoor2": {
+				"sequence": [
+					{
+						"set_block_state": {
+							"zalcyan:doubledoor": true
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"setblock ~~~-1 zalcyan:raken_door_bottom_flipped [\"zalcyan:direction_facing\"=2, \"zalcyan:is_open\"=false]"
+							]
+						}
+					}
+				]
+			},
+			"zalcyan:init_zalcyan:doubledoor3": {
+				"sequence": [
+					{
+						"set_block_state": {
+							"zalcyan:doubledoor": true
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"setblock ~~~1 zalcyan:raken_door_bottom_flipped [\"zalcyan:direction_facing\"=3, \"zalcyan:is_open\"=false]"
+							]
+						}
+					}
+				]
+			},
+			"zalcyan:set_direction": {
+				"sequence": [
+					{
+						"set_block_state": {
+							"zalcyan:direction_facing": "query.cardinal_facing_2d-2"
+						}
+					}
+				]
+			},
+			"zalcyan:setup": {
+				"sequence": [
+					{
+						"condition": "q.block_state('zalcyan:top_refresh')==false",
+						"trigger": {
+							"event": "zalcyan:set_upper_block",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:top_refresh')==true",
+						"set_block_state": {
+							"zalcyan:top_refresh": false
+						}
+					}
+				]
+			},
+			"zalcyan:set_upper_block": {
+				"sequence": [
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==0&&q.block_state('zalcyan:is_open')==false",
+						"run_command": {
+							"command": [
+								"setblock ~~1~ zalcyan:raken_door_top [\"zalcyan:direction_facing\"=0, \"zalcyan:is_open\"=false]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==1&&q.block_state('zalcyan:is_open')==false",
+						"run_command": {
+							"command": [
+								"setblock ~~1~ zalcyan:raken_door_top [\"zalcyan:direction_facing\"=1, \"zalcyan:is_open\"=false]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==2&&q.block_state('zalcyan:is_open')==false",
+						"run_command": {
+							"command": [
+								"setblock ~~1~ zalcyan:raken_door_top [\"zalcyan:direction_facing\"=2, \"zalcyan:is_open\"=false]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==3&&q.block_state('zalcyan:is_open')==false",
+						"run_command": {
+							"command": [
+								"setblock ~~1~ zalcyan:raken_door_top [\"zalcyan:direction_facing\"=3, \"zalcyan:is_open\"=false]"
+							]
+						}
+					},
+
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==0&&q.block_state('zalcyan:is_open')==true",
+						"run_command": {
+							"command": [
+								"setblock ~~1~ zalcyan:raken_door_top [\"zalcyan:direction_facing\"=0, \"zalcyan:is_open\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==1&&q.block_state('zalcyan:is_open')==true",
+						"run_command": {
+							"command": [
+								"setblock ~~1~ zalcyan:raken_door_top [\"zalcyan:direction_facing\"=1, \"zalcyan:is_open\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==2&&q.block_state('zalcyan:is_open')==true",
+						"run_command": {
+							"command": [
+								"setblock ~~1~ zalcyan:raken_door_top [\"zalcyan:direction_facing\"=2, \"zalcyan:is_open\"=true]"
+							]
+						}
+					},
+					{
+						"condition": "q.block_state('zalcyan:direction_facing')==3&&q.block_state('zalcyan:is_open')==true",
+						"run_command": {
+							"command": [
+								"setblock ~~1~ zalcyan:raken_door_top [\"zalcyan:direction_facing\"=3, \"zalcyan:is_open\"=true]"
+							]
+						}
+					}
+				]
+			},
+			"zalcyan:close_door": {
+				"sequence": [{
+						"run_command": {
+							"command": [
+								"playsound random.door_close @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"set_block_state": {
+							"zalcyan:is_open": 0
+						}
+					},
+					{
+						"trigger": {
+							"event": "zalcyan:set_upper_block",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"zalcyan:open_door": {
+				"sequence": [{
+						"run_command": {
+							"command": [
+								"playsound random.door_open @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"set_block_state": {
+							"zalcyan:is_open": 1
+						}
+					},
+					{
+						"trigger": {
+							"event": "zalcyan:set_upper_block",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"zalcyan:player_broken": {
+				"sequence": [{
+						"spawn_loot":{
+							"table": "loot_tables/blocks/raken/raken_door.json"
+						}
+					},
+					{
+						"trigger": {
+							"event": "zalcyan:reset_top",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"zalcyan:reset_top": {
+				"run_command": {
+					"command": [
+						"setblock ~~1~ air"
+					]
+				}
+			}
+		}
+	}
+}

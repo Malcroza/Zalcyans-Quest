@@ -1,0 +1,42 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "zalcyan:gulu_stem",
+            "menu_category": {
+                "category": "nature",
+                "group": "itemGroup.name.log"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4
+            },
+            "minecraft:friction": 0.4,
+            "minecraft:light_emission": 0,
+            "minecraft:light_dampening": 0,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "gulu_stem",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:on_step_on": {
+                "event": "naus",
+                "target": "self"
+            },
+            "minecraft:map_color": "#06422C",
+            "minecraft:unit_cube": {}
+        },
+        "events": {
+            "naus": {
+                "add_mob_effect": {
+                    "effect": "nausea",
+                    "duration": 8,
+                    "target": "other",
+                    "amplifier": 6
+                }
+            }
+        }
+    }
+}

@@ -14,15 +14,14 @@
 						{
 							"test": "has_biome_tag",
 							"operator": "==",
-							"value": "raken"
+							"value": "swamp"
 						}
 					]
 				}
 			]
 		},
 		"distribution": {
-			"iterations": 1,
-			"coordinate_eval_order": "zyx",
+			"iterations": "(q.noise(v.originx / 512, v.originz / 512) < -0.4)",
 			"x": {
 				"distribution": "uniform",
 				"extent": [
@@ -30,13 +29,7 @@
 					16
 				]
 			},
-			"y": {
-				"distribution": "uniform",
-				"extent": [
-					24,
-					24
-				]
-			},
+			"y": 63,
 			"z": {
 				"distribution": "uniform",
 				"extent": [
