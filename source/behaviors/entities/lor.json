@@ -9,6 +9,11 @@
 			"is_experimental": false
 		},
 		"component_groups": {
+			"minecraft:is_dead": {
+				"minecraft:transformation": {
+					"into": "zalcyan:lor_dead"
+				}
+			},
 			"lor_angry": {
 				"minecraft:angry": {
 					"duration": 25,
@@ -236,9 +241,35 @@
 				"avoid_water": true,
 				"target_needed": false,
 				"mount_distance": 20
-			}
+			},
+			"minecraft:damage_sensor": [
+				{
+					"on_damage": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_damage",
+									"value": "fatal"
+								}
+							]
+						},
+						"event": "minecraft:event_spawn_dead"
+					}
+				},
+				{
+					"cause": "projectile",
+					"deals_damage": false
+				}
+			]
 		},
 		"events": {
+			"minecraft:event_spawn_dead": {
+				"add": {
+					"component_groups": [
+						"minecraft:is_dead"
+					]
+				}
+			},
 			"minecraft:on_calm": {
 				"remove": {
 					"component_groups": [

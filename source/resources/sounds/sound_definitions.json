@@ -777,6 +777,13 @@
 				}
 			],
 			"category": "music"
+		},
+		"mob.rysii.step": {
+			"sounds": [
+				"sounds/mob/rysii/rysii_step1",
+				"sounds/mob/rysii/rysii_step2"	
+			],
+			"category": "hostile"
 		}
 	}
 }

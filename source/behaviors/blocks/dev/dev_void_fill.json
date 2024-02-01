@@ -18,7 +18,6 @@
                 }
             },
             "minecraft:map_color": "#00FFFF",
-            "minecraft:unit_cube": {},
             "minecraft:on_player_destroyed": {
                 "event": "activate",
                 "target": "self"

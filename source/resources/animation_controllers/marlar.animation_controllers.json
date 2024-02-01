@@ -9,6 +9,30 @@
 				}
 			}
 		},
+		"controller.animation.marlar.red_dye": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"ridden": "v.health_change < 0"
+						}
+					]
+				},
+				"ridden": {
+					"particle_effects": [
+						{
+							"effect": "red_dye"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					]
+				}
+			}
+		},
 		"controller.animation.marlar.attack" : {
 			"initial_state" : "default",
 			"states" : {

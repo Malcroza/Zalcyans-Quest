@@ -19,8 +19,7 @@
             "minecraft:light_emission": 0,
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 0.5
-            },
-			"minecraft:unit_cube": {}
+            }
         },
         "events": {}
     }

@@ -1,10 +1,10 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "§6ZALCYAN'S§r §5QUEST§r [9.0.0]",
+		"name": "§6ZALCYAN'S§r §5QUEST§r [9.0.1]",
 		"description": "Get ready for an adventure! §oEnable Experimental Gameplay.§r",
 		"uuid": "79c9f439-5069-4a4e-932b-14cee20d88c5",
-		"version": [9, 0, 0],
+		"version": [9, 0, 1],
 		"min_engine_version": [1,20,50]
 	},
 	"metadata": {
@@ -17,13 +17,13 @@
 			"type": "resources",
 			"description": "Resources for Zalcyan's Quest",
 			"uuid": "e4e65173-693f-48bd-ac01-2b4ac5365736",
-			"version": [9, 0, 0]
+			"version": [9, 0, 1]
 		}
 	],
 	"dependencies": [
 		{
 			"uuid": "01ed7b0c-be67-4ac0-89b4-084efffc47b1",
-			"version": [9, 0, 0]
+			"version": [9, 0, 1]
 		}
 	]
 }

@@ -17,7 +17,6 @@
             "minecraft:light_emission": 0,
             "minecraft:light_dampening": 0,
             "minecraft:map_color": "#695651",
-            "minecraft:unit_cube": {},
             "minecraft:on_player_destroyed": {
                 "event": "doom",
                 "target": "self"
@@ -45,7 +44,7 @@
 					{
                         "run_command": {
                             "command": [
-                                "stopsound @a rysii.music"
+                                "stopsound @a[r=30] rysii.music"
                             ],
                             "target": "self"
                         }
@@ -53,7 +52,7 @@
                     {
                         "run_command": {
                             "command": [
-                                "playsound rysii.music @a ~ ~ ~"
+						"playsound rysii.music @a[r=30] ~ ~ ~"
                             ],
                             "target": "self"
                         }

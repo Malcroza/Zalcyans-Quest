@@ -30,7 +30,6 @@
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 1
             },
-            "minecraft:unit_cube": {},
             "minecraft:flammable": {
                 "catch_chance_modifier": 30,
                 "destroy_chance_modifier": 80

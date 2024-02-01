@@ -25,8 +25,7 @@
                 "event": "naus",
                 "target": "self"
             },
-            "minecraft:map_color": "#06422C",
-            "minecraft:unit_cube": {}
+            "minecraft:map_color": "#06422C"
         },
         "events": {
             "naus": {

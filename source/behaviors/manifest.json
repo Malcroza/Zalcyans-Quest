@@ -1,13 +1,13 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "§6ZALCYAN'S§r §5QUEST§r [9.0.0]",
+		"name": "§6ZALCYAN'S§r §5QUEST§r [9.0.1]",
 		"description": "Get ready for an adventure! §oEnable Experimental Gameplay.§r",
 		"uuid": "01ed7b0c-be67-4ac0-89b4-084efffc47b1",
 		"version": [
 			9,
 			0,
-			0
+			1
 		],
 		"min_engine_version": [
 			1,
@@ -32,7 +32,7 @@
 			"version": [
 				9,
 				0,
-				0
+				1
 			]
 		}
 	],
@@ -42,7 +42,7 @@
 			"version": [
 				9,
 				0,
-				0
+				1
 			]
 		}
 	]

@@ -87,7 +87,6 @@
                 "destroy_chance_modifier": 35
             },
             "minecraft:map_color": "#2a0005",
-            "minecraft:unit_cube": {},
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 1
             },

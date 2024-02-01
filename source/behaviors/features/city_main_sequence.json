@@ -9,7 +9,8 @@
 		"features": [
 			"zalcyan:city_foundation_aggragate",
 			"zalcyan:city_tower_north_proxy",
-			"zalcyan:city_scrap_feature_north_proxy"
+			"zalcyan:city_scrap_feature_north_proxy",
+			"zalcyan:city_scrap_sp_feature_north_proxy"
 		]
 	}
 }

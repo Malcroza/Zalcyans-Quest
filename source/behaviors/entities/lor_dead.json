@@ -1,20 +1,12 @@
-//bridge-file-version: #9
+//bridge-file-version: #6
 {
 	"format_version": "1.8.0",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "zalcyan:marlar_dead",
+			"identifier": "zalcyan:lor_dead",
 			"is_spawnable": false,
 			"is_summonable": true,
-			"is_experimental": false,
-			"scripts": {
-				"animate": [
-					"bridge_execute_commands"
-				]
-			},
-			"animations": {
-				"bridge_execute_commands": "controller.animation.bridge_marlar_dead.execute_commands"
-			}
+			"is_experimental": false
 		},
 		"component_groups": {
 			"minecraft:dead_": {
@@ -25,7 +17,7 @@
 				"minecraft:timer": {
 					"looping": false,
 					"randomInterval": false,
-					"time": 30.15,
+					"time": 10.15,
 					"time_down_event": {
 						"event": "minecraft:event_dead"
 					}
@@ -36,16 +28,6 @@
 					"family": [
 						"despawn_"
 					]
-				}
-			},
-			"bridge:execute_command_id_1": {
-				"minecraft:skin_id": {
-					"value": 1
-				}
-			},
-			"bridge:execute_no_command": {
-				"minecraft:skin_id": {
-					"value": 0
 				}
 			}
 		},
@@ -84,7 +66,7 @@
 				"has_collusion": false
 			},
 			"minecraft:equipment": {
-				"table": "loot_tables/entities/marlar_gear_dead.json"
+				"table": "loot_tables/entities/lor_gear.json"
 			}
 		},
 		"events": {
@@ -96,32 +78,9 @@
 				}
 			},
 			"minecraft:event_dead": {
-				"sequence": [
-					{
-						"add": {
-							"component_groups": [
-								"bridge:execute_command_id_1"
-							]
-						}
-					},
-					{
-						"add": {
-							"component_groups": [
-								"minecraft:despawndead"
-							]
-						}
-					}
-				]
-			},
-			"bridge:remove_command_id_1": {
 				"add": {
 					"component_groups": [
-						"bridge:execute_no_command"
-					]
-				},
-				"remove": {
-					"component_groups": [
-						"bridge:execute_command_id_1"
+						"minecraft:despawndead"
 					]
 				}
 			}

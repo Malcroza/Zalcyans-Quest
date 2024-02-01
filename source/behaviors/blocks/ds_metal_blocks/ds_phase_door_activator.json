@@ -33,7 +33,6 @@
             "minecraft:on_step_on": {
                 "event": "activate"
             },
-			"minecraft:unit_cube": {},
 			"minecraft:material_instances": {
 						"*": {
 							"texture": "ds_phase_door_activator",
@@ -51,8 +50,7 @@
 							"render_method": "alpha_test"
 						}
 					},
-					"minecraft:light_emission": 0,
-					"minecraft:unit_cube": {}
+					"minecraft:light_emission": 0
                 }
             },
 			{
@@ -64,8 +62,7 @@
 							"render_method": "alpha_test"
 						}
 					},
-					"minecraft:light_emission": 2,
-					"minecraft:unit_cube": {}
+					"minecraft:light_emission": 2
                 }
             }
         ],

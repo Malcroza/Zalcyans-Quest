@@ -15,8 +15,11 @@
             "minecraft:light_emission": 0,
             "minecraft:light_dampening": 0,
             "minecraft:map_color": "#E0B61B",
-            "minecraft:unit_cube": {},
             "minecraft:on_player_destroyed": {
+                "event": "doom",
+                "target": "self"
+            },
+			"minecraft:on_interact": {
                 "event": "doom",
                 "target": "self"
             },
@@ -36,7 +39,7 @@
 					{
                         "run_command": {
                             "command": [
-                                "stopsound @a zighet.music"
+                                "stopsound @a[r=30] zighet.music"
                             ],
                             "target": "self"
                         }
@@ -44,7 +47,7 @@
                     {
                         "run_command": {
                             "command": [
-                                "playsound zighet.music @a ~ ~ ~"
+                                "playsound zighet.music @a[r=30] ~ ~ ~"
                             ],
                             "target": "self"
                         }
@@ -63,6 +66,13 @@
                                 "fill ~-10 ~+1 ~-10 ~+10 ~+20 ~+10 air destroy"
                             ],
                             "target": "self"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "setblock ~ ~ ~ air"
+                            ]
                         }
                     }
                 ]

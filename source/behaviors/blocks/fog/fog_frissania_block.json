@@ -20,8 +20,7 @@
                     "render_method": "blend"
                 }
             },
-            "minecraft:map_color": "#FF0000",
-            "minecraft:unit_cube": {}
+            "minecraft:map_color": "#FF0000"
         },
         "events": {}
     }

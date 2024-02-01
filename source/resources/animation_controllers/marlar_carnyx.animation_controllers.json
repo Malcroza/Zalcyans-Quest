@@ -7,24 +7,24 @@
 				"default": {
 					"animations": ["marlar_carnyx_first_person"],
 					"transitions": [
-						{"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged == 1 && query.is_sneaking != 1"},
-						{"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.is_sneaking == 1"}
+						{"look0": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan:bow') && query.item_is_charged == 1 && query.is_sneaking != 1"},
+						{"look1": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan:bow') && query.is_sneaking == 1"}
 					],
 					"blend_transition": 0.4
 				},
 				"look0": {
 					"animations": ["marlar_carnyx_first_person2"],
 					"transitions": [
-						{"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged != 1 && query.is_sneaking != 1"},
-						{"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.is_sneaking == 1"}
+						{"default": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan:bow') && query.item_is_charged != 1 && query.is_sneaking != 1"},
+						{"look1": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan:bow') && query.is_sneaking == 1"}
 					],
 					"blend_transition": 0.4
 				},
 				"look1": {
 					"animations": ["marlar_carnyx_first_person3"],
 					"transitions": [
-						{"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged != 1 && query.is_sneaking != 1"},
-						{"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'bow' && query.item_is_charged == 1 && query.is_sneaking != 1"}
+						{"default": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan:bow') && query.item_is_charged != 1 && query.is_sneaking != 1"},
+						{"look0": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan:bow') && query.item_is_charged == 1 && query.is_sneaking != 1"}
 					],
 					"blend_transition": 0.2
 				}

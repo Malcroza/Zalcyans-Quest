@@ -12,7 +12,6 @@
             "minecraft:light_emission": 0,
             "minecraft:light_dampening": 0,
             "minecraft:map_color": "#E0B61B",
-            "minecraft:unit_cube": {},
             "minecraft:on_player_destroyed": {
                 "event": "doom",
                 "target": "self"

@@ -7,16 +7,16 @@
 				"default": {
 					"animations": ["rysii_blaster_first_person"],
 					"transitions": [
-						{"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged == 1 && query.is_sneaking != 1"},
-						{"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.is_sneaking == 1"}
+						{"look0": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan2:crossbow') && query.item_is_charged == 1 && query.is_sneaking != 1"},
+						{"look1": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan2:crossbow') && query.is_sneaking == 1"}
 					],
 					"blend_transition": 0.4
 				},
 				"look0": {
 					"animations": ["rysii_blaster_first_person2"],
 					"transitions": [
-						{"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged != 1 && query.is_sneaking != 1"},
-						{"look1": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.is_sneaking == 1"}
+						{"default": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan2:crossbow') && query.item_is_charged != 1 && query.is_sneaking != 1"},
+						{"look1": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan2:crossbow') && query.is_sneaking == 1"}
 					],
 					"blend_transition": 0.4
 				},
@@ -26,15 +26,15 @@
 						{"effect": "scope"}
 					],
 					"transitions": [
-						{"end_hold": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged != 1 && query.is_sneaking != 1"},
-						{"end_hold": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged == 1 && query.is_sneaking != 1"}
+						{"end_hold": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan2:crossbow') && query.item_is_charged != 1 && query.is_sneaking != 1"},
+						{"end_hold": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan2:crossbow') && query.item_is_charged == 1 && query.is_sneaking != 1"}
 					]
 				},
 				"end_hold": {
 					"animations": ["end_hold"],
 					"transitions": [
-						{"default": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged != 1 && query.is_sneaking != 1 && query.all_animations_finished"},
-						{"look0": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'crossbow' && query.item_is_charged == 1 && query.is_sneaking != 1 && query.all_animations_finished"}
+						{"default": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan2:crossbow') && query.item_is_charged != 1 && query.is_sneaking != 1 && query.all_animations_finished"},
+						{"look0": "c.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 0, 'zalcyan2:crossbow') && query.item_is_charged == 1 && query.is_sneaking != 1 && query.all_animations_finished"}
 					],
 					"blend_transition": 0.2
 				}

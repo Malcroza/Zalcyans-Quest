@@ -1,0 +1,30 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "zalcyan:ds_city_scrap_sp_feature_scatter"
+		},
+
+		"places_feature": "minecraft:ds_city_scrap_sp1_mcstructure",
+
+		"iterations": 1,
+		"scatter_chance": 30,
+
+		"x": {
+			"extent": [
+				-30,
+				-18
+			],
+			"distribution": "inverse_gaussian"
+		},
+		"z": {
+			"extent": [
+				-30,
+				-18
+			],
+			"distribution": "inverse_gaussian"
+		},
+		"y": 16
+	}
+}

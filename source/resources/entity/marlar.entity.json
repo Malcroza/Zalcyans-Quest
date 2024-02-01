@@ -60,19 +60,30 @@
 				
 				"breath": "animation.marlar_v2.breath",
 				
-				"celebrate": "animation.marlar_v2.celebrate"
+				"celebrate": "animation.marlar_v2.celebrate",
+				
+				"red_dye": "controller.animation.marlar.red_dye"
 
 
 
 			},
 			"scripts": {
+				"initialize": [
+                    "v.health_previous = query.health;"	
+                ],
+                "pre_animation": [
+					"v.health_after = query.health;",
+					"v.health_change = v.health_after-v.health_previous;",
+					"v.health_previous = query.health;"	
+                ],
 				"animate": [
 					"look_at_target",
 					"move",
 					"riding",
 					"holdingc",
 					"attack",
-					"breath"
+					"breath",
+					"red_dye"
 					
 					
 				]
@@ -91,7 +102,8 @@
 			},
 			"particle_effects": {
 				"z_z": "zalcyan:z_z",
-				"breath": "zalcyan:z_breath"
+				"breath": "zalcyan:z_breath",
+				"red_dye": "zalcyan:red_dye"
 			}
 		}
 	}

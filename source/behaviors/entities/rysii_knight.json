@@ -360,7 +360,7 @@
         "components": {
             "minecraft:boss": {
                 "hud_range": 55,
-                "name": "§k§l§4Rysii Knight",
+                "name": "§k§l§41§r §l§4Rysii Knight §k§l§41",
                 "should_darken_sky": true
             },
             "minecraft:fire_immune": true,

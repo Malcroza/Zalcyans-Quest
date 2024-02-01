@@ -20,7 +20,6 @@
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 0.5
             },
-            "minecraft:unit_cube": {},
             "minecraft:collision_box": {
                 "origin": [
                     -8,
