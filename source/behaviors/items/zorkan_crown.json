@@ -10,8 +10,7 @@
     },
     "components": {
       "minecraft:icon": {
-        "texture": "zorkan_crown",
-        "frame": 0
+        "texture": "zorkan_crown"
       },
       "minecraft:max_stack_size": 1,
       "minecraft:enchantable": {

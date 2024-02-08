@@ -10,8 +10,7 @@
     },
     "components": {
       "minecraft:icon": {
-        "texture": "marlar_helmet",
-        "frame": 0
+        "texture": "marlar_helmet"
       },
       "minecraft:display_name": {
         "value": "Marlar Helmet"

@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "rysii_leggings",
-				"frame": 0
-			},
+				"texture": "rysii_leggings"},
 			"minecraft:display_name": {
 				"value": "§cRysii Leggings"
 			},

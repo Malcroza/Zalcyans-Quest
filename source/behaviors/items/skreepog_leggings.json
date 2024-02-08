@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "skreepog_leggings",
-				"frame": 0
-			},
+				"texture": "skreepog_leggings"},
 			"minecraft:display_name": {
 				"value": "§aSkreepog Leggings"
 			},

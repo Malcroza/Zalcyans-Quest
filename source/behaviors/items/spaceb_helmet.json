@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "spaceb_helmet",
-				"frame": 0
-			},
+				"texture": "spaceb_helmet"},
 			"minecraft:display_name": {
 				"value": "§aJyr Helmet"
 			},

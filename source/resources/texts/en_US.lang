@@ -85,11 +85,15 @@ item.zalcyan:spacem_boots=§4Cosmic boots
 
 
 ##action hints
-action.hint.exit.zalcyan:pod=Tap sneak to dismount
-action.hint.exit.zalcyan:skreepog_pod=Tap sneak to dismount
-action.hint.exit.zalcyan:rysii_pod=Tap sneak to dismount
+action.hint.exit.zalcyan:pod=Tap sneak to Exit
+action.hint.exit.zalcyan:skreepog_pod=Tap sneak to Exit
+action.hint.exit.zalcyan:rysii_pod=Tap sneak to Exit
 action.hint.exit.zalcyan:borgan_bullet=You can't escape!
 action.hint.tame.zalcyan:lightning_bug=Tame (only lasts one day)
+action.hint.exit.zalcyan:wybeom=Tap Sneak to Dismount
+action.hint.exit.zalcyan:wybeom_wild=Tap Sneak to Try to Escape!
+action.hint.exit.zalcyan:neo_pod=Tap sneak to Exit
+action.hint.exit.zalcyan:rysii_pod=Tap sneak to Exit
 
 ##entities n stuff
 entity.zalcyan:aqe.name=Aqe
@@ -222,7 +226,7 @@ tile.zalcyan:krackle_wood.name=Krackle Wood
 tile.zalcyan:bioluminescent_rod.name=Bioluminescent Rod
 tile.zalcyan:skreepog_pod_stone.name=Skreepog Pod Stone
 tile.zalcyan:orb_light.name=Orb Light
-tile.zalcyan:neo_pod_stone.name=§6§lNeo Pod Summon
+tile.zalcyan:neo_pod_stone.name=§6§lMarlar Jet Summon
 tile.zalcyan:marlar_banner1.name=Marlar Banner
 
 

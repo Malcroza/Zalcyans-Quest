@@ -10,9 +10,7 @@
     },
     "components": {
 			"minecraft:icon": {
-				"texture": "spaceb_chestplate",
-				"frame": 0
-			},
+				"texture": "spaceb_chestplate"},
 			"minecraft:display_name": {
 				"value": "§aJyr Chestplate"
 			},

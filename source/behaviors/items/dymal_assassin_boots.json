@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "dymal_assassin_boots",
-				"frame": 0
-			},
+				"texture": "dymal_assassin_boots"},
 			"minecraft:display_name": {
 				"value": "§eDymal Assassin boots"
 			},

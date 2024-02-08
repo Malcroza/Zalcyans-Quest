@@ -8,7 +8,7 @@
         
         "places_feature": "zalcyan:zighet_loot_box_feature",
         
-        "iterations": 800,
+        "iterations": 700,
         
         "x": {
             "distribution": "gaussian",

@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "spacem_boots",
-				"frame": 0
-			},
+				"texture": "spacem_boots"},
 			"minecraft:display_name": {
 				"value": "§dCosmic Boots"
 			},

@@ -10,9 +10,7 @@
     },
     "components": {
 			"minecraft:icon": {
-				"texture": "rysii_chestplate",
-				"frame": 0
-			},
+				"texture": "rysii_chestplate"},
 			"minecraft:display_name": {
 				"value": "§cRysii Chestplate"
 			},

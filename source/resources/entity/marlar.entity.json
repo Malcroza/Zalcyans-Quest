@@ -60,9 +60,7 @@
 				
 				"breath": "animation.marlar_v2.breath",
 				
-				"celebrate": "animation.marlar_v2.celebrate",
-				
-				"red_dye": "controller.animation.marlar.red_dye"
+				"celebrate": "animation.marlar_v2.celebrate"
 
 
 
@@ -82,8 +80,7 @@
 					"riding",
 					"holdingc",
 					"attack",
-					"breath",
-					"red_dye"
+					"breath"
 					
 					
 				]
@@ -102,8 +99,7 @@
 			},
 			"particle_effects": {
 				"z_z": "zalcyan:z_z",
-				"breath": "zalcyan:z_breath",
-				"red_dye": "zalcyan:red_dye"
+				"breath": "zalcyan:z_breath"
 			}
 		}
 	}

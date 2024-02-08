@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "spacem_leggings",
-				"frame": 0
-			},
+				"texture": "spacem_leggings"},
 			"minecraft:display_name": {
 				"value": "§dCosmic Leggings"
 			},

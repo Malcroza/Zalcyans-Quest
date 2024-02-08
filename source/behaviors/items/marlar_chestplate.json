@@ -10,9 +10,7 @@
     },
     "components": {
 			"minecraft:icon": {
-				"texture": "marlar_chestplate",
-				"frame": 0
-			},
+				"texture": "marlar_chestplate"},
 			"minecraft:display_name": {
 				"value": "Marlar Chestplate"
 			},

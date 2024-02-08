@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "borgan_leggings",
-				"frame": 0
-			},
+				"texture": "borgan_leggings"},
 			"minecraft:display_name": {
 				"value": "§dBorgan Leggings"
 			},

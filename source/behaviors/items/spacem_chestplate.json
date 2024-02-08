@@ -10,9 +10,7 @@
     },
     "components": {
 			"minecraft:icon": {
-				"texture": "spacem_chestplate",
-				"frame": 0
-			},
+				"texture": "spacem_chestplate"},
 			"minecraft:display_name": {
 				"value": "§dCosmic Chestplate"
 			},

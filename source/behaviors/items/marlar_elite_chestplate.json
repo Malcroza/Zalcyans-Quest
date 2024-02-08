@@ -10,9 +10,7 @@
     },
     "components": {
 			"minecraft:icon": {
-				"texture": "marlar_elite_chestplate",
-				"frame": 0
-			},
+				"texture": "marlar_elite_chestplate"},
 			"minecraft:display_name": {
 				"value": "§4Astral Chestplate"
 			},

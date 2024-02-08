@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "spaceb_boots",
-				"frame": 0
-			},
+				"texture": "spaceb_boots"},
 			"minecraft:display_name": {
 				"value": "§aJyr boots"
 			},

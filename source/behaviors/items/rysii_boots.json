@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "rysii_boots",
-				"frame": 0
-			},
+				"texture": "rysii_boots"},
 			"minecraft:display_name": {
 				"value": "§cRysii Boots"
 			},

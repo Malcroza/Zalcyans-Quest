@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "skreepog_helmet",
-				"frame": 0
-			},
+				"texture": "skreepog_helmet"},
 			"minecraft:display_name": {
 				"value": "§aSkreepog Helmet"
 			},

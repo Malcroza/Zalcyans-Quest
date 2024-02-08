@@ -25,7 +25,7 @@
 				"minecraft:timer": {
 					"looping": false,
 					"randomInterval": false,
-					"time": 30.15,
+					"time": 10.15,
 					"time_down_event": {
 						"event": "minecraft:event_dead"
 					}

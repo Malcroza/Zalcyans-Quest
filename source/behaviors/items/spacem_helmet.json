@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "spacem_helmet",
-				"frame": 0
-			},
+				"texture": "spacem_helmet"},
 			"minecraft:display_name": {
 				"value": "§dCosmic Helmet"
 			},

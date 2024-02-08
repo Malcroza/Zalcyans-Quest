@@ -10,9 +10,7 @@
     },
     "components": {
 			"minecraft:icon": {
-				"texture": "yalron_chestplate",
-				"frame": 0
-			},
+				"texture": "yalron_chestplate"},
 			"minecraft:display_name": {
 				"value": "§bYalron Chestplate"
 			},

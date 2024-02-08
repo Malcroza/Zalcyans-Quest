@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "zighet_queen_helmet",
-				"frame": 0
-			},
+				"texture": "zighet_queen_helmet"},
 			"minecraft:display_name": {
 				"value": "§dZighet Queen Head"
 			},

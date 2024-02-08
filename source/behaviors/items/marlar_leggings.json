@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "marlar_leggings",
-				"frame": 0
-			},
+				"texture": "marlar_leggings"},
 			"minecraft:display_name": {
 				"value": "Marlar Leggings"
 			},

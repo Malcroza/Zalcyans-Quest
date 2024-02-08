@@ -10,8 +10,7 @@
     },
     "components": {
       "minecraft:icon": {
-        "texture": "marlar_boots",
-        "frame": 0
+        "texture": "marlar_boots"
       },
       "minecraft:display_name": {
         "value": "Marlar Boots"

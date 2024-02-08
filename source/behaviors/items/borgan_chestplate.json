@@ -10,9 +10,7 @@
     },
     "components": {
 			"minecraft:icon": {
-				"texture": "borgan_chestplate",
-				"frame": 0
-			},
+				"texture": "borgan_chestplate"},
 			"minecraft:display_name": {
 				"value": "§dBorgan Chestplate"
 			},

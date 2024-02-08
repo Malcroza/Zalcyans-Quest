@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "spaceb_leggings",
-				"frame": 0
-			},
+				"texture": "spaceb_leggings"},
 			"minecraft:display_name": {
 				"value": "§aJyr Leggings"
 			},

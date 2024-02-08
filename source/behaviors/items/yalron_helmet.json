@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "yalron_helmet",
-				"frame": 0
-			},
+				"texture": "yalron_helmet"},
 			"minecraft:display_name": {
 				"value": "§bYalron Helmet"
 			},

@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "dymal_assassin_leggings",
-				"frame": 0
-			},
+				"texture": "dymal_assassin_leggings"},
 			"minecraft:display_name": {
 				"value": "§eDymal Assassin Leggings"
 			},

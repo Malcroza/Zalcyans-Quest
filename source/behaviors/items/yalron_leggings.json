@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "yalron_leggings",
-				"frame": 0
-			},
+				"texture": "yalron_leggings"},
 			"minecraft:display_name": {
 				"value": "§bYalron Leggings"
 			},

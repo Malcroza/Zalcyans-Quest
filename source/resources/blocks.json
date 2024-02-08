@@ -1378,5 +1378,13 @@
 	"zalcyan:ds_loot_box1": {
 		"sound": "ancient_debris",
 		"textures": "ds_loot_box1"
+	},
+	"zalcyan:skreepog_pod_stone": {
+		"textures": "skreepog_pod_stone",
+		"sound": "stone"
+	},
+	"zalcyan:pod_stone": {
+		"textures": "pod_stone",
+		"sound": "stone"
 	}
 }

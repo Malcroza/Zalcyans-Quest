@@ -11,9 +11,7 @@
 		},
 		"components": {
 			"minecraft:icon": {
-				"texture": "dymal_assassin_helmet",
-				"frame": 0
-			},
+				"texture": "dymal_assassin_helmet"},
 			"minecraft:display_name": {
 				"value": "§eDymal Assassin Helmet"
 			},
