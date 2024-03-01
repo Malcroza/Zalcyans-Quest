@@ -52,6 +52,8 @@
 					"inertia": 1,
 					"liquid_inertia": 1,
 					"should_bounce": false,
+					"uncertainty_base": 4,
+					"uncertainty_multiplier":1,
 					"offset": [
 						-0.32,
 						-0.15,
@@ -121,6 +123,8 @@
 					"liquid_inertia": 1,
 					"multiple_targets": false,
 					"should_bounce": false,
+					"uncertainty_base": 8,
+					"uncertainty_multiplier":1,
 					"offset": [
 						-0.27,
 						1.25,

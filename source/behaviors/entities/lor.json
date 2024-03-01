@@ -28,22 +28,12 @@
 					"event": "minecraft:become_angry",
 					"target": "self"
 				}
-			},
-			"melee": {
-				"minecraft:behavior.delayed_attack": {
-					"priority": 1,
-					"attack_duration": 0.96,
-					"speed_multiplier": 1,
-					"hit_delay_pct": 0.5,
-					"track_target": true,
-					"reach_multiplier": 2
-				}
 			}
 		},
 		"components": {
 			"minecraft:nameable": {},
 			"minecraft:movement": {
-				"value": 0.38
+				"value": 0.36
 			},
 			"minecraft:type_family": {
 				"family": [
@@ -79,9 +69,9 @@
 			},
 			"minecraft:behavior.delayed_attack": {
 				"priority": 1,
-				"attack_duration": 0.96,
+				"attack_duration": 0.76,
 				"speed_multiplier": 1,
-				"hit_delay_pct": 0.7,
+				"hit_delay_pct": 0.2,
 				"track_target": true,
 				"reach_multiplier": 2
 			},
@@ -182,15 +172,6 @@
 					0.1,
 					0.2
 				]
-			},
-			"minecraft:behavior.melee_attack": {
-				"on_attack": {
-					"event": "minecraft:entity_transformed"
-				},
-				"track_target": true
-			},
-			"minecraft:walk_animation_speed": {
-				"value": 1.1
 			},
 			"minecraft:behavior.follow_caravan": {
 				"priority": 3,
@@ -298,13 +279,6 @@
 				"add": {
 					"component_groups": [
 						"lor_calm"
-					]
-				}
-			},
-			"minecraft:entity_transformed": {
-				"add": {
-					"component_groups": [
-						"melee"
 					]
 				}
 			}

@@ -14,19 +14,29 @@
 				"default": "geometry.lor"
 			},
 			"animations": {
-				"moving": "animation.lor.move",
-				"lor_general": "animation.lor.general",
+				"walk": "animation.lor.walk",
+				"run": "animation.lor.run",
+				"idle": "animation.lor.idle",
 				"attack0": "animation.lor.attack",
 				"attack1": "animation.lor.attack",
 				"move": "controller.animation.lor.move",
-				"general": "controller.animation.lor.general",
-				"attack": "controller.animation.lor.attack"
+				"attack": "controller.animation.lor.attack",
+				"look_at_target": "animation.lor.look_at_target",
+				"has_target": "animation.lor.has_target",
+				"riding.arms": "animation.humanoid.riding.arms.v1.0",
+				"riding.legs": "animation.humanoid.riding.legs.v1.0",
+				"riding": "controller.animation.humanoid.riding",
+				"sit": "animation.lor.sit",
+				"stand": "animation.lor.stand",
+				"nap": "controller.animation.lor.nap",
+				"crouch": "animation.lor.crouch"
 			},
 			"scripts": {
 				"animate": [
 					"move",
-					"general",
-					"attack"
+					"attack",
+					"riding",
+					"nap"
 				],
 				"pre_animation": [
 					"variable.attack = Math.sin(variable.attack_time * 30.0);"

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bridge_smoke_orb.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						}
+					],
+					"on_entry": [
+						"/playsound mob.witch.throw @a ~ ~ ~ 2.8"
+					]
+				},
+				"execute_command_id_1": {
+					"transitions": [
+					],
+					"on_entry": [
+						"/particle zalcyan:smoke_orb_sparks ~ ~ ~",
+						"@s bridge:remove_command_id_1",
+						"/playsound dig.netherite @a ~ ~ ~ 2.8",
+						"/effect @a[r=3] nausea 10 1 true",
+						"/playsound random.fizz @a ~ ~ ~ 2.8"
+					]
+				}
+			}
+		}
+	}
+}

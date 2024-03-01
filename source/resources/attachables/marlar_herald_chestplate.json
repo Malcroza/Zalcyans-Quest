@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan:marlar_herald_chestplate",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/models/armor/marlar_herald",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.marlar_herald_chestplate"
+		
+      },
+	  "animations": {
+				"dycape": "animation.dymal_assassin.cape"
+	  },
+      "scripts": {
+        "parent_setup": "variable.helmet_layer_visible = 0.0;",
+        "animate": [
+          "dycape"
+        ]
+      },
+      "render_controllers": [ "controller.render.armor" ]
+    }
+  }
+}

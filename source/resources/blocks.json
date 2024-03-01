@@ -24,6 +24,42 @@
 		"textures": "dev_replace_void_fill_block",
 		"sound": "stone"
 	},
+	"zalcyan:fog_ds_city_block": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
+	},
+	"zalcyan:fog_frissania_block": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
+	},
+	"zalcyan:fog_gulumar_block": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
+	},
+	"zalcyan:fog_lorla_block": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
+	},
+	"zalcyan:fog_miren_block": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
+	},
+	"zalcyan:fog_moonlen_block": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
+	},
+	"zalcyan:fog_mynis_block": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
+	},
+	"zalcyan:fog_quag_block": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
+	},
+	"zalcyan:fog_sappis_block": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
+	},
 	"argen_stone": {
 		"textures": "argen_stone",
 		"sound": "stone"
@@ -43,6 +79,10 @@
 	"gulu_stem": {
 		"textures": "gulu_stem",
 		"sound": "wood"
+	},
+	"zalcyan:aqe_elite_stone": {
+		"textures": "aqe_elite_stone",
+		"sound": "stone"
 	},
 	"zalcyan:gulu_ground": {
 		"textures": {

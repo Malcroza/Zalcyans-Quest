@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.smoke_orb.move": {
+			"loop": true,
+			"animation_length": 0.01,
+			"bones": {
+				"waist": {
+					"rotation": ["-query.target_x_rotation", "-query.body_y_rotation + query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.smoke_orb.part": {
+			"animation_length": 0.04,
+			"particle_effects": {
+				"0.04": {
+					"effect": "lazar_trail",
+					"locator": "part_emitter"
+				}
+			}
+		},
+		"animation.smoke_orb.fog": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.16,
+			"particle_effects": {
+				"0.16": {
+					"effect": "fog",
+					"locator": "part_emitter"
+				}
+			}
+		},
+		"animation.smoke_orb.rotate": {
+			"loop": true,
+			"bones": {
+				"cubes": {
+					"rotation": ["query.anim_time*50*query.ground_speed", 0, 0]
+				}
+			}
+		}
+	}
+}

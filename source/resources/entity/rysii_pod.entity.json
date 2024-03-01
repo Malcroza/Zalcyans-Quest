@@ -27,7 +27,8 @@
 		"wing_spread": "animation.rysii_pod.wing_spread",
 		"rider_shield": "controller.animation.rysii_pod.ride_shield",
 		"smoke": "animation.rysii_pod.smoke",
-		"cont_smoke": "controller.animation.rysii_pod.smoke"
+		"cont_smoke": "controller.animation.rysii_pod.smoke",
+		"cont_dust": "controller.animation.rysii_pod.dust"
 
       },
       "scripts": {
@@ -87,7 +88,8 @@
 		  "zoom",
 		  "wing_spread",
 		  "rider_shield",
-		  "cont_smoke"
+		  "cont_smoke",
+		  "cont_dust"
         ]
       },
         "spawn_egg": {
@@ -96,7 +98,8 @@
 			},
 			"particle_effects": {
 				"trail": "zalcyan:rysii_trail_particle",
-				"smoke": "zalcyan:neo_pod_smoke"
+				"smoke": "zalcyan:neo_pod_smoke",
+				"dust": "zalcyan:pod_dust"
 			},
 			"sound_effects": {
 				"gear": "sound.gear.turn"

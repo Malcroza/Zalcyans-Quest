@@ -129,7 +129,7 @@
 				"default": {
 					"transitions": [
 						{
-							"attack0": "math.random_integer(1,5)==1 && query.is_delayed_attacking"
+							"attack0": "math.random_integer(1,2)==1 && query.is_delayed_attacking"
 						},
 						{
 							"attack1": "math.random_integer(1,2)==2 && query.is_delayed_attacking"

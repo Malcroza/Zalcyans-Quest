@@ -41,20 +41,46 @@
                             "zalcyan:moonlen_spike1"
                         ],
                         "allowed_faces": [
-                            "down",
-                            "up"
+                            "down"
                         ]
                     }
                 ]
             },
-            "minecraft:loot": "loot_tables/items/moonlen_spike_item.json"
+            "minecraft:loot": "loot_tables/items/moonlen_spike_item.json",
+            "minecraft:on_player_destroyed": {
+                "event": "zalcyan:broken",
+                "target": "self"
+            },
+			"tag:pillar_body": {}
         },
         "events": {
-            "broken": {
+            "zalcyan:broken": {
+                "sequence": [
+                    {
+                        "condition": "query.block_neighbor_has_any_tag(0,1,0,'pillar_body','pillar_tip')",
+                        "trigger": {
+                            "event": "zalcyan:broken_up"
+                        }
+                    },
+                    {
+                        "condition": "query.block_neighbor_has_any_tag(0,-1,0,'pillar_body','pillar_tip')",
+                        "trigger": {
+                            "event": "zalcyan:broken_down"
+                        }
+                    }
+                ]
+            },
+            "zalcyan:broken_up": {
                 "run_command": {
                     "command": [
-                        "fill ~ ~+1 ~ ~ ~+1 ~ zalcyan:moonlen_spike1 replace zalcyan:moonlen_spike_body",
-                        "fill ~ ~-1 ~ ~ ~-1 ~ zalcyan:moonlen_spike1 replace zalcyan:moonlen_spike_body"
+				"fill ~ ~+1 ~ ~ ~+1 ~ zalcyan:moonlen_spike1 [\"zalcyan:rotate\"=0]"
+                    ]
+                }
+            },
+            "zalcyan:broken_down": {
+                "run_command": {
+                    "command": [
+				"fill ~ ~-1 ~ ~ ~-1 ~ zalcyan:moonlen_spike1 [\"zalcyan:rotate\"=6]"
                     ]
                 }
             }

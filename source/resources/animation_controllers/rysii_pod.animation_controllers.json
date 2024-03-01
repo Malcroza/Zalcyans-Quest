@@ -126,6 +126,33 @@
 					"blend_transition": 0.4
 				}
 			}
+		},
+		"controller.animation.rysii_pod.dust": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"dust": "query.is_on_ground && query.has_rider"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"dust": {
+					"particle_effects": [
+						{
+							"effect": "dust",
+							"locator": "dust"
+						}
+					],
+					"transitions": [
+						{
+							"default": "!query.is_on_ground || !query.has_rider"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
 		}
 	}
 }

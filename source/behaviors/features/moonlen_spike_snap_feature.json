@@ -5,7 +5,7 @@
       "identifier": "zalcyan:moonlen_spike_snap_feature"
     },
     "feature_to_snap":  "zalcyan:moonlen_spike_feature",
-    "vertical_search_range":  12,
+    "vertical_search_range":  5,
     "surface": "ceiling"
   }
 }

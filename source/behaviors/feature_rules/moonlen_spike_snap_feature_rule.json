@@ -4,7 +4,7 @@
 	"minecraft:feature_rules": {
 		"description": {
 			"identifier": "zalcyan:moonlen_spike_snap_feature_rule",
-			"places_feature": "zalcyan:moonlen_spike_sequence_feature"
+			"places_feature": "zalcyan:moonlen_spike_scatter"
 		},
 		"conditions": {
 			"minecraft:biome_filter": [
@@ -18,31 +18,13 @@
 					]
 				}
 			],
-			"placement_pass": "final_pass"
+			"placement_pass": "first_pass"
 		},
 		"distribution": {
-			"iterations": 67,
-			"x": {
-				"distribution": "uniform",
-				"extent": [
-					0,
-					16
-				]
-			},
-			"y": {
-				"distribution": "uniform",
-				"extent": [
-					10,
-					70
-				]
-			},
-			"z": {
-				"distribution": "uniform",
-				"extent": [
-					0,
-					16
-				]
-			}
+			"iterations": "(q.noise(v.worldx / 820, v.worldz / 820) + (q.noise(v.worldx, v.worldz) * 0.025) < -0.2 && (query.heightmap(variable.worldx, variable.worldz) >= 64))",
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz)",
+			"z": 0
 		}
 	}
 }

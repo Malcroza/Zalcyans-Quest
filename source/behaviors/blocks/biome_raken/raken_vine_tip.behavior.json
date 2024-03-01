@@ -37,7 +37,9 @@
                     {
                         "block_filter": [
                             "zalcyan:raken_vine_body",
-                            "zalcyan:raken_stone"
+                            "zalcyan:raken_stone",
+                            "zalcyan:raken_vine_tip",
+							"zalcyan:raken_leaves"
                         ],
                         "allowed_faces": [
                             "down"
@@ -46,44 +48,42 @@
                 ]
             },
             "minecraft:on_player_destroyed": {
-                "event": "broken",
+                "event": "zalcyan:broken",
                 "target": "self"
             },
             "minecraft:on_interact": {
-                "event": "grow",
-                "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'  ||  query.get_equipped_item_name('main_hand') == 'item.zalcyan:mya_vine_item' "
+                "event": "zalcyan:grow",
+                "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+            },
+            "minecraft:on_placed": {
+                "event": "zalcyan:place",
+                "target": "self"
             },
             "minecraft:loot": "loot_tables/items/raken_vine_item.json"
         },
         "events": {
-            "broken": {
+            "zalcyan:broken": {
                 "run_command": {
                     "command": [
                         "fill ~ ~+1 ~ ~ ~+1 ~ zalcyan:raken_vine_tip replace zalcyan:raken_vine_body"
                     ]
                 }
             },
-            "grow": {
+            "zalcyan:grow": {
                 "sequence": [
                     {
                         "sequence": [
                             {
-                                "set_block_at_pos": {
-                                    "block_type": "zalcyan:raken_vine_body",
-                                    "block_offset": [
-                                        0,
-                                        0,
-                                        0
+                                "run_command": {
+                                    "command": [
+                                        "fill ~ ~ ~ ~ ~ ~ zalcyan:raken_vine_body replace zalcyan:raken_vine_tip"
                                     ]
                                 }
                             },
                             {
-                                "set_block_at_pos": {
-                                    "block_type": "zalcyan:raken_vine_tip",
-                                    "block_offset": [
-                                        0,
-                                        -1,
-                                        0
+                                "run_command": {
+                                    "command": [
+                                        "fill ~ ~-1 ~ ~ ~-1 ~ zalcyan:raken_vine_tip replace air"
                                     ]
                                 }
                             }
@@ -96,6 +96,24 @@
                         "run_command": {
                             "command": [
                                 "particle minecraft:endrod ~ ~ ~"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "playsound item.bone_meal.use @a ~ ~ ~"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "zalcyan:place": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~+1 ~ ~ ~+1 ~ zalcyan:raken_vine_body replace zalcyan:raken_vine_tip"
                             ]
                         }
                     },

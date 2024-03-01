@@ -48,7 +48,7 @@
 				"distribution": "fixed_grid",
 				"extent": [0, 15]
 			},
-			"y": "( q.noise(v.originx / 840, v.originz / 840) < -0.37) ? -64 : -70"
+			"y": "( q.noise(v.originx / 1140, v.originz / 1140) < -0.57) ? -64 : -70"
 		}
 	}
 }

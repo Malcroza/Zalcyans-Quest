@@ -509,11 +509,8 @@
 		},
 		"sound.carnyx.fear": {
 			"sounds": [
-				"sounds/music/carnyx/carnyx1",
 				"sounds/music/carnyx/carnyx2",
-				"sounds/music/carnyx/carnyx3",
-				"sounds/music/carnyx/carnyx4",
-				"sounds/music/carnyx/carnyx5"
+				"sounds/music/carnyx/carnyx3"
 			],
 			"category": "player"
 		},
@@ -634,6 +631,11 @@
          "__use_legacy_max_distance" : "true",
          "category" : "player",
          "sounds" : []
+		},
+		"random.bow_player" : {//replacement
+		"__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : ["sounds/random/bow"]
 		},
 		"sound.gun.empty": {
 			"sounds": [

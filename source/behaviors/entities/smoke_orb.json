@@ -1,0 +1,289 @@
+//bridge-file-version: #43
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "zalcyan:smoke_orb",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": true,
+			"runtime_identifier": "minecraft:snowball",
+			"properties":{
+			"zalcyan:invis": { 
+				"type": "bool", 
+				 "default": false,
+				"client_sync": true 
+				}				
+			 },
+			"scripts": {
+				"animate": [
+					"bridge_execute_commands"
+				]
+			},
+			"animations": {
+				"bridge_execute_commands": "controller.animation.bridge_smoke_orb.execute_commands"
+			}
+		},
+		"component_groups": {
+			"despawning": {
+				"minecraft:type_family": {
+					"family": [
+						"smoke_orb"
+					]
+				},
+				"minecraft:despawn": {
+					"remove_child_entities": true,
+					"filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "self",
+								"value": "smoke_orb"
+							}
+						]
+					}
+				}
+			},
+			"zalcyan:player_smoke_orb_standing": {
+				"minecraft:projectile": {
+					"power": 2.2,
+					"gravity": 0.1,
+					"angle_offset": -20,
+					"uncertainty_base": 10,
+					"uncertainty_multiplier":2,
+					
+					"inertia": 0.95,
+					"liquid_inertia": 0.75,
+					"should_bounce": true,
+					"offset": [
+						-0.32,
+						-0.15,
+						0.9
+					],
+					"multiple_targets": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 5,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"zalcyan:player_smoke_orb_sneaking": {
+				"minecraft:projectile": {
+					"power": 2.2,
+					"gravity": 0.1,
+					"angle_offset": 0,
+					"inertia": 0.95,
+					"liquid_inertia": 0.75,
+					"should_bounce": true,
+					"offset": [
+						0,
+						-0.25,
+						0.4
+					],
+					"multiple_targets": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 7,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"zalcyan:marlar_smoke_orb": {
+				"minecraft:projectile": {
+					"power": 2.2,
+					"gravity": 0.1,
+					"angle_offset": -10,
+					"uncertainty_base": 10,
+					"uncertainty_multiplier":2,
+					
+					"inertia": 0.95,
+					"liquid_inertia": 0.75,
+					"multiple_targets": false,
+					"should_bounce": true,
+					"offset": [
+						-0.27,
+						1.25,
+						0
+					],
+					"on_hit": {
+						"impact_damage": {
+							"damage": 7,
+							"knockback": true,
+							"semi_random_diff_damage": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0.0001
+						},
+						"definition_event": {
+							"event_trigger": {
+								"event": "particle",
+								"target": "self"
+							}
+						}
+					},
+					"shoot_target": true,
+					"is_dangerous": true
+				}
+			},
+			"bridge:execute_command_id_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.4,
+				"height": 0.4
+			},
+			"minecraft:despawn": {
+				"remove_child_entities": true,
+				"filters": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "self",
+							"value": "smoke_orb"
+						}
+					]
+				}
+			},
+			"minecraft:timer": {
+				"looping": false,
+				"time_down_event": {
+					"event": "minecraft:start_despawn",
+					"target": "self"
+				},
+				"time": [
+					4,
+					4
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"minecraft:start_despawn": {
+				"add": {
+					"component_groups": [
+						"despawning"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": true
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:player_smoke_orb_sneaking"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": false
+								},
+								{
+									"test": "is_family",
+									"value": "player",
+									"subject": "other"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:player_smoke_orb_standing"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "marlar"
+						},
+						"add": {
+							"component_groups": [
+								"zalcyan:marlar_smoke_orb"
+							]
+						}
+					}
+				]
+			},
+			"particle": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				},
+					"set_property": { 
+					"zalcyan:invis": true
+					}
+			},
+			"bridge:remove_command_id_1": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			}
+		}
+	}
+}

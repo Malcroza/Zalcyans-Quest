@@ -79,7 +79,11 @@ item.zalcyan:spacem_helmet=§4Cosmic Helmet
 item.zalcyan:spacem_chestplate=§4Cosmic Chestplate
 item.zalcyan:spacem_leggings=§4Cosmic Leggings
 item.zalcyan:spacem_boots=§4Cosmic boots
-
+item.zalcyan:marlar_herald_helmet=Marlar Helmet
+item.zalcyan:marlar_herald_chestplate=Marlar Chestplate
+item.zalcyan:marlar_herald_leggings=Marlar Leggings
+item.zalcyan:marlar_herald_boots=Marlar boots
+item.zalcyan:smoke_blast=Smoke Blast
 
 
 
@@ -173,6 +177,8 @@ entity.zalcyan:yalron.name=Yalron Dwifaller
 entity.zalcyan:zighet.name=Zighet Wasp
 entity.zalcyan:zighet_bullet.name=Zighet Wasp Spiddle
 entity.zalcyan:zighet_queen.name=Zighet Queen
+entity.zalcyan:marlar_herald.name=Marauder Herald
+entity.zalcyan:marlar_herald_dead.name=Dead Marauder Herald
 
 
 ##spawn eggs n stuff
@@ -215,7 +221,7 @@ item.spawn_egg.entity.zalcyan:skreepog_pillar.name=Spawn §l§cSkreepog Pillar
 item.spawn_egg.entity.zalcyan:rysii_summon.name=Spawn §cRysii Knight
 item.spawn_egg.entity.zalcyan:rysii_pod.name=Spawn §cRysii Firebird
 item.spawn_egg.entity.zalcyan:neo_pod_summon.name=Spawn §cMarlar Fighter Jet
-
+item.spawn_egg.entity.zalcyan:marlar_herald.name=Spawn §cMarauder Herald
 
 ##blocks n stuff
 tile.zalcyan:aqe_elite_stone.name=§6§lAqe Elite Stone

@@ -2,24 +2,100 @@
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
-		"controller.animation.lor.general": {
+		"controller.animation.lor.nap": {
 			"states": {
 				"default": {
 					"animations": [
-						"lor_general"
-					]
+						"look_at_target",
+						"idle"
+					],
+					"transitions" : [
+						{
+							"sleep" : "query.is_sleeping"
+						},
+						{
+							"target" : "query.has_target"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"inter": {
+					"animations": [
+						"stand",
+						"idle"
+					],
+					"transitions" : [
+						{
+							"default" : "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"sleep": {
+					"animations": [
+						"sit",
+						"idle"
+					],
+					"transitions" : [
+						{
+							"inter" : "!query.is_sleeping"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"target": {
+					"animations": [
+						"idle",
+						"look_at_target"
+					],
+					"transitions" : [
+						{
+							"default" : "!query.has_target"
+						},
+						{
+							"sleep" : "query.is_sleeping"
+						}
+					],
+					"blend_transition": 0.2
 				}
 			}
 		},
 		"controller.animation.lor.move": {
 			"states": {
 				"default": {
-					"animations": [
+					"transitions" : [
 						{
-							"moving": "query.modified_move_speed"
+							"walking" : "query.modified_move_speed > 0.05 && query.modified_move_speed < 0.4"
+						},
+						{
+							"running" : "query.modified_move_speed >= 0.4"
 						}
 					],
-					"blend_transition": 0.4
+					"blend_transition": 0.2
+				},
+				"walking" : {
+					"animations" : [ "walk" ],
+					"transitions" : [
+						{
+							"default" : "query.modified_move_speed <= 0.05"
+						},
+						{
+							"running" : "query.modified_move_speed >= 0.4"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"running" : {
+					"animations" : [ "run" ],
+					"transitions" : [
+						{
+							"default" : "query.modified_move_speed <= 0.05"
+						},
+						{
+							"walking" : "query.modified_move_speed > 0.05 && query.modified_move_speed < 0.4"
+						}
+					],
+					"blend_transition": 0.2
 				}
 			}
 		},
@@ -28,10 +104,10 @@
 				"default": {
 					"transitions": [
 						{
-							"attack0": "variable.attack > 0"
+							"attack0": "math.random_integer(1,2)==1 && query.is_delayed_attacking"
 						},
 						{
-							"attack1": "variable.attack > 0"
+							"attack1": "math.random_integer(1,2)==2 && query.is_delayed_attacking"
 						}
 					],
 					"blend_transition": 0.4

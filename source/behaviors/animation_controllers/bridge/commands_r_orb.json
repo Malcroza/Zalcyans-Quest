@@ -10,7 +10,7 @@
 						}
 					],
 					"on_entry": [
-						"/playsound sound.lazar.shoot @a ~ ~ ~ 1.0",
+						"/playsound sound.lazar.shoot @a ~ ~ ~ 4.0",
 						"/camerashake add @a[r=2] 0.2 0.2"
 					]
 				},

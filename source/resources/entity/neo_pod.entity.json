@@ -23,7 +23,8 @@
 		"rider": "animation.neo_pod.enter",
 		"idle":"animation.neo_pod.idle",
 		"smoke": "animation.neo_pod.smoke",
-		"cont_smoke": "controller.animation.neo_pod.smoke"
+		"cont_smoke": "controller.animation.neo_pod.smoke",
+		"cont_dust": "controller.animation.neo_pod.dust"
 
       },
       "scripts": {
@@ -80,7 +81,8 @@
 		{"general": "query.variant != 2"},
 		  "zoom",
 		  "rider_shield",
-		  "cont_smoke"
+		  "cont_smoke",
+		  "cont_dust"
         ]
       },
         "spawn_egg": {
@@ -90,7 +92,8 @@
 			"particle_effects": {
 				"trail": "zalcyan:rysii_trail_particle",
 				"exaust": "zalcyan:neo_pod_trail_fog",
-				"smoke": "zalcyan:neo_pod_smoke"
+				"smoke": "zalcyan:neo_pod_smoke",
+				"dust": "zalcyan:pod_dust"
 			},
 			"sound_effects": {
 				"charge_up": "neo.engine.charge_up",

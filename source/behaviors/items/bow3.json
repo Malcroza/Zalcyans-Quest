@@ -65,6 +65,10 @@
 			},
 			"minecraft:display_name": {
 				"value": "§dCrystalline Suppresor \n §o§8Continuous press to shoot"
+			},
+			"minecraft:enchantable": {
+				"value": 22,
+				"slot": "crossbow"
 			}
 		},
 		"events": {

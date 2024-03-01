@@ -46,11 +46,25 @@
 				"hold": {
 					"animations": ["hold", {"run": "c.is_first_person && query.is_sneaking != 1" }],
 					"transitions": [
-						{"cont_hold": "query.item_is_charged == 1"}
+						{"cont_hold": "query.item_is_charged == 1 && query.is_sneaking"},
+						{"cont_hold_unsneak_before": "query.item_is_charged == 1 && !query.is_sneaking"}
+					]
+				},
+				"cont_hold_unsneak_before": {
+					"animations": ["hold", "sound_charge", {"load": "c.is_first_person && query.is_sneaking != 1" }],
+					"transitions": [
+						{"fire": "query.item_is_charged != 1"}
 					]
 				},
 				"cont_hold": {
 					"animations": ["hold", "sound_charge", {"load": "c.is_first_person && query.is_sneaking != 1" }],
+					"transitions": [
+						{"fire": "query.item_is_charged != 1"},
+						{"cont_hold_unsneak": "!query.is_sneaking"}
+					]
+				},
+				"cont_hold_unsneak": {
+					"animations": ["hold"],
 					"transitions": [
 						{"fire": "query.item_is_charged != 1"}
 					]

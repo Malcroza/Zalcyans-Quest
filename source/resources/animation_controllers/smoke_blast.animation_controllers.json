@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.smoke_blast.sound": {
+			"initial_state": "hold",
+			"states": {
+				"hold": {
+					"transitions": [
+						{"cont_hold": "query.item_is_charged == 1"}
+					]
+				},
+				"cont_hold": {
+					"sound_effects": [
+						{"effect": "charge"}
+					],
+					"transitions": [
+						{"hold": "query.item_is_charged != 1"}
+					]
+				}
+			}
+		}
+	}
+}

@@ -16,7 +16,10 @@
 					"pivot": [0, 37, 0],
 					"cubes": [
 						{"origin": [-5, 45, 40], "size": [9, 37, 44], "inflate": 0.01, "uv": [0, 162]}
-					]
+					],
+					"locators": {
+						"dust": [0, 13, 0]
+					}
 				},
 				{
 					"name": "main",

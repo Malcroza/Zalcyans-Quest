@@ -479,6 +479,31 @@
 			"textures": [
 				"textures/items/vok_summon"
 			]
+		},
+		"marlar_herald_boots": {
+			"textures": [
+				"textures/items/marlar_herald_boots"
+			]
+		},
+		"marlar_herald_chestplate": {
+			"textures": [
+				"textures/items/marlar_herald_chestplate"
+			]
+		},
+		"marlar_herald_helmet": {
+			"textures": [
+				"textures/items/marlar_herald_helmet"
+			]
+		},
+		"marlar_herald_leggings": {
+			"textures": [
+				"textures/items/marlar_herald_leggings"
+			]
+		},
+		"smoke_blast": {
+			"textures": [
+				"textures/items/smoke_blast"
+			]
 		}
 	},
 	"texture_name": "atlas.items"

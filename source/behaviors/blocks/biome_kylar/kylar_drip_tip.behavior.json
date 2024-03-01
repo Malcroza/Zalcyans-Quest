@@ -37,7 +37,8 @@
                     {
                         "block_filter": [
                             "zalcyan:kylar_drip_body",
-                            "zalcyan:kylar_crystal"
+                            "zalcyan:kylar_crystal",
+							"zalcyan:kylar_drip_tip"
                         ],
                         "allowed_faces": [
                             "down"
@@ -46,44 +47,42 @@
                 ]
             },
             "minecraft:on_player_destroyed": {
-                "event": "broken",
+                "event": "zalcyan:broken",
                 "target": "self"
             },
             "minecraft:on_interact": {
-                "event": "grow",
-                "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'  ||  query.get_equipped_item_name('main_hand') == 'item.zalcyan:kylar_drip_item' "
+                "event": "zalcyan:grow",
+                "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+            },
+            "minecraft:on_placed": {
+                "event": "zalcyan:place",
+                "target": "self"
             },
             "minecraft:loot": "loot_tables/items/kylar_drip_item.json"
         },
         "events": {
-            "broken": {
+            "zalcyan:broken": {
                 "run_command": {
                     "command": [
                         "fill ~ ~+1 ~ ~ ~+1 ~ zalcyan:kylar_drip_tip replace zalcyan:kylar_drip_body"
                     ]
                 }
             },
-            "grow": {
+            "zalcyan:grow": {
                 "sequence": [
                     {
                         "sequence": [
                             {
-                                "set_block_at_pos": {
-                                    "block_type": "zalcyan:kylar_drip_body",
-                                    "block_offset": [
-                                        0,
-                                        0,
-                                        0
+                                "run_command": {
+                                    "command": [
+                                        "fill ~ ~ ~ ~ ~ ~ zalcyan:kylar_drip_body replace zalcyan:kylar_drip_tip"
                                     ]
                                 }
                             },
                             {
-                                "set_block_at_pos": {
-                                    "block_type": "zalcyan:kylar_drip_tip",
-                                    "block_offset": [
-                                        0,
-                                        -1,
-                                        0
+                                "run_command": {
+                                    "command": [
+                                        "fill ~ ~-1 ~ ~ ~-1 ~ zalcyan:kylar_drip_tip replace air"
                                     ]
                                 }
                             }
@@ -96,6 +95,24 @@
                         "run_command": {
                             "command": [
                                 "particle minecraft:endrod ~ ~ ~"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "playsound item.bone_meal.use @a ~ ~ ~"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "zalcyan:place": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "fill ~ ~+1 ~ ~ ~+1 ~ zalcyan:kylar_drip_body replace zalcyan:kylar_drip_tip"
                             ]
                         }
                     },

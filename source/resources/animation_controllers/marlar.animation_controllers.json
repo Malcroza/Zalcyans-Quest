@@ -1,456 +1,631 @@
 {
-	"format_version" : "1.10.0",
-	"animation_controllers" : {
-		"controller.animation.marlar.default" : {
-			"initial_state" : "default",
-			"states" : {
-				"default" : {
-					"animations" : [ "bob"]
-				}
-			}
-		},
-		"controller.animation.marlar.attack" : {
-			"initial_state" : "default",
-			"states" : {
-				"default" : {
-					"animations" : [ "bob"],
-					"transitions" : [
-						{
-							"melee" : "!query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"ranged" : "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire_draw" : "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-					],
-					"blend_transition": 0.2
-				},
-				"melee" : {
-					"animations" : [ "bob" ],
-					"transitions" : [
-						{
-							"default" : " !query.has_target"
-						},
-						{
-							"ranged" : "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire_draw" : "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"marlar_attack1" : "math.random_integer(1,5)==1 && query.is_delayed_attacking"
-						},
-						{
-							"marlar_attack2" : "math.random_integer(1,5)==2 && query.is_delayed_attacking"
-						},
-						{
-							"marlar_attack3" : "math.random_integer(1,5)==3 && query.is_delayed_attacking"
-						},
-						{
-							"marlar_attack4" : "math.random_integer(1,5)==4 && query.is_delayed_attacking"
-						},
-						{
-							"marlar_attack5" : "math.random_integer(1,5)==5 && query.is_delayed_attacking"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-						
-					],
-					"blend_transition": 0.2
-				},
-				"marlar_attack1" : {
-					"animations" : [ "bob", "marlar_attack1" ],
-					"transitions" : [
-						{
-							"default" : " !query.has_target && query.all_animations_finished"
-						},
-						{
-							"ranged" : "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire_draw" : "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"melee" : "!query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-					],
-					"blend_transition": 0.2
-				},
-				"marlar_attack2" : {
-					"animations" : [ "bob", "marlar_attack2" ],
-					"transitions" : [
-						{
-							"default" : " !query.has_target && query.all_animations_finished"
-						},
-						{
-							"ranged" : "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire_draw" : "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"melee" : "!query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-					],
-					"blend_transition": 0.2
-				},
-				"marlar_attack3" : {
-					"animations" : [ "bob", "marlar_attack3" ],
-					"transitions" : [
-						{
-							"default" : " !query.has_target && query.all_animations_finished"
-						},
-						{
-							"ranged" : "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire_draw" : "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"melee" : " !query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-					],
-					"blend_transition": 0.2
-				},
-				"marlar_attack4" : {
-					"animations" : [ "bob", "marlar_attack4" ],
-					"transitions" : [
-						{
-							"default" : " !query.has_target && query.all_animations_finished"
-						},
-						{
-							"ranged" : "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire_draw" : "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"melee" : " !query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-					],
-					"blend_transition": 0.2
-				},
-				"marlar_attack5" : {
-					"animations" : [ "bob", "marlar_attack5" ],
-					"transitions" : [
-						{
-							"default" : " !query.has_target && query.all_animations_finished"
-						},
-						{
-							"ranged" : "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire_draw" : "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"melee" : " !query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-					],
-					"blend_transition": 0.2
-				},
-				"ranged" : {
-					"animations" : [ "bob" ],
-					"transitions" : [
-						{
-							"default" : " !query.has_target"
-						},
-						{
-							"melee" : "!query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire_draw" : "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-					],
-					"blend_transition": 0.2
-				},
-				"fire_draw" : {
-					"animations" : [ "bob"],
-					"transitions" : [
-						{
-							"default" : " !query.has_target"
-						},
-						{
-							"melee" : "!query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire" : "!query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-					],
-					"blend_transition": 0.2
-				},
-				"fire" : {
-					"animations" : [ "bob", "fire"],
-					"transitions" : [
-						{
-							"default" : "query.all_animations_finished && !query.has_target"
-						},
-						{
-							"melee" : "!query.facing_target_to_range_attack && query.has_target"
-						},
-						{
-							"ranged" : "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"hold_shield" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
-						}
-						
-					],
-					"blend_transition": 0.5
-				},
-				"hold_shield" : {
-					"animations" : [ "bob"],
-					"transitions" : [
-						{
-							"default" : " !query.has_target"
-						},
-						{
-							"ranged" : "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"fire_draw" : "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"melee" : "(query.property('zalcyan:shielded') == false) && !query.facing_target_to_range_attack && query.has_target"
-						}
-					],
-					"blend_transition": 0.3
-				}
-			}
-		},
-		"controller.animation.marlar.move": {
-			"states": {
-				"default": {
-					"animations": [
-						{
-							"moving": "query.modified_move_speed*2"
-						},
-						{
-							"moving_arms": "query.modified_move_speed*1.8"
-						},
-						"base_arms"
-					],
-					"transitions" : [
-						{
-							"sleep" : "query.is_sleeping"
-						},
-						{
-							"stop" : "query.modified_move_speed <= 0.05"
-						},
-						{
-							"melee_arms" : "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"ranged_arms" : "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"shield_arms" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
-						},
-						{
-							"celebrate" : "query.is_celebrating"
-						}
-						
-					],
-					"blend_transition": 0.1
-				},
-				"inter": {
-					"animations": [
-						"stand"
-					],
-					"transitions" : [
-						{
-							"default" : "query.all_animations_finished && query.modified_move_speed > 0.05"
-						},
-						{
-							"stop" : "query.all_animations_finished && query.modified_move_speed <= 0.05"
-						}
-					],
-					"blend_transition": 0.1
-				},
-				"sleep": {
-					"animations": [
-						"sit"
-					],
-					"transitions" : [
-						{
-							"inter" : "!query.is_sleeping"
-						}
-					],
-					"blend_transition": 0.1
-				},
-				"stop": {
-					"animations": [
-						"base_arms"
-					],
-					"transitions" : [
-						{
-							"sleep" : "query.is_sleeping"
-						},
-						{
-							"default": "query.modified_move_speed > 0.05"
-						},
-						{
-							"shield_arms" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
-						},
-						{
-							"ranged_arms" : "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"melee_arms" : "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"celebrate" : "query.is_celebrating"
-						}
-						
-					],
-					"blend_transition": 0.3
-				},
-				"ranged_arms": {
-					"animations": [
-						{
-							"moving": "query.modified_move_speed*1.8"
-						}, "bow_and_arrow"
-					],
-					"transitions" : [
-						{
-							"default" : "!query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.modified_move_speed > 0.05"
-						},
-						{
-							"stop" : "!query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.modified_move_speed <= 0.05"
-						},
-						{
-							"sleep" : "query.is_sleeping"
-						},
-						{
-							"melee_arms" : "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"shield_arms" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
-						},
-						{
-							"celebrate" : "query.is_celebrating"
-						}
-						
-					],
-					"blend_transition": 0.3
-				},
-				"melee_arms": {
-					"animations": [
-						{
-							"moving": "query.modified_move_speed*1.8"
-						},
-						"base_arms"
-					],
-					"transitions" : [
-						{
-							"default" : "!query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping"
-						},
-						{
-							"sleep" : "query.is_sleeping"
-						},
-						{
-							"stop" : "query.modified_move_speed <= 0.05"
-						},
-						{
-							"ranged_arms" : "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"shield_arms" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
-						},
-						{
-							"celebrate" : "query.is_celebrating"
-						}
-						
-					],
-					"blend_transition": 0.1
-				},
-				"shield_arms": {
-					"animations": [
-							"shield",
-						{
-							"moving": "query.modified_move_speed*1.8"
-						}
-					],
-					"transitions" : [
-						{
-							"default" : "(query.property('zalcyan:shielded') == false) && !query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed > 0.05"
-						},
-						{
-							"stop" : "(query.property('zalcyan:shielded') == false) && !query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed <= 0.05"
-						},
-						{
-							"sleep" : "query.is_sleeping"
-						},
-						{
-							"ranged_arms" : "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"melee_arms" : "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"celebrate" : "query.is_celebrating"
-						}
-						
-					],
-					"blend_transition": 0.3
-				},
-				"celebrate": {
-					"animations": [
-							"celebrate",
-						{
-							"moving": "query.modified_move_speed*1.8"
-						}
-					],
-					"transitions" : [
-						{
-							"default" : "!query.is_celebrating && (query.property('zalcyan:shielded') == false) && !query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed > 0.05"
-						},
-						{
-							"stop" : "!query.is_celebrating && (query.property('zalcyan:shielded') == false) && !query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed <= 0.05"
-						},
-						{
-							"sleep" : "query.is_sleeping"
-						},
-						{
-							"ranged_arms" : "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"melee_arms" : "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
-						},
-						{
-							"shield_arms" : "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
-						}
-						
-					],
-					"blend_transition": 0.3
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.marlar.default": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "bob"
+                    ]
+                }
+            }
+        },
+        "controller.animation.marlar.attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "bob"
+                    ],
+                    "transitions": [
+                        {
+                            "melee": "!query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "ranged": "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire_draw": "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "melee": {
+                    "animations": [
+                        "bob"
+                    ],
+                    "transitions": [
+                        {
+                            "default": " !query.has_target"
+                        },
+                        {
+                            "ranged": "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire_draw": "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "marlar_attack1": "math.random_integer(1,5)==1 && query.is_delayed_attacking"
+                        },
+                        {
+                            "marlar_attack2": "math.random_integer(1,5)==2 && query.is_delayed_attacking"
+                        },
+                        {
+                            "marlar_attack3": "math.random_integer(1,5)==3 && query.is_delayed_attacking"
+                        },
+                        {
+                            "marlar_attack4": "math.random_integer(1,5)==4 && query.is_delayed_attacking"
+                        },
+                        {
+                            "marlar_attack5": "math.random_integer(1,5)==5 && query.is_delayed_attacking"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "marlar_attack1": {
+                    "animations": [
+                        "bob",
+                        "marlar_attack1"
+                    ],
+                    "transitions": [
+                        {
+                            "default": " !query.has_target && query.all_animations_finished"
+                        },
+                        {
+                            "ranged": "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire_draw": "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "melee": "!query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "marlar_attack2": {
+                    "animations": [
+                        "bob",
+                        "marlar_attack2"
+                    ],
+                    "transitions": [
+                        {
+                            "default": " !query.has_target && query.all_animations_finished"
+                        },
+                        {
+                            "ranged": "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire_draw": "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "melee": "!query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "marlar_attack3": {
+                    "animations": [
+                        "bob",
+                        "marlar_attack3"
+                    ],
+                    "transitions": [
+                        {
+                            "default": " !query.has_target && query.all_animations_finished"
+                        },
+                        {
+                            "ranged": "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire_draw": "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "melee": " !query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "marlar_attack4": {
+                    "animations": [
+                        "bob",
+                        "marlar_attack4"
+                    ],
+                    "transitions": [
+                        {
+                            "default": " !query.has_target && query.all_animations_finished"
+                        },
+                        {
+                            "ranged": "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire_draw": "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "melee": " !query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "marlar_attack5": {
+                    "animations": [
+                        "bob",
+                        "marlar_attack5"
+                    ],
+                    "transitions": [
+                        {
+                            "default": " !query.has_target && query.all_animations_finished"
+                        },
+                        {
+                            "ranged": "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire_draw": "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "melee": " !query.is_delayed_attacking && query.all_animations_finished && query.has_target && !query.facing_target_to_range_attack"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "ranged": {
+                    "animations": [
+                        "bob"
+                    ],
+                    "transitions": [
+                        {
+                            "default": " !query.has_target"
+                        },
+                        {
+                            "melee": "!query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire_draw": "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "fire_draw": {
+                    "animations": [
+                        "bob"
+                    ],
+                    "transitions": [
+                        {
+                            "default": " !query.has_target"
+                        },
+                        {
+                            "melee": "!query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire": "!query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "fire": {
+                    "animations": [
+                        "bob",
+                        "fire"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.all_animations_finished && !query.has_target"
+                        },
+                        {
+                            "melee": "!query.facing_target_to_range_attack && query.has_target"
+                        },
+                        {
+                            "ranged": "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "hold_shield": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.5
+                },
+                "hold_shield": {
+                    "animations": [
+                        "bob"
+                    ],
+                    "transitions": [
+                        {
+                            "default": " !query.has_target"
+                        },
+                        {
+                            "ranged": "query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "fire_draw": "query.is_charged && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "melee": "(query.property('zalcyan:shielded') == false) && !query.facing_target_to_range_attack && query.has_target"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                }
+            }
+        },
+        "controller.animation.marlar.move": {
+            "states": {
+                "default": {
+                    "animations": [
+                        {
+                            "moving": "query.modified_move_speed*2"
+                        },
+                        {
+                            "moving_arms": "query.modified_move_speed*1.8"
+                        },
+                        "base_arms"
+                    ],
+                    "transitions": [
+                        {
+                            "sleep": "query.is_sleeping"
+                        },
+                        {
+                            "stop": "query.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "melee_arms": "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "ranged_arms": "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "shield_arms": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
+                        },
+                        {
+                            "celebrate": "query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.1
+                },
+                "inter": {
+                    "animations": [
+                        "stand"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.all_animations_finished && query.modified_move_speed > 0.05"
+                        },
+                        {
+                            "stop": "query.all_animations_finished && query.modified_move_speed <= 0.05"
+                        }
+                    ],
+                    "blend_transition": 0.1
+                },
+                "sleep": {
+                    "animations": [
+                        "sit"
+                    ],
+                    "transitions": [
+                        {
+                            "inter": "!query.is_sleeping"
+                        }
+                    ],
+                    "blend_transition": 0.1
+                },
+                "stop": {
+                    "animations": [
+                        "base_arms"
+                    ],
+                    "transitions": [
+                        {
+                            "sleep": "query.is_sleeping"
+                        },
+                        {
+                            "default": "query.modified_move_speed > 0.05"
+                        },
+                        {
+                            "shield_arms": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
+                        },
+                        {
+                            "ranged_arms": "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "melee_arms": "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "celebrate": "query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "ranged_arms": {
+                    "animations": [
+                        {
+                            "moving": "query.modified_move_speed*1.8"
+                        },
+                        "bow_and_arrow"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.modified_move_speed > 0.05"
+                        },
+                        {
+                            "stop": "!query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "sleep": "query.is_sleeping"
+                        },
+                        {
+                            "melee_arms": "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "shield_arms": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
+                        },
+                        {
+                            "celebrate": "query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "melee_arms": {
+                    "animations": [
+                        {
+                            "moving": "query.modified_move_speed*1.8"
+                        },
+                        "base_arms"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping"
+                        },
+                        {
+                            "sleep": "query.is_sleeping"
+                        },
+                        {
+                            "stop": "query.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "ranged_arms": "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "shield_arms": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
+                        },
+                        {
+                            "celebrate": "query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.1
+                },
+                "shield_arms": {
+                    "animations": [
+                        "shield",
+                        {
+                            "moving": "query.modified_move_speed*1.8"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "default": "(query.property('zalcyan:shielded') == false) && !query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed > 0.05"
+                        },
+                        {
+                            "stop": "(query.property('zalcyan:shielded') == false) && !query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "sleep": "query.is_sleeping"
+                        },
+                        {
+                            "ranged_arms": "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "melee_arms": "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "celebrate": "query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "celebrate": {
+                    "animations": [
+                        "celebrate",
+                        {
+                            "moving": "query.modified_move_speed*1.8"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_celebrating && (query.property('zalcyan:shielded') == false) && !query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed > 0.05"
+                        },
+                        {
+                            "stop": "!query.is_celebrating && (query.property('zalcyan:shielded') == false) && !query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "sleep": "query.is_sleeping"
+                        },
+                        {
+                            "ranged_arms": "(query.property('zalcyan:shielded') == false) && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "melee_arms": "(query.property('zalcyan:shielded') == false) && query.is_delayed_attacking && !query.facing_target_to_range_attack && !query.is_sleeping && query.has_target"
+                        },
+                        {
+                            "shield_arms": "(query.property('zalcyan:shielded') == true) && !query.is_sleeping"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                }
+            }
+        },
+        "controller.animation.marlar.range_crouch": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "bow_crouch0"
+                    ],
+                    "transitions": [
+                        {
+                            "ranged0": "math.random_integer(1,5)==1 && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target && query.modified_move_speed < 0.05"
+                        },
+                        {
+                            "ranged1": "math.random_integer(1,5)==2 && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target && query.modified_move_speed < 0.05"
+                        },
+                        {
+                            "ranged2": "math.random_integer(1,5)>=3 && query.facing_target_to_range_attack && !query.is_sleeping && query.has_target && query.modified_move_speed < 0.05"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "ranged0": {
+                    "animations": [
+                        "bow_crouch0"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.facing_target_to_range_attack || query.is_sleeping || !query.has_target || query.modified_move_speed >= 0.05"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "ranged1": {
+                    "animations": [
+                        "bow_crouch1"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.facing_target_to_range_attack || query.is_sleeping || !query.has_target || query.modified_move_speed >= 0.05"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "ranged2": {
+                    "animations": [
+                        "bow_crouch2"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.facing_target_to_range_attack || query.is_sleeping || !query.has_target || query.modified_move_speed >= 0.05"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                }
+            }
+        },
+        "controller.animation.marlar.idle": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "bow_crouch0"
+                    ],
+                    "transitions": [
+                        {
+                            "idle1": "math.random_integer(1,10000)>=9995 && math.random_integer(1,6)==1 && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed < 0.05 && !query.is_celebrating"
+                        },
+                        {
+                            "idle2": "math.random_integer(1,10000)>=9995 && math.random_integer(1,6)==2 && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed < 0.05 && !query.is_celebrating"
+                        },
+                        {
+                            "idle3": "math.random_integer(1,10000)>=9995 && math.random_integer(1,6)==3 && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed < 0.05 && !query.is_celebrating"
+                        },
+                        {
+                            "idle4": "math.random_integer(1,10000)>=9995 && math.random_integer(1,6)==4 && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed < 0.05 && !query.is_celebrating"
+                        },
+                        {
+                            "idle5": "math.random_integer(1,10000)>=9995 && math.random_integer(1,6)==5 && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed < 0.05 && !query.is_celebrating"
+                        },
+                        {
+                            "idle6": "math.random_integer(1,10000)>=9995 && math.random_integer(1,6)==6 && !query.facing_target_to_range_attack && !query.is_sleeping && !query.has_target && query.modified_move_speed < 0.05 && !query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "idle1": {
+                    "animations": [
+                        "idle1"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.facing_target_to_range_attack || query.is_sleeping || query.has_target || query.all_animations_finished || query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "idle2": {
+                    "animations": [
+                        "idle2"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.facing_target_to_range_attack || query.is_sleeping || query.has_target || query.all_animations_finished || query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "idle3": {
+                    "animations": [
+                        "idle3"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.facing_target_to_range_attack || query.is_sleeping || query.has_target || query.all_animations_finished || query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "idle4": {
+                    "animations": [
+                        "idle4"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.facing_target_to_range_attack || query.is_sleeping || query.has_target || query.all_animations_finished || query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "idle5": {
+                    "animations": [
+                        "idle5"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.facing_target_to_range_attack || query.is_sleeping || query.has_target || query.all_animations_finished || query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "idle6": {
+                    "animations": [
+                        "idle6"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.facing_target_to_range_attack || query.is_sleeping || query.has_target || query.all_animations_finished || query.is_celebrating"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                }
+            }
+        }
+    }
 }

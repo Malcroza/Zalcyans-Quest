@@ -1,0 +1,124 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:marlar_herald",
+			"materials": { 
+				"default": "skeleton" 
+				},
+			"textures": { 
+				"default": "textures/entity/marlar" 
+				},
+			"geometry": { 
+				"default": "geometry.marlar_v2" },
+			
+			"animations": {
+
+				
+				"look_at_target_default": "animation.marlar_v2.look_at_target.default",
+				"look_at_target_gliding": "animation.marlar_v2.look_at_target.gliding",
+				"look_at_target_swimming": "animation.marlar_v2.look_at_target.swimming",
+				
+				"moving": "animation.marlar_v2.move7",
+				"moving_arms": "animation.marlar_v2.move_arms",
+				"base_arms":"animation.marlar_v2.base_arms",
+				
+				"riding.arms": "animation.marlar_v2.riding.arms",
+				"riding.legs": "animation.marlar_v2.riding.legs",
+				
+				"holding": "animation.marlar_v2.holding",
+				
+				"bob": "animation.marlar_v2.bob",
+				
+
+				"bow_and_arrow": "animation.marlar_v2.bow_and_arrow",
+				
+				
+				"marlar_attack1": "animation.marlar_v2.attack1",
+				"marlar_attack2": "animation.marlar_v2.attack2",
+				"marlar_attack3": "animation.marlar_v2.attack3",
+				"marlar_attack4": "animation.marlar_v2.attack4",
+				"marlar_attack5": "animation.marlar_v2.attack5",
+				
+				
+				"default": "controller.animation.marlar_herald.default",
+				
+				"look_at_target": "controller.animation.humanoid.look_at_target",
+				
+				"move": "controller.animation.marlar_herald.move",
+				
+				"riding": "controller.animation.humanoid.riding",
+				
+				"holdingc": "controller.animation.humanoid.holding",
+
+				"attack": "controller.animation.marlar_herald.attack",
+				
+				"sit":"animation.marlar_v2.sit",
+				"stand":"animation.marlar_v2.stand",
+				"fire": "animation.marlar_v2.fire",
+				"shield": "animation.marlar_v2.shield",
+				
+				"breath": "animation.marlar_v2.breath",
+				
+				"celebrate": "animation.marlar_v2.celebrate",
+				
+				"bow_crouch0": "animation.marlar_v2.bow_crouch0",
+				"bow_crouch1": "animation.marlar_v2.bow_crouch1",
+				"bow_crouch2": "animation.marlar_v2.bow_crouch2",
+				"bow_crouch": "controller.animation.marlar_herald.range_crouch",
+				
+				"idle1": "animation.marlar_v2.idle1",
+				"idle2": "animation.marlar_v2.idle2",
+				"idle3": "animation.marlar_v2.idle3",
+				"idle4": "animation.marlar_v2.idle4",
+				"idle5": "animation.marlar_v2.idle5",
+				"idle6": "animation.marlar_v2.idle6",
+				"idle_cont": "controller.animation.marlar_herald.idle",
+				
+				"throw": "animation.marlar_v2.throw",
+				"boing": "animation.marlar_v2.boing"
+
+
+
+			},
+			"scripts": {
+				"initialize": [
+                    "v.health_previous = query.health;"	
+                ],
+                "pre_animation": [
+					"v.health_after = query.health;",
+					"v.health_change = v.health_after-v.health_previous;",
+					"v.health_previous = query.health;"	
+                ],
+				"animate": [
+					"look_at_target",
+					"move",
+					"riding",
+					"holdingc",
+					"attack",
+					"breath",
+					"bow_crouch",
+					"idle_cont"
+					
+					
+				]
+			},
+			"render_controllers": [
+				"controller.render.skeleton"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#81b7ca",
+				"overlay_color": "#e5b753"
+			},
+			"sound_effects": {
+				"swing": "mob.marlar.swing",
+				"celebrate": "mob.marlar.celebrate"
+			},
+			"particle_effects": {
+				"z_z": "zalcyan:z_z",
+				"breath": "zalcyan:z_breath"
+			}
+		}
+	}
+}

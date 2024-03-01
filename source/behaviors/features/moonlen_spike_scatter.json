@@ -1,0 +1,26 @@
+{
+    "format_version": "1.13.0",
+    
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "zalcyan:moonlen_spike_scatter"
+        },
+        
+        "places_feature": "zalcyan:moonlen_spike_snap_feature",
+        
+        "iterations": 200,
+        
+        "x": {
+            "distribution": "uniform",
+            "extent": [1, 15]
+        },
+        "z": {
+            "distribution": "uniform",
+            "extent": [1, 15]
+        },
+        "y": {
+            "distribution": "uniform",
+            "extent": [-60, 0]
+        }
+    }
+}

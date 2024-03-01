@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zalcyan:smoke_orb",
+      "materials": {
+        "default": "skeleton"
+      },
+	  "particle_effects": {
+    "lazar_trail": "zalcyan:smoke_orb_trail",
+	"lazar_sparks": "zalcyan:smoke_orb_sparks"
+	},
+      "textures": {
+        "default": "textures/entity/smoke_orb"
+      },
+      "geometry": {
+        "default": "geometry.smoke_orb"
+      },
+      "animations": {
+        "move": "animation.smoke_orb.move",		
+		"part": "controller.animation.smoke_orb.particles",
+		"moving": "controller.animation.smoke_orb.movement",
+		"fog_part": "animation.smoke_orb.fog",
+		"rotate":"animation.smoke_orb.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "move",
+		  "part",
+		  "fog_part",
+		  "rotate"
+        ]
+      },
+      "render_controllers": [ "controller.render.skeleton" ]
+    }
+  }
+}

@@ -1,4 +1,3 @@
-//bridge-file-version: #6
 {
 	"format_version": "1.20.40",
 	"minecraft:item": {
@@ -19,7 +18,9 @@
 					"zalcyan:raken_ground",
 					"zalcyan:raken_cap_cover",
 					"zalcyan:raken_jell",
-					"zalcyan:raken_stone"
+					"zalcyan:raken_stone",
+					"zalcyan:mya_vine_tip",
+					"zalcyan:mya_vine_body"
 				],
 				"use_block_description": true
 			},
@@ -28,37 +29,6 @@
 			},
 			"minecraft:max_stack_size": 64,
 			"minecraft:stacked_by_data": true
-		},
-		"events": {
-			"grow": {
-				"sequence": [
-					{
-						"run_command": {
-							"command": [
-								"fill ~ ~ ~ ~ ~ ~ zalcyan:mya_vine_body 0 replace zalcyan:mya_vine_tip",
-								"fill ~ ~-1 ~ ~ ~-1 ~ zalcyan:mya_vine_tip 0 replace air"
-							]
-						}
-					},
-					{
-						"decrement_stack": {}
-					},
-					{
-						"run_command": {
-							"command": [
-								"particle minecraft:endrod ~ ~ ~"
-							]
-						}
-					},
-					{
-						"run_command": {
-							"command": [
-								"playsound item.bone_meal.use @a ~ ~ ~"
-							]
-						}
-					}
-				]
-			}
 		}
 	}
 }

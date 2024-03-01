@@ -390,6 +390,22 @@
 									]
 								},
 								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"value": "player",
+											"subject": "other"
+										},
+										{
+											"test": "has_equipment",
+											"value": "zalcyan:marlar_herald_helmet",
+											"subject": "other",
+											"domain": "head",
+											"operator": "not"
+										}
+									]
+								},
+								{
 									"test": "is_sleeping",
 									"subject": "self",
 									"operator": "==",

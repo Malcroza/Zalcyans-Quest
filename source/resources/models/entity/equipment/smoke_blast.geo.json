@@ -1,0 +1,44 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.smoke_blast",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "Body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "RightArm",
+					"pivot": [-5, 22, 0],
+					"rotation": [-10, 0, 0],
+					"cubes": [
+						{"origin": [-6, 22, 0], "size": [1, 1, 1], "uv": [0, 4]}
+					]
+				},
+				{
+					"name": "blaster",
+					"parent": "RightArm",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{"origin": [3.5, 11, -3], "size": [3, 3, 7], "pivot": [0, 0, 0], "rotation": [0, 180, 0], "uv": [40, 3]},
+						{"origin": [3.5, 11, 4], "size": [3, 3, 1], "inflate": 0.2, "pivot": [0, 0, 0], "rotation": [0, 180, 0], "uv": [49, 19]}
+					],
+					"locators": {
+						"blast": {
+							"offset": [-6, -38, -2],
+							"rotation": [0, 0, 90]
+						}
+					}
+				}
+			]
+		}
+	]
+}

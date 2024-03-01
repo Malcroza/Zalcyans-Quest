@@ -1,4 +1,3 @@
-//bridge-file-version: #4
 {
 	"format_version": "1.20.40",
 	"minecraft:item": {
@@ -13,7 +12,9 @@
 			"minecraft:block_placer": {
 				"block": "zalcyan:moonlen_spike1",
 				"use_on": [
-					"zalcyan:moonlen_stone"
+					"zalcyan:moonlen_stone",
+					"zalcyan:moonlen_spike1",
+					"zalcyan:moonlen_spike_body"
 				]
 			},
 			"minecraft:icon": {
@@ -21,38 +22,6 @@
 			},
 			"minecraft:max_stack_size": 64,
 			"minecraft:stacked_by_data": true
-		},
-		"events": {
-			"grow": {
-				"sequence": [
-					{
-						"run_command": {
-							"command": [
-								"fill ~ ~+1 ~ ~ ~+1 ~ zalcyan:moonlen_spike_body 0 replace zalcyan:moonlen_spike1",
-								"fill ~ ~-1 ~ ~ ~-1 ~ zalcyan:moonlen_spike_body 0 replace zalcyan:moonlen_spike1",
-								"setblock ~ ~ ~ zalcyan:moonlen_spike1"
-							]
-						}
-					},
-					{
-						"decrement_stack": {}
-					},
-					{
-						"run_command": {
-							"command": [
-								"particle minecraft:endrod ~ ~ ~"
-							]
-						}
-					},
-					{
-						"run_command": {
-							"command": [
-								"playsound use.dripstone_block @a ~ ~ ~"
-							]
-						}
-					}
-				]
-			}
 		}
 	}
 }

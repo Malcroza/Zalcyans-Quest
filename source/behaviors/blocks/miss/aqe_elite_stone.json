@@ -28,11 +28,6 @@
         },
         "events": {
             "doom": {
-                "play_effect": {
-                    "data": 2,
-                    "target": "self",
-                    "effect": "minecraft:eyeofender_death_explode_particle"
-                },
                 "run_command": {
                     "command": [
                         "summon zalcyan:aqe_elite"

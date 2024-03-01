@@ -33,7 +33,7 @@
 		},
 		"distribution": {
 			"iterations": "
-				v.tile.chunk_size = 50;
+				v.tile.chunk_size = 70;
 
 				v.tile.origin.x = (16 * v.tile.chunk_size) * math.floor(v.originx / (16 * v.tile.chunk_size));
 				v.tile.origin.z = (16 * v.tile.chunk_size) * math.floor(v.originz / (16 * v.tile.chunk_size));
