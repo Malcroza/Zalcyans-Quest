@@ -15,4 +15,4 @@ execute at @a if block ~ -64 ~ zalcyan:fog_moonlen_block run scoreboard players 
 #remove fog  and remove scoreboard if timer reaches 40
 
 execute as @a[scores={moonlen_detect=40..}] run fog @s remove moonlen
-execute as @a[scores={moonlen_detect=50..}] run scoreboard objectives remove moonlen_detect
+execute as @a[scores={moonlen_detect=41..}] run scoreboard objectives remove moonlen_detect

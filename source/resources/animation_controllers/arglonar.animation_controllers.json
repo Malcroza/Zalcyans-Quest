@@ -1,14 +1,10 @@
-//bridge-file-version: #2
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
 		"controller.animation.arglonar.general": {
 			"states": {
 				"default": {
-					"animations": [
-						"arglonar_general",
-						"look_at_target"
-					]
+					"animations": ["arglonar_general", "look_at_target"]
 				}
 			}
 		},
@@ -16,31 +12,25 @@
 			"states": {
 				"default": {
 					"animations": [
-						{
-							"moving": "query.modified_move_speed"
-						}
+						{"moving": "query.modified_move_speed*2"}
 					],
 					"blend_transition": 0.4
 				}
 			}
 		},
-		"controller.animation.arglonar.head_movement" : {
-			"initial_state" : "default",
-			"states" : {
-				"default" : {
-					"transitions" : [
-						{
-							"roaring" : "query.is_roaring == 1"
-						}
+		"controller.animation.arglonar.head_movement": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{"roaring": "query.is_roaring == 1"}
 					],
 					"blend_transition": 0.4
 				},
-				"roaring" : {
-					"animations" : [ "roaring" ],
-					"transitions" : [
-						{
-							"default" : "query.is_roaring == 0"
-						}
+				"roaring": {
+					"animations": ["roaring"],
+					"transitions": [
+						{"default": "query.is_roaring == 0"}
 					],
 					"blend_transition": 0.4
 				}
@@ -50,60 +40,40 @@
 			"states": {
 				"default": {
 					"transitions": [
-						{
-							"attack0": "query.is_delayed_attacking && Math.Random(1,5)<3"
-						},
-						{
-							"attack1": "query.is_delayed_attacking && Math.Random(1,5)>2"
-						}
+						{"attack0": "query.is_delayed_attacking && Math.Random(1,5)<3"},
+						{"attack1": "query.is_delayed_attacking && Math.Random(1,5)>2"}
 					],
 					"blend_transition": 0.4
 				},
 				"attack0": {
-					"animations": [
-						"attack0"
-					],
+					"animations": ["attack0"],
 					"transitions": [
-						{
-							"default": "!query.is_delayed_attacking"
-						}
+						{"default": "!query.is_delayed_attacking"}
 					],
 					"blend_transition": 0.4
 				},
 				"attack1": {
-					"animations": [
-						"attack1"
-					],
+					"animations": ["attack1"],
 					"transitions": [
-						{
-							"default": "!query.is_delayed_attacking"
-						}
+						{"default": "!query.is_delayed_attacking"}
 					],
 					"blend_transition": 0.4
 				}
 			}
-		},"controller.animation.arglonar.charging" : {
-			"states" : {					
-				"default" : {
-					"transitions" : [
-					
-						{
-							"charged" : "query.is_charged"
-						}
-					
+		},
+		"controller.animation.arglonar.charging": {
+			"states": {
+				"default": {
+					"transitions": [
+						{"charged": "query.is_charged"}
 					],
 					"blend_transition": 0.2
 				},
-				"charged" : {
-					"animations" : [
-						"charge"
-					
-					],
-					"blend_transition" : 0.2,
-					"transitions" : [
-						{
-							"default" : "!query.is_charged"
-						}
+				"charged": {
+					"animations": ["charge"],
+					"blend_transition": 0.2,
+					"transitions": [
+						{"default": "!query.is_charged"}
 					]
 				}
 			}

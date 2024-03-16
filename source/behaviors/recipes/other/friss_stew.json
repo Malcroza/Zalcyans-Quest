@@ -1,0 +1,39 @@
+{
+	"format_version": "1.17.41",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "zalcyan:friss_stew"
+		},
+		"tags": ["crafting_table"],
+		"priority":0,
+		"ingredients": [
+			{
+			"item": "minecraft:bowl"
+			},
+			{
+			"item": "zalcyan:friss_beetle"
+			},
+			{
+			"item": "zalcyan:friss_fungus_item"
+			},
+			{
+			"item": "zalcyan:mafis_berries"
+			}
+		],
+		"unlock": [
+			{
+				"item": "zalcyan:mafis_berries"
+			},
+			{
+				"item": "zalcyan:friss_beetle"
+			},
+			{
+				"item": "zalcyan:friss_fungus_item"
+			}
+
+		],
+		"result": {
+			"item": "zalcyan:friss_stew"
+		}
+	}
+}

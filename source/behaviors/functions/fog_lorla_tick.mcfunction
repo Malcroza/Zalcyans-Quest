@@ -15,7 +15,7 @@ execute at @a if block ~ -64 ~ zalcyan:fog_lorla_block run scoreboard players se
 #remove fog  and remove scoreboard if timer reaches 40
 
 execute as @a[scores={lorla_detect=40..}] run fog @s remove lorla
-execute as @a[scores={lorla_detect=50..}] run scoreboard objectives remove lorla_detect
+execute as @a[scores={lorla_detect=41..}] run scoreboard objectives remove lorla_detect
 
 
 #particle

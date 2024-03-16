@@ -15,4 +15,4 @@ execute at @a if block ~ -64 ~ zalcyan:fog_gulumar_block run scoreboard players 
 #remove fog  and remove scoreboard if timer reaches 40
 
 execute as @a[scores={gulumar_detect=40..}] run fog @s remove gulumar
-execute as @a[scores={gulumar_detect=50..}] run scoreboard objectives remove gulumar_detect
+execute as @a[scores={gulumar_detect=41..}] run scoreboard objectives remove gulumar_detect

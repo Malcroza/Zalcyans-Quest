@@ -504,6 +504,21 @@
 			"textures": [
 				"textures/items/smoke_blast"
 			]
+		},
+		"friss_beetle": {
+			"textures": [
+				"textures/items/friss_beetle"
+			]
+		},
+		"friss_stew": {
+			"textures": [
+				"textures/items/friss_stew"
+			]
+		},
+		"skreepog_charge": {
+			"textures": [
+				"textures/items/skreepog_charge"
+			]
 		}
 	},
 	"texture_name": "atlas.items"

@@ -1,0 +1,60 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "zalcyan4:bow",
+      "materials": {
+        "default": "phantom",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/models/equipment/skreepog_blaster",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.skreepog_blaster"
+      },
+      "animations": {
+		  "skreepog_blaster_ripple": "animation.skreepog_blaster.ripple",
+		"skreepog_blaster_first_person": "animation.skreepog_blaster.first_person.hold",
+		"skreepog_blaster_first_person2": "animation.skreepog_blaster.first_person.hold2",
+		"skreepog_blaster_first_person3": "animation.skreepog_blaster.first_person.hold4",
+		"hold": "animation.skreepog_blaster.fire_hold",
+		"hold_idle": "animation.skreepog_blaster.hold_idle",
+		"fire": "animation.skreepog_blaster.fire",
+		"fire_empty": "animation.skreepog_blaster.fire_empty",
+		"fire_empty_crouched": "animation.skreepog_blaster.fire_empty_crouched",
+		"shoot": "animation.skreepog_blaster.shoot",
+		"skreepog_blaster_shoot": "animation.skreepog_blaster.shoot",
+		"shoot_cont": "controller.animation.skreepog_blaster.attack",
+		"fire_cont": "controller.animation.skreepog_blaster.fire",
+		"fire_empty_cont": "controller.animation.skreepog_blaster.fire_empty",
+		"entity_fire": "controller.animation.skreepog_blaster.fire_entity"
+      },
+      "scripts": {
+		  "pre_animation": [
+					"t.val = 0; t.i = 0; loop(27, {t.val = q.is_item_name_any('slot.inventory', t.i, 'zalcyan:skreepog_charge'); t.val ? {return t.val;}; t.i = t.i+1;});",
+					"t.val1 = 0; t.i = 0; loop(9, {t.val1 = q.is_item_name_any('slot.hotbar', t.i, 'zalcyan:skreepog_charge'); t.val1 ? {return t.val1;}; t.i = t.i+1;});",
+					"t.val2 = q.is_item_name_any('slot.weapon.offhand', 0, 'zalcyan:skreepog_charge');"
+					
+                ],
+        "animate": [
+		"skreepog_blaster_ripple",
+			{
+			"shoot_cont": "c.is_first_person"
+			},
+		  
+            "skreepog_blaster_shoot"
+          ,
+		  {"fire_cont": "t.val == 1 || t.val1 == 1 || t.val2 ==1"},
+		  {"fire_empty_cont": "t.val == 0 && t.val1 == 0 && t.val2 ==0 && !query.has_property('zalcyan:gun_spark')"},
+		  {"entity_fire": "query.has_property('zalcyan:gun_spark')" }
+	   ]
+      },
+      "render_controllers": [ "controller.render.item_default"],
+	  "sound_effects": {
+				"empty": "sound.gun.empty"
+			}
+    }
+  }
+}

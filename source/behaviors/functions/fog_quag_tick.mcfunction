@@ -15,4 +15,4 @@ execute at @a if block ~ -64 ~ zalcyan:fog_quag_block run scoreboard players set
 #remove fog  and remove scoreboard if timer reaches 40
 
 execute as @a[scores={qua_detect=40..}] run fog @s remove quag
-execute as @a[scores={qua_detect=50..}] run scoreboard objectives remove qua_detect
+execute as @a[scores={qua_detect=41..}] run scoreboard objectives remove qua_detect

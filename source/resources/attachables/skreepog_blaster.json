@@ -17,14 +17,14 @@
       "animations": {
 		"skreepog_blaster_first_person": "animation.skreepog_blaster.first_person.hold",
 		"skreepog_blaster_ripple": "animation.skreepog_blaster.ripple",
-		"skreepog_blaster_first_person_hold_sneak": "animation.skreepog_blaster.first_person.hold_sneak",
-		"shoot_cont": "controller.animation.skreepog_blaster.attack"
+		"hold": "animation.skreepog_blaster.fire_hold"
       },
       "scripts": {
-        "animate": [  
+        "animate": [ 
+			"hold",
             "skreepog_blaster_ripple",
 			{
-			"shoot_cont": "c.is_first_person"
+			"skreepog_blaster_first_person": "c.is_first_person"
 			}
 			
         ]

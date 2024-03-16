@@ -15,4 +15,4 @@ execute at @a if block ~ -64 ~ zalcyan:fog_sappis_block run scoreboard players s
 #remove fog  and remove scoreboard if timer reaches 40
 
 execute as @a[scores={sappis_detect=40..}] run fog @s remove sappis
-execute as @a[scores={sappis_detect=50..}] run scoreboard objectives remove sappis_detect
+execute as @a[scores={sappis_detect=41..}] run scoreboard objectives remove sappis_detect

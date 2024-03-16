@@ -345,13 +345,6 @@
 		"isotropic": true
 		
 	},
-	"zalcyan:friss_cap1": {
-		"textures": "friss_cap1",
-		"sound": "slime",
-		"brightness_gamma": 1,
-		"isotropic": true
-		
-	},
 	"zalcyan:friss_stem": {
 		"textures": {
 			"up": "friss_stem_top",
@@ -553,10 +546,6 @@
 		"sound": "bamboo",
 		"textures": "zlily_pad1"
 	},
-	"zalcyan:raken_door": {
-		"sound": "wood",
-		"textures": "raken_door"
-	},
 	"zalcyan:raken_trapdoor": {
 		"sound": "wood",
 		"textures": "raken_trapdoor"
@@ -596,14 +585,6 @@
 	"zalcyan:mynis_dirt": {
 		"sound": "gravel",
 		"textures": "mynis_dirt"
-	},
-	"zalcyan:mynis_door": {
-		"sound": "wood",
-		"textures": "mynis_door"
-	},
-	"zalcyan:mynis_fan": {
-		"sound": "grass",
-		"textures": "mynis_fan"
 	},
 	"zalcyan:mynis_grass": {
 		"sound": "grass",
@@ -832,12 +813,8 @@
 		},
 		"sound": "grass"
 	},
-	"kylar_drop_body": {
-		"textures": "kylar_drop_body",
-		"sound": "slime"
-	},
-	"kylar_drop_body": {
-		"textures": "kylar_drop_body",
+	"zalcyan:kylar_drip_body": {
+		"textures": "kylar_drip_body",
 		"sound": "slime"
 	},
 	"zalcyan:kylar_short_grass": {

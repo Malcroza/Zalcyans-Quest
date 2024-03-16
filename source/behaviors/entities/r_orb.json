@@ -123,7 +123,7 @@
 					"liquid_inertia": 1,
 					"multiple_targets": false,
 					"should_bounce": false,
-					"uncertainty_base": 8,
+					"uncertainty_base": 10,
 					"uncertainty_multiplier":1,
 					"offset": [
 						-0.27,
@@ -132,7 +132,7 @@
 					],
 					"on_hit": {
 						"impact_damage": {
-							"damage": 7,
+							"damage": 5,
 							"knockback": true,
 							"semi_random_diff_damage": false
 						},

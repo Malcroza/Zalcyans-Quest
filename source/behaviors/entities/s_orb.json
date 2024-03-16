@@ -239,7 +239,7 @@
 						"filters": {
 							"test": "is_family",
 							"subject": "other",
-							"value": "skreepog"
+							"value": "skreepog_pilot"
 						},
 						"add": {
 							"component_groups": [

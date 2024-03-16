@@ -46,6 +46,7 @@
 			},
 			"zalcyan:player_smoke_orb_standing": {
 				"minecraft:projectile": {
+					"stop_on_hurt": true,
 					"power": 2.2,
 					"gravity": 0.1,
 					"angle_offset": -20,
@@ -83,6 +84,7 @@
 			},
 			"zalcyan:player_smoke_orb_sneaking": {
 				"minecraft:projectile": {
+					"stop_on_hurt": true,
 					"power": 2.2,
 					"gravity": 0.1,
 					"angle_offset": 0,
@@ -117,6 +119,7 @@
 			},
 			"zalcyan:marlar_smoke_orb": {
 				"minecraft:projectile": {
+					"stop_on_hurt": true,
 					"power": 2.2,
 					"gravity": 0.1,
 					"angle_offset": -10,

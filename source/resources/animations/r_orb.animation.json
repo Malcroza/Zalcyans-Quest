@@ -36,6 +36,26 @@
 					"locator": "part_emitter"
 				}
 			}
+		},
+		"animation.r_orb.pew": {
+			"loop": true,
+			"animation_length": 0.04,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "lazar_trail",
+						"locator": "part_emitter"
+					},
+					{
+						"effect": "lazar_trail",
+						"locator": "part_emitter2"
+					},
+					{
+						"effect": "lazar_trail",
+						"locator": "part_emitter3"
+					}
+				]
+			}
 		}
 	}
 }

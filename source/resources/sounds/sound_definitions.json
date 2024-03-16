@@ -467,6 +467,17 @@
 			],
 			"category": "hostile"
 		},
+		"mob.marlar.step": {
+			"sounds": [
+				"sounds/mob/marlar/step1",
+				"sounds/mob/marlar/step2",
+				"sounds/mob/marlar/step3",
+				"sounds/mob/marlar/step4",
+				"sounds/mob/marlar/step5",
+				"sounds/mob/marlar/step6"	
+			],
+			"category": "hostile"
+		},
 		"mob.marlar.celebrate": {
 			"sounds": [
 				"sounds/mob/marlar/celebrate",
@@ -687,6 +698,16 @@
 				"sounds/z_sounds/laser_ricochet3",
 				"sounds/z_sounds/laser_ricochet4",
 				"sounds/z_sounds/laser_ricochet5"
+			],
+			"category": "neutral"
+		},
+		"sound.s_orb.hit": {
+			"sounds": [
+				"sounds/z_sounds/orb_hit1",
+				"sounds/z_sounds/orb_hit2",
+				"sounds/z_sounds/orb_hit3",
+				"sounds/z_sounds/orb_hit4",
+				"sounds/z_sounds/orb_hit5"
 			],
 			"category": "neutral"
 		},

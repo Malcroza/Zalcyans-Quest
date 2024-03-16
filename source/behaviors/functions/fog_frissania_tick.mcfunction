@@ -15,7 +15,7 @@ execute at @a if block ~ -64 ~ zalcyan:fog_frissania_block run scoreboard player
 #remove fog  and remove scoreboard if timer reaches 40
 
 execute as @a[scores={friss_detect=40..}] run fog @s remove frissania
-execute as @a[scores={friss_detect=50..}] run scoreboard objectives remove friss_detect
+execute as @a[scores={friss_detect=41..}] run scoreboard objectives remove friss_detect
 
 
 #particle

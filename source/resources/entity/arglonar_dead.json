@@ -14,13 +14,14 @@
 				"default": "geometry.arglonar"
 			},
 			"animations": {
-				"arglonar_d.general": "animation.arglonar_d.general",
+				"arglonar_d.general": "animation.arglonar.general",
 				"general": "controller.animation.arglonar_d.general",
-				"dead": "animation.arglonar_d.dead"
+				"dead": "animation.arglonar.dead"
 			},
 			"scripts": {
 				"animate": [
-					"general"
+					"general",
+					"dead"
 				]
 			},
 			"render_controllers": [

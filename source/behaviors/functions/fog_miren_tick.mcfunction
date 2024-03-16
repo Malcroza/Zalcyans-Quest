@@ -15,4 +15,4 @@ execute at @a if block ~ -64 ~ zalcyan:fog_miren_block run scoreboard players se
 #remove fog  and remove scoreboard if timer reaches 40
 
 execute as @a[scores={lorzoland_detect=40..}] run fog @s remove lorzoland
-execute as @a[scores={lorzoland_detect=50..}] run scoreboard objectives remove lorzoland_detect
+execute as @a[scores={lorzoland_detect=41..}] run scoreboard objectives remove lorzoland_detect

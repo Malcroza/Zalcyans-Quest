@@ -1,0 +1,121 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "zalcyan:skreepog_pilot",
+			"materials": { 
+				"default": "skeleton" 
+				},
+			"textures": { 
+				"default": "textures/entity/skreepog_pilot" 
+				},
+			"geometry": { 
+				"default": "geometry.skreepog_pilot" },
+			
+			"animations": {
+
+				
+				"look_at_target_default": "animation.skreepog_pilot.look_at_target.default",
+				"look_at_target_gliding": "animation.skreepog_pilot.look_at_target.gliding",
+				"look_at_target_swimming": "animation.skreepog_pilot.look_at_target.swimming",
+				
+				"moving": "animation.skreepog_pilot.move7",
+				"moving_arms": "animation.skreepog_pilot.move_arms",
+				"base_arms":"animation.skreepog_pilot.base_arms",
+				
+				"riding.arms": "animation.skreepog_pilot.riding.arms",
+				"riding.legs": "animation.skreepog_pilot.riding.legs",
+				
+				"holding": "animation.skreepog_pilot.holding",
+				
+				"bob": "animation.skreepog_pilot.bob",
+				
+
+				"bow_and_arrow": "animation.skreepog_pilot.bow_and_arrow",
+				
+				
+				"skreepog_pilot_attack1": "animation.skreepog_pilot.attack1",
+				"skreepog_pilot_attack2": "animation.skreepog_pilot.attack2",
+				"skreepog_pilot_attack3": "animation.skreepog_pilot.attack3",
+				"skreepog_pilot_attack4": "animation.skreepog_pilot.attack4",
+				"skreepog_pilot_attack5": "animation.skreepog_pilot.attack5",
+				
+				
+				"default": "controller.animation.skreepog_pilot.default",
+				
+				"look_at_target": "controller.animation.humanoid.look_at_target",
+				
+				"move": "controller.animation.skreepog_pilot.move",
+				
+				"riding": "controller.animation.humanoid.riding",
+				
+				"holdingc": "controller.animation.humanoid.holding",
+
+				"attack": "controller.animation.skreepog_pilot.attack",
+				
+				"sit":"animation.skreepog_pilot.sit",
+				"stand":"animation.skreepog_pilot.stand",
+				"fire": "animation.skreepog_pilot.fire",
+				"shield": "animation.skreepog_pilot.shield",
+				
+				"breath": "animation.skreepog_pilot.breath",
+				
+				"celebrate": "animation.skreepog_pilot.celebrate",
+				
+				"bow_crouch0": "animation.skreepog_pilot.bow_crouch0",
+				"bow_crouch1": "animation.skreepog_pilot.bow_crouch1",
+				"bow_crouch2": "animation.skreepog_pilot.bow_crouch2",
+				"bow_crouch": "controller.animation.skreepog_pilot.range_crouch",
+				
+				"idle1": "animation.skreepog_pilot.idle1",
+				"idle2": "animation.skreepog_pilot.idle2",
+				"idle3": "animation.skreepog_pilot.idle3",
+				"idle4": "animation.skreepog_pilot.idle4",
+				"idle5": "animation.skreepog_pilot.idle5",
+				"idle6": "animation.skreepog_pilot.idle6",
+				"idle_cont": "controller.animation.skreepog_pilot.idle"
+
+
+
+			},
+			"scripts": {
+				"initialize": [
+                    "v.health_previous = query.health;"	
+                ],
+                "pre_animation": [
+					"v.health_after = query.health;",
+					"v.health_change = v.health_after-v.health_previous;",
+					"v.health_previous = query.health;"	
+                ],
+				"animate": [
+					"look_at_target",
+					"move",
+					"riding",
+					"holdingc",
+					"attack",
+					"breath",
+					"bow_crouch",
+					"idle_cont"
+					
+					
+				]
+			},
+			"render_controllers": [
+				"controller.render.skeleton"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#81b7ca",
+				"overlay_color": "#4f5d68"
+			},
+			"sound_effects": {
+				"swing": "mob.marlar.swing",
+				"celebrate":"mob.skreepog.say"
+			},
+			"particle_effects": {
+				"z_z": "zalcyan:z_z",
+				"breath": "zalcyan:z_breath"
+			}
+		}
+	}
+}

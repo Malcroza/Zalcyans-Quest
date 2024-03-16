@@ -214,6 +214,14 @@
 						"max_dist": 64
 					},
 					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "marlar"
+						},
+						"max_dist": 64
+					},
+					{
 					"filters": {
 							"all_of": [
 								{

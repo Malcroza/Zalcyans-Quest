@@ -423,7 +423,7 @@
 							"all_of": [
 								{
 									"test": "is_family",
-									"value": "skreepog",
+									"value": "skreepog_pilot",
 									"subject": "other"
 								}
 							]
